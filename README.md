@@ -78,3 +78,23 @@ Sernitas Care is a professional home nursing service platform built with **React
 - `npm run build`: Build the project for production.
 - `npm run preview`: Preview the production build.
 - `npm run lint`: Run ESLint to check for code quality.
+
+## Folder Structure
+
+```bash
+sernitas-care/
+├── public/                 # Static assets
+├── src/                    # Source code
+│   ├── components/         # React components
+│   ├── assets/             # Images and icons
+│   ├── utility/            # Utility functions
+│   ├── App.jsx             # Main app component
+│   ├── main.jsx            # Entry point
+│   └── index.css           # Global styles
+├── server.js               # Backend server
+├── .env                    # Environment variables
+├── package.json            # Project configuration
+├── tailwind.config.js      # TailwindCSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── vite.config.js          # Vite configuration
+```
