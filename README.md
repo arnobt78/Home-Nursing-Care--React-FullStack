@@ -1,56 +1,80 @@
+## Sernitas Care
 
-## Marketing--TailwindCSS-Fundamental-Project-2
+Sernitas Care is a professional home nursing service platform built with **React**, **Vite**, and **TailwindCSS**. This project provides a modern, responsive, and user-friendly interface to showcase nursing services, testimonials, and contact options for clients.
 
-![Screenshot 2024-09-29 at 13 38 37](https://github.com/user-attachments/assets/b2278b37-2816-4221-bf54-c67b599ae35b) ![Screenshot 2024-09-29 at 13 38 55](https://github.com/user-attachments/assets/45aebcc2-afae-4de3-9dc6-0117bc919b0e) ![Screenshot 2024-09-29 at 13 39 14](https://github.com/user-attachments/assets/3070285b-ea27-472c-a673-2cea04e7c67e) ![Screenshot 2024-09-29 at 13 39 26](https://github.com/user-attachments/assets/d0f6fe8d-6dda-4b98-a82f-56789008d355) ![Screenshot 2024-09-29 at 13 40 03](https://github.com/user-attachments/assets/70048532-506c-4e1e-9e45-670c4fe5524f)
+## Features
 
-Marketing-TailwindCSS-Template is a Static React-Vite Frontend Landing Page, using React-Vite, TailwindCSS, Framer-Motion, React-Animate, React-Icons, and deployed on Netlify.
+- **Responsive Design**: Fully responsive layout optimized for all devices.
+- **Modern UI/UX**: Built with TailwindCSS for a clean and professional design.
+- **Dynamic Components**: Includes interactive components like accordions, testimonials, and modals.
+- **Lazy Loading**: Uses React's `React.lazy` for efficient loading of components.
+- **Email Integration**: Backend powered by **Express** and **Nodemailer** for sending emails.
+- **Smooth Animations**: Integrated with **Framer Motion** for smooth animations.
+- **Routing**: Client-side routing with **React Router**.
+- **Environment Configuration**: Secure environment variables using .env.
 
-**Online Live:** https://marketing-arnob.netlify.app
+## Tech Stack
 
-*Note that the feedback widget is integrated from https://github.com/arnobt78/Feedback-Widget--ReactVite*
+## Frontend
 
-## To Install Dependencies
+- **React**: Component-based UI library.
+- **Vite**: Fast build tool for modern web projects.
+- **TailwindCSS**: Utility-first CSS framework.
+- **Framer Motion**: Animation library for React.
+- **React Icons**: Icon library for React.
 
-To install all dependencies, run this command from your project folder: `npm install`
+## Backend
 
-## To Install NodeJS
+- **Express**: Lightweight Node.js framework.
+- **Nodemailer**: Email sending service.
+- **Body-Parser**: Middleware for parsing request bodies.
+- **CORS**: Middleware for handling cross-origin requests.
 
-Make sure you have NodeJS installed on your machine first, The installation instructions are here: https://nodejs.org/en/
+## Other Tools
 
-Run on terminal: `npm run dev`
+- **ESLint**: Linting for consistent code quality.
+- **Zod**: Schema validation for form inputs.
 
-Run on your browser Local: `http://localhost:5173/`
+## Installation
 
-## To Create TailwindCSS React Vite Project
+1. Clone the repository:
 
-Open up your terminal and bootstrap a new React Vite App by: `npm create vite@latest my-project -- --template react`
+   ```bash
+   git clone https://github.com/arnobt78/sernitas-care.git
+   cd sernitas-care
+   ```
 
-Then go to that project folder, and write this command via terminal from your project folder: `npm install -D tailwindcss postcss autoprefixer`
+2. Install dependencies:
 
-Then install tailwindcss and its peer dependencies, then generate your `tailwind.config.js` and `postcss.config.js` files: `npx tailwindcss init -p`
+   ```bash
+   npm install
+   ```
 
-Then add the paths to all your template files in your tailwind.config.js file.
+3. Create a .env file in the root directory and configure the following variables:
 
-```
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
+   ```env
+   VITE_EMAIL_USER=your-email@example.com
+   VITE_EMAIL_PASS=your-email-password
+   VITE_SMTP_HOST=smtp.example.com
+   VITE_SMTP_PORT=465
+   VITE_SMTP_SECURE=true
+   ```
 
-Then add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+4. Start the development server:
 
-```
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
+   ```bash
+   npm run dev
+   ```
 
-(For more details, visit: https://tailwindcss.com/docs/guides/vite )
+5. Run the backend server:
+
+   ```bash
+   node server.js
+   ```
+
+## Scripts
+
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the project for production.
+- `npm run preview`: Preview the production build.
+- `npm run lint`: Run ESLint to check for code quality.
