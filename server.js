@@ -90,12 +90,18 @@ app.use(
       "http://localhost:5173", // Local frontend
       "https://develop-testing-1.netlify.app", // Netlify frontend
     ],
-    methods: ["GET", "POST"], // Allow specific HTTP methods
+    methods: ["GET", "POST", "OPTIONS"], // Allow specific HTTP methods
     allowedHeaders: ["Content-Type"], // Allow specific headers
+    credentials: true, // Allow cookies and credentials
   })
 );
 
-// API Route for Netlify and localhost
+// Default route for Render
+app.get("/", (req, res) => {
+  res.send("Sernitas Care Backend is Running!");
+});
+
+// API Route for sending emails
 app.post("/api/send-email", async (req, res) => {
   try {
     const { fullname, email, phone, message } = req.body;
