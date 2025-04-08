@@ -177,7 +177,7 @@ import { slideBottom } from "../../utility/animation";
 const NavbarLinks = [
   { id: 1, title: "Home", link: "/" },
   { id: 2, title: "Services", link: "#" },
-  { id: 3, title: "Magazine", link: "/magazine" },
+  // { id: 3, title: "Magazine", link: "/magazine" },
   { id: 4, title: "About Us", link: "/about-us" },
 ];
 

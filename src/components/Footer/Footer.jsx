@@ -11,6 +11,8 @@ import {
   FaXing,
 } from "react-icons/fa";
 import Logo from "../../assets/logo-bg.png";
+import PartnersSection from "./PartnersSection"; // Import the PartnersSection component
+import AffiliatesSection from "./AffiliatesSection"; // Import the AffiliatesSection component
 
 const Footer = () => {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -41,6 +43,7 @@ const Footer = () => {
   return (
     <>
       <ScrollToTop /> {/* Ensure ScrollToTop is included */}
+      <AffiliatesSection /> {/* Add AffiliatesSection above the footer */}
       <footer className="bg-primary text-white py-10">
         <motion.div
           initial="hidden"
@@ -213,6 +216,7 @@ const Footer = () => {
           </p>
         </motion.div>
       </footer>
+      <PartnersSection /> {/* Add PartnersSection below the footer */}
     </>
   );
 };

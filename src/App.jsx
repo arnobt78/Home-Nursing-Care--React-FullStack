@@ -32,7 +32,7 @@ const GeneralTerms = React.lazy(() =>
 );
 const Contact = React.lazy(() => import("./components/Contact/Contact"));
 const AboutUs = React.lazy(() => import("./components/AboutUs/AboutUs"));
-const Magazine = React.lazy(() => import("./components/Magazine/Magazine"));
+// const Magazine = React.lazy(() => import("./components/Magazine/Magazine"));
 const AccordionSection = React.lazy(() =>
   import("./components/Accordion/AccordionSection")
 );
@@ -64,7 +64,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/magazine" element={<Magazine />} />
+            {/* <Route path="/magazine" element={<Magazine />} /> */}
             <Route path="/imprint" element={<Imprint />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/general-terms" element={<GeneralTerms />} />
