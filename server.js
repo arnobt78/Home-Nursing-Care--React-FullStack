@@ -95,7 +95,7 @@ app.use(
   })
 );
 
-// API Route
+// API Route for Netlify and localhost
 app.post("/api/send-email", async (req, res) => {
   try {
     const { fullname, email, phone, message } = req.body;
