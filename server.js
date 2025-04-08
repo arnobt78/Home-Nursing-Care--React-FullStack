@@ -71,9 +71,9 @@
 
 import express from "express";
 import nodemailer from "nodemailer";
-import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 
@@ -83,13 +83,15 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(bodyParser.json());
 
-// Allow requests from multiple origins (localhost and Netlify)
+// Allow requests from multiple origins (Netlify and localhost)
 app.use(
   cors({
     origin: [
       "http://localhost:5173", // Local frontend
       "https://develop-testing-1.netlify.app", // Netlify frontend
     ],
+    methods: ["GET", "POST"], // Allow specific HTTP methods
+    allowedHeaders: ["Content-Type"], // Allow specific headers
   })
 );
 
