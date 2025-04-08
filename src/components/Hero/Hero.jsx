@@ -4,6 +4,7 @@ import HeroImg3 from "../../assets/nurse-3.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { slideUp } from "../../utility/animation";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   // Array of background images
@@ -33,6 +34,8 @@ const Hero = () => {
     },
     exit: { opacity: 0, scale: 1.1, transition: { duration: 1.5 } },
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -94,6 +97,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.1 }} // Enlarge button on hover
               whileTap={{ scale: 0.95 }} // Slightly shrink button on tap
+              onClick={() => navigate("/application-form")}
               className="primary-btn border-2 border-white hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 shadow-md hover:shadow-lg"
             >
               Start Application

@@ -36,6 +36,12 @@ const AboutUs = React.lazy(() => import("./components/AboutUs/AboutUs"));
 const AccordionSection = React.lazy(() =>
   import("./components/Accordion/AccordionSection")
 );
+const ApplicationForm = React.lazy(() =>
+  import("./components/ApplicationForm/ApplicationForm")
+);
+
+import PropTypes from "prop-types";
+
 const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
@@ -49,6 +55,33 @@ const Home = () => {
   );
 };
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("ErrorBoundary caught an error", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong. Please try again later.</h1>;
+    }
+    return this.props.children;
+  }
+}
+
+// Add PropTypes validation
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired, // Validate that 'children' is a React node and required
+};
+
 const App = () => {
   const location = useLocation();
 
@@ -56,7 +89,7 @@ const App = () => {
   const currentPath = useMemo(() => location.pathname, [location.pathname]);
 
   return (
-    <>
+    <ErrorBoundary>
       <ScrollToTop />
       <Navbar />
       <main>
@@ -69,13 +102,14 @@ const App = () => {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/general-terms" element={<GeneralTerms />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/application-form" element={<ApplicationForm />} />
           </Routes>
         </Suspense>
       </main>
       {currentPath !== "/imprint" &&
         currentPath !== "/privacy-policy" &&
         currentPath !== "/general-terms" && <Footer />}
-    </>
+    </ErrorBoundary>
   );
 };
 
