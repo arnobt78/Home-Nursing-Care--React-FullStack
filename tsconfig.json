@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src"],
+    "skipLibCheck": true // Skip type checking for declaration files
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "src/assets/**/*", // Exclude all files in the assets directory
+    "src/components/**/*", // Exclude all files in the components directory
+    "src/utility/**/*" // Exclude all files in the utility directory
+  ]
+}

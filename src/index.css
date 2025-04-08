@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .primary-btn {
+    @apply bg-primary text-white py-2 px-4 rounded-lg shadow-sm hover:shadow-md;
+  }
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow only the main browser scrollbar */
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+main {
+  height: 100%; /* Ensure the main content takes full height */
+  overflow: hidden; /* Prevent inner scrollbars */
+}
+
+.container {
+  overflow: visible !important; /* Ensure no inner scrollbars */
+  max-width: 100%; /* Prevent horizontal overflow */
+}
+
+/* Ensure no overflow issues for motion.div elements */
+.overflow-hidden {
+  overflow: hidden;
+}
