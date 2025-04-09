@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import { motion } from "framer-motion";
+
+import TestimonialImg from "../../assets/hr-2.jpg"; // Replace with your thumbnail image path
 import { FaPlay } from "react-icons/fa";
-import TestimonialImg from "../../assets/nurse-3.jpg"; // Replace with your thumbnail image path
+import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa"; // Import the quote icons
 
 Modal.setAppElement("#root"); // Required for accessibility
 
@@ -13,20 +15,22 @@ const TestimonialSection2 = () => {
   const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // Replace with your YouTube video ID
 
   return (
-    <div className="bg-primary/40 py-16">
+    <div className="bg-primary/40 py-4">
       <motion.div
-        className="container flex flex-col md:flex-row-reverse items-center justify-center gap-8" // Added justify-center for horizontal alignment
+        className="container flex flex-col md:flex-row-reverse items-center justify-center gap-8"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 0.2 }} // Trigger animation every time it enters the viewport
         transition={{ duration: 0.8 }}
       >
         {/* Circular Video Thumbnail with Border Animation */}
         <motion.div
-          className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden cursor-pointer flex-shrink-0" // Added flex-shrink-0 to prevent resizing
+          className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden cursor-pointer flex-shrink-0"
           whileHover={{ scale: 1.05 }}
           onClick={() => setIsOpen(true)}
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: -100, opacity: 0 }} // Start from the left
+          whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+          viewport={{ once: false, amount: 0.2 }} // Trigger animation every time it enters the viewport
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Border Circle */}
@@ -37,7 +41,7 @@ const TestimonialSection2 = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
           <img
-            src={TestimonialImg} // Replace with your thumbnail image
+            src={TestimonialImg}
             alt="Testimonial Thumbnail"
             className="w-full h-full object-cover rounded-full"
           />
@@ -48,24 +52,29 @@ const TestimonialSection2 = () => {
 
         {/* Testimonial Text */}
         <motion.div
-          className="flex-1 text-gray-800 text-center md:text-left" // Added text-center for small screens
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          className="flex-1 text-gray-800 text-center md:text-left px-10"
+          initial={{ x: 100, opacity: 0 }} // Start from the right
+          whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+          viewport={{ once: false, amount: 0.2 }} // Trigger animation every time it enters the viewport
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="text-lg text-justify leading-relaxed">
-            Ich arbeite seit ca. <strong>18 Jahren</strong> als Altenpflegerin
-            im Altenheim. Pflege Stellenangebote zu vergleichen ist aufwendig
-            und oft nichtssagend. Bewerbungsschreiben mit allem Drum und Dran
-            ist nicht meins. Also habe ich mich bei Pflegia registriert und
-            meine Wünsche & Anforderungen angegeben. Per SMS habe ich passende
-            Stellenangebote von Pflegeheimen in meiner Umgebung bekommen und
-            konnte alle Infos der Stellen auf einen Blick sehen: Gehalt,
-            Fahrtweg, Vorteile, Ansprechpartner, Schichtsystem... So habe ich
-            einen Job gefunden, in dem ich sehr zufrieden bin!
+          <div className="relative">
+            {/* FaQuoteLeft dynamically aligned to the start of the paragraph */}
+            <FaQuoteLeft className="absolute -top-2 -left-10 text-primary text-3xl md:text-4xl" />
+            <p className="text-primary text-lg text-justify leading-relaxed">
+              Bei Sernitas Care stehen die Menschen im Mittelpunkt. Mit Herz,
+              Respekt und echter Hingabe kümmern wir uns um das Wohl unserer
+              Klientinnen und Klienten. Für uns ist Pflege mehr als nur ein
+              Beruf – es ist eine Herzensangelegenheit. Denn wahre Fürsorge
+              beginnt mit Menschlichkeit.
+            </p>
+            {/* FaQuoteRight dynamically aligned to the bottom of the paragraph */}
+            <FaQuoteRight className="absolute -bottom-4 right-0 text-primary text-3xl md:text-4xl" />
+          </div>
+          <p className="mt-4 text-primary text-lg italic font-bold">
+            Summyaah Yildiz
           </p>
-          <p className="mt-4 text-xl font-bold">Astrid</p>
-          <p className="text-gray-600">Altenpflegerin im Altenheim</p>
+          <p className="text-primary/80 italic">HR - Accountant</p>
         </motion.div>
       </motion.div>
 

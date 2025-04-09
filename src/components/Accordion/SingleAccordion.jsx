@@ -3,9 +3,7 @@ import { motion } from "framer-motion";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import PropTypes from "prop-types";
 
-const SingleAccordion = ({ title, info }) => {
-  const [showInfo, setShowInfo] = useState(false);
-
+const SingleAccordion = ({ title, info, isActive, onToggle }) => {
   return (
     <motion.article
       className="question shadow-lg mb-4"
@@ -19,21 +17,21 @@ const SingleAccordion = ({ title, info }) => {
           <h5 className="text-lg font-semibold text-white">{title}</h5>
           <button
             className="bg-white text-primary rounded-full w-8 h-8 flex items-center justify-center"
-            onClick={() => setShowInfo(!showInfo)}
+            onClick={onToggle} // Call the toggle function
           >
-            {showInfo ? (
-              <AiOutlineMinus className="text-xl font-bold" /> // Apply bold styling to the icon
+            {isActive ? (
+              <AiOutlineMinus className="text-xl font-bold" />
             ) : (
-              <AiOutlinePlus className="text-xl font-bold" /> // Apply bold styling to the icon
+              <AiOutlinePlus className="text-xl font-bold" />
             )}
           </button>
         </header>
       </div>
 
       {/* Answer Content */}
-      {showInfo && (
+      {isActive && (
         <motion.div
-          className="bg-primary/70 p-4 rounded-lg"
+          className="bg-primary/80 p-4 rounded-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -47,8 +45,10 @@ const SingleAccordion = ({ title, info }) => {
 
 // Add PropTypes for props validation
 SingleAccordion.propTypes = {
-  title: PropTypes.string.isRequired, // 'title' must be a string and is required
-  info: PropTypes.string.isRequired, // 'info' must be a string and is required
+  title: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired, // Whether the accordion is active
+  onToggle: PropTypes.func.isRequired, // Function to toggle the accordion
 };
 
 export default SingleAccordion;

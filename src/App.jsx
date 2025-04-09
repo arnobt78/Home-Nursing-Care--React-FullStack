@@ -33,12 +33,19 @@ const GeneralTerms = React.lazy(() =>
 const Contact = React.lazy(() => import("./components/Contact/Contact"));
 const AboutUs = React.lazy(() => import("./components/AboutUs/AboutUs"));
 // const Magazine = React.lazy(() => import("./components/Magazine/Magazine"));
+const TeamValuesSection = React.lazy(() =>
+  import("./components/TeamValuesSection/TeamValuesSection")
+);
 const AccordionSection = React.lazy(() =>
   import("./components/Accordion/AccordionSection")
 );
 const ApplicationForm = React.lazy(() =>
   import("./components/ApplicationForm/ApplicationForm")
 );
+const StatsCounterSection = React.lazy(() =>
+  import("./components/StatsCounterSection/StatsCounterSection")
+);
+const Services = React.lazy(() => import("./components/Services/Services"));
 
 import PropTypes from "prop-types";
 
@@ -46,8 +53,10 @@ const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Hero />
+      <StatsCounterSection />
       <TestimonialSection1 />
       <Cards />
+      <TeamValuesSection />
       <TestimonialSection2 />
       <ReviewSection />
       <AccordionSection />
@@ -96,6 +105,7 @@ const App = () => {
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/about-us" element={<AboutUs />} />
             {/* <Route path="/magazine" element={<Magazine />} /> */}
             <Route path="/imprint" element={<Imprint />} />

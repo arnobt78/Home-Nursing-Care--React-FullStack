@@ -1,6 +1,6 @@
-import HeroImg1 from "../../assets/nurse-1.jpg";
-import HeroImg2 from "../../assets/nurse-2.jpg";
-import HeroImg3 from "../../assets/nurse-3.jpg";
+import HeroImg1 from "../../assets/hero-1.jpg";
+import HeroImg2 from "../../assets/hero-2.jpg";
+import HeroImg3 from "../../assets/hero-3.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { slideUp } from "../../utility/animation";
@@ -64,21 +64,47 @@ const Hero = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="text-4xl xl:text-5xl font-bold"
+            className="text-4xl xl:text-5xl font-bold leading-tight text-center"
           >
-            Trusted Home Nursing Professionals{" "}
-            <span className="text-gray-300 underline">Sernitas Care</span>
+            Verlässliche Pflegekräfte für Ihr Zuhause <br />
+            <span className="">Sernitas Care</span>
           </motion.h1>
+
           <motion.p
             variants={slideUp(0.5)}
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="mt-4 text-lg"
+            className="mt-4 text-lg xl:text-xl text-center leading-relaxed"
           >
-            Providing expert, compassionate, and personalized home nursing
-            services to ensure comfort, dignity, and well-being for your loved
-            ones.
+            Mit Herz, Kompetenz und Fürsorge begleiten wir Ihre Liebsten im
+            Alltag – individuell, persönlich und in vertrauter Umgebung. <br />
+            Weil Würde, Geborgenheit und Lebensqualität an erster Stelle stehen.
+          </motion.p>
+
+          {/* Bullet Points */}
+          <motion.ul
+            variants={slideUp(0.8)}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: false }}
+            className="mt-6 text-slate-300 flex flex-row justify-center items-center text-lg xl:text-xl text-center list-disc list-inside gap-x-4"
+          >
+            <li>Pflege, die ankommt.</li>
+            <li>Zu Hause.</li>
+            <li>Mit Liebe.</li>
+          </motion.ul>
+
+          {/* Optional Subtitle/Slogan */}
+          <motion.p
+            variants={slideUp(1)}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: false }}
+            className="mt-8 text-md xl:text-lg text-center italic text-gray-200"
+          >
+            Ihre vertrauensvolle Pflegepartnerin für ein selbstbestimmtes Leben
+            daheim.
           </motion.p>
           <motion.div
             variants={slideUp(0.8)}
@@ -92,7 +118,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }} // Slightly shrink button on tap
               className="primary-btn border-2 border-white hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 shadow-md hover:shadow-lg"
             >
-              More News
+              Mehr erfahren
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.1 }} // Enlarge button on hover
@@ -100,7 +126,7 @@ const Hero = () => {
               onClick={() => navigate("/application-form")}
               className="primary-btn border-2 border-white hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 shadow-md hover:shadow-lg"
             >
-              Start Application
+              Kostenlos beraten lassen
             </motion.button>
           </motion.div>
         </div>

@@ -175,10 +175,10 @@ import { motion } from "framer-motion";
 import { slideBottom } from "../../utility/animation";
 
 const NavbarLinks = [
-  { id: 1, title: "Home", link: "/" },
-  { id: 2, title: "Services", link: "#" },
+  { id: 1, title: "Willkommen", link: "/" },
+  { id: 2, title: "Was wir tun", link: "/services" },
   // { id: 3, title: "Magazine", link: "/magazine" },
-  { id: 4, title: "About Us", link: "/about-us" },
+  { id: 4, title: "Über uns", link: "/about-us" },
 ];
 
 const Navbar = () => {
@@ -252,7 +252,7 @@ const Navbar = () => {
                 onClick={handleContactClick}
                 className="primary-btn border-2 border-white hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 shadow-md hover:shadow-lg"
               >
-                Contact Us
+                Kontakt
               </button>
             </div>
           </div>

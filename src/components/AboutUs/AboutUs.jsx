@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { slideUp } from "../../utility/animation";
 import { FaCheckCircle } from "react-icons/fa";
 
-import AboutImg1 from "../../assets/nurse-1.jpg";
-import AboutImg2 from "../../assets/nurse-2.jpg";
-import AboutImg3 from "../../assets/nurse-3.jpg";
+import AboutImg1 from "../../assets/hero-3.jpg";
+import AboutImg2 from "../../assets/hero-1.jpg";
+import AboutImg3 from "../../assets/hero-4.jpg";
 
 const team = [
   {

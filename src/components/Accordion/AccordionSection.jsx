@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import SingleAccordion from "./SingleAccordion";
+import { useState } from "react";
+
 import accordionData from "./data";
+import SingleAccordion from "./SingleAccordion";
 
 // Animation function for sliding up
 const slideUp = (delay = 0) => ({
@@ -17,34 +19,40 @@ const slideUp = (delay = 0) => ({
 });
 
 const AccordionSection = () => {
+  const [activeQuestionId, setActiveQuestionId] = useState(null); // Track the active question
+
+  const handleToggle = (id) => {
+    setActiveQuestionId((prevId) => (prevId === id ? null : id)); // Toggle the active question
+  };
+
   return (
     <motion.section
       className="container mx-auto px-4 py-16"
       initial="initial"
       whileInView="animate"
-      viewport={{ amount: 0.2 }} // Trigger animation when 20% of the section is visible
+      viewport={{ amount: 0.2 }}
     >
       {/* Header */}
       <motion.h2
-        variants={slideUp(0.2)} // Use the slideUp animation
+        variants={slideUp(0.2)}
         initial="initial"
-        whileInView="animate" // Trigger animation every time it enters the viewport
-        viewport={{ amount: 0.2 }} // Trigger when 20% of the header is visible
+        whileInView="animate"
+        viewport={{ amount: 0.2 }}
         className="text-3xl font-bold text-center text-primary mb-10"
       >
-        Common Questions, Simple Answers!
+        Fragen, die oft gestellt werden – Antworten, die helfen!
       </motion.h2>
 
       {/* Accordion Questions */}
       <motion.div
         className="max-w-3xl mx-auto"
         initial="initial"
-        whileInView="animate" // Trigger animation every time it enters the viewport
-        viewport={{ amount: 0.2 }} // Trigger when 20% of the container is visible
+        whileInView="animate"
+        viewport={{ amount: 0.2 }}
         variants={{
           animate: {
             transition: {
-              staggerChildren: 0.2, // Delay between each question animation
+              staggerChildren: 0.2,
             },
           },
         }}
@@ -52,12 +60,16 @@ const AccordionSection = () => {
         {accordionData.map((question, index) => (
           <motion.div
             key={question.id}
-            variants={slideUp(index * 0.2)} // Apply staggered animation for each question
+            variants={slideUp(index * 0.2)}
             initial="initial"
-            whileInView="animate" // Trigger animation every time it enters the viewport
+            whileInView="animate"
             viewport={{ amount: 0.2 }}
           >
-            <SingleAccordion {...question} />
+            <SingleAccordion
+              {...question}
+              isActive={activeQuestionId === question.id} // Pass active state
+              onToggle={() => handleToggle(question.id)} // Handle toggle
+            />
           </motion.div>
         ))}
       </motion.div>

@@ -2,35 +2,40 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 
+import ReviewImg1 from "../../assets/hr-1.jpg";
+import ReviewImg2 from "../../assets/hr-2.jpg";
+import ReviewImg3 from "../../assets/hr-3.jpg";
+import ReviewImg4 from "../../assets/hr-4.jpg";
+
 // Dummy data for reviews
 const reviews = [
   {
     id: 1,
-    name: "Susan Smith",
-    job: "Web Developer",
-    image: "https://www.course-api.com/images/people/person-1.jpeg",
-    text: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry.",
+    name: "Dr. Ali Yildiz",
+    job: "CEO",
+    image: ReviewImg1,
+    text: "„Wir sind ein weltoffenes und multikulturelles Team mit einem klaren Auftrag und exzellentem Know-how, das zusammen über rund ein halbes Jahrhundert Berufserfahrung verfügt.“",
   },
   {
     id: 2,
-    name: "Anna Johnson",
-    job: "Web Designer",
-    image: "https://www.course-api.com/images/people/person-2.jpeg",
-    text: "Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.",
+    name: "Summyaah Yildiz",
+    job: "Angehörige/r eines Pflegebedürftigen",
+    image: ReviewImg2,
+    text: "„Sernitas Care hat unser Leben verändert. Die Pflegerinnen sind nicht nur professionell, sondern auch unglaublich einfühlsam. Meine Mutter fühlt sich endlich wieder wohl und gut betreut – fast wie in einer zweiten Familie.“",
   },
   {
     id: 3,
-    name: "Peter Jones",
-    job: "Intern",
-    image: "https://www.course-api.com/images/people/person-4.jpeg",
-    text: "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
+    name: "Andre Piper",
+    job: "Klient/in",
+    image: ReviewImg3,
+    text: "„Ich bin dankbar für die Unterstützung von Sernitas Care. Die Betreuung ist liebevoll, respektvoll und genau auf meine Bedürfnisse abgestimmt. Endlich fühle ich mich zu Hause sicher und verstanden.“",
   },
   {
     id: 4,
     name: "Bill Anderson",
-    job: "The Boss",
-    image: "https://www.course-api.com/images/people/person-3.jpeg",
-    text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic.",
+    job: "Angehörige/r",
+    image: ReviewImg4,
+    text: "„Die Mitarbeiter*innen von Sernitas Care nehmen sich wirklich Zeit. Man merkt, dass hier mit Herz gearbeitet wird. Die Kommunikation ist klar, freundlich und immer lösungsorientiert – so wünscht man sich das!“",
   },
 ];
 
@@ -110,7 +115,7 @@ const ReviewSection = () => {
         whileInView="animate"
         className="text-3xl font-bold text-center text-primary mb-10"
       >
-        Words That Inspire. Reviews That Matter.
+        Worte, die Mut machen. Rückmeldungen, die zählen.
       </motion.h2>
 
       {/* Left Arrow */}
@@ -161,9 +166,13 @@ const ReviewSection = () => {
               ></div>
             </div>
 
-            <h4 className="author text-xl font-bold text-gray-800">{name}</h4>
-            <p className="job text-sm uppercase text-primary mb-4">{job}</p>
-            <p className="info text-gray-600 leading-relaxed">{text}</p>
+            <h4 className="author text-xl font-bold text-primary italic">
+              {name}
+            </h4>
+            <p className="job text-sm uppercase text-primary/80 italic mb-4">
+              {job}
+            </p>
+            <p className="info text-primary italic leading-relaxed">{text}</p>
           </motion.div>
         </AnimatePresence>
       </article>

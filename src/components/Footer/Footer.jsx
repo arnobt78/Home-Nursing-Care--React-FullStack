@@ -62,8 +62,8 @@ const Footer = () => {
               alt="Sernitas Logo"
               className="w-[200px] mx-auto md:mx-0"
             />
-            <p className="text-lg">We are globalize health!</p>
-            <p className="text-lg font-medium">FOLLOW US</p>
+            <p className="text-lg">Wir globalisieren die Gesundheit!</p>
+            <p className="text-lg font-medium">Folgen Sie uns</p>
             <div className="flex justify-center md:justify-start gap-4">
               <a
                 href="#"
@@ -110,14 +110,22 @@ const Footer = () => {
             variants={rowVariants}
             className="space-y-4 text-center md:text-left"
           >
-            <h4 className="text-xl font-bold">Menu</h4>
+            <h4 className="text-xl font-bold">Menü</h4>
             <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => handleNavigation("/")} // Use handleNavigation
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  Home
+                  Willkommen
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavigation("/services")} // Use handleNavigation
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Was wir tun
                 </button>
               </li>
               <li>
@@ -125,7 +133,7 @@ const Footer = () => {
                   onClick={() => handleNavigation("/about-us")} // Use handleNavigation
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  About Us
+                  Über uns
                 </button>
               </li>
               <li>
@@ -133,7 +141,7 @@ const Footer = () => {
                   onClick={() => handleNavigation("/contact")} // Use handleNavigation
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  Contact
+                  Kontakt
                 </button>
               </li>
             </ul>
@@ -152,7 +160,7 @@ const Footer = () => {
                   href="/imprint"
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  Imprint
+                  Impressum
                 </a>
               </li>
               <li>
@@ -160,7 +168,7 @@ const Footer = () => {
                   href="/privacy-policy"
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  Privacy Policy
+                  Datenschutz
                 </a>
               </li>
               <li>
@@ -168,7 +176,7 @@ const Footer = () => {
                   href="/general-terms"
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  General Terms and Conditions
+                  AGB
                 </a>
               </li>
             </ul>
@@ -180,7 +188,7 @@ const Footer = () => {
             variants={rowVariants}
             className="space-y-4 text-center md:text-left"
           >
-            <h4 className="text-xl font-bold">Contact</h4>
+            <h4 className="text-xl font-bold">Kontakt aufnehmen</h4>
             <p>
               <span className="font-bold">E-mail:</span> info@sernitas-care.com
             </p>
