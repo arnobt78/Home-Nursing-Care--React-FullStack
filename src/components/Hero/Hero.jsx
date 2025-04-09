@@ -116,6 +116,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.1 }} // Enlarge button on hover
               whileTap={{ scale: 0.95 }} // Slightly shrink button on tap
+              onClick={() => navigate("/services")}
               className="primary-btn border-2 border-white hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 shadow-md hover:shadow-lg"
             >
               Mehr erfahren
