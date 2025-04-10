@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import Cards from "../Cards/Cards";
+import { slideUp } from "../../utility/animation";
 
 import teamImage from "../../assets/service-3.jpg";
 
@@ -70,6 +71,24 @@ const Services = () => {
 
       {/* Cards Section */}
       <Cards />
+
+      {/* Footer Service Section */}
+      <motion.h2
+        variants={slideUp(0.2)}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }} // Ensure animation runs only once
+        className="text-lg font-medium text-center text-primary/90 p-4 md:text-md"
+      >
+        Für weitere Informationen, Beratung und ein persönliches Gespräch –
+        selbstverständlich kostenlos – kontaktieren Sie uns gerne telefonisch
+        unter +49 234 966 46 480 oder per E-Mail an info@sernitas-care.com.
+        <br />
+        <br />
+        Wir freuen uns darauf, für Sie da zu sein.
+        <br />
+        Vielen Dank für Ihr Vertrauen!
+      </motion.h2>
     </>
   );
 };

@@ -164,6 +164,20 @@ const Cards = () => {
           Weil Fürsorge bei uns Herzenssache ist
         </motion.h2>
 
+        {/* Sub Section*/}
+        <motion.h2
+          variants={slideUp(0.2)}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }} // Ensure animation runs only once
+          className="text-base text-center text-primary/90 mb-10"
+        >
+          Wir unterstützen Menschen mit körperlichen oder psychischen
+          Beeinträchtigungen oder auch mit gesundheitlich bedingten Belastungen
+          bzw. Anforderungen mit individuell angepassten Leistungen. Gerne
+          beraten wir Sie!
+        </motion.h2>
+
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {cardsData.map((card, index) => (
