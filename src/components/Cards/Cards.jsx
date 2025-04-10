@@ -158,6 +158,7 @@ const Cards = () => {
           variants={slideUp(0.2)}
           initial="initial"
           whileInView="animate"
+          viewport={{ once: true }} // Ensure animation runs only once
           className="text-3xl font-bold text-center text-primary mb-10"
         >
           Weil Fürsorge bei uns Herzenssache ist
@@ -171,6 +172,7 @@ const Cards = () => {
               variants={slideUp(index * 0.2)}
               initial="initial"
               whileInView="animate"
+              viewport={{ once: true }} // Ensure animation runs only once
               className={`bg-primary/80 shadow-xl rounded-xl px-5 py-10 text-center flex flex-col justify-center items-center gap-5 md:max-w-[280px] mx-auto `}
             >
               <img
