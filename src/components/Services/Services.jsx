@@ -4,18 +4,18 @@ import Cards from "../Cards/Cards";
 
 import teamImage from "../../assets/service-3.jpg";
 
-const fadeIn = (delay = 0) => ({
-  initial: { opacity: 0, y: 20 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: "easeIn",
-      delay,
-    },
-  },
-});
+// const fadeIn = (delay = 0) => ({
+//   initial: { opacity: 0, y: 20 },
+//   animate: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 1,
+//       ease: "easeIn",
+//       delay,
+//     },
+//   },
+// });
 
 const Services = () => {
   return (

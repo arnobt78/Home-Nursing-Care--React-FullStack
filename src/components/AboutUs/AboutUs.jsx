@@ -3,33 +3,38 @@ import { motion, AnimatePresence } from "framer-motion";
 import { slideUp } from "../../utility/animation";
 import { FaCheckCircle } from "react-icons/fa";
 
-import AboutImg1 from "../../assets/hero-3.jpg";
-import AboutImg2 from "../../assets/hero-1.jpg";
-import AboutImg3 from "../../assets/hero-4.jpg";
+import AboutImg1 from "../../assets/hr-4.jpg";
+import AboutImg2 from "../../assets/hr-2.jpg";
+import AboutImg3 from "../../assets/hr-3.jpg";
+import AboutImg4 from "../../assets/hero-1.jpg";
 
 const team = [
   {
-    name: "Sarah Müller",
-    title: "Registered Nurse",
+    name: "Dr. Ali Yildiz",
+    title: "CEO",
     img: AboutImg1,
   },
   {
-    name: "Thomas Becker",
-    title: "Senior Care Specialist",
+    name: "Summyaah Yildiz",
+    title: "Personalbuchhalterin",
     img: AboutImg2,
   },
   {
-    name: "Anna Schmidt",
-    title: "Palliative Care Nurse",
+    name: "Andre Piper",
+    title: "Betriebsleiter",
     img: AboutImg3,
   },
 ];
 
 const services = [
-  "24/7 In-Home Nursing Support",
-  "Personalized Elderly Care Plans",
-  "Post-Surgery Rehabilitation",
-  "Palliative & Hospice Support",
+  "24/7 Pflege und Betreuung zu Hause",
+  "Individuelle Pflegepläne für Senior*innen",
+  "Rehabilitation und Unterstützung nach Operationen",
+  "Palliativ- und Hospizbegleitung mit Würde",
+  "Kostenlose Beratung und persönliche Pflegeeinschätzung",
+  "Unterstützung für Angehörige und enge Zusammenarbeit",
+  "Pflege mit Respekt, ohne Diskriminierung – unabhängig von Herkunft oder Religion",
+  "Bereitstellung notwendiger Pflegehilfsmittel und Alltagshilfen",
 ];
 
 const AboutUs = () => {
@@ -85,27 +90,29 @@ const AboutUs = () => {
         />
       </AnimatePresence> */}
 
-      {/* Hero Section */}
-      <section className="text-center">
+      {/* Hero Section*/}
+      {/* <section className="text-center">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-4xl md:text-6xl font-bold text-primary mb-4"
+          className="text-xl md:text-2xl font-bold text-primary mb-4"
         >
-          About Us
+          Über uns
         </motion.h1>
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          At Sernitas Care, we are dedicated to providing expert, compassionate,
-          and personalized home nursing services. Our mission is to ensure the
-          comfort, dignity, and well-being of your loved ones.
+          Bei Sernitas Care stehen der Mensch und seine Würde im Mittelpunkt.
+          Mit Herz, Fachwissen und echter Hingabe bieten wir individuelle und
+          liebevolle Pflege im eigenen Zuhause. Unser Ziel ist es, Ihren
+          Liebsten ein Leben in Geborgenheit, Selbstbestimmung und Vertrauen zu
+          ermöglichen – Tag für Tag.
         </p>
-      </section>
+      </section>  */}
 
       {/* Mission Section */}
       <section className="grid md:grid-cols-2 gap-10 items-center">
         <motion.img
-          src={AboutImg2}
+          src={AboutImg4}
           alt="Company Mission"
           className="w-full rounded-2xl shadow-lg"
           initial={{ opacity: 0, x: -50 }}
@@ -117,21 +124,59 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-semibold text-primary mb-4">
-            Our Mission
+          <h2 className="text-2xl font-semibold text-primary mb-4">
+            Unsere Mission
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            At Sernitas Care, we aim to provide compassionate, personalized care
-            that empowers individuals and families. Our mission is to bring
-            hospital-grade nursing into the comfort of your home.
+            Bei Sernitas Care ist es unsere Herzensaufgabe, Menschen mit
+            Mitgefühl, Respekt und individueller Fürsorge zu begleiten. Wir
+            möchten pflegebedürftigen Menschen und ihren Familien Kraft und
+            Vertrauen schenken – und gleichzeitig professionelle Pflege auf
+            Klinikniveau direkt in die Geborgenheit des eigenen Zuhauses
+            bringen.
           </p>
         </motion.div>
       </section>
 
+      {/* Unique Section */}
+      <section className="bg-primary/10 rounded-3xl p-10 shadow-inner">
+        <motion.h2
+          className="text-3xl font-semibold text-primary mb-4 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          Was uns besonders macht
+        </motion.h2>
+        <motion.p
+          className="text-gray-700 max-w-4xl mx-auto text-center text-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          Bei Sernitas Care steht nicht nur die Pflege im Mittelpunkt – sondern
+          der Mensch in seiner Ganzheit. Mit Herz, Verstand und tiefem Respekt
+          begleiten wir unsere Pflegekund*innen auf ihrem individuellen Weg. Wir
+          nehmen uns Zeit, hören zu und gestalten Pflege, die nicht nur
+          professionell, sondern auch menschlich ist.
+          <br />
+          <br />
+          Unsere Stärke liegt in der Verbindung aus fachlicher Kompetenz, echter
+          Nähe und einem tiefen Verständnis für die Bedürfnisse jedes Einzelnen.
+          Wir glauben daran, dass würdevolle Pflege zu Hause möglich ist – mit
+          Vertrauen, Empathie und einem Team, das seine Arbeit als Berufung
+          versteht.
+          <br />
+          <br />
+          Was uns besonders macht? Wir pflegen mit dem Herzen. Fürsorge ist bei
+          uns kein Service – sie ist unsere Herzenssache.
+        </motion.p>
+      </section>
+
       {/* Services Section */}
       <section>
-        <h2 className="text-3xl font-semibold text-primary mb-6 text-center">
-          Our Services
+        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
+          Was wir anbieten
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, idx) => (
@@ -151,10 +196,10 @@ const AboutUs = () => {
 
       {/* Team Section */}
       <section>
-        <h2 className="text-3xl font-semibold text-primary mb-6 text-center">
-          Meet Our Team
+        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
+          Lernen Sie unser Team kennen
         </h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 ">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -168,37 +213,15 @@ const AboutUs = () => {
                 alt={member.name}
                 className="w-full h-64 object-cover"
               />
-              <div className="p-4 text-center">
+              <div className="p-4 text-center bg-primary/10">
                 <h3 className="text-xl font-semibold text-primary">
                   {member.name}
                 </h3>
-                <p className="text-gray-600">{member.title}</p>
+                <p className="text-primary">{member.title}</p>
               </div>
             </motion.div>
           ))}
         </div>
-      </section>
-
-      {/* Unique Section */}
-      <section className="bg-primary/10 rounded-3xl p-10 shadow-inner">
-        <motion.h2
-          className="text-3xl font-semibold text-primary mb-4 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          What Makes Us Unique
-        </motion.h2>
-        <motion.p
-          className="text-gray-700 max-w-4xl mx-auto text-center text-lg"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          From tailored care plans to our responsive 24/7 support team, Sernitas
-          Care is dedicated to offering peace of mind for families and
-          respectful, expert care for individuals in need.
-        </motion.p>
       </section>
     </motion.div>
   );
