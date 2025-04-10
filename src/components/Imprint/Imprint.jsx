@@ -15,7 +15,7 @@ const Imprint = () => {
           viewport={{ once: true }}
           className="text-3xl font-bold mb-6 text-primary"
         >
-          Imprint
+          Impressum
         </motion.h1>
         <div className="relative overflow-hidden">
           <motion.div
@@ -23,9 +23,9 @@ const Imprint = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="space-y-6 text-primary leading-relaxed"
+            className="space-y-6 text-primary/90 leading-relaxed"
           >
-            <p>
+            {/* <p>
               <strong>Information according to § 5 TMG</strong>
               <br />
               Sernitas GmbH
@@ -116,6 +116,99 @@ const Imprint = () => {
                 https://www.verbraucher-schlichter.de
               </a>
               ) is responsible.
+            </p> */}
+            <p>
+              <strong>Angaben gemäß § 5 TMG</strong>
+              <br />
+              Sernitas GmbH
+              <br />
+              Universitätstraße 136
+              <br />
+              44799 Bochum
+            </p>
+            <p>
+              Handelsregister: HRB 19884
+              <br />
+              Registergericht: Amtsgericht Bochum
+            </p>
+            <p>
+              <strong>Adresse Türkei:</strong>
+              <br />
+              İçerenköy Mah. Değirmenyolu Cad.
+              <br />
+              Kutay İş Merkezi B Blok K:4
+              <br />
+              Ataşehir / İstanbul
+            </p>
+            <p>
+              Telefonnummer: +90 216 912 22 04
+              <br />
+              Fax: +90 216 740 09 88
+            </p>
+            <p>
+              <strong>Vertreten durch:</strong>
+              <br />
+              Dr. Ali YILDIZ
+            </p>
+            <p>
+              <strong>Kontakt</strong>
+              <br />
+              Telefon: +49 234 966 46 480
+              <br />
+              Fax: +49 234 966 45 602
+              <br />
+              E-Mail: info@sernitas.com
+            </p>
+            <p>
+              Telefon: +90 216 519 0083
+              <br />
+              Fax: +90 216 519 0073
+            </p>
+            <p>
+              <strong>Umsatzsteuer-ID</strong>
+              <br />
+              Umsatzsteuer-Identifikationsnummer gemäß § 27 a
+              Umsatzsteuergesetz: DE351180348
+            </p>
+            <p>
+              <strong>Redaktionell verantwortlich</strong>
+              <br />
+              Dr. Ali YILDIZ
+            </p>
+            <p>
+              <strong>EU-Streitbeilegung</strong>
+              <br />
+              Die Europäische Kommission stellt eine Plattform zur
+              Online-Streitbeilegung (OS) bereit:{" "}
+              <a
+                href="https://ec.europa.eu/consumers/odr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary underline"
+              >
+                https://ec.europa.eu/consumers/odr/
+              </a>
+              .
+            </p>
+            <p>Unsere E-Mail-Adresse finden Sie im oben genannten Impressum.</p>
+            <p>
+              <strong>
+                Verbraucherstreitbeilegung/allgemeine Streitbeilegungsstelle
+              </strong>
+              <br />
+              Wir nehmen an einem Streitbeilegungsverfahren vor einer
+              Verbraucherstreitschlichtungsstelle teil. Zuständig ist die
+              universelle Schlichtungsstelle des Zentrum für Schlichtung e.V.,
+              Straßburger Straße 8, 77694 Kehl am Rhein (
+              <a
+                href="https://www.verbraucher-schlichter.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary underline"
+              >
+                https://www.verbraucher-schlichter.de
+              </a>
+              ).
             </p>
           </motion.div>
         </div>

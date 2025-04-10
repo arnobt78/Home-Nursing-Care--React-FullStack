@@ -202,7 +202,7 @@ const Footer = () => {
               44799 Bochum
             </p>
             <p>
-              <span className="font-bold">Telephone:</span> +49 234 966 46 480
+              <span className="font-bold">Telefon:</span> +49 234 966 46 480
               <br />
               <span className="font-bold">Fax:</span> +49 234 966 45 602
             </p>
