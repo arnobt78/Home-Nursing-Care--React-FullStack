@@ -127,7 +127,7 @@ const AboutUs = () => {
           <h2 className="text-2xl font-semibold text-primary mb-4">
             Unsere Mission
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-primary/90 leading-relaxed">
             Bei Sernitas Care ist es unsere Herzensaufgabe, Menschen mit
             Mitgefühl, Respekt und individueller Fürsorge zu begleiten. Wir
             möchten pflegebedürftigen Menschen und ihren Familien Kraft und
@@ -149,7 +149,7 @@ const AboutUs = () => {
           Was uns besonders macht
         </motion.h2>
         <motion.p
-          className="text-gray-700 max-w-4xl mx-auto text-center text-lg"
+          className="text-primary/90 max-w-4xl mx-auto text-center text-md"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
@@ -188,7 +188,7 @@ const AboutUs = () => {
               transition={{ delay: idx * 0.1 }}
             >
               <FaCheckCircle className="text-primary text-2xl flex-shrink-0" />
-              <p className="text-primary font-medium text-lg">{service}</p>
+              <p className="text-primary/90 font-semibold text-sm">{service}</p>
             </motion.div>
           ))}
         </div>
@@ -214,10 +214,10 @@ const AboutUs = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-4 text-center bg-primary/10">
-                <h3 className="text-xl font-semibold text-primary">
+                <h3 className="text-lg font-semibold text-primary/90">
                   {member.name}
                 </h3>
-                <p className="text-primary">{member.title}</p>
+                <p className="text-md text-primary/90">{member.title}</p>
               </div>
             </motion.div>
           ))}
