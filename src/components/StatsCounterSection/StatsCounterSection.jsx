@@ -16,10 +16,10 @@ const AnimatedCounter = ({ value }) => {
         end={value}
         duration={5}
         separator=","
-        className="text-4xl font-bold text-primary"
+        className="text-4xl font-bold text-primary/90"
       />
       <motion.span
-        className="text-4xl font-bold text-primary ml-1"
+        className="text-4xl font-bold text-primary/90 ml-1"
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.2 }}
@@ -49,7 +49,7 @@ const StatsCounterSection = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
           >
             <AnimatedCounter value={stat.value} />
-            <p className="mt-2 text-sm uppercase tracking-widest text-primary">
+            <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-primary/90">
               {stat.label}
             </p>
           </motion.div>

@@ -153,12 +153,12 @@ const ReviewSection = () => {
                 className="person-img w-full h-full rounded-full object-cover"
               />
               {/* Quote Icon */}
-              <span className="quote-icon absolute top-2 left-1 bg-primary text-white p-2 rounded-full">
+              <span className="quote-icon absolute top-2 left-1 bg-primary/70 text-white p-2 rounded-full">
                 <FaQuoteRight />
               </span>
               {/* Background Circle */}
               <div
-                className="absolute bottom-1 left-2 w-full h-full bg-secondary rounded-full"
+                className="absolute bottom-1 left-2 w-full h-full bg-primary/70 rounded-full"
                 style={{
                   clipPath: "circle(100% at 75% 25%)", // Show only the non-overlapping part of the background circle
                   zIndex: -1, // Ensure it stays behind the main image
@@ -166,13 +166,13 @@ const ReviewSection = () => {
               ></div>
             </div>
 
-            <h4 className="author text-xl font-bold text-primary italic">
+            <h4 className="author text-lg font-semibold text-primary/90">
               {name}
             </h4>
-            <p className="job text-sm uppercase text-primary/80 italic mb-4">
-              {job}
+            <p className="job text-sm uppercase text-primary/90 mb-4">{job}</p>
+            <p className="info text-primary/90 italic leading-relaxed">
+              {text}
             </p>
-            <p className="info text-primary italic leading-relaxed">{text}</p>
           </motion.div>
         </AnimatePresence>
       </article>

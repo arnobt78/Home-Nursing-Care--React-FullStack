@@ -35,7 +35,7 @@ const TestimonialSection1 = () => {
         >
           {/* Border Circle */}
           <motion.div
-            className="absolute inset-0 rounded-full border-4 border-primary"
+            className="absolute inset-0 rounded-full border-4 border-primary/90"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -60,8 +60,8 @@ const TestimonialSection1 = () => {
         >
           <div className="relative">
             {/* FaQuoteLeft dynamically aligned to the start of the paragraph */}
-            <FaQuoteLeft className="absolute -top-2 -left-10 text-primary text-3xl md:text-4xl" />
-            <p className="text-primary text-lg text-justify leading-relaxed">
+            <FaQuoteLeft className="absolute -top-2 -left-10 text-primary/90 text-3xl md:text-4xl" />
+            <p className="text-primary/90 text-lg text-justify leading-relaxed">
               Der respektvolle und vertrauensvolle Umgang mit Menschen gehört zu
               den elementaren Bestandteilen unseres Handelns und spiegelt sich
               auch in unserem Namen wieder. Zusammengesetzt aus den lateinischen
@@ -70,12 +70,12 @@ const TestimonialSection1 = () => {
               Dienst am Menschen.
             </p>
             {/* FaQuoteRight dynamically aligned to the bottom of the paragraph */}
-            <FaQuoteRight className="absolute -bottom-4 right-0 text-primary text-3xl md:text-4xl" />
+            <FaQuoteRight className="absolute -bottom-4 right-0 text-primary/90 text-3xl md:text-4xl" />
           </div>
-          <p className="mt-4 text-primary text-lg italic font-bold">
+          <p className="mt-4 text-primary/90 text-lg italic font-bold">
             Dr. Ali Yildiz
           </p>
-          <p className="text-primary/80 italic">CEO</p>
+          <p className="text-primary/90 italic">CEO</p>
         </motion.div>
       </motion.div>
 

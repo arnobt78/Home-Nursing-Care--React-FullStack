@@ -50,7 +50,7 @@ const Services = () => {
               Willkommen bei Sernitas Care – Ihre vertrauensvolle Unterstützung
               im Alltag
             </h1>
-            <p className="text-base md:text-lg leading-relaxed text-primary">
+            <p className="text-base md:text-lg leading-relaxed text-primary/90">
               Bei Sernitas Care bieten wir Ihnen eine Vielzahl an
               Dienstleistungen, die individuell auf Ihre Bedürfnisse abgestimmt
               sind. Unser Ziel ist es, Ihnen ein selbstbestimmtes, würdevolles

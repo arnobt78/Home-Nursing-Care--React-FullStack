@@ -32,7 +32,7 @@ const TeamValuesSection = () => {
             Unsere Philosophie – Pflege, die den Menschen in den Mittelpunkt
             stellt
           </h2>
-          <p className="text-base md:text-lg leading-relaxed text-primary">
+          <p className="text-base md:text-lg leading-relaxed text-primary/90">
             Bei Sernitas Care verstehen wir Pflege als Berufung – getragen von
             Menschlichkeit, Respekt und einem ganzheitlichen Blick auf den
             Menschen. Wir begleiten unsere Pflegekund*innen mit Würde,

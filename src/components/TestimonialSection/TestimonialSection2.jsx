@@ -35,7 +35,7 @@ const TestimonialSection2 = () => {
         >
           {/* Border Circle */}
           <motion.div
-            className="absolute inset-0 rounded-full border-4 border-primary"
+            className="absolute inset-0 rounded-full border-4 border-primary/90"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -60,8 +60,8 @@ const TestimonialSection2 = () => {
         >
           <div className="relative">
             {/* FaQuoteLeft dynamically aligned to the start of the paragraph */}
-            <FaQuoteLeft className="absolute -top-2 -left-10 text-primary text-3xl md:text-4xl" />
-            <p className="text-primary text-lg text-justify leading-relaxed">
+            <FaQuoteLeft className="absolute -top-2 -left-10 text-primary/90 text-3xl md:text-4xl" />
+            <p className="text-primary/90 text-lg text-justify leading-relaxed">
               Bei Sernitas Care stehen die Menschen im Mittelpunkt. Mit Herz,
               Respekt und echter Hingabe kümmern wir uns um das Wohl unserer
               Klientinnen und Klienten. Für uns ist Pflege mehr als nur ein
@@ -69,12 +69,12 @@ const TestimonialSection2 = () => {
               beginnt mit Menschlichkeit.
             </p>
             {/* FaQuoteRight dynamically aligned to the bottom of the paragraph */}
-            <FaQuoteRight className="absolute -bottom-4 right-0 text-primary text-3xl md:text-4xl" />
+            <FaQuoteRight className="absolute -bottom-4 right-0 text-primary/90 text-3xl md:text-4xl" />
           </div>
-          <p className="mt-4 text-primary text-lg italic font-bold">
+          <p className="mt-4 text-primary/90 text-lg italic font-bold">
             Summyaah Yildiz
           </p>
-          <p className="text-primary/80 italic">HR - Accountant</p>
+          <p className="text-primary/90 italic">HR - Accountant</p>
         </motion.div>
       </motion.div>
 
