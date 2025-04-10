@@ -193,6 +193,10 @@ const Navbar = () => {
     navigate("/contact");
   };
 
+  const handleLogoClick = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <motion.div
@@ -202,7 +206,11 @@ const Navbar = () => {
         className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black bg-opacity-30 py-4 shadow-lg"
       >
         <div className="container flex justify-between items-center">
-          <div className="flex items-center">
+          {/* Clickable Logo */}
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={handleLogoClick}
+          >
             <img
               src={Logo}
               alt="Logo"
@@ -210,6 +218,7 @@ const Navbar = () => {
             />
           </div>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
             <ul className="flex gap-7 xl:gap-10">
               {NavbarLinks.map((link) => (
@@ -257,6 +266,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex justify-end w-full">
             <button
               onClick={toggleMenu}
@@ -271,6 +281,43 @@ const Navbar = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-black bg-opacity-50 backdrop-blur-md flex flex-col items-center justify-center text-white shadow-lg">
+          <button
+            onClick={toggleMenu}
+            className="absolute top-5 right-5 text-white text-2xl hover:shadow-md transition-shadow duration-300"
+          >
+            &times;
+          </button>
+          <ul className="flex flex-col md:flex-row gap-6 text-lg uppercase font-medium tracking-wide justify-center text-center">
+            {NavbarLinks.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={link.link}
+                  onClick={toggleMenu}
+                  className="hover:shadow-md transition-shadow duration-300"
+                >
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-6">
+            <button
+              onClick={() => {
+                toggleMenu();
+                navigate("/contact");
+              }}
+              className="primary-btn border-2 border-secondary hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 hover:scale-105 shadow-md hover:shadow-lg"
+            >
+              Kontakt
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

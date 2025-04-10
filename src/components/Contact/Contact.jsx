@@ -240,17 +240,17 @@ const schema = z.object({
 const info = [
   {
     icon: <FaPhoneAlt />,
-    title: "Phone",
+    title: "Telefonnummer",
     description: "+49 234 966 46 480",
   },
   {
     icon: <FaEnvelope />,
-    title: "Email",
+    title: "E-Mail",
     description: "info@sernitas-care.com",
   },
   {
     icon: <FaMapMarkerAlt />,
-    title: "Address",
+    title: "Adresse",
     description: (
       <>
         Sernitas GmbH <br />
@@ -299,7 +299,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setSuccessMessage("Message sent successfully!");
+        setSuccessMessage("Nachricht erfolgreich versendet!");
         setFormData({
           fullname: "",
           email: "",
@@ -364,19 +364,19 @@ const Contact = () => {
             className="bg-gray-800 p-10 rounded-xl"
           >
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-              <h3 className="text-4xl text-white/100">
-                We&apos;re Here for You
-              </h3>
+              <h3 className="text-4xl text-white/100">Wir sind für Sie da</h3>
               <p className="text-white/60 text-justify">
-                Reach out to Sernitas Care for trusted, compassionate home
-                nursing services. Let us help ensure the comfort, dignity, and
-                well-being of your loved ones.
+                Treten Sie mit Sernitas Care in Kontakt – wir stehen Ihnen mit
+                vertrauensvoller, einfühlsamer und professioneller Pflege zur
+                Seite. Gemeinsam sorgen wir für mehr Wohlbefinden, Würde und
+                Geborgenheit für Ihre Liebsten. Wir freuen uns auf Ihre
+                Nachricht!
               </p>
               <div className="grid gap-6">
                 <Input
                   type="text"
                   name="fullname"
-                  placeholder="First & Last Name"
+                  placeholder="Vor- und Nachname"
                   value={formData.fullname}
                   onChange={handleChange}
                 />
@@ -386,7 +386,7 @@ const Contact = () => {
                 <Input
                   type="email"
                   name="email"
-                  placeholder="E-mail Address"
+                  placeholder="E-Mail-Adresse"
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -396,7 +396,7 @@ const Contact = () => {
                 <Input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number"
+                  placeholder="Telefonnummer"
                   value={formData.phone}
                   onChange={handleChange}
                 />
@@ -407,7 +407,7 @@ const Contact = () => {
               <Textarea
                 className="h-[200px]"
                 name="message"
-                placeholder="Type Your Message Here."
+                placeholder="Ihre Nachricht"
                 value={formData.message}
                 onChange={handleChange}
               />
@@ -426,7 +426,7 @@ const Contact = () => {
                 type="submit"
                 disabled={isLoading} // Disable button while loading
               >
-                {isLoading ? "Sending..." : "Send Message"}{" "}
+                {isLoading ? "Senden..." : "Nachricht senden"}{" "}
                 {/* Show loading text */}
               </Button>
             </form>
