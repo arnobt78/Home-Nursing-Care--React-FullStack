@@ -1,4 +1,4 @@
-## Sernitas Care - Home Nursing Service Provider
+## Sernitas Care - Home Care Nursing Service Provider
 
 Sernitas-Care is a dedicated home nursing service platform in Germany and an official member of the Sernitas-Groupe. The platform features React, Vite, TailwindCSS, and Framer Motion technologies. It showcases a modern, responsive, and user-friendly design that emphasizes nursing services, client testimonials, application details (powered by MongoDB, Prisma, and Zod), and contact options (through an SMTP server).
 
