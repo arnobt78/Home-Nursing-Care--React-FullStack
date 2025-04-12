@@ -1,6 +1,6 @@
-## Sernitas Care
+## Sernitas Care - Home Nursing Service Provider
 
-Sernitas Care is a professional home nursing service platform built with **React**, **Vite**, and **TailwindCSS**. This project provides a modern, responsive, and user-friendly interface to showcase nursing services, testimonials, and contact options for clients.
+Sernitas Care is a professional home nursing service platform built with **React**, **Vite**, **TailwindCSS** and **Framer-Motion**. This project provides a modern, responsive, and user-friendly interface to showcase nursing services, testimonials, application from and contact options for clients.
 
 ## Features
 
