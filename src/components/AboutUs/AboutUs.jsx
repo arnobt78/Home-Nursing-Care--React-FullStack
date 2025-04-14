@@ -8,6 +8,8 @@ import AboutImg2 from "../../assets/hr-2.jpg";
 import AboutImg3 from "../../assets/hr-3.jpg";
 import AboutImg4 from "../../assets/hero-1.jpg";
 
+import CachedImage from "../CachedImage";
+
 const team = [
   {
     name: "Dr. Ali Yildiz",
@@ -208,7 +210,7 @@ const AboutUs = () => {
               transition={{ delay: index * 0.1 }}
               className="rounded-2xl overflow-hidden shadow-xl"
             >
-              <img
+              <CachedImage
                 src={member.img}
                 alt={member.name}
                 className="w-full h-64 object-cover"

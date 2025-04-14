@@ -14,6 +14,8 @@ import Logo from "../../assets/logo-bg.png";
 import PartnersSection from "./PartnersSection"; // Import the PartnersSection component
 import AffiliatesSection from "./AffiliatesSection"; // Import the AffiliatesSection component
 
+import CachedImage from "../CachedImage";
+
 const Footer = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
@@ -57,7 +59,7 @@ const Footer = () => {
             variants={rowVariants}
             className="space-y-4 text-center md:text-left"
           >
-            <img
+            <CachedImage
               src={Logo}
               alt="Sernitas Logo"
               className="w-[200px] mx-auto md:mx-0"

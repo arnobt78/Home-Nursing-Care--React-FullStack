@@ -5,6 +5,8 @@ import { slideUp } from "../../utility/animation";
 
 import teamImage from "../../assets/service-3.jpg";
 
+import CachedImage from "../CachedImage";
+
 // const fadeIn = (delay = 0) => ({
 //   initial: { opacity: 0, y: 20 },
 //   animate: {
@@ -32,7 +34,7 @@ const Services = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <img
+            <CachedImage
               src={teamImage}
               alt="Sernitas Team"
               className="rounded-xl shadow-lg object-cover w-full"
@@ -78,11 +80,13 @@ const Services = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }} // Ensure animation runs only once
-        className="text-lg font-medium text-center text-primary/90 p-4 md:text-md"
+        className="text-sm text-center text-primary/90 p-4 md:text-md"
       >
         Für weitere Informationen, Beratung und ein persönliches Gespräch –
         selbstverständlich kostenlos – kontaktieren Sie uns gerne telefonisch
-        unter +49 234 966 46 480 oder per E-Mail an info@sernitas-care.com.
+        unter <span className="font-semibold test-lg">+49 234 966 46 480</span>{" "}
+        oder per E-Mail an{" "}
+        <span className="font-semibold test-lg">info@sernitas-care.com</span>
         <br />
         <br />
         Wir freuen uns darauf, für Sie da zu sein.

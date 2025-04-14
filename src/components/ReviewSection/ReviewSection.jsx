@@ -7,6 +7,8 @@ import ReviewImg2 from "../../assets/hr-2.jpg";
 import ReviewImg3 from "../../assets/hr-3.jpg";
 import ReviewImg4 from "../../assets/hr-4.jpg";
 
+import CachedImage from "../CachedImage";
+
 // Dummy data for reviews
 const reviews = [
   {
@@ -147,7 +149,7 @@ const ReviewSection = () => {
             {/* Image Container */}
             <div className="img-container relative w-36 h-36 mx-auto mb-6">
               {/* Main Image */}
-              <img
+              <CachedImage
                 src={image}
                 alt={name}
                 className="person-img w-full h-full rounded-full object-cover"

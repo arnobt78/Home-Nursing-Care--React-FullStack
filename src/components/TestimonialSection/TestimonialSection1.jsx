@@ -2,9 +2,12 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { motion } from "framer-motion";
 
-import TestimonialImg from "../../assets/hr-1.jpg"; // Replace with your thumbnail image path
 import { FaPlay } from "react-icons/fa";
-import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa"; // Import the quote icons
+import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
+
+import TestimonialImg from "../../assets/hr-1.jpg";
+
+import CachedImage from "../CachedImage";
 
 Modal.setAppElement("#root"); // Required for accessibility
 
@@ -40,7 +43,7 @@ const TestimonialSection1 = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
-          <img
+          <CachedImage
             src={TestimonialImg}
             alt="Testimonial Thumbnail"
             className="w-full h-full object-cover rounded-full"

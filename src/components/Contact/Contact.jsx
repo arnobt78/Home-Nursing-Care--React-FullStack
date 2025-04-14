@@ -332,7 +332,7 @@ const Contact = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="pt-24 pb-2 bg-gray-700"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Use grid for larger screens and flex-col-reverse for phone screens */}
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Contact Information */}
@@ -340,7 +340,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex items-center xl:justify-end"
+            className="flex items-center justify-center lg:justify-end"
           >
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => (
@@ -356,15 +356,18 @@ const Contact = () => {
               ))}
             </ul>
           </motion.div>
+
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gray-800 p-10 rounded-xl"
+            className="bg-gray-800 p-6 sm:p-8 lg:p-10 rounded-xl w-full"
           >
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-              <h3 className="text-4xl text-white/100">Wir sind für Sie da</h3>
+              <h3 className="text-3xl sm:text-4xl text-white/100">
+                Wir sind für Sie da
+              </h3>
               <p className="text-white/60 text-justify">
                 Treten Sie mit Sernitas Care in Kontakt – wir stehen Ihnen mit
                 vertrauensvoller, einfühlsamer und professioneller Pflege zur

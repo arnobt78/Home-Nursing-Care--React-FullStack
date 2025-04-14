@@ -170,9 +170,11 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.png";
 import { motion } from "framer-motion";
 import { slideBottom } from "../../utility/animation";
+
+import Logo from "../../assets/logo.png";
+import CachedImage from "../CachedImage";
 
 const NavbarLinks = [
   { id: 1, title: "Willkommen", link: "/" },
@@ -211,7 +213,7 @@ const Navbar = () => {
             className="flex items-center cursor-pointer"
             onClick={handleLogoClick}
           >
-            <img
+            <CachedImage
               src={Logo}
               alt="Logo"
               className="w-[180px] md:w-[200px] hover:scale-105 transition-transform duration-300"

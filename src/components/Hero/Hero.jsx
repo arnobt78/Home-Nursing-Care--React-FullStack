@@ -1,10 +1,13 @@
-import HeroImg1 from "../../assets/hero-1.jpg";
-import HeroImg2 from "../../assets/hero-2.jpg";
-import HeroImg3 from "../../assets/hero-3.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { slideUp } from "../../utility/animation";
 import { useNavigate } from "react-router-dom";
+
+import HeroImg1 from "../../assets/hero-1.jpg";
+import HeroImg2 from "../../assets/hero-2.jpg";
+import HeroImg3 from "../../assets/hero-3.jpg";
+
+import CachedImage from "../CachedImage";
 
 const Hero = () => {
   // Array of background images

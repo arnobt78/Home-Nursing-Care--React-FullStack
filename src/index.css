@@ -33,3 +33,53 @@ main {
 .overflow-hidden {
   overflow: hidden;
 }
+
+/* Style for <h3> */
+.styled-content h3 {
+  font-size: 1.5rem; /* Tailwind equivalent: text-xl */
+  font-weight: 700; /* Tailwind equivalent: font-bold */
+  color: #144647; /* Tailwind equivalent: text-gray-800 */
+  margin-bottom: 0.5rem; /* Tailwind equivalent: mb-2 */
+  border-bottom: 2px solid #e5e7eb; /* Tailwind equivalent: border-gray-200 */
+  padding-bottom: 0.25rem; /* Tailwind equivalent: pb-1 */
+}
+
+/* Style for <h4> */
+.styled-content h4 {
+  font-size: 1.25rem; /* Tailwind equivalent: text-lg */
+  font-weight: 600; /* Tailwind equivalent: font-semibold */
+  color: #144647/90; /* Tailwind equivalent: text-gray-700 */
+  margin-bottom: 0.5rem; /* Tailwind equivalent: mb-2 */
+}
+
+/* Style for <p> */
+.styled-content p {
+  font-size: 1rem; /* Tailwind equivalent: text-base */
+  color: #144647/90; /* Tailwind equivalent: text-gray-600 */
+  margin-bottom: 1rem; /* Tailwind equivalent: mb-4 */
+  line-height: 1.75; /* Tailwind equivalent: leading-relaxed */
+}
+
+/* Add spacing between sections */
+.styled-content p + h3,
+.styled-content p + h4 {
+  margin-top: 1.5rem; /* Tailwind equivalent: mt-6 */
+  border-bottom: 2px solid #e5e7eb; /* Tailwind equivalent: border-gray-200 */
+  padding-bottom: 0.25rem; /* Tailwind equivalent: pb-1 */
+}
+
+/* Style for <ul> */
+.styled-content ul {
+  list-style-type: disc; /* Ensure bullets are displayed */
+  margin-left: 1.5rem; /* Tailwind equivalent: ml-6 */
+  margin-bottom: 1rem; /* Tailwind equivalent: mb-4 */
+  color: #144647/90; /* Tailwind equivalent: text-gray-600 */
+}
+
+/* Style for <li> */
+.styled-content li {
+  margin-bottom: 0.5rem; /* Tailwind equivalent: mb-2 */
+  line-height: 1.75; /* Tailwind equivalent: leading-relaxed */
+  font-size: 1rem; /* Tailwind equivalent: text-base */
+  color: #144647/90; /* Tailwind equivalent: text-gray-600 */
+}

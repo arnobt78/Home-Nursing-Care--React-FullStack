@@ -5,6 +5,8 @@ import SernitasHR from "../../assets/sernitas-hr.png";
 import SernitasKliniken from "../../assets/sernitas-kliniken.png";
 import SernitasInstitute from "../../assets/sernitas-institute.png";
 
+import CachedImage from "../CachedImage";
+
 const partners = [
   {
     id: 1,
@@ -53,7 +55,7 @@ const PartnersSection = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
           >
-            <img
+            <CachedImage
               src={partner.img}
               alt={partner.alt}
               className="w-24 h-auto md:w-36 lg:w-40 object-contain"

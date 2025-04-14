@@ -12,7 +12,7 @@ export default {
         secondary: "#24836d", // Secondary color
       },
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
       },
       container: {
         center: true,

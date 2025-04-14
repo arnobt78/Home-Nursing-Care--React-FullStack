@@ -9,6 +9,8 @@ import Ankara from "../../assets/ankara.png";
 import Timer from "../../assets/timer.png";
 import LWL from "../../assets/lwl.png";
 
+import CachedImage from "../CachedImage";
+
 const affiliates = [
   {
     id: 1,
@@ -81,7 +83,7 @@ const AffiliatesSection = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
           >
-            <img
+            <CachedImage
               src={affiliate.img}
               alt={affiliate.alt}
               className="w-20 h-auto md:w-28 lg:w-32 object-contain"

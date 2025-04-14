@@ -1,30 +1,75 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { z } from "zod";
+
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 
-// Zod validation schema
+// // Zod validation schema in English
+// const ApplicationFormSchema = z.object({
+//   firstName: z.string().min(2, "First name must be at least 2 characters"),
+//   lastName: z.string().min(2, "Last name must be at least 2 characters"),
+//   birthDate: z.string().nonempty("Birth date is required"),
+//   gender: z.enum(["Male", "Female", "Other"], "Gender is required"),
+//   streetName: z.string().min(2, "Street name must be at least 2 characters"),
+//   houseNumber: z.string().min(1, "House number is required"),
+//   postalCode: z.string().min(4, "Postal code must be at least 4 characters"),
+//   city: z.string().min(2, "City must be at least 2 characters"),
+//   occupation: z.string().min(2, "Occupation must be at least 2 characters"),
+//   emergencyContactName: z
+//     .string()
+//     .min(2, "Emergency contact name must be at least 2 characters"),
+//   emergencyContactNumber: z
+//     .string()
+//     .regex(/^\d+$/, "Emergency contact number must contain only digits")
+//     .min(10, "Emergency contact number must be at least 10 digits"),
+//   primaryPhysician: z.string().optional(),
+//   insuranceProvider: z.string().optional(),
+//   insurancePolicyNumber: z.string().optional(),
+//   allergies: z.string().optional(),
+//   currentMedication: z.string().optional(),
+//   familyMedicalHistory: z.string().optional(),
+//   pastMedicalHistory: z.string().optional(),
+//   identificationType: z.enum([
+//     "Passport",
+//     "National ID",
+//     "Driving License",
+//     "Other",
+//   ]),
+//   identificationNumber: z.string().optional(),
+//   remarks: z.string().optional(),
+//   privacyConsent: z.boolean().refine((val) => val, {
+//     message: "You must agree to the privacy policy",
+//   }),
+// });
+
+// Zod validation schema (messages in German)
 const ApplicationFormSchema = z.object({
-  firstName: z.string().min(2, "First name must be at least 2 characters"),
-  lastName: z.string().min(2, "Last name must be at least 2 characters"),
-  birthDate: z.string().nonempty("Birth date is required"),
-  gender: z.enum(["Male", "Female", "Other"], "Gender is required"),
-  streetName: z.string().min(2, "Street name must be at least 2 characters"),
-  houseNumber: z.string().min(1, "House number is required"),
-  postalCode: z.string().min(4, "Postal code must be at least 4 characters"),
-  city: z.string().min(2, "City must be at least 2 characters"),
-  occupation: z.string().min(2, "Occupation must be at least 2 characters"),
+  firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),
+  lastName: z.string().min(2, "Nachname muss mindestens 2 Zeichen lang sein"),
+  birthDate: z.string().nonempty("Geburtsdatum ist erforderlich"),
+  gender: z.enum(["Male", "Female", "Other"], {
+    errorMap: () => ({ message: "Geschlecht ist erforderlich" }),
+  }),
+  streetName: z
+    .string()
+    .min(2, "Straßenname muss mindestens 2 Zeichen lang sein"),
+  houseNumber: z.string().min(1, "Hausnummer ist erforderlich"),
+  postalCode: z
+    .string()
+    .min(4, "Postleitzahl muss mindestens 4 Zeichen lang sein"),
+  city: z.string().min(2, "Stadt muss mindestens 2 Zeichen lang sein"),
+  occupation: z.string().min(2, "Beruf muss mindestens 2 Zeichen lang sein"),
   emergencyContactName: z
     .string()
-    .min(2, "Emergency contact name must be at least 2 characters"),
+    .min(2, "Name der Kontaktperson muss mindestens 2 Zeichen lang sein"),
   emergencyContactNumber: z
     .string()
-    .regex(/^\d+$/, "Emergency contact number must contain only digits")
-    .min(10, "Emergency contact number must be at least 10 digits"),
+    .regex(/^\d+$/, "Notfallnummer darf nur Ziffern enthalten")
+    .min(10, "Notfallnummer muss mindestens 10 Ziffern enthalten"),
   primaryPhysician: z.string().optional(),
   insuranceProvider: z.string().optional(),
   insurancePolicyNumber: z.string().optional(),
@@ -41,7 +86,7 @@ const ApplicationFormSchema = z.object({
   identificationNumber: z.string().optional(),
   remarks: z.string().optional(),
   privacyConsent: z.boolean().refine((val) => val, {
-    message: "You must agree to the privacy policy",
+    message: "Sie müssen der Datenschutzerklärung zustimmen",
   }),
 });
 
@@ -58,11 +103,28 @@ const ApplicationForm = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-    console.log("Form Data:", data);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("http://localhost:5000/api/applications", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit application");
+      }
+
+      const result = await response.json();
+      console.log("Application submitted successfully:", result);
       alert("Application submitted successfully!");
-    }, 2000);
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      alert("Failed to submit application. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -73,7 +135,7 @@ const ApplicationForm = () => {
       transition={{ duration: 0.5 }}
     >
       <h1 className="text-3xl text-primary font-bold text-center mb-6">
-        Application Form
+        Bewerbungsformular
       </h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -82,7 +144,7 @@ const ApplicationForm = () => {
         {/* First Name and Last Name */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-lg font-medium mb-1">First Name</label>
+            <label className="block text-lg font-medium mb-1">Vorname</label>
             <Input
               type="text"
               placeholder="John"
@@ -96,7 +158,7 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">Last Name</label>
+            <label className="block text-lg font-medium mb-1">Nachname</label>
             <Input
               type="text"
               placeholder="Doe"
@@ -114,7 +176,9 @@ const ApplicationForm = () => {
         {/* Birth Date and Gender */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-lg font-medium mb-1">Birth Date</label>
+            <label className="block text-lg font-medium mb-1">
+              Geburtsdatum
+            </label>
             <Input
               type="date"
               {...register("birthDate")}
@@ -127,15 +191,15 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">Gender</label>
+            <label className="block text-lg font-medium mb-1">Geschlecht</label>
             <select
               {...register("gender")}
               className="w-full h-[48px] text-white bg-[#436b6c] rounded-md p-2"
             >
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
+              <option value="">Geschlecht wählen</option>
+              <option value="Male">Männlich</option>
+              <option value="Female">Weiblich</option>
+              <option value="Other">Divers</option>
             </select>
             {errors.gender && (
               <p className="text-red-500 text-md mt-1">
@@ -149,11 +213,11 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Street Name
+              Straßenname
             </label>
             <Input
               type="text"
-              placeholder="Main Street"
+              placeholder="Beispielstraße"
               {...register("streetName")}
               className="w-full"
             />
@@ -164,12 +228,10 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">
-              House Number
-            </label>
+            <label className="block text-lg font-medium mb-1">Hausnummer</label>
             <Input
               type="text"
-              placeholder="123"
+              placeholder="12A"
               {...register("houseNumber")}
               className="w-full"
             />
@@ -183,7 +245,7 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Postal Code
+              Postleitzahl
             </label>
             <Input
               type="text"
@@ -198,10 +260,10 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">City</label>
+            <label className="block text-lg font-medium mb-1">Stadt</label>
             <Input
               type="text"
-              placeholder="New York"
+              placeholder="Berlin"
               {...register("city")}
               className="w-full"
             />
@@ -213,10 +275,10 @@ const ApplicationForm = () => {
 
         {/* Occupation */}
         <div>
-          <label className="block text-lg font-medium mb-1">Occupation</label>
+          <label className="block text-lg font-medium mb-1">Beruf</label>
           <Input
             type="text"
-            placeholder="Software Engineer"
+            placeholder="Pflegekraft"
             {...register("occupation")}
             className="w-full"
           />
@@ -231,7 +293,7 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Emergency Contact Name
+              Name der Kontaktperson für Notfälle
             </label>
             <Input
               type="text"
@@ -247,11 +309,11 @@ const ApplicationForm = () => {
           </div>
           <div>
             <label className="block text-lg font-medium mb-1">
-              Emergency Contact Number
+              Telefonnummer der Kontaktperson
             </label>
             <Input
               type="text"
-              placeholder="1234567890"
+              placeholder="0123456789"
               {...register("emergencyContactNumber")}
               className="w-full"
             />
@@ -266,11 +328,11 @@ const ApplicationForm = () => {
         {/* Primary Physician */}
         <div>
           <label className="block text-lg font-medium mb-1">
-            Primary Physician
+            Hausarzt / Hausärztin
           </label>
           <Input
             type="text"
-            placeholder="Dr. Smith"
+            placeholder="Dr. Schmidt"
             {...register("primaryPhysician")}
             className="w-full"
           />
@@ -280,22 +342,22 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Insurance Provider
+              Krankenkasse
             </label>
             <Input
               type="text"
-              placeholder="BlueCross"
+              placeholder="AOK, TK, etc."
               {...register("insuranceProvider")}
               className="w-full"
             />
           </div>
           <div>
             <label className="block text-lg font-medium mb-1">
-              Insurance Policy Number
+              Versichertennummer
             </label>
             <Input
               type="text"
-              placeholder="123456789"
+              placeholder="XYZ123456"
               {...register("insurancePolicyNumber")}
               className="w-full"
             />
@@ -305,40 +367,40 @@ const ApplicationForm = () => {
         {/* Medical History */}
         <div>
           <label className="block text-lg font-medium mb-1">
-            Allergies/Disease
+            Allergien oder Erkrankungen
           </label>
           <Textarea
-            placeholder="List any allergies or diseases"
+            placeholder="Bitte Allergien oder bekannte Krankheiten angeben"
             {...register("allergies")}
             className="w-full"
           />
         </div>
         <div>
           <label className="block text-lg font-medium mb-1">
-            Current Medication
+            Aktuelle Medikamente
           </label>
           <Textarea
-            placeholder="List any current medications"
+            placeholder="Liste der derzeit eingenommenen Medikamente"
             {...register("currentMedication")}
             className="w-full"
           />
         </div>
         <div>
           <label className="block text-lg font-medium mb-1">
-            Family Medical History
+            Medizinische Familiengeschichte
           </label>
           <Textarea
-            placeholder="Describe family medical history"
+            placeholder="Relevante Informationen zur Familienanamnese"
             {...register("familyMedicalHistory")}
             className="w-full"
           />
         </div>
         <div>
           <label className="block text-lg font-medium mb-1">
-            Past Medical History
+            Frühere Krankheiten
           </label>
           <Textarea
-            placeholder="Describe past medical history"
+            placeholder="Bisherige gesundheitliche Beschwerden oder Diagnosen"
             {...register("pastMedicalHistory")}
             className="w-full"
           />
@@ -347,18 +409,16 @@ const ApplicationForm = () => {
         {/* Identification */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-lg font-medium mb-1">
-              Identification Type
-            </label>
+            <label className="block text-lg font-medium mb-1">Ausweisart</label>
             <select
               {...register("identificationType")}
               className="w-full h-[48px] text-white bg-[#436b6c] rounded-md p-2"
             >
-              <option value="">Select Identification Type</option>
-              <option value="Passport">Passport</option>
-              <option value="National ID">National ID</option>
-              <option value="Driving License">Driving License</option>
-              <option value="Other">Other</option>
+              <option value="">Ausweisart wählen</option>
+              <option value="Passport">Reisepass</option>
+              <option value="National ID">Personalausweis</option>
+              <option value="Driving License">Führerschein</option>
+              <option value="Other">Sonstige</option>
             </select>
             {errors.identificationType && (
               <p className="text-red-500 text-md mt-1">
@@ -368,7 +428,7 @@ const ApplicationForm = () => {
           </div>
           <div>
             <label className="block text-lg font-medium mb-1">
-              Identification Number
+              Ausweisnummer
             </label>
             <Input
               type="text"
@@ -387,10 +447,10 @@ const ApplicationForm = () => {
         {/* Remarks */}
         <div>
           <label className="block text-lg font-medium mb-1">
-            Remarks/Comments
+            Bemerkungen / Kommentare
           </label>
           <Textarea
-            placeholder="Additional comments or remarks"
+            placeholder="Zusätzliche Informationen oder Hinweise"
             {...register("remarks")}
             className="w-full"
           />
@@ -408,7 +468,9 @@ const ApplicationForm = () => {
             {...register("privacyConsent")}
             className="mr-2"
           />
-          <label className="text-md">I agree to the privacy policy</label>
+          <label className="text-md">
+            Ich stimme der Datenschutzerklärung zu
+          </label>
         </div>
         {errors.privacyConsent && (
           <p className="text-red-500 text-md mt-1">
@@ -422,7 +484,7 @@ const ApplicationForm = () => {
           className="w-auto border-white border-2 bg-secondary text-white py-2 rounded-md hover:bg-secondary/30 hover:border-slate-500 transition duration-200"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Submitting..." : "Submit Application"}
+          {isSubmitting ? "Wird gesendet..." : "Bewerbung absenden"}
         </Button>
       </form>
     </motion.div>

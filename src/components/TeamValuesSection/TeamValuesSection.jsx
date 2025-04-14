@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
+
 import teamImage from "../../assets/hero-4.jpg";
+
+import CachedImage from "../CachedImage";
 
 const TeamValuesSection = () => {
   return (
@@ -13,7 +16,7 @@ const TeamValuesSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }} // Trigger animation every time it enters the viewport
         >
-          <img
+          <CachedImage
             src={teamImage}
             alt="Sernitas Team"
             className="rounded-xl shadow-lg object-cover w-full"

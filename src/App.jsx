@@ -47,6 +47,8 @@ const StatsCounterSection = React.lazy(() =>
 );
 const Services = React.lazy(() => import("./components/Services/Services"));
 
+const Admin = React.lazy(() => import("./components/Admin/Admin")); // Lazy load Admin component
+
 import PropTypes from "prop-types";
 
 const Home = () => {
@@ -70,7 +72,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(_error) {
     return { hasError: true };
   }
 
@@ -113,6 +115,8 @@ const App = () => {
             <Route path="/general-terms" element={<GeneralTerms />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/application-form" element={<ApplicationForm />} />
+
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </Suspense>
       </main>
