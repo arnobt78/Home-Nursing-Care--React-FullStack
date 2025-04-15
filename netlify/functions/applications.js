@@ -1,6 +1,12 @@
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+let prisma;
+
+// Reuse Prisma Client instance across invocations to avoid connection issues
+if (!global.prisma) {
+  global.prisma = new PrismaClient();
+}
+prisma = global.prisma;
 
 export async function handler(event, context) {
   const { httpMethod, body } = event;
