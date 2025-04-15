@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types"; // Import PropTypes for validation
+import { useState } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 
 const AdminLogin = ({ onLogin }) => {
