@@ -14,7 +14,7 @@ const reviews = [
   {
     id: 1,
     name: "Dr. Ali Yildiz",
-    job: "CEO",
+    job: "Geschäftsführer",
     image: ReviewImg1,
     text: "„Wir sind ein weltoffenes und multikulturelles Team mit einem klaren Auftrag und exzellentem Know-how, das zusammen über rund ein halbes Jahrhundert Berufserfahrung verfügt.“",
   },

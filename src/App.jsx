@@ -47,7 +47,9 @@ const StatsCounterSection = React.lazy(() =>
 );
 const Services = React.lazy(() => import("./components/Services/Services"));
 
-const Admin = React.lazy(() => import("./components/Admin/Admin")); // Lazy load Admin component
+// const Admin = React.lazy(() => import("./components/Admin/Admin"));
+
+import Admin from "./components/Admin/Admin";
 
 import PropTypes from "prop-types";
 

@@ -1,12 +1,11 @@
-// filepath: /server/applicationRoutes.js
 import express from "express";
 import { PrismaClient } from "@prisma/client";
-
 import bcrypt from "bcrypt";
 
 const router = express.Router();
 const prisma = new PrismaClient();
 
+// Admin login route
 router.post("/api/admin/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -28,6 +27,17 @@ router.post("/api/admin/login", async (req, res) => {
   res.status(200).json({ message: "Login successful" });
 });
 
+// Fetch all applications
+router.get("/api/applications", async (req, res) => {
+  try {
+    const applications = await prisma.application.findMany();
+    res.status(200).json(applications);
+  } catch (error) {
+    console.error("Error fetching applications:", error);
+    res.status(500).json({ error: "Failed to fetch applications" });
+  }
+});
+
 // Save application data
 router.post("/api/applications", async (req, res) => {
   try {
@@ -38,16 +48,6 @@ router.post("/api/applications", async (req, res) => {
   } catch (error) {
     console.error("Error saving application:", error);
     res.status(500).json({ error: "Failed to save application" });
-  }
-});
-
-router.get("/api/applications", async (req, res) => {
-  try {
-    const applications = await prisma.application.findMany();
-    res.status(200).json(applications);
-  } catch (error) {
-    console.error("Error fetching applications:", error);
-    res.status(500).json({ error: "Failed to fetch applications" });
   }
 });
 
