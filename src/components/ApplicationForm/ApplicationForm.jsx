@@ -104,14 +104,23 @@ const ApplicationForm = () => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch("http://localhost:5000/api/applications", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
+      // const response = await fetch("http://localhost:5000/api/applications", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/applications`, // Use the backend URL from environment variables
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       if (!response.ok) {
         throw new Error("Failed to submit application");
       }
