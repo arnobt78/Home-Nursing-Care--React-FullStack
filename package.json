@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "npx prisma generate && node server.js",
     "postinstall": "npx prisma generate",
     "dev": "vite",
     "build": "npx prisma generate && vite build",

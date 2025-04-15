@@ -101,26 +101,58 @@ const ApplicationForm = () => {
     resolver: zodResolver(ApplicationFormSchema),
   });
 
+  // Determine the API base URL dynamically
+  const apiBaseUrl =
+    import.meta.env.MODE === "development"
+      ? "http://localhost:8888/.netlify/functions" // Local Netlify Functions URL
+      : "/.netlify/functions"; // Production Netlify Functions URL
+
+  // const onSubmit = async (data) => {
+  //   setIsSubmitting(true);
+  //   try {
+  //     // const response = await fetch("http://localhost:5000/api/applications", {
+  //     //   method: "POST",
+  //     //   headers: {
+  //     //     "Content-Type": "application/json",
+  //     //   },
+  //     //   body: JSON.stringify(data),
+  //     // });
+  //     const response = await fetch(
+  //       `${import.meta.env.VITE_API_BASE_URL}/api/applications`, // Use the backend URL from environment variables
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(data),
+  //       }
+  //     );
+  //     if (!response.ok) {
+  //       throw new Error("Failed to submit application");
+  //     }
+
+  //     const result = await response.json();
+  //     console.log("Application submitted successfully:", result);
+  //     alert("Application submitted successfully!");
+  //   } catch (error) {
+  //     console.error("Error submitting application:", error);
+  //     alert("Failed to submit application. Please try again.");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      // const response = await fetch("http://localhost:5000/api/applications", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(data),
-      // });
-      const response = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}/api/applications`, // Use the backend URL from environment variables
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await fetch(`${apiBaseUrl}/applications`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
       if (!response.ok) {
         throw new Error("Failed to submit application");
       }
