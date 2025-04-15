@@ -3,8 +3,12 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import { QueryClientProvider } from "@tanstack/react-query";
 import queryClient from "./reactQueryClient";
+
 import App from "./App.jsx";
 import "./index.css";
+
+import ReactDOM from "react-dom";
+import axios from "axios";
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -21,6 +25,9 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
+
+// Set the base URL for axios globally
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

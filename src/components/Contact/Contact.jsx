@@ -224,7 +224,9 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { Button } from "../../components/ui/button";
-import { z } from "zod"; // Import zod
+import { z } from "zod";
+
+import axios from "axios";
 
 // Define validation schema using zod
 const schema = z.object({
@@ -278,6 +280,53 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsLoading(true); // Set loading to true while sending
+  //   setErrors({});
+  //   setSuccessMessage("");
+
+  //   try {
+  //     // Validate form data using zod schema
+  //     const validatedData = schema.parse(formData);
+
+  //     // Use the API base URL from environment variables
+  //     const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
+  //     // Send data to the server
+  //     const response = await fetch(`${apiBaseUrl}/api/send-email`, {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(validatedData),
+  //     });
+
+  //     if (response.ok) {
+  //       setSuccessMessage("Nachricht erfolgreich versendet!");
+  //       setFormData({
+  //         fullname: "",
+  //         email: "",
+  //         phone: "",
+  //         message: "",
+  //       });
+  //     } else {
+  //       const errorData = await response.json();
+  //       setErrors({ form: errorData.error || "Failed to send message." });
+  //     }
+  //   } catch (error) {
+  //     if (error.errors) {
+  //       const validationErrors = {};
+  //       error.errors.forEach((err) => {
+  //         validationErrors[err.path[0]] = err.message;
+  //       });
+  //       setErrors(validationErrors);
+  //     } else {
+  //       setErrors({ form: "An unexpected error occurred." });
+  //     }
+  //   } finally {
+  //     setIsLoading(false); // Set loading to false after sending
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true); // Set loading to true while sending
@@ -288,17 +337,10 @@ const Contact = () => {
       // Validate form data using zod schema
       const validatedData = schema.parse(formData);
 
-      // Use the API base URL from environment variables
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+      // Send data to the server using axios
+      const response = await axios.post("/api/send-email", validatedData);
 
-      // Send data to the server
-      const response = await fetch(`${apiBaseUrl}/api/send-email`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(validatedData),
-      });
-
-      if (response.ok) {
+      if (response.status === 200) {
         setSuccessMessage("Nachricht erfolgreich versendet!");
         setFormData({
           fullname: "",
@@ -307,11 +349,14 @@ const Contact = () => {
           message: "",
         });
       } else {
-        const errorData = await response.json();
-        setErrors({ form: errorData.error || "Failed to send message." });
+        setErrors({ form: response.data.error || "Failed to send message." });
       }
     } catch (error) {
-      if (error.errors) {
+      if (error.response && error.response.data) {
+        setErrors({
+          form: error.response.data.error || "An unexpected error occurred.",
+        });
+      } else if (error.errors) {
         const validationErrors = {};
         error.errors.forEach((err) => {
           validationErrors[err.path[0]] = err.message;

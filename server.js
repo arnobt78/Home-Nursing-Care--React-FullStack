@@ -154,8 +154,9 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import applicationRoutes from "./server/applicationRoutes.js"; // Corrected import path
+import applicationRoutes from "./server/applicationRoutes.js";
 
+// Load environment variables from .env
 dotenv.config();
 
 const app = express(); // Initialize app here
