@@ -4,6 +4,7 @@ let prisma;
 
 // Reuse Prisma Client instance across invocations to avoid connection issues
 if (!global.prisma) {
+  console.log("Initializing Prisma Client...");
   global.prisma = new PrismaClient();
 }
 prisma = global.prisma;
