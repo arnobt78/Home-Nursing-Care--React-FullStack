@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Upload dist folder to cPanel via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4 # 🔥 Use a real tagged version
         with:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
