@@ -25,13 +25,11 @@ jobs:
         run: npm run build
 
       - name: Upload dist folder to cPanel via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.SFTP_HOST }}
           port: ${{ secrets.SFTP_PORT }}
-          protocol: "sftp"
-          local-dir: dist
-          server-dir: ${{ secrets.SFTP_REMOTE_PATH }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: ./dist
+          remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
