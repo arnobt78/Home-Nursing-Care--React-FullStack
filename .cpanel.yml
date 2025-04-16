@@ -1,0 +1,3 @@
+deployment:
+  type: git
+  destination: /home/sern4076/public_html
