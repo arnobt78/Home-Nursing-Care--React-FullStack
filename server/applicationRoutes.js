@@ -59,11 +59,11 @@ import bcrypt from "bcrypt";
 
 const router = express.Router();
 
-// Explicitly pass DATABASE_URL to PrismaClient
+// Explicitly pass VITE_DATABASE_URL to PrismaClient
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url: process.env.DATABASE_URL, // Use DATABASE_URL from environment variables
+      url: process.env.VITE_DATABASE_URL, // Use VITE_DATABASE_URL from environment variables
     },
   },
 });
