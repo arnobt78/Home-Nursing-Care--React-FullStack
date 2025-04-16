@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Untergruppenbach",
+			"country": {
+				"code": "DE",
+				"name": "Germany"
+			},
+			"subdivision": {
+				"code": "BW",
+				"name": "Baden-Wurttemberg"
+			},
+			"timezone": "Europe/Berlin",
+			"latitude": 49.0924,
+			"longitude": 9.2784,
+			"postalCode": "74199"
+		},
+		"timestamp": 1744729441399
+	}
+}
