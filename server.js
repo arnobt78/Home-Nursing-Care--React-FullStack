@@ -183,6 +183,7 @@ app.use(
     origin: [
       "http://localhost:5173", // Local frontend
       "https://develop-testing-1.netlify.app", // Netlify frontend
+      "https://sernitas-care.com/", // cPanel main domain
     ],
     methods: ["GET", "POST", "OPTIONS"], // Allow specific HTTP methods
     allowedHeaders: ["Content-Type"], // Allow specific headers
