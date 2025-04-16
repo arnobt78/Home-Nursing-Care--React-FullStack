@@ -60,13 +60,15 @@ import bcrypt from "bcrypt";
 const router = express.Router();
 
 // Explicitly pass VITE_DATABASE_URL to PrismaClient
+console.log("Initializing Prisma Client...");
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url: process.env.VITE_DATABASE_URL, // Use VITE_DATABASE_URL from environment variables
+      url: process.env.VITE_DATABASE_URL,
     },
   },
 });
+console.log("Prisma Client initialized successfully.");
 
 // Admin login route
 router.post("/api/admin/login", async (req, res) => {

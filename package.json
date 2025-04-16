@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npx prisma generate && node server.js",
+    "start": "npm run prisma:generate && node server.js",
+    "prisma:generate": "prisma generate",
     "postinstall": "npx prisma generate",
     "dev": "vite",
     "build": "npx prisma generate && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
   },
   "dependencies": {

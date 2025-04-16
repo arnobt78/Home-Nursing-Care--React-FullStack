@@ -160,6 +160,7 @@ import { execSync } from "child_process";
 
 // Load environment variables from .env
 dotenv.config();
+console.log("Database URL:", process.env.VITE_DATABASE_URL);
 
 // Run `npx prisma generate` programmatically
 try {
