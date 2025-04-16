@@ -33,3 +33,4 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: ./dist
           remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
+          sftp_only: true
