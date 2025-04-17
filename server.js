@@ -156,21 +156,21 @@ import cors from "cors";
 
 import applicationRoutes from "./server/applicationRoutes.js";
 
-import { execSync } from "child_process";
+// import { execSync } from "child_process";
 
 // Load environment variables from .env
 dotenv.config();
 console.log("Database URL:", process.env.VITE_DATABASE_URL);
 
 // Run `npx prisma generate` programmatically
-try {
-  console.log("Generating Prisma client...");
-  execSync("npx prisma generate", { stdio: "inherit" });
-  console.log("Prisma client generated successfully.");
-} catch (error) {
-  console.error("Error generating Prisma client:", error);
-  process.exit(1); // Exit the process if Prisma client generation fails
-}
+// try {
+//   console.log("Generating Prisma client...");
+//   execSync("npx prisma generate", { stdio: "inherit" });
+//   console.log("Prisma client generated successfully.");
+// } catch (error) {
+//   console.error("Error generating Prisma client:", error);
+//   process.exit(1); // Exit the process if Prisma client generation fails
+// }
 
 const app = express(); // Initialize app here
 const PORT = process.env.PORT || 5000;
