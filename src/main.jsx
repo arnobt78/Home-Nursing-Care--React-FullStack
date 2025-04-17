@@ -7,8 +7,8 @@ import queryClient from "./reactQueryClient";
 import App from "./App.jsx";
 import "./index.css";
 
-import ReactDOM from "react-dom";
-import axios from "axios";
+// import ReactDOM from "react-dom";
+// import axios from "axios";
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
