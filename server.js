@@ -160,6 +160,9 @@ import applicationRoutes from "./server/applicationRoutes.js";
 
 // Load environment variables from .env
 dotenv.config();
+
+console.log("API Base URL:", process.env.VITE_API_BASE_URL_RENDER);
+console.log("SMTP Host:", process.env.VITE_SMTP_HOST);
 console.log("Database URL:", process.env.VITE_DATABASE_URL);
 
 // Run `npx prisma generate` programmatically
