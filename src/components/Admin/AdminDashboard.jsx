@@ -11,13 +11,17 @@ const AdminDashboard = () => {
     pageSize: 8,
   });
 
+  const apiBaseUrl =
+    import.meta.env.MODE === "development"
+      ? import.meta.env.VITE_API_BASE_URL_LOCAL // Local backend
+      : import.meta.env.VITE_API_BASE_URL_RENDER; // Render backend
+
   useEffect(() => {
-    // Fetch application data from the backend
     axios
-      .get(`${import.meta.env.VITE_API_BASE_URL}/api/applications`)
+      .get(`${apiBaseUrl}/api/applications`)
       .then((response) => setApplications(response.data))
       .catch((error) => console.error("Error fetching applications:", error));
-  }, []);
+  }, [apiBaseUrl]);
 
   // Calculate paginated data
   const paginatedApplications = applications.slice(

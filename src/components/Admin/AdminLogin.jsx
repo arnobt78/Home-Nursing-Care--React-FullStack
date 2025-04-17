@@ -7,12 +7,17 @@ const AdminLogin = ({ onLogin }) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const apiBaseUrl =
+    import.meta.env.MODE === "development"
+      ? import.meta.env.VITE_API_BASE_URL_LOCAL // Local backend
+      : import.meta.env.VITE_API_BASE_URL_RENDER; // Render backend
+
   const handleLogin = async () => {
     try {
-      const _response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/api/admin/login`,
-        { email, password }
-      );
+      const response = await axios.post(`${apiBaseUrl}/api/admin/login`, {
+        email,
+        password,
+      });
       onLogin(); // Notify parent component of successful login
       setError("");
     } catch (err) {

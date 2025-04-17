@@ -26,9 +26,6 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-// Set the base URL for axios globally
-axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>

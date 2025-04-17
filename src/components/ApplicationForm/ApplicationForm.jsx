@@ -105,10 +105,9 @@ const ApplicationForm = () => {
   const apiBaseUrl =
     import.meta.env.MODE === "development"
       ? import.meta.env.VITE_API_BASE_URL_LOCAL // Local backend
-      : import.meta.env.VITE_API_BASE_URL_RENDER; // Render backend for production
+      : import.meta.env.VITE_API_BASE_URL_RENDER; // Render backend
 
   const onSubmit = async (data) => {
-    setIsSubmitting(true);
     try {
       const response = await fetch(`${apiBaseUrl}/api/applications`, {
         method: "POST",
@@ -128,8 +127,6 @@ const ApplicationForm = () => {
     } catch (error) {
       console.error("Error submitting application:", error);
       alert("Failed to submit application. Please try again.");
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
