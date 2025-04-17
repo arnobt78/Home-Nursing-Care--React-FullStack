@@ -27,7 +27,7 @@ app.use(
       "https://develop-testing-1.netlify.app", // Netlify frontend
       "https://sernitas-care.com", // cPanel main domain
     ],
-    methods: ["GET", "POST", "OPTIONS"], // Allow specific HTTP methods
+    methods: ["GET", "POST", "OPTIONS", "DELETE", "PATCH"], // Allow specific HTTP methods
     allowedHeaders: ["Content-Type"], // Allow specific headers
     credentials: true, // Allow cookies and credentials
   })

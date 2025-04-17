@@ -14,6 +14,8 @@ model Application {
   lastName               String
   birthDate              String
   gender                 String
+  email                  String
+  telephone              String
   streetName             String
   houseNumber            String
   postalCode             String
@@ -33,4 +35,5 @@ model Application {
   remarks                String?
   privacyConsent         Boolean
   createdAt              DateTime @default(now())
+  status                 String   @default("Pending") // Add status field with default value
 }

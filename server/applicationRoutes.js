@@ -52,12 +52,46 @@ router.get("/api/applications", async (req, res) => {
 router.post("/api/applications", async (req, res) => {
   try {
     const application = await prisma.application.create({
-      data: req.body,
+      data: {
+        ...req.body,
+        status: "Pending", // Set default status
+      },
     });
     res.status(201).json(application);
   } catch (error) {
     console.error("Error saving application:", error);
     res.status(500).json({ error: "Failed to save application" });
+  }
+});
+
+// Update application status
+router.patch("/api/applications/:id/status", async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+
+  try {
+    const updatedApplication = await prisma.application.update({
+      where: { id },
+      data: { status },
+    });
+    res.status(200).json(updatedApplication);
+  } catch (error) {
+    console.error("Error updating application status:", error);
+    res.status(500).json({ error: "Failed to update application status" });
+  }
+});
+
+// Delete an application by ID
+router.delete("/api/applications/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    await prisma.application.delete({
+      where: { id },
+    });
+    res.status(200).json({ message: "Application deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting application:", error);
+    res.status(500).json({ error: "Failed to delete application" });
   }
 });
 

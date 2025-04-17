@@ -54,6 +54,11 @@ const ApplicationFormSchema = z.object({
   gender: z.enum(["Male", "Female", "Other"], {
     errorMap: () => ({ message: "Geschlecht ist erforderlich" }),
   }),
+  email: z.string().email("Ungültige E-Mail-Adresse"),
+  telephone: z
+    .string()
+    .regex(/^\d+$/, "Telefonnummer darf nur Ziffern enthalten")
+    .min(10, "Telefonnummer muss mindestens 10 Ziffern enthalten"),
   streetName: z
     .string()
     .min(2, "Straßenname muss mindestens 2 Zeichen lang sein"),
@@ -175,7 +180,6 @@ const ApplicationForm = () => {
             )}
           </div>
         </div>
-
         {/* Birth Date and Gender */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -207,6 +211,39 @@ const ApplicationForm = () => {
             {errors.gender && (
               <p className="text-red-500 text-md mt-1">
                 {errors.gender.message}
+              </p>
+            )}
+          </div>
+        </div>
+        {/* Email and Telephone fields */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-lg font-medium mb-1">E-Mail</label>
+            <Input
+              type="email"
+              placeholder="example@example.com"
+              {...register("email")}
+              className="w-full"
+            />
+            {errors.email && (
+              <p className="text-red-500 text-md mt-1">
+                {errors.email.message}
+              </p>
+            )}
+          </div>
+          <div>
+            <label className="block text-lg font-medium mb-1">
+              Telefonnummer
+            </label>
+            <Input
+              type="text"
+              placeholder="0123456789"
+              {...register("telephone")}
+              className="w-full"
+            />
+            {errors.telephone && (
+              <p className="text-red-500 text-md mt-1">
+                {errors.telephone.message}
               </p>
             )}
           </div>
@@ -275,7 +312,6 @@ const ApplicationForm = () => {
             )}
           </div>
         </div>
-
         {/* Occupation */}
         <div>
           <label className="block text-lg font-medium mb-1">Beruf</label>
@@ -291,7 +327,6 @@ const ApplicationForm = () => {
             </p>
           )}
         </div>
-
         {/* Emergency Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -327,7 +362,6 @@ const ApplicationForm = () => {
             )}
           </div>
         </div>
-
         {/* Primary Physician */}
         <div>
           <label className="block text-lg font-medium mb-1">
@@ -340,7 +374,6 @@ const ApplicationForm = () => {
             className="w-full"
           />
         </div>
-
         {/* Insurance Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -366,7 +399,6 @@ const ApplicationForm = () => {
             />
           </div>
         </div>
-
         {/* Medical History */}
         <div>
           <label className="block text-lg font-medium mb-1">
@@ -408,7 +440,6 @@ const ApplicationForm = () => {
             className="w-full"
           />
         </div>
-
         {/* Identification */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -446,7 +477,6 @@ const ApplicationForm = () => {
             )}
           </div>
         </div>
-
         {/* Remarks */}
         <div>
           <label className="block text-lg font-medium mb-1">
@@ -463,7 +493,6 @@ const ApplicationForm = () => {
             </p>
           )}
         </div>
-
         {/* Privacy Consent */}
         <div className="flex items-center">
           <input
@@ -480,7 +509,6 @@ const ApplicationForm = () => {
             {errors.privacyConsent.message}
           </p>
         )}
-
         {/* Submit Button */}
         <Button
           type="submit"
