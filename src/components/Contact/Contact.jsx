@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useMutation } from "@tanstack/react-query"; // Import useMutation
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -8,17 +9,16 @@ import { Textarea } from "../../components/ui/textarea";
 import { Button } from "../../components/ui/button";
 
 import { z } from "zod";
-import axios from "axios";
 
 // Define validation schema using zod
 const schema = z.object({
-  fullname: z.string().min(1, "Full name is required"),
-  email: z.string().email("Invalid email address"),
+  fullname: z.string().min(1, "Vollständiger Name ist erforderlich"),
+  email: z.string().email("Ungültige E-Mail-Adresse"),
   phone: z
     .string()
-    .regex(/^\d+$/, "Phone number must contain only digits")
-    .min(10, "Phone number must be at least 10 digits"),
-  message: z.string().min(1, "Message is required"),
+    .regex(/^\d+$/, "Telefonnummer darf nur Ziffern enthalten")
+    .min(10, "Telefonnummer muss mindestens 10 Ziffern enthalten"),
+  message: z.string().min(1, "Nachricht ist erforderlich"),
 });
 
 const info = [
@@ -63,6 +63,20 @@ const Contact = () => {
       ? import.meta.env.VITE_API_BASE_URL_LOCAL // Local backend
       : import.meta.env.VITE_API_BASE_URL_RENDER; // Render backend
 
+  // Define the mutation function
+  const mutation = useMutation({
+    mutationFn: async (data) => {
+      const response = await fetch(`${apiBaseUrl}/api/send-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok)
+        throw new Error("Nachricht konnte nicht gesendet werden.");
+      return response.json();
+    },
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -78,36 +92,25 @@ const Contact = () => {
       // Validate form data using zod schema
       const validatedData = schema.parse(formData);
 
-      // Send data to the server using axios
-      const response = await axios.post(
-        `${apiBaseUrl}/api/send-email`,
-        validatedData
-      );
+      // Use mutation for API call
+      await mutation.mutateAsync(validatedData);
 
-      if (response.status === 200) {
-        setSuccessMessage("Nachricht erfolgreich versendet!");
-        setFormData({
-          fullname: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      } else {
-        setErrors({ form: response.data.error || "Failed to send message." });
-      }
+      setSuccessMessage("Nachricht erfolgreich versendet!");
+      setFormData({
+        fullname: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     } catch (error) {
-      if (error.response && error.response.data) {
-        setErrors({
-          form: error.response.data.error || "An unexpected error occurred.",
-        });
-      } else if (error.errors) {
+      if (error.errors) {
         const validationErrors = {};
         error.errors.forEach((err) => {
           validationErrors[err.path[0]] = err.message;
         });
         setErrors(validationErrors);
       } else {
-        setErrors({ form: "An unexpected error occurred." });
+        setErrors({ form: "Ein unerwarteter Fehler ist aufgetreten." });
       }
     } finally {
       setIsLoading(false);

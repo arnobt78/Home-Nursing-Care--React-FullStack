@@ -48,14 +48,18 @@
 
 import { useQuery } from "@tanstack/react-query";
 
-export const usePersistedQuery = (key, fetchData, options = {}) => {
-  const cachedData = localStorage.getItem(key);
+// Updated usePersistedQuery to use the object-based signature for React Query v5
+export const usePersistedQuery = ({ queryKey, queryFn, options = {} }) => {
+  const cachedData = localStorage.getItem(JSON.stringify(queryKey));
 
   // Always call useQuery
-  const queryResult = useQuery(key, fetchData, {
+  const queryResult = useQuery({
+    queryKey,
+    queryFn,
     ...options,
     onSuccess: (data) => {
-      localStorage.setItem(key, JSON.stringify(data));
+      // Cache the data in localStorage
+      localStorage.setItem(JSON.stringify(queryKey), JSON.stringify(data));
       if (options.onSuccess) {
         options.onSuccess(data); // Call any additional onSuccess logic passed in options
       }
@@ -74,3 +78,33 @@ export const usePersistedQuery = (key, fetchData, options = {}) => {
   // Otherwise, return the query result
   return queryResult;
 };
+
+// Example usage (for reference):
+// const fetchServices = async () => {
+//   const response = await fetch("/api/services");
+//   if (!response.ok) {
+//     throw new Error("Failed to fetch services");
+//   }
+//   return response.json();
+// };
+
+// const Services = () => {
+//   const { data, isLoading, error } = usePersistedQuery({
+//     queryKey: ["services"],
+//     queryFn: fetchServices,
+//     options: {
+//       staleTime: 1000 * 60 * 5, // Data is fresh for 5 minutes
+//     },
+//   });
+
+//   if (isLoading) return <p>Loading...</p>;
+//   if (error) return <p>Error: {error.message}</p>;
+
+//   return (
+//     <ul>
+//       {data.map((service) => (
+//         <li key={service.id}>{service.name}</li>
+//       ))}
+//     </ul>
+//   );
+// };

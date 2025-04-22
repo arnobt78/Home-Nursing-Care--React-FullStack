@@ -7,19 +7,6 @@ import teamImage from "../../assets/service-3.jpg";
 
 import CachedImage from "../CachedImage";
 
-// const fadeIn = (delay = 0) => ({
-//   initial: { opacity: 0, y: 20 },
-//   animate: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       duration: 1,
-//       ease: "easeIn",
-//       delay,
-//     },
-//   },
-// });
-
 const Services = () => {
   return (
     <>

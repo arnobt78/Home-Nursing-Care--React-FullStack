@@ -43,8 +43,8 @@ const Hero = () => {
   return (
     <>
       <div className="container relative min-h-[600px] md:min-h-[700px] overflow-hidden">
-        <AnimatePresence>
-          {/* Background Image Slider */}
+        {/* <AnimatePresence>
+          {
           <motion.div
             key={currentImageIndex} // Ensure unique key for each image
             className="absolute inset-0"
@@ -58,6 +58,24 @@ const Hero = () => {
             animate="animate"
             exit="exit"
           />
+        </AnimatePresence> */}
+
+        <AnimatePresence>
+          {/* Background Image Slider */}
+          <motion.div
+            key={currentImageIndex} // Ensure unique key for each image
+            className="absolute inset-0"
+            variants={backgroundVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <CachedImage
+              src={images[currentImageIndex]}
+              alt={`Background ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
         </AnimatePresence>
 
         {/* Overlay for Text */}

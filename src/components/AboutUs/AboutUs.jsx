@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { slideUp } from "../../utility/animation";
+// import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
 import { FaCheckCircle } from "react-icons/fa";
 
 import AboutImg1 from "../../assets/hr-1.jpg";
@@ -8,7 +8,8 @@ import AboutImg2 from "../../assets/hr-2.jpg";
 import AboutImg3 from "../../assets/hr-3.jpg";
 import AboutImg4 from "../../assets/hero-1.jpg";
 
-import CachedImage from "../CachedImage";
+import { MotionCachedImage } from "../CachedImage";
+// import CachedImage from "../CachedImage";
 
 const team = [
   {
@@ -43,34 +44,6 @@ const services = [
 ];
 
 const AboutUs = () => {
-  // // Array of background images
-  // const images = [AboutImg1, AboutImg2, AboutImg3];
-
-  // // State to track the current image index
-  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // // Automatically change the image every 5 seconds
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 5000); // Change image every 5 seconds
-  //   return () => clearInterval(interval); // Cleanup interval on component unmount
-  // }, [images.length]);
-
-  // // Framer Motion Variants for Background Animation
-  // const backgroundVariants = {
-  //   initial: { opacity: 0, scale: 1.1 },
-  //   animate: {
-  //     opacity: 1,
-  //     scale: 1,
-  //     transition: {
-  //       duration: 1.5,
-  //       ease: "easeOut",
-  //     },
-  //   },
-  //   exit: { opacity: 0, scale: 1.1, transition: { duration: 1.5 } },
-  // };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -78,52 +51,28 @@ const AboutUs = () => {
       transition={{ duration: 0.6 }}
       className="px-6 py-24 md:px-16 max-w-7xl mx-auto space-y-16"
     >
-      {/* Background Image Slider
-      <AnimatePresence>
-        <motion.div
-          key={currentImageIndex}
-          className="absolute inset-0 -z-10"
-          style={{
-            backgroundImage: `url(${images[currentImageIndex]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          variants={backgroundVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-        />
-      </AnimatePresence> */}
-
-      {/* Hero Section*/}
-      {/* <section className="text-center">
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-xl md:text-2xl font-bold text-primary mb-4"
-        >
-          Über uns
-        </motion.h1>
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          Bei Sernitas Care stehen der Mensch und seine Würde im Mittelpunkt.
-          Mit Herz, Fachwissen und echter Hingabe bieten wir individuelle und
-          liebevolle Pflege im eigenen Zuhause. Unser Ziel ist es, Ihren
-          Liebsten ein Leben in Geborgenheit, Selbstbestimmung und Vertrauen zu
-          ermöglichen – Tag für Tag.
-        </p>
-      </section>  */}
-
       {/* Mission Section */}
       <section className="grid md:grid-cols-2 gap-10 items-center">
-        <motion.img
+        {/* <motion.img
           src={AboutImg4}
           alt="Company Mission"
           className="w-full rounded-2xl shadow-lg"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }} 
+        /> */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-        />
+        >
+          <MotionCachedImage
+            src={AboutImg4}
+            alt="Company Mission"
+            className="w-full rounded-2xl shadow-lg"
+          />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}

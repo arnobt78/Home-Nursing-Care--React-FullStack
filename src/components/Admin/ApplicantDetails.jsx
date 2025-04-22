@@ -1,18 +1,47 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query"; // Import useMutation
 
 const ApplicantDetails = ({ application, onClose, onStatusChange }) => {
   const [showConfirmationPopup, setShowConfirmationPopup] = useState(false); // State for confirmation popup
   const [statusToChange, setStatusToChange] = useState(null); // Track the status to change
 
-  if (!application) return null;
+  const apiBaseUrl =
+    import.meta.env.MODE === "development"
+      ? import.meta.env.VITE_API_BASE_URL_LOCAL
+      : import.meta.env.VITE_API_BASE_URL_RENDER;
 
-  // Handle confirmation for status change
-  const handleConfirmStatusChange = () => {
-    onStatusChange(application.id, statusToChange); // Change the status
-    setShowConfirmationPopup(false); // Close confirmation popup
-    onClose(); // Close the ApplicantDetails popup
+  // Define the mutation function
+  const mutation = useMutation({
+    mutationFn: async ({ id, status }) => {
+      const response = await fetch(
+        `${apiBaseUrl}/api/applications/${id}/status`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status }),
+        }
+      );
+      if (!response.ok) throw new Error("Failed to update status");
+      return response.json();
+    },
+  });
+
+  const handleConfirmStatusChange = async () => {
+    try {
+      await mutation.mutateAsync({
+        id: application.id,
+        status: statusToChange,
+      });
+      onStatusChange(application.id, statusToChange); // Notify parent component of status change
+      setShowConfirmationPopup(false); // Close the confirmation popup
+      onClose(); // Close the ApplicantDetails popup
+    } catch (error) {
+      console.error("Error updating status:", error);
+    }
   };
+
+  if (!application) return null;
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center pt-24">

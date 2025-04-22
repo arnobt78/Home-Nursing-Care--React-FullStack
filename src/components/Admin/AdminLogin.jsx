@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import { useMutation } from "@tanstack/react-query"; // Import useMutation
 
 const AdminLogin = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -12,12 +13,21 @@ const AdminLogin = ({ onLogin }) => {
       ? import.meta.env.VITE_API_BASE_URL_LOCAL // Local backend
       : import.meta.env.VITE_API_BASE_URL_RENDER; // Render backend
 
-  const handleLogin = async () => {
-    try {
+  // Define the mutation function
+  const mutation = useMutation({
+    mutationFn: async ({ email, password }) => {
       const response = await axios.post(`${apiBaseUrl}/api/admin/login`, {
         email,
         password,
       });
+      if (response.status !== 200) throw new Error("Login failed");
+      return response.data;
+    },
+  });
+
+  const handleLogin = async () => {
+    try {
+      await mutation.mutateAsync({ email, password }); // Use mutation for API call
       onLogin(); // Notify parent component of successful login
       setError("");
     } catch (err) {
