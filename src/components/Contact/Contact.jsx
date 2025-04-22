@@ -119,9 +119,9 @@ const Contact = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="pt-24 pb-2 bg-gray-700"
+      className="pt-24 pb-2 bg-slate-600"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto p-4">
         {/* Use grid for larger screens and flex-col-reverse for phone screens */}
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Contact Information */}
@@ -134,11 +134,11 @@ const Contact = () => {
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => (
                 <li key={index} className="flex items-center gap-6">
-                  <div className="w-[52px] h-[52px] xl:w-[72px] bg-slate-300 text-primary rounded-md flex justify-center items-center">
+                  <div className="w-[52px] h-[52px] xl:w-[72px] bg-slate-200 text-primary rounded-md flex justify-center items-center">
                     <div className="text-[28px]">{item.icon}</div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-white/60">{item.title}</p>
+                    <p className="text-white/70">{item.title}</p>
                     <h3 className="text-xl text-white">{item.description}</h3>
                   </div>
                 </li>
@@ -151,13 +151,13 @@ const Contact = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gray-800 p-6 sm:p-8 lg:p-10 rounded-xl w-full"
+            className="bg-slate-700 p-6 sm:p-8 lg:p-10 rounded-xl w-full"
           >
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-              <h3 className="text-3xl sm:text-4xl text-white/100">
+              <h3 className="text-3xl sm:text-4xl text-white/90">
                 Wir sind für Sie da
               </h3>
-              <p className="text-white/60 text-justify">
+              <p className="text-white/70 text-justify">
                 Treten Sie mit Sernitas Care in Kontakt – wir stehen Ihnen mit
                 vertrauensvoller, einfühlsamer und professioneller Pflege zur
                 Seite. Gemeinsam sorgen wir für mehr Wohlbefinden, Würde und
@@ -214,7 +214,7 @@ const Contact = () => {
               )}
               <Button
                 size="md"
-                className="max-w-[200px] bg-primary text-white hover:bg-secondary"
+                className="lg:max-w-[200px] sm:px-4 sm:py-2 bg-secondary text-white rounded-xl border-2 hover:bg-white hover:text-secondary hover:border-secondary transition duration-300 flex items-center justify-center"
                 type="submit"
                 disabled={isLoading}
               >

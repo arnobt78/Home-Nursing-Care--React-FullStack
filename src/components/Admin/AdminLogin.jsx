@@ -27,7 +27,7 @@ const AdminLogin = ({ onLogin }) => {
 
   return (
     <div className="container mx-auto py-24">
-      <div className="max-w-md mx-auto bg-white p-6 rounded shadow">
+      <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-xl">
         <h2 className="text-2xl font-bold mb-4">Admin Login</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <input
@@ -35,18 +35,18 @@ const AdminLogin = ({ onLogin }) => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full mb-4 p-2 border rounded"
+          className="w-full mb-4 p-2 border rounded-xl"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full mb-4 p-2 border rounded"
+          className="w-full mb-4 p-2 border rounded-xl"
         />
         <button
           onClick={handleLogin}
-          className="bg-primary text-white px-4 py-2 rounded"
+          className="bg-primary/90 text-white rounded-xl border-2 hover:bg-white hover:text-primary/90 hover:border-primary/90 transition duration-300 px-4 py-2"
         >
           Login
         </button>

@@ -15,16 +15,19 @@ const team = [
     name: "Dr. Ali Yildiz",
     title: "CEO",
     img: AboutImg1,
+    link: "https://example.com/ali-yildiz", // Add the link for this member
   },
   {
     name: "Summyaah Yildiz",
     title: "Personalbuchhalterin",
     img: AboutImg2,
+    link: "https://example.com/summyaah-yildiz", // Add the link for this member
   },
   {
     name: "Andre Piper",
     title: "Betriebsleiter",
     img: AboutImg3,
+    link: "https://example.com/andre-piper", // Add the link for this member
   },
 ];
 
@@ -141,7 +144,7 @@ const AboutUs = () => {
       </section>
 
       {/* Unique Section */}
-      <section className="bg-primary/10 rounded-3xl p-10 shadow-inner">
+      <section className="bg-primary/10 rounded-2xl p-10 shadow-inner">
         <motion.h2
           className="text-3xl font-semibold text-primary mb-4 text-center"
           initial={{ opacity: 0 }}
@@ -175,29 +178,8 @@ const AboutUs = () => {
         </motion.p>
       </section>
 
-      {/* Services Section */}
-      <section>
-        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
-          Was wir anbieten
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, idx) => (
-            <motion.div
-              key={idx}
-              className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all flex items-center gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
-            >
-              <FaCheckCircle className="text-primary text-2xl flex-shrink-0" />
-              <p className="text-primary/90 font-semibold text-sm">{service}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* Team Section */}
-      <section>
+      {/* <section>
         <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
           Lernen Sie unser Team kennen
         </h2>
@@ -221,6 +203,61 @@ const AboutUs = () => {
                 </h3>
                 <p className="text-md text-primary/90">{member.title}</p>
               </div>
+            </motion.div>
+          ))}
+        </div>
+      </section> */}
+      <section>
+        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
+          Lernen Sie unser Team kennen
+        </h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {team.map((member, index) => (
+            <motion.a
+              key={index}
+              href={member.link} // Add the link for each team member
+              target="_blank" // Open in a new tab
+              rel="noopener noreferrer" // Security best practice
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1 }}
+              className="rounded-2xl overflow-hidden shadow-xl group relative block"
+            >
+              {/* Background Image */}
+              <div
+                className="w-full h-64 bg-cover bg-center"
+                style={{ backgroundImage: `url(${member.img})` }}
+              ></div>
+
+              {/* Overlay with Name and Title */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black/40 pb-2 text-white text-center">
+                <h3 className="text-lg font-semibold">{member.name}</h3>
+                <p className="text-md">{member.title}</p>
+              </div>
+
+              {/* Hover Effect */}
+              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </motion.a>
+          ))}
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section>
+        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
+          Was wir anbieten
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all flex items-center gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1 }}
+            >
+              <FaCheckCircle className="text-primary text-2xl flex-shrink-0" />
+              <p className="text-primary/90 font-semibold text-sm">{service}</p>
             </motion.div>
           ))}
         </div>

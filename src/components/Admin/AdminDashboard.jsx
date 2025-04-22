@@ -146,19 +146,21 @@ const AdminDashboard = () => {
                 <td className="border border-gray-300 p-1">{app.gender}</td>
                 <td className="border border-gray-300 p-1">{app.email}</td>
                 <td className="border border-gray-300 p-1">{app.telephone}</td>
-                <td className="border border-gray-300 p-2 justify-center ">
-                  <span
-                    className={`flex items-center justify-center w-24 h-8 px-2 py-1 rounded-lg border-2 text-white ${
-                      app.status === "Pending"
-                        ? "bg-orange-500"
-                        : app.status === "Approved"
-                        ? "bg-green-500"
-                        : "bg-red-500"
-                    }`}
-                    style={{ minWidth: "6rem", minHeight: "2rem" }} // Optional inline styles for fallback
-                  >
-                    {app.status}
-                  </span>
+                <td className="border border-gray-300 p-1 text-center align-middle">
+                  <div className="flex items-center justify-center h-full">
+                    <span
+                      className={`flex items-center justify-center w-24 h-8 rounded-3xl border-2 text-white ${
+                        app.status === "Pending"
+                          ? "bg-orange-500"
+                          : app.status === "Approved"
+                          ? "bg-green-500"
+                          : "bg-red-500"
+                      }`}
+                      style={{ minWidth: "6rem", minHeight: "2rem" }} // Optional inline styles for fallback
+                    >
+                      {app.status}
+                    </span>
+                  </div>
                 </td>
                 {/* <td className="border border-gray-300 p-2 flex justify-center gap-2">
                   <button
@@ -177,14 +179,14 @@ const AdminDashboard = () => {
                 <td className="border border-gray-300 p-2 flex justify-center gap-2">
                   <button
                     onClick={() => setSelectedApplication(app)}
-                    className="bg-secondary text-white rounded-lg border-2 hover:bg-white hover:text-secondary hover:border-secondary transition duration-300 flex items-center justify-center"
+                    className="bg-white text-secondary border-secondary rounded-xl border-2 hover:bg-secondary hover:text-white hover:border-slate-300 transition duration-300 flex items-center justify-center"
                     style={{ width: "6rem", height: "2.5rem" }} // Fixed width and height
                   >
                     Details
                   </button>
                   <button
                     onClick={() => handleDeleteClick(app)}
-                    className="bg-red-500 text-white rounded-lg border-2 hover:bg-white hover:text-red-500 hover:border-red-500 transition duration-300 flex items-center justify-center"
+                    className="bg-white text-red-500 border-red-500 rounded-xl border-2 hover:bg-red-500 hover:text-white hover:border-slate-300 transition duration-300 flex items-center justify-center"
                     style={{ width: "6rem", height: "2.5rem" }} // Fixed width and height
                   >
                     Delete
@@ -206,7 +208,7 @@ const AdminDashboard = () => {
             }))
           }
           disabled={pagination.pageIndex === 0}
-          className="bg-gray-200 px-4 py-2 rounded-lg disabled:opacity-50"
+          className="bg-slate-300 px-4 py-2 rounded-xl disabled:opacity-50"
         >
           Previous
         </button>
@@ -228,7 +230,7 @@ const AdminDashboard = () => {
             pagination.pageIndex >=
             Math.ceil(applications.length / pagination.pageSize) - 1
           }
-          className="bg-gray-200 px-4 py-2 rounded-lg disabled:opacity-50"
+          className="bg-slate-300 px-4 py-2 rounded-xl disabled:opacity-50"
         >
           Next
         </button>
@@ -266,14 +268,14 @@ const AdminDashboard = () => {
             <div className="flex justify-center gap-4">
               <button
                 onClick={confirmDelete}
-                className="bg-red-500 text-white rounded-lg border-2 hover:bg-white hover:text-red-500 hover:border-red-500 transition duration-300 flex items-center justify-center"
+                className="bg-red-500 text-white rounded-xl border-2 hover:bg-white hover:text-red-500 hover:border-red-500 transition duration-300 flex items-center justify-center px-4 py-2"
                 style={{ width: "6rem", height: "2.5rem" }} // Fixed width and height
               >
                 Yes
               </button>
               <button
                 onClick={cancelDelete}
-                className="bg-slate-500 text-white rounded-lg border-2 hover:bg-white hover:text-slate-500 hover:border-slate-500 transition duration-300 flex items-center justify-center"
+                className="bg-slate-500 text-white rounded-xl border-2 hover:bg-white hover:text-slate-500 hover:border-slate-500 transition duration-300 flex items-center justify-center px-4 py-2"
                 style={{ width: "6rem", height: "2.5rem" }} // Fixed width and height
               >
                 No

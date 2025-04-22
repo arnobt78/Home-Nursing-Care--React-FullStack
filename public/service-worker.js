@@ -2,12 +2,22 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open("static-assets").then((cache) => {
       return cache.addAll([
-        "/assets/icon/1.svg",
-        "/assets/icon/2.svg",
-        "/assets/icon/3.svg",
+        // icons
+        "/assets/icon/ambulance-1.svg",
+        "/assets/icon/care-1.svg",
+        "/assets/icon/care-2.svg",
+        "/assets/icon/handshake-1.svg",
+        "/assets/icon/health-1.svg",
+        "/assets/icon/health-2.svg",
+        "/assets/icon/home-1.svg",
+        "/assets/icon/home-2.svg",
+        "/assets/icon/nurse-1.svg",
+        "/assets/icon/nurse-2.svg",
+        "/assets/icon/time-1.svg",
+
+        // images
         "/assets/american.png",
         "/assets/ankara.png",
-        // Add more static assets here
         "/assets/goethe.png",
         "/assets/hero-1.jpg",
         "/assets/hero-2.jpg",

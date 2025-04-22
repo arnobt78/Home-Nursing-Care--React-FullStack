@@ -1,6 +1,14 @@
-import Img1 from "../../assets/icon/1.svg";
-import Img2 from "../../assets/icon/2.svg";
-import Img3 from "../../assets/icon/3.svg";
+import Img11 from "../../assets/icon/ambulance-1.svg";
+import Img4 from "../../assets/icon/care-1.svg";
+import Img2 from "../../assets/icon/care-2.svg";
+import Img3 from "../../assets/icon/handshake-1.svg";
+import Img5 from "../../assets/icon/health-1.svg";
+import Img6 from "../../assets/icon/health-2.svg";
+import Img9 from "../../assets/icon/home-1.svg";
+import Img10 from "../../assets/icon/home-2.svg";
+import Img7 from "../../assets/icon/nurse-1.svg";
+import Img8 from "../../assets/icon/nurse-2.svg";
+import Img1 from "../../assets/icon/time-1.svg";
 
 export const cardsData = [
   {
@@ -8,7 +16,7 @@ export const cardsData = [
     title: "Kostenlose Beratung",
     description:
       "Individuelle und unverbindliche Pflegeberatung – persönlich oder telefonisch.",
-    image: Img2,
+    image: Img4,
     details: `<h3>Individuelle und unverbindliche Pflegeberatung – persönlich oder telefonisch</h3>
 
 <h4>Vertrauen beginnt mit einem offenen Gespräch</h4>
@@ -91,7 +99,7 @@ Wenn Sie mehr über die 24-Stunden-Betreuung von Sernitas Care erfahren möchten
     title: "Medizinische Pflegezyklen",
     description:
       "Strukturierte Behandlungsabläufe für chronisch oder akut Erkrankte.",
-    image: Img3,
+    image: Img6,
     details: `<h3>Strukturierte Behandlungsabläufe für chronisch oder akut Erkrankte</h3>
 
 <h4>Gezielte Pflegeprozesse für mehr Stabilität und Lebensqualität</h4>
@@ -140,7 +148,7 @@ Sernitas Care steht Ihnen bei der Planung und Durchführung medizinischer Pflege
     title: "Qualitätskontrolle",
     description:
       "Regelmäßige Überprüfungen für eine gleichbleibend hohe Pflegequalität.",
-    image: Img2,
+    image: Img3,
     details: `<h3>Regelmäßige Überprüfungen für eine gleichbleibend hohe Pflegequalität</h3>
 
 <h4>Pflege mit Anspruch – Qualität, die man spürt</h4>
@@ -189,7 +197,7 @@ Sernitas Care steht für verlässliche Pflege auf höchstem Niveau. Mit unserem 
     title: "Grundpflege",
     description:
       "Hilfe bei alltäglichen Aufgaben wie Körperpflege, Ernährung und Mobilität.",
-    image: Img3,
+    image: Img2,
     details: `<h3>Grundpflege – pflegende Leistungen von Sernitas Care</h3>
 <p>
   Sie benötigen Unterstützung bei Ihrer Mobilität, bei der Ernährung oder beim
@@ -324,7 +332,7 @@ Sernitas Care steht für verlässliche Pflege auf höchstem Niveau. Mit unserem 
     title: "Behandlungspflege",
     description:
       "Medizinisch verordnete Leistungen wie Wundversorgung und Medikamentengabe.",
-    image: Img2,
+    image: Img7,
     details: `<h3>Behandlungspflege – medizinische Leistungen durch Sernitas Care</h3>
 <p>
   Die Behandlungspflege umfasst alle medizinisch notwendigen pflegerischen Maßnahmen, die von einem Arzt verordnet wurden – sei es zur Heilung, Linderung oder Stabilisierung eines Krankheitsbildes. Unsere examinierten Pflegefachkräfte bei Sernitas Care führen diese Leistungen fachgerecht und einfühlsam bei Ihnen zuhause durch.
@@ -388,7 +396,7 @@ Sernitas Care steht für verlässliche Pflege auf höchstem Niveau. Mit unserem 
     id: 7,
     title: "Hauswirtschaftliche Hilfe",
     description: "Unterstützung im Haushalt – vom Einkaufen bis zum Reinigen.",
-    image: Img3,
+    image: Img9,
     details: `<h3>Sernitas Care – Hauswirtschaft als Unterstützung für Ihren Alltag</h3>
 <p>
   Die tägliche Gestaltung qualifizierter Pflege nimmt immer individuelle Formen an. Denn die Bedürfnisse variieren je nach Klient und dem jeweils bewilligten Pflegegrad. Neben der Grundpflege – also der Unterstützung bei Körperpflege und Nahrungsaufnahme – spielt auch die hauswirtschaftliche Betreuung eine große Rolle. Denn oftmals sind es die typischen Aufgaben des Alltags, die eine immer größere Herausforderung darstellen. Eine Haushaltshilfe durch Sernitas Care schafft hier eine wertvolle Unterstützung.
@@ -485,7 +493,7 @@ Sernitas Care steht für verlässliche Pflege auf höchstem Niveau. Mit unserem 
     title: "Beratung nach §37.3 SGB XI",
     description:
       "Pflegeberatung für Angehörige mit Pflegegeldanspruch gemäß Gesetz.",
-    image: Img1,
+    image: Img2,
     details: `<h3>Sernitas Care – qualifizierte Pflegeberatung nach §37.3 SGB XI</h3>
 
 <p>Die regelmäßige Pflegeberatung durch unser geschultes Team deckt alle Phasen und Grade der Pflege ab. Pflegebedürftige und ihre Angehörigen erhalten auf diesem Weg alle relevanten Informationen über die Möglichkeiten einer professionellen Pflege. Wir beraten Sie zu Ihrem Pflegegrad und welche Pflegedienstleistungen noch interessant für Sie geworden sein könnten. Auch der Bedarf nach Hilfsmitteln wird durch unsere Beratung aufgedeckt. Die Pflegekasse übernimmt die Kosten für Hilfsmittel und für die Leistungen durch unseren Pflegedienst. Wir prüfen in unserem Beratungseinsatz, ob Ihr Pflegegrad eventuell neu eingestuft werden muss und ob sich der Zustand Ihrer Pflegebedürftigkeit verbessert oder verschlechtert hat oder ob die Leistungen durch unseren Pflegedienst und der Bedarf an Hilfsmitteln gleichbleiben.</p>
@@ -534,7 +542,7 @@ Sernitas Care steht für verlässliche Pflege auf höchstem Niveau. Mit unserem 
     title: "Verhinderungspflege",
     description:
       "Kurzzeitige Übernahme der Pflege, wenn Angehörige verhindert sind.",
-    image: Img3,
+    image: Img7,
     details: `<h3>Verhinderungspflege – ob jahres-, stunden- oder wochenweise</h3>
 <p>
 Sernitas Care springt für Pflegepersonen & Angehörige mit flexibler Ersatzpflege ein. Sernitas Care ist mit einem flexibel buchbaren Dienstleistungsangebot in der Verhinderungspflege für Pflegebedürftige da, wenn Pflegepersonen oder Angehörige verhindert bzw. abwesend sind. Unsere ambitionierten Mitarbeiter kümmern sich stellvertretend in allen Belangen um pflegebedürftige Personen, die sonst von einer eingetragenen Pflegeperson oder Angehörigen gepflegt werden.
@@ -623,7 +631,7 @@ Unser Ziel: Sie entlasten – emotional, organisatorisch und finanziell. Vertrau
     title: "Krankenpflege",
     description:
       "Pflege und Versorgung nach ärztlicher Anordnung direkt zu Hause.",
-    image: Img2,
+    image: Img8,
     details: `<h3>Mit Herz & Fachkompetenz – Erstklassige Krankenpflege von Sernitas Care</h3>
 
 <h4>Sernitas Care – ein kompetenter Partner in der Krankenpflege</h4>
@@ -697,7 +705,7 @@ Unser Ziel: Sie entlasten – emotional, organisatorisch und finanziell. Vertrau
     title: "Altenpflege",
     description:
       "Wertschätzende Betreuung älterer Menschen mit Herz und Erfahrung.",
-    image: Img2,
+    image: Img7,
     details: `<h3>Zuverlässig & professionell – Altenpflege von der Sernitas Care</h3>
 
 <h4>Altenpflege – Was ist das eigentlich?</h4>
@@ -760,7 +768,7 @@ Unser Ziel: Sie entlasten – emotional, organisatorisch und finanziell. Vertrau
     id: 12,
     title: "Ambulante Pflege",
     description: "Pflege zu Hause – individuell, flexibel und professionell.",
-    image: Img2,
+    image: Img11,
     details: `<h3>Mit Herz & Hingabe – Ambulante Pflege von Sernitas Care</h3>
 
 <h4>Was ist ambulante Pflege?</h4>
@@ -827,7 +835,7 @@ Wir sind stolz darauf, eine Arbeit zu leisten, die einen echten Unterschied im L
     title: "Häusliche Pflege",
     description:
       "Umfassende Versorgung in der vertrauten Umgebung des eigenen Zuhauses.",
-    image: Img2,
+    image: Img10,
     details: `<h3>Empathie & Herzblut in der häuslichen Pflege mit Sernitas Care</h3>
     
     <h4>Häusliche Pflegekraft mit viel Herzblut & Empathie</h4>
@@ -906,7 +914,7 @@ Wir sind stolz darauf, eine Arbeit zu leisten, die einen echten Unterschied im L
     title: "Pflegeberatung für Angehörige",
     description:
       "Begleitung, Aufklärung und Hilfe bei der Organisation von Pflege.",
-    image: Img2,
+    image: Img4,
     details: `<h3>Begleitung, Aufklärung und Hilfe bei der Organisation von Pflege</h3>
 
 <h4>Verständnisvolle Beratung für Angehörige in jeder Lebenslage</h4>
@@ -955,7 +963,7 @@ Mit Sernitas Care haben Sie einen verlässlichen Partner an Ihrer Seite. Wir ber
     title: "Demenzbetreuung",
     description:
       "Einfühlsame Unterstützung für Menschen mit kognitiven Einschränkungen.",
-    image: Img2,
+    image: Img7,
     details: `<h3>Mit Herz & Hingabe – Demenzbetreuung von Sernitas Care</h3>
 
 <h4>Was ist Demenzbetreuung?</h4>
@@ -1014,7 +1022,7 @@ Unser Team von Sernitas Care ist mit Herz und Hingabe für die Demenzbetreuung z
     title: "Palliativpflege",
     description:
       "Würdevolle Begleitung in der letzten Lebensphase – mit Zeit und Zuwendung.",
-    image: Img2,
+    image: Img8,
     details: `<h3>Würdevolle Begleitung in der letzten Lebensphase – mit Zeit und Zuwendung bei Sernitas Care</h3>
 
 <h4>Was ist Palliativpflege?</h4>
@@ -1076,7 +1084,7 @@ Wenn Sie Unterstützung in der Palliativpflege benötigen, können Sie sich jede
     id: 17,
     title: "Mobilitätsförderung",
     description: "Gezielte Maßnahmen zur Erhaltung der Selbstständigkeit.",
-    image: Img2,
+    image: Img5,
     details: `<h3>Gezielte Maßnahmen zur Erhaltung der Selbstständigkeit – Mobilitätsförderung bei Sernitas Care</h3>
 
 <h4>Was ist Mobilitätsförderung?</h4>

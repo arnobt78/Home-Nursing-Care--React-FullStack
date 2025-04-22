@@ -20,7 +20,7 @@ const CardModal = ({ isOpen, onClose, cardData }) => {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
+      <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-8 relative overflow-y-auto max-h-[90vh]">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <button

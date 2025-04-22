@@ -109,7 +109,7 @@ const ApplicantDetails = ({ application, onClose, onStatusChange }) => {
           <p>
             <strong>Status:</strong>{" "}
             <span
-              className={`px-2 py-1 rounded text-white ${
+              className={`px-2 py-1 rounded-3xl text-white ${
                 application.status === "Pending"
                   ? "bg-orange-500"
                   : application.status === "Approved"
@@ -127,7 +127,7 @@ const ApplicantDetails = ({ application, onClose, onStatusChange }) => {
                 setStatusToChange("Approved");
                 setShowConfirmationPopup(true);
               }}
-              className="bg-green-500 text-white px-4 py-2 rounded-lg"
+              className=" bg-secondary text-white rounded-xl border-2 hover:bg-white hover:text-secondary hover:border-secondary transition duration-300 flex items-center justify-center px-4 py-2 "
             >
               Approve
             </button>
@@ -136,13 +136,13 @@ const ApplicantDetails = ({ application, onClose, onStatusChange }) => {
                 setStatusToChange("Declined");
                 setShowConfirmationPopup(true);
               }}
-              className="bg-red-500 text-white px-4 py-2 rounded-lg"
+              className="bg-red-500 text-white rounded-xl border-2 hover:bg-white hover:text-red-500 hover:border-red-500 transition duration-300 flex items-center justify-center px-4 py-2"
             >
               Decline
             </button>
             <button
               onClick={onClose}
-              className="bg-gray-300 text-black px-4 py-2 rounded-lg"
+              className="bg-slate-500 text-white rounded-xl border-2 hover:bg-white hover:text-slate-500 hover:border-slate-500 transition duration-300 flex items-center justify-center px-4 py-2"
             >
               Close
             </button>
@@ -161,13 +161,13 @@ const ApplicantDetails = ({ application, onClose, onStatusChange }) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <button
                 onClick={handleConfirmStatusChange}
-                className="bg-green-500 text-white px-4 py-2 rounded-lg"
+                className="bg-secondary text-white rounded-xl border-2 hover:bg-white hover:text-secondary hover:border-secondary transition duration-300 flex items-center justify-center px-4 py-2"
               >
                 Yes
               </button>
               <button
                 onClick={() => setShowConfirmationPopup(false)}
-                className="bg-gray-300 text-black px-4 py-2 rounded-lg"
+                className="bg-slate-500 text-white rounded-xl border-2 hover:bg-white hover:text-slate-500 hover:border-slate-500 transition duration-300 flex items-center justify-center px-4 py-2"
               >
                 No
               </button>
