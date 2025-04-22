@@ -512,7 +512,7 @@ const ApplicationForm = () => {
         {/* Submit Button */}
         <Button
           type="submit"
-          className="w-auto border-white border-2 bg-secondary text-white py-2 rounded-md hover:bg-secondary/30 hover:border-slate-500 transition duration-200"
+          className="w-auto border-white border-2 bg-secondary text-white py-2 rounded-xl hover:bg-slate-300 hover:border-slate-300 transition duration-300"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Wird gesendet..." : "Bewerbung absenden"}

@@ -15,7 +15,7 @@ const team = [
     name: "Dr. Ali Yildiz",
     title: "CEO",
     img: AboutImg1,
-    link: "https://example.com/ali-yildiz", // Add the link for this member
+    link: "https://www.linkedin.com/in/ali-yildiz-09376a157/", // Add the link for this member
   },
   {
     name: "Summyaah Yildiz",
@@ -27,7 +27,7 @@ const team = [
     name: "Andre Piper",
     title: "Betriebsleiter",
     img: AboutImg3,
-    link: "https://example.com/andre-piper", // Add the link for this member
+    link: "https://www.linkedin.com/in/andre-pieper-7b208b24b/", // Add the link for this member
   },
 ];
 
