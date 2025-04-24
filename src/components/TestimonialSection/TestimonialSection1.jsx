@@ -74,9 +74,9 @@ const TestimonialSection1 = () => {
               Dienst am Menschen.
             </p>
             {/* FaQuoteRight dynamically aligned to the bottom of the paragraph */}
-            <FaQuoteRight className="absolute -bottom-4 right-0 text-primary/90 text-3xl md:text-4xl" />
+            <FaQuoteRight className="absolute -bottom-7 right-0 text-primary/90 text-3xl md:text-4xl" />
           </div>
-          <p className="mt-4 text-primary/90 text-lg italic font-bold">
+          <p className="font-ephesis mt-4 text-primary/90 text-3xl italic font-bold">
             Dr. Ali Yildiz
           </p>
           <p className="text-primary/90 italic">Geschäftsführer</p>

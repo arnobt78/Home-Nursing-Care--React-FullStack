@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { Input } from "../../components/ui/input";
-import { Button } from "../../components/ui/button";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 import { z } from "zod";
 
 // Validation schema using zod
@@ -81,7 +81,7 @@ const CallbackRequest = () => {
   };
 
   return (
-    <section className="bg-primary/90 py-4 px-6 border-t-4 border-secondary/90 text-white">
+    <section className="bg-primary/90 py-4 px-12 border-t-4 border-secondary/90 text-white">
       <form
         className="flex flex-col md:flex-row items-center gap-4"
         onSubmit={handleSubmit}
@@ -89,7 +89,7 @@ const CallbackRequest = () => {
         <p className="text-white/90 font-medium whitespace-nowrap px-4">
           Wir rufen Sie gerne zurück:
         </p>
-        <div className="flex-1 gap-8">
+        <div className="flex-1 px-8">
           <Input
             type="text"
             name="fullname"
@@ -104,7 +104,7 @@ const CallbackRequest = () => {
             </p>
           )}
         </div>
-        <div className="flex-1 gap-8">
+        <div className="flex-1 px-8">
           <Input
             type="tel"
             name="phone"

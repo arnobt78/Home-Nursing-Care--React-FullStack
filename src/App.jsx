@@ -43,7 +43,7 @@ const ApplicationForm = React.lazy(() =>
   import("./components/ApplicationForm/ApplicationForm")
 );
 const CallbackRequest = React.lazy(() =>
-  import("./components/StatsCounterSection/CallbackRequest")
+  import("./components/Services/CallbackRequest")
 );
 const Services = React.lazy(() => import("./components/Services/Services"));
 const WelcomeSection = React.lazy(() =>
@@ -55,6 +55,10 @@ const StepsSection = React.lazy(() =>
 );
 const HomeConsultationSection = React.lazy(() =>
   import("./components/Services/HomeConsultationSection")
+);
+
+const ServicesPage = React.lazy(() =>
+  import("./components/OurServices/ServicesPage")
 );
 
 // const Admin = React.lazy(() => import("./components/Admin/Admin"));
@@ -122,7 +126,7 @@ const App = () => {
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/services/*" element={<ServicesPage />} />
             <Route path="/about-us" element={<AboutUs />} />
             {/* <Route path="/magazine" element={<Magazine />} /> */}
             <Route path="/imprint" element={<Imprint />} />

@@ -188,14 +188,14 @@ const Navbar = () => {
     {
       title: "Unsere Leistungen",
       subItems: [
-        { title: "Grundpflege", link: "/grundpflege" },
-        { title: "Behandlungspflege", link: "/behandlungspflege" },
-        { title: "Verhinderungspflege", link: "/verhinderungspflege" },
+        { title: "Grundpflege", link: "/services/grundpflege" },
+        { title: "Behandlungspflege", link: "/services/behandlungspflege" },
+        { title: "Verhinderungspflege", link: "/services/verhinderungspflege" },
         {
           title: "Betreuungs- und Entlastungsleistungen",
-          link: "/betreuung-entlastung",
+          link: "/services/betreuung-entlastung",
         },
-        { title: "24h - Rufbereitschaft", link: "/rufbereitschaft" },
+        { title: "24h - Rufbereitschaft", link: "/services/rufbereitschaft" },
       ],
     },
     {
