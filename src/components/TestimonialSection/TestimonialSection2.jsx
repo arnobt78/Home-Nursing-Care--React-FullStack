@@ -15,7 +15,8 @@ const TestimonialSection2 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Correct YouTube embed URL
-  const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // Replace with your YouTube video ID
+  const videoUrl = "https://www.youtube.com"; // Replace with your YouTube video ID
+  // const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // (example) format of your YouTube video ID
 
   return (
     <div className="bg-primary/40 py-4">
@@ -64,7 +65,7 @@ const TestimonialSection2 = () => {
           <div className="relative">
             {/* FaQuoteLeft dynamically aligned to the start of the paragraph */}
             <FaQuoteLeft className="absolute -top-2 -left-10 text-primary/90 text-3xl md:text-4xl" />
-            <p className="text-primary/90 text-lg text-justify leading-relaxed">
+            <p className="text-primary/90 text-md text-justify leading-relaxed">
               Bei Sernitas Care stehen die Menschen im Mittelpunkt. Mit Herz,
               Respekt und echter Hingabe kümmern wir uns um das Wohl unserer
               Klientinnen und Klienten. Für uns ist Pflege mehr als nur ein
@@ -75,9 +76,9 @@ const TestimonialSection2 = () => {
             <FaQuoteRight className="absolute -bottom-4 right-0 text-primary/90 text-3xl md:text-4xl" />
           </div>
           <p className="mt-4 text-primary/90 text-lg italic font-bold">
-            Summyaah Yildiz
+            Sümeyya Yildiz
           </p>
-          <p className="text-primary/90 italic">HR - Accountant</p>
+          <p className="text-primary/90 italic">Personalbuchhalterin</p>
         </motion.div>
       </motion.div>
 

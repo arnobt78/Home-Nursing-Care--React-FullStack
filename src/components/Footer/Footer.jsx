@@ -68,13 +68,17 @@ const Footer = () => {
             <p className="text-lg font-medium">Folgen Sie uns</p>
             <div className="flex justify-center md:justify-start gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/sernitasglobal"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:scale-110 hover:text-secondary transition-transform duration-300"
               >
                 <FaFacebook size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/sernitashrturkey?igsh=MWphd210cjVod3hjbg=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:scale-110 hover:text-secondary transition-transform duration-300"
               >
                 <FaInstagram size={24} />
@@ -92,13 +96,17 @@ const Footer = () => {
                 <FaYoutube size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/sernitas/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:scale-110 hover:text-secondary transition-transform duration-300"
               >
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.xing.com/pages/sernitas-gmbh"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:scale-110 hover:text-secondary transition-transform duration-300"
               >
                 <FaXing size={24} />

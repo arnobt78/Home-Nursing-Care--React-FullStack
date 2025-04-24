@@ -15,7 +15,8 @@ const TestimonialSection1 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Correct YouTube embed URL
-  const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // Replace with your YouTube video ID
+  const videoUrl = "https://www.youtube.com"; // Replace with your YouTube video ID
+  // const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // (example) format of your YouTube video ID
 
   return (
     <div className="bg-primary/40 py-4">
@@ -64,7 +65,7 @@ const TestimonialSection1 = () => {
           <div className="relative">
             {/* FaQuoteLeft dynamically aligned to the start of the paragraph */}
             <FaQuoteLeft className="absolute -top-2 -left-10 text-primary/90 text-3xl md:text-4xl" />
-            <p className="text-primary/90 text-lg text-justify leading-relaxed">
+            <p className="text-primary/90 text-md text-justify leading-relaxed">
               Der respektvolle und vertrauensvolle Umgang mit Menschen gehört zu
               den elementaren Bestandteilen unseres Handelns und spiegelt sich
               auch in unserem Namen wieder. Zusammengesetzt aus den lateinischen

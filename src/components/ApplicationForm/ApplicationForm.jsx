@@ -145,22 +145,24 @@ const ApplicationForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-6 max-w-3xl mx-auto bg-primary text-white pt-24 pl-6 pr-6 pb-4 rounded-lg shadow-xl"
+      className="space-y-6 max-w-3xl mx-auto bg-gray-600 text-white pt-24 pl-8 pr-8 pb-4 rounded-lg shadow-xl"
     >
       <h1 className="text-3xl text-white font-bold text-center mb-6">
         Bewerbungsformular
       </h1>
 
       {/* First Name and Last Name */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">Vorname</label>
-          <Input
-            type="text"
-            placeholder="John"
-            {...register("firstName")}
-            className="w-full"
-          />
+          <div className="relative">
+            <Input
+              type="text"
+              placeholder="John"
+              {...register("firstName")}
+              className="search-input"
+            />
+          </div>
           {errors.firstName && (
             <p className="text-red-500 text-md mt-1">
               {errors.firstName.message}
@@ -173,7 +175,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="Doe"
             {...register("lastName")}
-            className="w-full"
+            className="search-input"
           />
           {errors.lastName && (
             <p className="text-red-500 text-md mt-1">
@@ -183,13 +185,13 @@ const ApplicationForm = () => {
         </div>
       </div>
       {/* Birth Date and Gender */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">Geburtsdatum</label>
           <Input
             type="date"
             {...register("birthDate")}
-            className="w-full justify-between"
+            className="search-input justify-between"
           />
           {errors.birthDate && (
             <p className="text-red-500 text-md mt-1">
@@ -199,29 +201,31 @@ const ApplicationForm = () => {
         </div>
         <div>
           <label className="block text-lg font-medium mb-1">Geschlecht</label>
-          <select
-            {...register("gender")}
-            className="w-full h-[48px] text-white bg-[#436b6c] rounded-md p-2"
-          >
-            <option value="">Geschlecht wählen</option>
-            <option value="Male">Männlich</option>
-            <option value="Female">Weiblich</option>
-            <option value="Other">Divers</option>
-          </select>
+          <div className="relative">
+            <select
+              {...register("gender")}
+              className="w-full h-[48px] text-white bg-[#436b6c] search-input rounded-md p-2"
+            >
+              <option value="">Geschlecht wählen</option>
+              <option value="Male">Männlich</option>
+              <option value="Female">Weiblich</option>
+              <option value="Other">Divers</option>
+            </select>
+          </div>
           {errors.gender && (
             <p className="text-red-500 text-md mt-1">{errors.gender.message}</p>
           )}
         </div>
       </div>
       {/* Email and Telephone fields */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">E-Mail</label>
           <Input
             type="email"
             placeholder="example@example.com"
             {...register("email")}
-            className="w-full"
+            className="search-input"
           />
           {errors.email && (
             <p className="text-red-500 text-md mt-1">{errors.email.message}</p>
@@ -235,7 +239,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="0123456789"
             {...register("telephone")}
-            className="w-full"
+            className="search-input"
           />
           {errors.telephone && (
             <p className="text-red-500 text-md mt-1">
@@ -246,14 +250,14 @@ const ApplicationForm = () => {
       </div>
 
       {/* Address Fields */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">Straßenname</label>
           <Input
             type="text"
             placeholder="Beispielstraße"
             {...register("streetName")}
-            className="w-full"
+            className="search-input"
           />
           {errors.streetName && (
             <p className="text-red-500 text-md mt-1">
@@ -267,7 +271,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="12A"
             {...register("houseNumber")}
-            className="w-full"
+            className="search-input"
           />
           {errors.houseNumber && (
             <p className="text-red-500 text-md mt-1">
@@ -276,14 +280,14 @@ const ApplicationForm = () => {
           )}
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">Postleitzahl</label>
           <Input
             type="text"
             placeholder="12345"
             {...register("postalCode")}
-            className="w-full"
+            className="search-input"
           />
           {errors.postalCode && (
             <p className="text-red-500 text-md mt-1">
@@ -297,7 +301,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="Berlin"
             {...register("city")}
-            className="w-full"
+            className="search-input"
           />
           {errors.city && (
             <p className="text-red-500 text-md mt-1">{errors.city.message}</p>
@@ -311,7 +315,7 @@ const ApplicationForm = () => {
           type="text"
           placeholder="Pflegekraft"
           {...register("occupation")}
-          className="w-full"
+          className="search-input"
         />
         {errors.occupation && (
           <p className="text-red-500 text-md mt-1">
@@ -320,7 +324,7 @@ const ApplicationForm = () => {
         )}
       </div>
       {/* Emergency Contact */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">
             Name der Kontaktperson für Notfälle
@@ -329,7 +333,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="Jane Doe"
             {...register("emergencyContactName")}
-            className="w-full"
+            className="search-input"
           />
           {errors.emergencyContactName && (
             <p className="text-red-500 text-md mt-1">
@@ -345,7 +349,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="0123456789"
             {...register("emergencyContactNumber")}
-            className="w-full"
+            className="search-input"
           />
           {errors.emergencyContactNumber && (
             <p className="text-red-500 text-md mt-1">
@@ -363,18 +367,18 @@ const ApplicationForm = () => {
           type="text"
           placeholder="Dr. Schmidt"
           {...register("primaryPhysician")}
-          className="w-full"
+          className="search-input"
         />
       </div>
       {/* Insurance Fields */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">Krankenkasse</label>
           <Input
             type="text"
             placeholder="AOK, TK, etc."
             {...register("insuranceProvider")}
-            className="w-full"
+            className="search-input"
           />
         </div>
         <div>
@@ -385,7 +389,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="XYZ123456"
             {...register("insurancePolicyNumber")}
-            className="w-full"
+            className="search-input"
           />
         </div>
       </div>
@@ -397,7 +401,7 @@ const ApplicationForm = () => {
         <Textarea
           placeholder="Bitte Allergien oder bekannte Krankheiten angeben"
           {...register("allergies")}
-          className="w-full"
+          className="search-input"
         />
       </div>
       <div>
@@ -407,7 +411,7 @@ const ApplicationForm = () => {
         <Textarea
           placeholder="Liste der derzeit eingenommenen Medikamente"
           {...register("currentMedication")}
-          className="w-full"
+          className="search-input"
         />
       </div>
       <div>
@@ -417,7 +421,7 @@ const ApplicationForm = () => {
         <Textarea
           placeholder="Relevante Informationen zur Familienanamnese"
           {...register("familyMedicalHistory")}
-          className="w-full"
+          className="search-input"
         />
       </div>
       <div>
@@ -427,16 +431,16 @@ const ApplicationForm = () => {
         <Textarea
           placeholder="Bisherige gesundheitliche Beschwerden oder Diagnosen"
           {...register("pastMedicalHistory")}
-          className="w-full"
+          className="search-input"
         />
       </div>
       {/* Identification */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-medium mb-1">Ausweisart</label>
           <select
             {...register("identificationType")}
-            className="w-full h-[48px] text-white bg-[#436b6c] rounded-md p-2"
+            className="w-full h-[48px] text-white bg-[#436b6c] rounded-md p-2 search-input"
           >
             <option value="">Ausweisart wählen</option>
             <option value="Passport">Reisepass</option>
@@ -458,7 +462,7 @@ const ApplicationForm = () => {
             type="text"
             placeholder="123456789"
             {...register("identificationNumber")}
-            className="w-full"
+            className="search-input"
           />
           {errors.identificationNumber && (
             <p className="text-red-500 text-md mt-1">
@@ -475,7 +479,7 @@ const ApplicationForm = () => {
         <Textarea
           placeholder="Zusätzliche Informationen oder Hinweise"
           {...register("remarks")}
-          className="w-full"
+          className="search-input"
         />
         {errors.remarks && (
           <p className="text-red-500 text-md mt-1">{errors.remarks.message}</p>

@@ -16,6 +16,15 @@ self.addEventListener("install", (event) => {
         "/assets/icon/time-1.svg",
 
         // images
+        "/assets/bpa.png",
+        "/assets/burger.png",
+        "/assets/hirler.png",
+        "/assets/kabs.png",
+        "/assets/klinikum.png",
+        "/assets/lmu.png",
+        "/assets/map-1.jpg",
+        "/assets/review-1.jpg",
+
         "/assets/american.png",
         "/assets/ankara.png",
         "/assets/goethe.png",

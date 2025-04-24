@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { usePersistedQuery } from "../usePersistedQuery"; // Corrected import path
+import { usePersistedQuery } from "../usePersistedQuery";
 import ApplicantDetails from "./ApplicantDetails";
 import PaginationSelection from "./PaginationSelection";
 

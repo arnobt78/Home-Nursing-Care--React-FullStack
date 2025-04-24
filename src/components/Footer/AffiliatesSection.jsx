@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
 
+import BPA from "../../assets/bpa.png";
+import KABS from "../../assets/kabs.png";
+import Dr from "../../assets/hirler.png";
+import Klinikum from "../../assets/klinikum.png";
+import Burger from "../../assets/burger.png";
+import LMU from "../../assets/lmu.png";
+
 import Goethe from "../../assets/goethe.png";
 import Nicc from "../../assets/nicc.png";
 import IEC from "../../assets/iec.png";
@@ -14,48 +21,85 @@ import CachedImage from "../CachedImage";
 const affiliates = [
   {
     id: 1,
+    img: BPA,
+    alt: "BPA",
+    link: "/",
+  },
+  {
+    id: 2,
+    img: KABS,
+    alt: "KABS",
+    link: "/",
+  },
+  {
+    id: 3,
+    img: Dr,
+    alt: "Dr. med. Erwin Hirler",
+    link: "/",
+  },
+  {
+    id: 4,
+    img: Klinikum,
+    alt: "Klinikum Dritter Orden",
+    link: "/",
+  },
+  {
+    id: 5,
+    img: Burger,
+    alt: "Burger",
+    link: "/",
+  },
+  {
+    id: 6,
+    img: LMU,
+    alt: "LMU",
+    link: "/",
+  },
+
+  {
+    id: 7,
     img: Goethe,
     alt: "Goethe Institut",
     link: "https://www.goethe.de/de/index.html",
   },
   {
-    id: 2,
+    id: 8,
     img: Nicc,
     alt: "Nice Education",
     link: "https://www.nice-education.de/",
   },
   {
-    id: 3,
+    id: 9,
     img: IEC,
     alt: "International Education Centers",
     link: "https://internationaleducationcenters.de/?v=a4b7f41804b0",
   },
   {
-    id: 4,
+    id: 10,
     img: Markische,
     alt: "Märkische Kliniken",
     link: "https://www.maerkische-kliniken.de/home.html",
   },
   {
-    id: 5,
+    id: 11,
     img: American,
     alt: "American Life",
     link: "https://www.americanlife.com.tr/",
   },
   {
-    id: 6,
+    id: 12,
     img: Ankara,
     alt: "Ankara University",
     link: "https://www.ankara.edu.tr/",
   },
   {
-    id: 7,
+    id: 13,
     img: Timer,
     alt: "TÖMER Ankara University",
     link: "https://tomer.ankara.edu.tr/",
   },
   {
-    id: 8,
+    id: 14,
     img: LWL,
     alt: "LWL Psychiatry Verbund",
     link: "https://www.lwl-psychiatrieverbund.de/de/",

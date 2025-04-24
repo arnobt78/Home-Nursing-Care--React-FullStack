@@ -11,8 +11,8 @@ const Services = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-white pt-24 pb-2 px-4 md:px-12">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="bg-white pt-4 pb-4 px-4 md:px-12">
+        <div className="max-w-2xl mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* Left Image */}
           <motion.div
             className="w-full md:w-1/2"
@@ -46,23 +46,16 @@ const Services = () => {
               sind. Unser Ziel ist es, Ihnen ein selbstbestimmtes, würdevolles
               Leben in Ihrer gewohnten Umgebung zu ermöglichen – ganz gleich, ob
               es um kleine Alltagshelfer oder um umfassende Pflege geht.
-              <br />
-              <br />
-              Unsere Grundpflege unterstützt Sie in den Bereichen, die im Alltag
-              besonders wichtig sind: Körperpflege, Ernährung und Mobilität. Wir
-              sind da, um Ihnen bei alltäglichen Aufgaben zur Seite zu stehen
-              und sorgen mit viel Einfühlungsvermögen dafür, dass Sie sich
-              rundum wohl und sicher fühlen.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Cards Section */}
-      <Cards />
+      {/* <Cards /> */}
 
       {/* Footer Service Section */}
-      <motion.h2
+      {/* <motion.h2
         variants={slideUp(0.2)}
         initial="initial"
         whileInView="animate"
@@ -79,7 +72,7 @@ const Services = () => {
         Wir freuen uns darauf, für Sie da zu sein.
         <br />
         Vielen Dank für Ihr Vertrauen!
-      </motion.h2>
+      </motion.h2> */}
     </>
   );
 };

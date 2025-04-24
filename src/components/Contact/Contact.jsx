@@ -154,7 +154,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-slate-700 p-6 sm:p-8 lg:p-10 rounded-xl w-full"
+            className="bg-slate-700 text-white p-6 sm:p-8 lg:p-10 rounded-xl w-full"
           >
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
               <h3 className="text-3xl sm:text-4xl text-white/90">
@@ -174,6 +174,7 @@ const Contact = () => {
                   placeholder="Vor- und Nachname"
                   value={formData.fullname}
                   onChange={handleChange}
+                  className="search-input text-white"
                 />
                 {errors.fullname && (
                   <p className="text-red-500 text-sm">{errors.fullname}</p>
@@ -184,6 +185,7 @@ const Contact = () => {
                   placeholder="E-Mail-Adresse"
                   value={formData.email}
                   onChange={handleChange}
+                  className="search-input text-white"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm">{errors.email}</p>
@@ -194,13 +196,14 @@ const Contact = () => {
                   placeholder="Telefonnummer"
                   value={formData.phone}
                   onChange={handleChange}
+                  className="search-input text-white"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm">{errors.phone}</p>
                 )}
               </div>
               <Textarea
-                className="h-[200px]"
+                className="search-input text-white"
                 name="message"
                 placeholder="Ihre Nachricht"
                 value={formData.message}

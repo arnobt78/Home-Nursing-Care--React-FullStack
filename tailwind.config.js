@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
+        ephesis: ["Ephesis", "cursive"],
       },
       container: {
         center: true,

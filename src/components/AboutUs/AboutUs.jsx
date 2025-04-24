@@ -19,10 +19,10 @@ const team = [
     link: "https://www.linkedin.com/in/ali-yildiz-09376a157/", // Add the link for this member
   },
   {
-    name: "Summyaah Yildiz",
+    name: "Sümeyya Yildiz",
     title: "Personalbuchhalterin",
     img: AboutImg2,
-    link: "https://example.com/summyaah-yildiz", // Add the link for this member
+    link: "https://www.linkedin.com/in/s%C3%BCmeyya-yildiz-9117272a4/", // Add the link for this member
   },
   {
     name: "Andre Piper",

@@ -42,10 +42,20 @@ const AccordionSection = React.lazy(() =>
 const ApplicationForm = React.lazy(() =>
   import("./components/ApplicationForm/ApplicationForm")
 );
-const StatsCounterSection = React.lazy(() =>
-  import("./components/StatsCounterSection/StatsCounterSection")
+const CallbackRequest = React.lazy(() =>
+  import("./components/StatsCounterSection/CallbackRequest")
 );
 const Services = React.lazy(() => import("./components/Services/Services"));
+const WelcomeSection = React.lazy(() =>
+  import("./components/Services/WelcomeSection")
+);
+const MapSection = React.lazy(() => import("./components/Services/MapSection"));
+const StepsSection = React.lazy(() =>
+  import("./components/Services/StepsSection")
+);
+const HomeConsultationSection = React.lazy(() =>
+  import("./components/Services/HomeConsultationSection")
+);
 
 // const Admin = React.lazy(() => import("./components/Admin/Admin"));
 
@@ -57,12 +67,15 @@ const Home = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Hero />
-      <StatsCounterSection />
+      <CallbackRequest />
+      <Services />
       <TestimonialSection1 />
+      <WelcomeSection />
       <Cards />
-      <TeamValuesSection />
-      <TestimonialSection2 />
+      <MapSection />
       <ReviewSection />
+      <StepsSection />
+      <HomeConsultationSection />
       <AccordionSection />
     </Suspense>
   );
