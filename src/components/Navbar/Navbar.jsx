@@ -169,6 +169,9 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const navigate = useNavigate();
 
+  // Define hideDropdownTimeout
+  let hideDropdownTimeout;
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -245,14 +248,38 @@ const Navbar = () => {
                 <li
                   key={idx}
                   className="relative group"
-                  onMouseEnter={() => setActiveDropdown(idx)}
-                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseEnter={() => {
+                    clearTimeout(hideDropdownTimeout); // Clear any existing timeout
+                    setActiveDropdown(idx); // Show the dropdown immediately
+                  }}
+                  onMouseLeave={() => {
+                    hideDropdownTimeout = setTimeout(() => {
+                      setActiveDropdown(null); // Hide the dropdown after a delay
+                    }, 300); // Delay of 300ms
+                  }}
                 >
-                  <button className="uppercase hover:text-secondary">
+                  {/* Main Navigation Button */}
+                  <button
+                    className="uppercase hover:text-secondary"
+                    onClick={() => {
+                      if (item.title === "Über uns") {
+                        navigate("/about-us"); // Navigate to /about-us when "Über uns" is clicked
+                      }
+                    }}
+                  >
                     {item.title}
                   </button>
-                  {activeDropdown === idx && (
-                    <ul className="absolute left-0 top-full mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg py-2 px-4 w-64">
+                  {/* Dropdown for Sub-items */}
+                  {activeDropdown === idx && item.subItems && (
+                    <ul
+                      className="absolute left-0 top-full mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg py-2 px-4 w-64"
+                      onMouseEnter={() => clearTimeout(hideDropdownTimeout)} // Prevent hiding when hovering over the dropdown
+                      onMouseLeave={() => {
+                        hideDropdownTimeout = setTimeout(() => {
+                          setActiveDropdown(null); // Hide the dropdown after a delay
+                        }, 300); // Delay of 300ms
+                      }}
+                    >
                       {item.subItems.map((sub, i) => (
                         <li key={i}>
                           <a
@@ -336,49 +363,6 @@ const Navbar = () => {
           </div>
         </div>
       </motion.div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black bg-opacity-50 backdrop-blur-md flex flex-col items-center justify-center text-white shadow-lg">
-          <button
-            onClick={toggleMenu}
-            className="absolute top-5 right-5 text-white text-2xl hover:shadow-md transition-shadow duration-300"
-          >
-            &times;
-          </button>
-          <ul className="flex flex-col gap-6 text-lg uppercase font-medium tracking-wide justify-center text-center">
-            {navItems.map((item, idx) => (
-              <li key={idx}>
-                <p className="text-secondary font-semibold mb-1">
-                  {item.title}
-                </p>
-                {item.subItems.map((sub, i) => (
-                  <a
-                    key={i}
-                    href={sub.link}
-                    onClick={toggleMenu}
-                    className="block text-white hover:text-secondary"
-                  >
-                    {sub.title}
-                  </a>
-                ))}
-              </li>
-            ))}
-
-            <li className="mt-6">
-              <button
-                onClick={() => {
-                  toggleMenu();
-                  navigate("/contact");
-                }}
-                className="primary-btn border-2 border-white hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 hover:scale-105 shadow-md hover:shadow-lg"
-              >
-                Kontakt
-              </button>
-            </li>
-          </ul>
-        </div>
-      )}
     </>
   );
 };

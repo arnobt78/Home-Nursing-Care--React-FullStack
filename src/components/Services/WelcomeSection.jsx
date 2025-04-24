@@ -1,5 +1,3 @@
-import React from "react";
-
 const WelcomeSection = () => {
   return (
     <section className="bg-gray-50 py-12 px-6 md:px-12">

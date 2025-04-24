@@ -91,35 +91,53 @@ const HomeConsultationSection = () => {
           </h2>
           <p className="text-gray-500 leading-relaxed mb-4 text-justify">
             Immer mehr Menschen entscheiden sich bewusst für eine Betreuung
-            zuhause. Auch im Ruhrgebiet vertrauen viele Pflegedürftige auf die
+            zuhause. Auch im Ruhrgebiet vertrauen viele Pflegebedürftige auf die
             Vorteile der ambulanten Pflege – und damit auf mehr Selbstbestimmung
             und Geborgenheit in vertrauter Umgebung.
-          </p>
-          <p className="text-gray-500 leading-relaxed mb-4 text-justify">
-            Sernitas Care ist Ihr zuverlässiger Partner für die häusliche Pflege
-            in Bochum und Umgebung. Unsere qualifizierten Pflegekräfte und
-            geschulten Mitarbeiter:innen aus dem hauswirtschaftlichen Bereich
-            sorgen dafür, dass Sie oder Ihre Angehörigen medizinisch,
-            pflegerisch und alltagspraktisch bestens versorgt sind – direkt in
-            Ihrem Zuhause.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-justify">
+            <br />
+            <br />
+            <strong>Sernitas Care</strong> ist Ihr zuverlässiger Partner für die
+            häusliche Pflege in Bochum und Umgebung. Unsere qualifizierten
+            Pflegefachkräfte und geschulten Mitarbeitenden aus dem
+            hauswirtschaftlichen Bereich sorgen dafür, dass Sie oder Ihre
+            Angehörigen medizinisch, pflegerisch und alltagspraktisch bestens
+            versorgt sind – direkt in Ihrem Zuhause.
+            <br />
+            <br />
+            Wir bieten Leistungen der <strong>Behandlungspflege</strong> nach §
+            37 SGB V – ärztlich verordnet und mit der Krankenkasse abgerechnet.
+            Dazu gehören unter anderem die Medikamentengabe, die Kontrolle von
+            Blutdruck, Puls und Blutzucker, sowie die Wundversorgung, oder das
+            An- und Ausziehen von Kompressionsstrümpfen.
+            <br />
+            Im Bereich der <strong>Grundpflege</strong> nach SGB XI unterstützen
+            wir Sie bei der Körperpflege, der Nahrungsaufnahme, der
+            Inkontinenzversorgung und der Mobilität. Voraussetzung für diese
+            Leistungen ist ein anerkannter Pflegegrad. Wir beraten Sie gern bei
+            der Antragstellung und allen weiteren Schritten.
+            <br />
+            Ergänzend kümmern wir uns auf Wunsch auch um die{" "}
+            <strong>hauswirtschaftliche Versorgung</strong> – z. B. mit
+            Einkäufen, Wohnungsreinigung oder der Organisation von Hilfsmitteln
+            und Medikamenten.
+            <br />
+            <br />
             Mit Sernitas Care entscheiden Sie sich für einen kultursensiblen
             Pflegedienst, der nicht nur professionell, sondern auch menschlich
-            und mit Respekt für Vielfalt handelt.
+            und mit Respekt für Vielfalt handelt
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="bg-white shadow-lg rounded-lg p-6">
-          <h3 className="text-primary/90 text-lg font-bold ml-4 mb-4">
+        <div className="bg-white shadow-lg rounded-lg items-center text-center pt-12 p-6">
+          <h3 className="text-primary/90 text-lg font-bold mb-4">
             Kostenfreie Beratung
           </h3>
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 text-center mb-6">
             <CachedImage
               src={HRImage}
               alt="Consultant"
-              className="w-16 h-16 rounded-full object-cover border-2 border-primary/90"
+              className="w-16 h-16 rounded-full object-cover border-2 border-primary/90 ml-8"
             />
             <div>
               <p className="font-ephesis text-primary/90 text-2xl font-bold tracking-wide">
@@ -130,7 +148,7 @@ const HomeConsultationSection = () => {
             </div>
           </div>
           <form onSubmit={handleSubmit}>
-            <p className="text-primary/90 font-medium ml-4 mb-4">
+            <p className="text-primary/90 font-medium mb-8">
               Wir rufen Sie zurück!
             </p>
             <div className="ml-4 mr-4 mb-4 text-gray-700">
@@ -146,7 +164,7 @@ const HomeConsultationSection = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.fullname}</p>
               )}
             </div>
-            <div className="ml-4 mr-4 mb-4 text-gray-700">
+            <div className="ml-4 mr-4 mb-8 text-gray-700">
               <Input
                 type="tel"
                 name="phone"
@@ -159,7 +177,7 @@ const HomeConsultationSection = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
               )}
             </div>
-            <div className="ml-4 mb-4">
+            <div className=" mb-8">
               <label className="flex items-start text-sm text-gray-500">
                 <input
                   type="checkbox"

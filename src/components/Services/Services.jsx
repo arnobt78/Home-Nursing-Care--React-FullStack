@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-import Cards from "../Cards/Cards";
-import { slideUp } from "../../utility/animation";
+// import Cards from "../Cards/Cards";
+// import { slideUp } from "../../utility/animation";
 
 import teamImage from "../../assets/service-3.jpg";
 
