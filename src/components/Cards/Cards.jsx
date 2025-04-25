@@ -18,17 +18,20 @@ const Cards = () => {
 
   return (
     <div className="bg-slate-100">
-      <div className="container py-16">
+      <div className="container py-24 px-6 md:px-24 xl:px-72">
         {/* Section Title */}
-        <motion.h2
+        <h2 className="text-center text-primary/90 text-lg md:text-xl font-medium mb-4">
+          Zuhause in besten Händen
+        </h2>
+        <motion.h1
           variants={slideUp(0.2)}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="text-3xl font-bold text-center text-primary mb-10"
+          className="text-3xl font-bold text-center text-primary/90 mb-12"
         >
-          Weil Fürsorge bei uns Herzenssache ist
-        </motion.h2>
+          Unsere Leistungen auf einen Blick
+        </motion.h1>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -39,7 +42,7 @@ const Cards = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="bg-primary/80 shadow-xl rounded-xl px-5 py-10 text-center flex flex-col justify-center items-center gap-5 md:max-w-[280px] mx-auto"
+              className="bg-primary/80 shadow-2xl rounded-2xl px-4 py-10 text-center flex flex-col justify-center items-center md:max-w-[350px] mx-auto"
             >
               <CachedImage
                 src={card.image}

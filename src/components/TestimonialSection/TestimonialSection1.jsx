@@ -15,11 +15,11 @@ const TestimonialSection1 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Correct YouTube embed URL
-  const videoUrl = "https://www.youtube.com"; // Replace with your YouTube video ID
-  // const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // (example) format of your YouTube video ID
+  // const videoUrl = "https://www.youtube.com/embed/<your-youtube-video-id>"; // Replace with your YouTube video ID
+  const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // (example) format of your YouTube video ID
 
   return (
-    <div className="bg-primary/40 py-4">
+    <div className="bg-primary/30 py-10 px-6 md:px-16 xl:px-44">
       <motion.div
         className="container flex flex-col md:flex-row items-center justify-center gap-8"
         initial={{ opacity: 0 }}
@@ -65,7 +65,7 @@ const TestimonialSection1 = () => {
           <div className="relative">
             {/* FaQuoteLeft dynamically aligned to the start of the paragraph */}
             <FaQuoteLeft className="absolute -top-2 -left-10 text-primary/90 text-3xl md:text-4xl" />
-            <p className="text-primary/90 text-md text-justify leading-relaxed">
+            <p className="text-primary/90 text-md xl:text-lg text-justify leading-relaxed italic pb-4">
               Der respektvolle und vertrauensvolle Umgang mit Menschen gehört zu
               den elementaren Bestandteilen unseres Handelns und spiegelt sich
               auch in unserem Namen wieder. Zusammengesetzt aus den lateinischen
@@ -74,12 +74,12 @@ const TestimonialSection1 = () => {
               Dienst am Menschen.
             </p>
             {/* FaQuoteRight dynamically aligned to the bottom of the paragraph */}
-            <FaQuoteRight className="absolute -bottom-7 right-0 text-primary/90 text-3xl md:text-4xl" />
+            <FaQuoteRight className="absolute -bottom-5 right-0 text-primary/90 text-3xl md:text-4xl" />
           </div>
-          <p className="font-ephesis mt-4 text-primary/90 text-3xl font-bold tracking-wide">
+          <p className="font-ephesis text-primary/90 text-3xl font-bold tracking-wide">
             Dr. Ali Yildiz
           </p>
-          <p className="text-primary/90 italic">Geschäftsführer</p>
+          <p className="text-primary/90">Geschäftsführer</p>
         </motion.div>
       </motion.div>
 

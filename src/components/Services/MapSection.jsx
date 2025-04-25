@@ -5,11 +5,11 @@ import CachedImage from "../CachedImage";
 
 const MapSection = () => {
   return (
-    <section className="bg-gray-50 py-12 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section className="bg-white py-24 px-6 md:px-16 xl:px-60">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div>
-          <h2 className="text-primary text-2xl md:text-3xl font-bold mb-6">
+          <h2 className="text-primary/90 text-2xl md:text-3xl font-bold mb-6">
             Für Sie durch das Revier
           </h2>
           <p className="text-base md:text-lg leading-relaxed text-primary/90 mb-4 text-justify">
@@ -48,7 +48,7 @@ const MapSection = () => {
           <CachedImage
             src={mapImage}
             alt="Map showing Sernitas Care coverage"
-            className="rounded-lg shadow-lg object-contain"
+            className=" object-cover max-w-max h-[400px]"
           />
         </div>
       </div>

@@ -212,8 +212,8 @@ const ReviewSectionNew = () => {
   const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // Replace with your YouTube video ID
 
   return (
-    <section className="bg-gray-200 py-6 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+    <section className="bg-gray-200 py-10 px-6 md:px-16 xl:px-44">
+      <div className="container flex flex-col md:flex-row items-center justify-center gap-8">
         {/* Image with Play Button */}
         <div className="relative flex-shrink-0">
           <CachedImage
@@ -232,7 +232,7 @@ const ReviewSectionNew = () => {
 
         {/* Review Text */}
         <div className="flex-1 text-center md:text-left">
-          <p className="text-primary/90 text-lg md:text-xl leading-relaxed italic mb-4">
+          <p className="text-primary/90 text-md xl:text-lg text-justify leading-relaxed italic pb-4">
             „Sernitas ist mein Begleiter am Morgen, am Mittag und am Abend. Dank
             Sernitas Care kann ich, trotz meines hohen Alters, selbstbestimmt
             und zufrieden zuhause wohnen und leben.“

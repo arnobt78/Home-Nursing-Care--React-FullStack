@@ -17,9 +17,9 @@ const Cards = React.lazy(() => import("./components/Cards/Cards"));
 const TestimonialSection1 = React.lazy(() =>
   import("./components/TestimonialSection/TestimonialSection1")
 );
-const TestimonialSection2 = React.lazy(() =>
-  import("./components/TestimonialSection/TestimonialSection2")
-);
+// const TestimonialSection2 = React.lazy(() =>
+//   import("./components/TestimonialSection/TestimonialSection2")
+// );
 const ReviewSectionHome = React.lazy(() =>
   import("./components/ReviewSection/ReviewSectionHome")
 );
@@ -45,7 +45,7 @@ const ApplicationForm = React.lazy(() =>
 const CallbackRequest = React.lazy(() =>
   import("./components/Services/CallbackRequest")
 );
-const Services = React.lazy(() => import("./components/Services/Services"));
+
 const WelcomeSection = React.lazy(() =>
   import("./components/Services/WelcomeSection")
 );
@@ -60,9 +60,9 @@ const HomeConsultationSection = React.lazy(() =>
 const ServicesPage = React.lazy(() =>
   import("./components/OurServices/ServicesPage")
 );
-const ReviewSectionService = React.lazy(() =>
-  import("./components/ReviewSection/ReviewSectionService")
-);
+// const ReviewSectionService = React.lazy(() =>
+//   import("./components/ReviewSection/ReviewSectionService")
+// );
 
 // const Admin = React.lazy(() => import("./components/Admin/Admin"));
 
@@ -75,9 +75,9 @@ const Home = () => {
     <Suspense fallback={<Loading />}>
       <Hero />
       <CallbackRequest />
-      <Services />
-      <TestimonialSection1 />
       <WelcomeSection />
+      <TestimonialSection1 />
+
       <Cards />
       <MapSection />
       <ReviewSectionHome />

@@ -82,10 +82,10 @@ const HomeConsultationSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-12 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="bg-gray-100 py-24 px-6 md:px-12 xl:px-44">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Left Section */}
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 px-6">
           <h2 className="text-primary/90 text-2xl md:text-3xl font-bold mb-4">
             Mehr Lebensqualität in den eigenen vier Wänden
           </h2>
@@ -129,7 +129,7 @@ const HomeConsultationSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="bg-white shadow-2xl rounded-xl items-center text-center pt-10 p-6">
+        <div className="bg-white shadow-2xl rounded-xl items-center text-center px-6 py-8">
           <h3 className="text-primary/90 text-xl font-bold mb-8">
             Kostenfreie Beratung
           </h3>
