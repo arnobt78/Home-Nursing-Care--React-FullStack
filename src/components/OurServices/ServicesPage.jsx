@@ -10,7 +10,7 @@ import grundpflegeImg from "../../assets/service-4.png";
 import behandlungspflegeImg from "../../assets/service-6.png";
 import verhinderungspflegeImg from "../../assets/service-9.png";
 import betreuungEntlastungImg from "../../assets/service-12.png";
-import rufbereitschaftImg from "../../assets/service-4.png";
+import rufbereitschaftImg from "../../assets/service-14.png";
 
 const tabs = [
   {

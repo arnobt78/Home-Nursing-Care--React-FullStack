@@ -129,15 +129,15 @@ const HomeConsultationSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="bg-white shadow-lg rounded-lg items-center text-center pt-12 p-6">
-          <h3 className="text-primary/90 text-lg font-bold mb-4">
+        <div className="bg-white shadow-2xl rounded-xl items-center text-center pt-10 p-6">
+          <h3 className="text-primary/90 text-xl font-bold mb-8">
             Kostenfreie Beratung
           </h3>
           <div className="flex items-center gap-4 text-center mb-6">
             <CachedImage
               src={HRImage}
               alt="Consultant"
-              className="w-16 h-16 rounded-full object-cover border-2 border-primary/90 ml-8"
+              className="w-24 h-24 rounded-full object-cover border-2 border-primary/90"
             />
             <div>
               <p className="font-ephesis text-primary/90 text-2xl font-bold tracking-wide">

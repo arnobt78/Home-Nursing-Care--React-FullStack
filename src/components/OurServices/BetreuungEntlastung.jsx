@@ -1,15 +1,156 @@
-import React from "react";
+import infoIcon from "../../assets/service-11.png";
+import serviceImage from "../../assets/service-13.png";
+
+import ReviewSectionService from "../ReviewSection/ReviewSectionService";
+import HomeConsultationSection from "../Services/HomeConsultationSection";
+
+import { FaCheckCircle } from "react-icons/fa";
 
 const BetreuungEntlastung = () => {
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold">
-        Betreuungs- und Entlastungsleistungen
-      </h2>
-      <p className="text-gray-700">
-        Unsere Betreuungs- und Entlastungsleistungen helfen Ihnen im Alltag...
-      </p>
-      {/* Add more structured content here */}
+    <div className="space-y-6 px-12">
+      {/* First Section: Text and Image */}
+      <div className="flex flex-col lg:flex-row items-center gap-8">
+        <div className="lg:w-1/2 space-y-4">
+          <h2 className="text-xl font-bold text-green-700">
+            Betreuungs- und Entlastungsleistungen
+          </h2>
+          <h3 className="text-3xl font-bold text-green-700">
+            Den Alltag gemeinsam leichter machen
+          </h3>
+          <p className="text-primary/90 text-justify">
+            Manchmal sind es nicht nur die großen Dinge, die belasten – sondern
+            die vielen kleinen Aufgaben im Alltag. Wenn Organisation, Haushalt
+            oder einfach das Gefühl von Einsamkeit zur Herausforderung werden,
+            stehen wir Ihnen mit Herz und Zeit zur Seite.
+          </p>
+          <p className="text-primary/90 text-justify">
+            Unsere Betreuungs- und Entlastungsleistungen bieten genau die
+            Unterstützung, wo sie gebraucht wird: bei Spaziergängen, gemeinsamen
+            Gesprächen, der Begleitung zu Terminen oder auch bei alltäglichen
+            Dingen wie dem Einkauf oder leichten Haushaltstätigkeiten. Damit der
+            Alltag leichter wird – für Pflegebedürftige und Angehörige.
+          </p>
+          <p className="text-primary/90 text-justify">
+            Diese Leistungen können von allen Pflegebedürftigen mit anerkanntem
+            Pflegegrad in Anspruch genommen werden und werden durch den
+            Entlastungsbetrag nach § 45b SGB XI finanziert. Sie dienen der
+            Aktivierung, der sozialen Teilhabe und der spürbaren Entlastung
+            pflegender Angehöriger.
+          </p>
+          <p className="text-primary/90 text-justify">
+            Das Team von Sernitas Care begleitet Sie zuverlässig, freundlich und
+            mit einem offenen Ohr – damit Zuhause ein Ort bleibt, an dem man
+            sich wohl und aufgehoben fühlt.
+          </p>
+        </div>
+        <div className="lg:w-1/2">
+          <img
+            src={serviceImage}
+            alt="Betreuung und Entlastung"
+            className="w-full max-h-[400px] object-cover rounded-xl"
+          />
+        </div>
+      </div>
+
+      {/* Second Section: Review Section */}
+      <ReviewSectionService />
+
+      {/* Third Section: Additional Services */}
+      <div className="space-y-6">
+        <h3 className="text-2xl font-bold text-green-700 text-center">
+          Diese Zusatzleistungen bieten wir an
+        </h3>
+        <p className="text-primary/90 text-center">
+          Sernitas Care bietet verschiedene Zusatzleistungen an, die nicht Teil
+          der Grundpflege und Behandlungspflege sind. Bei Bedarf können unsere
+          Patienten Leistungen zur hauswirtschaftlichen Versorgung buchen, die
+          den Ablauf des täglichen Lebens erleichtern. Diese werden entweder als
+          Pflegesachleistung über die Pflegekasse oder als Privatleistung
+          abgerechnet.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-4">
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Spaziergänge & Bewegungsangebote
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Alltagsbegleitung & Gesellschaft
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Begleitung zu Terminen oder Einkäufen
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Unterstützung im Haushalt
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Entlastung pflegender Angehöriger
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Gemeinsame soziale Aktivitäten
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Aufstehen, Aufsetzen und Liegen
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Unterstützung beim Toilettengang
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            An- und Auskleiden
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Hilfe bei der Nahrungs- & Flüssigkeitsaufnahme
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Gemeinsames Spielen, Basteln oder Musikhören
+          </div>
+          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Versorgung von Haustieren
+          </div>
+        </div>
+      </div>
+
+      {/* Fourth Section: Info Box */}
+      <div
+        className="flex flex-col lg:flex-row items-center rounded-lg shadow-xl border-2"
+        style={{ borderColor: "#a0b106" }}
+      >
+        {/* Left Side: Image */}
+        <div className="lg:w-1/4 flex">
+          <img src={infoIcon} alt="Info Icon" className="w-72 h-40" />
+        </div>
+
+        {/* Right Side: Text */}
+        <div className="lg:w-3/4 px-4 text-justify">
+          <h4 className="text-lg font-bold text-green-700">Gut zu wissen!</h4>
+          <p className="text-sm text-primary/90">
+            Die Kosten für die Seniorenbetreuung können – sofern ein Pflegegrad
+            vorliegt – im Rahmen der <strong>Verhinderungspflege</strong> oder
+            zusätzlicher Betreuungs- und Entlastungsleistungen von der
+            Pflegekasse übernommen werden.
+          </p>
+          <p className="text-sm text-primary/90">
+            Wenn Sie wissen möchten, wie man Leistungen der Pflegeversicherung
+            beantragt, schauen Sie doch einmal auf der Seite{" "}
+            <strong>Pflegebegutachtung</strong>
+            vorbei.
+          </p>
+        </div>
+      </div>
+
+      {/* Fifth Section: Review Section */}
+      <HomeConsultationSection />
     </div>
   );
 };

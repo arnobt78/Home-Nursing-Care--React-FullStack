@@ -243,11 +243,21 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
-            <ul className="flex gap-7 xl:gap-10 text-white text-sm xl:text-base font-medium tracking-wide">
+            <ul className="flex gap-7 xl:gap-10 text-white text-sm xl:text-base font-medium tracking-wide items-center">
+              {/* Home Icon as Separate Nav Title */}
+              <li className="flex items-center">
+                <button
+                  className="text-white hover:text-secondary flex items-center justify-center"
+                  onClick={() => navigate("/")}
+                >
+                  <i className="fas fa-home"></i>
+                </button>
+              </li>
+
               {navItems.map((item, idx) => (
                 <li
                   key={idx}
-                  className="relative group"
+                  className="relative group flex items-center gap-2"
                   onMouseEnter={() => {
                     clearTimeout(hideDropdownTimeout); // Clear any existing timeout
                     setActiveDropdown(idx); // Show the dropdown immediately
@@ -260,15 +270,18 @@ const Navbar = () => {
                 >
                   {/* Main Navigation Button */}
                   <button
-                    className="uppercase hover:text-secondary"
+                    className="uppercase hover:text-secondary flex items-center justify-center"
                     onClick={() => {
-                      if (item.title === "Über uns") {
+                      if (item.title === "Unsere Leistungen") {
+                        navigate("/services/grundpflege"); // Navigate to default page
+                      } else if (item.title === "Über uns") {
                         navigate("/about-us"); // Navigate to /about-us when "Über uns" is clicked
                       }
                     }}
                   >
                     {item.title}
                   </button>
+
                   {/* Dropdown for Sub-items */}
                   {activeDropdown === idx && item.subItems && (
                     <ul
@@ -296,29 +309,29 @@ const Navbar = () => {
               ))}
 
               {/* Karriere */}
-              <li>
+              <li className="flex items-center">
                 <button
                   onClick={() => navigate("/karriere")}
-                  className="uppercase hover:text-secondary"
+                  className="uppercase hover:text-secondary flex items-center justify-center"
                 >
                   Karriere
                 </button>
               </li>
 
               {/* Kontakt */}
-              <li>
+              <li className="flex items-center">
                 <button
                   onClick={handleContactClick}
-                  className="uppercase hover:text-secondary"
+                  className="uppercase hover:text-secondary flex items-center justify-center"
                 >
                   Kontakt
                 </button>
               </li>
 
-              {/* Language Selector */}
-              <li className="relative group">
-                <button className="uppercase hover:text-secondary">
-                  DE/TR
+              {/* Updated Language Selector with Global Icon */}
+              <li className="relative group flex items-center">
+                <button className="uppercase hover:text-secondary flex items-center gap-2 justify-center">
+                  <i className="fas fa-globe"></i> {/* Global Icon */}
                 </button>
                 <ul className="absolute left-0 top-full mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg py-2 px-4 w-32 hidden group-hover:block">
                   <li>
@@ -340,8 +353,8 @@ const Navbar = () => {
               </li>
 
               {/* Search Icon */}
-              <li>
-                <button className="text-white hover:text-secondary">
+              <li className="flex items-center">
+                <button className="text-white hover:text-secondary flex items-center justify-center">
                   <i className="fas fa-search"></i>
                 </button>
               </li>

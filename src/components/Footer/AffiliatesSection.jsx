@@ -115,6 +115,10 @@ const AffiliatesSection = () => {
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
+      {/* Header */}
+      <h2 className="text-3xl font-bold text-center text-primary/90 mb-2s">
+        Unsere Partner
+      </h2>
       <div className="container mx-auto flex justify-between items-center gap-4 flex-wrap">
         {affiliates.map((affiliate) => (
           <motion.a

@@ -1,13 +1,57 @@
-import React from "react";
+import serviceImage from "../../assets/service-15.png";
 
 const Rufbereitschaft = () => {
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold">24h - Rufbereitschaft</h2>
-      <p className="text-gray-700">
-        Unsere 24h-Rufbereitschaft steht Ihnen jederzeit zur Verfügung...
-      </p>
-      {/* Add more structured content here */}
+    <div className="space-y-6 px-12">
+      {/* First Section: Text and Image */}
+      <div className="flex flex-col lg:flex-row items-center gap-8 ">
+        <div className="lg:w-1/2 space-y-4">
+          <h2 className="text-xl font-bold text-green-700">
+            24-STUNDEN-PFLEGE im Revier
+          </h2>
+          <h3 className="text-3xl font-bold text-green-700">
+            PFLEGEBEDÜRFTIGKEIT STETS IN GUTEN HÄNDEN
+          </h3>
+          <p className="text-primary/90 text-justify">
+            Ob altersbedingt oder aus gesundheitlichen Gründen: Früher oder
+            später ist es vielen Menschen unmöglich, sich um sich selbst und den
+            eigenen Haushalt zu kümmern. Können Angehörige pflegebedürftige
+            Familienmitglieder nicht in ausreichendem Maße betreuen, leisten
+            Pflegedienste die nötige Unterstützung – falls erforderlich, bis zu
+            24 Stunden am Tag.
+          </p>
+        </div>
+        <div className="lg:w-1/2">
+          <img
+            src={serviceImage}
+            alt="24-Stunden-Pflege"
+            className="w-full max-h-[400px] object-cover rounded-xl"
+          />
+        </div>
+      </div>
+
+      {/* Second Section: Vorteile */}
+      <div className="space-y-4">
+        <h3 className="text-2xl font-bold text-green-700">
+          VORTEILE DER 24-STUNDEN-PFLEGE FÜR DIE PFLEGE IM EIGENEN ZUHAUSE
+        </h3>
+        <p className="text-primary/90 text-justify">
+          Für Betroffene und ihre Angehörigen bietet die 24-Stunden-Pflege
+          zahlreiche Vorteile. Bei dieser Form der Pflege im eigenen Zuhause ist
+          es üblich, dass die Pflegekraft jederzeit vor Ort ist und sich
+          ausschließlich um die pflegebedürftige Person kümmert. Somit schließt
+          eine 24-Stunden-Pflege eine individuell ausgerichtete Versorgung ein.
+        </p>
+        <p className="text-primary/90 text-justify">
+          Da unser ambulanter Pflegedienst aus Ruhr diese Form der Pflege
+          Zuhause bereits seit langer Zeit anbietet, arbeiten pflegebedürftige
+          Personen und ihre Angehörigen automatisch mit einem zuverlässigen
+          Partner über einen langen Zeitraum hinweg zusammen. Zudem ist eine
+          24-Stunden-Betreuung trotz des großen Leistungsumfangs oftmals nicht
+          kostenintensiver als vergleichbare Pflegeangebote in Pflegeheimen.
+          Dennoch können Pflegebedürftige im eigenen Zuhause verweilen.
+        </p>
+      </div>
     </div>
   );
 };

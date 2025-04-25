@@ -20,8 +20,8 @@ const TestimonialSection1 = React.lazy(() =>
 const TestimonialSection2 = React.lazy(() =>
   import("./components/TestimonialSection/TestimonialSection2")
 );
-const ReviewSection = React.lazy(() =>
-  import("./components/ReviewSection/ReviewSection")
+const ReviewSectionHome = React.lazy(() =>
+  import("./components/ReviewSection/ReviewSectionHome")
 );
 const Imprint = React.lazy(() => import("./components/Imprint/Imprint"));
 const PrivacyPolicy = React.lazy(() =>
@@ -60,6 +60,9 @@ const HomeConsultationSection = React.lazy(() =>
 const ServicesPage = React.lazy(() =>
   import("./components/OurServices/ServicesPage")
 );
+const ReviewSectionService = React.lazy(() =>
+  import("./components/ReviewSection/ReviewSectionService")
+);
 
 // const Admin = React.lazy(() => import("./components/Admin/Admin"));
 
@@ -77,7 +80,7 @@ const Home = () => {
       <WelcomeSection />
       <Cards />
       <MapSection />
-      <ReviewSection />
+      <ReviewSectionHome />
       <StepsSection />
       <HomeConsultationSection />
       <AccordionSection />

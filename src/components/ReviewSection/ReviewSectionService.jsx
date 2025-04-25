@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { FaPlay } from "react-icons/fa";
 
-import reviewImage from "../../assets/review-1.png";
+import reviewImage from "../../assets/review-2.png";
 
 import CachedImage from "../CachedImage";
 
@@ -15,7 +15,7 @@ const ReviewSectionNew = () => {
   const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // Replace with your YouTube video ID
 
   return (
-    <section className="bg-gray-200 py-6 px-6 md:px-12">
+    <section className="bg-gray-200 py-6 px-6 md:px-12 rounded-lg shadow-xl">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
         {/* Image with Play Button */}
         <div className="relative flex-shrink-0">
@@ -36,14 +36,14 @@ const ReviewSectionNew = () => {
         {/* Review Text */}
         <div className="flex-1 text-center md:text-left">
           <p className="text-primary/90 text-lg md:text-xl leading-relaxed italic mb-4">
-            „Sernitas ist mein Begleiter am Morgen, am Mittag und am Abend. Dank
-            Sernitas Care kann ich, trotz meines hohen Alters, selbstbestimmt
-            und zufrieden zuhause wohnen und leben.“
+            „Pflege zu Hause schenkt uns jeden Tag ein bisschen Lebensfreude.
+            Die Betreuer respektieren unsere individuellen Bedürfnisse und
+            helfen uns unseren Alltag weiterhin flexibel zu gestalten.“
           </p>
-          <p className="font-ephesis text-primary/90 text-2xl tracking-wide">
-            Frau Müller
+          <p className="font-ephesis text-primary/90 text-3xl font-bold tracking-wide">
+            Fam. Zipple
           </p>
-          <p className="text-primary/90 italic">Patientin bei Sernitas Care</p>
+          <p className="text-primary/90">Patientin bei Sernitas Care</p>
         </div>
       </div>
 
