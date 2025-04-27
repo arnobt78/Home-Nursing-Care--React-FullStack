@@ -1,0 +1,165 @@
+import { useNavigate } from "react-router-dom";
+import karriereImage1 from "../../assets/karriere-1.png";
+import karriereImage2 from "../../assets/karriere-2.png";
+
+const jobPosts = [
+  {
+    title: "Vertriebsmitarbeiter:in",
+    subtitle: "(m/w/d)",
+    phone: "+49 234 966 46 480",
+    email: "info@sernitas-care.com",
+  },
+  {
+    title: "Büromanagement",
+    subtitle: "(m/w/d)",
+    phone: "+49 234 966 46 480",
+    email: "info@sernitas-care.com",
+  },
+  {
+    title: "Management HR",
+    subtitle: "(m/w/d)",
+    phone: "+49 234 966 46 480",
+    email: "info@sernitas-care.com",
+  },
+  {
+    title: "Kundenbetreuer:in",
+    subtitle: "(m/w/d)",
+    phone: "+49 234 966 46 480",
+    email: "info@sernitas-care.com",
+  },
+  {
+    title: "Werkstudent:in HR",
+    subtitle: "(m/w/d)",
+    phone: "+49 234 966 46 480",
+    email: "info@sernitas-care.com",
+  },
+  {
+    title: "Initiativbewerbung",
+    subtitle: "(m/w/d)",
+    phone: "+49 234 966 46 480",
+    email: "info@sernitas-care.com",
+  },
+];
+
+const KarrierePage = () => {
+  const navigate = useNavigate();
+
+  const handleApplyClick = () => {
+    navigate("/karriere/bewerben");
+  };
+
+  return (
+    <div className="bg-gray-50">
+      {/* Hero Section */}
+      <section
+        className="relative bg-cover bg-center h-[400px] flex items-center justify-center"
+        style={{ backgroundImage: `url(${karriereImage1})` }}
+      ></section>
+
+      {/* Introduction Section */}
+      <section className="py-24 px-6 lg:px-12 xl:32 bg-slate-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-secondary text-lg font-medium mb-4">
+            EIN TEAM VON EXPERTEN
+          </h2>
+          <h1 className="text-primary/90 text-3xl md:text-4xl font-bold mb-6">
+            Starte Deine Karriere bei Sernitas
+          </h1>
+          <p className="text-base md:text-lg leading-relaxed text-primary/90 mb-4">
+            Du willst dich in einem erfolgreichen Unternehmen weiterentwickeln?
+            Dann nutze die Möglichkeiten, die Dir Sernitas als Arbeitgeber
+            bietet, ganz gleich, in welcher Phase Deiner Karriere Du dich
+            befindest. Sernitas bietet Dir die Möglichkeit, Deine Fähigkeiten zu
+            erweitern und ein breites Spektrum an Erfahrungen zu sammeln. Auch
+            innerhalb der Sernitas-Gruppe und auf internationaler Ebene gibt es
+            zahlreiche Möglichkeiten.
+          </p>
+          <p className="text-base md:text-lg leading-relaxed text-primary/90">
+            Nutze unser breites Angebot an Karrieremöglichkeiten, von Praktika
+            und Studium über Berufseinstiegs- und Traineeprogramme bis hin zu
+            Fach- und Führungsaufgaben.
+          </p>
+        </div>
+      </section>
+
+      {/* Job Posts Section */}
+      <section className="py-24 px-6 lg:px-12 xl:px-32">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-primary/90 text-3xl font-bold text-center mb-12">
+            Offene Stellenangebote
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center text-center">
+            {jobPosts.map((job, index) => (
+              <div
+                key={index}
+                className="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition cursor-pointer"
+                onClick={handleApplyClick}
+              >
+                <h3 className="text-secondary text-xl font-bold mb-2">
+                  {job.title}
+                </h3>
+                <p className="text-gray-500 text-sm mb-4">{job.subtitle}</p>
+                <p className="text-primary/90 text-md flex items-center justify-center gap-2">
+                  <i className="fas fa-phone"></i> {job.phone}
+                </p>
+                <p className="text-primary/90 text-md flex items-center justify-center gap-2">
+                  <i className="fas fa-envelope"></i> {job.email}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Arbeitsweise Section */}
+      <section className="py-24 px-6 lg:px-12 xl:px-32 bg-slate-100 text-primary/90 text-justify">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          {/* Left Text */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-bold mb-6">Unsere Arbeitsweise</h2>
+            <p className="text-base md:text-lg leading-relaxed mb-4">
+              In unserem Unternehmen stehen unsere Kund:innen und
+              Mitarbeiter:innen im Mittelpunkt. Ganz gleich, welchen Beruf Sie
+              ausüben, ohne unsere Mitarbeiter:innen können wir den hohen
+              Qualitätsstandard unserer Unternehmen nicht gewährleisten.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              Das Unternehmen Sernitas GmbH benötigt stets engagierte und gut
+              ausgebildete Teamkolleg:innen. Wir wissen, dass hohe
+              Qualitätsleistungen und kompetentes Personal die Grundlage für
+              Erfolg sind. Dieser Grundsatz ist uns wichtig und ein Anliegen.
+              Wenn Du genauso denkst und dich angesprochen fühlst und in einer
+              freundlichen, internationalen Atmosphäre arbeiten möchtest, freuen
+              wir uns auf Deine Bewerbung.
+            </p>
+          </div>
+
+          {/* Right Image */}
+          <div className="w-full md:w-1/2">
+            <img
+              src={karriereImage2}
+              alt="Arbeitsweise"
+              className="rounded-xl shadow-lg object-cover w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Apply Button Section */}
+      <section className="py-24 px-6 lg:px-12 xl:px-32  text-center">
+        <h2 className="text-primary/90 text-xl lg:text-2xl font-medium mb-8">
+          Haben wir Dein Interesse geweckt? Dann bewirb dich gleich! Wir freuen
+          uns dich kennenzulernen.
+        </h2>
+        <button
+          onClick={handleApplyClick}
+          className="bg-primary/90 text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-secondary/90 transition cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105"
+        >
+          HIER BEWERBEN
+        </button>
+      </section>
+    </div>
+  );
+};
+
+export default KarrierePage;

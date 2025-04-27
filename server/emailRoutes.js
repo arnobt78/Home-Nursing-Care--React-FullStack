@@ -134,4 +134,67 @@ router.post("/api/send-home-consultation-email", async (req, res) => {
   }
 });
 
+// New API Route for BewerbenPage (Job Application)
+router.post("/api/send-job-application", async (req, res) => {
+  try {
+    const {
+      firstname,
+      lastname,
+      gender,
+      degree,
+      company,
+      country,
+      email,
+      phone,
+      linkedin,
+      subject,
+      message,
+    } = req.body;
+
+    let transporter = nodemailer.createTransport({
+      host: process.env.VITE_SMTP_HOST,
+      port: process.env.VITE_SMTP_PORT,
+      secure: process.env.VITE_SMTP_SECURE === "true",
+      auth: {
+        user: process.env.VITE_EMAIL_USER,
+        pass: process.env.VITE_EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: `"Sernitas Care" <${process.env.VITE_EMAIL_USER}>`,
+      to: process.env.VITE_EMAIL_USER,
+      subject: `Neue Bewerbung: ${firstname} ${lastname}`,
+      text: `
+Neue Bewerbung erhalten:
+
+Vorname: ${firstname}
+Nachname: ${lastname}
+Geschlecht: ${gender}
+Abschluss: ${degree}
+Unternehmen: ${company}
+Aufenthaltsland: ${country}
+E-Mail: ${email}
+Telefonnummer: ${phone}
+LinkedIn: ${linkedin}
+
+Betreffzeile: ${subject}
+
+Anfrage:
+${message}
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    res.status(200).json({ message: "Bewerbung erfolgreich gesendet!" });
+  } catch (error) {
+    console.error("Fehler beim Senden der Bewerbung:", error);
+    res.status(500).json({
+      error: "Fehler beim Senden der Bewerbung",
+      details: error.message,
+    });
+  }
+});
+
 export default router;

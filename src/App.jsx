@@ -33,9 +33,9 @@ const GeneralTerms = React.lazy(() =>
 const Contact = React.lazy(() => import("./components/Contact/Contact"));
 const AboutUs = React.lazy(() => import("./components/AboutUs/AboutUs"));
 // const Magazine = React.lazy(() => import("./components/Magazine/Magazine"));
-const TeamValuesSection = React.lazy(() =>
-  import("./components/TeamValuesSection/TeamValuesSection")
-);
+// const TeamValuesSection = React.lazy(() =>
+//   import("./components/TeamValuesSection/TeamValuesSection")
+// );
 const AccordionSection = React.lazy(() =>
   import("./components/Accordion/AccordionSection")
 );
@@ -63,6 +63,13 @@ const ServicesPage = React.lazy(() =>
 // const ReviewSectionService = React.lazy(() =>
 //   import("./components/ReviewSection/ReviewSectionService")
 // );
+
+const KarrierePage = React.lazy(() =>
+  import("./components/Karriere/KarrierePage")
+);
+const BewerbenPage = React.lazy(() =>
+  import("./components/Karriere/BewerbenPage")
+);
 
 // const Admin = React.lazy(() => import("./components/Admin/Admin"));
 
@@ -137,6 +144,8 @@ const App = () => {
             <Route path="/general-terms" element={<GeneralTerms />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/application-form" element={<ApplicationForm />} />
+            <Route path="/karriere" element={<KarrierePage />} />
+            <Route path="/karriere/bewerben" element={<BewerbenPage />} />
 
             <Route path="/admin" element={<Admin />} />
           </Routes>

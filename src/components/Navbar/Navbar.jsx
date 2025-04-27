@@ -180,6 +180,10 @@ const Navbar = () => {
     navigate("/contact");
   };
 
+  const handleCarrierClick = () => {
+    navigate("/karriere");
+  };
+
   const handleLogoClick = () => {
     navigate("/");
   };
@@ -311,7 +315,7 @@ const Navbar = () => {
               {/* Karriere */}
               <li className="flex items-center">
                 <button
-                  onClick={() => navigate("/karriere")}
+                  onClick={handleCarrierClick}
                   className="uppercase hover:text-secondary flex items-center justify-center"
                 >
                   Karriere
