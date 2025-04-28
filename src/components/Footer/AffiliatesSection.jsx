@@ -23,7 +23,7 @@ const affiliates = [
     id: 1,
     img: BPA,
     alt: "BPA",
-    link: "/",
+    link: "https://www.bpa.de/",
   },
   {
     id: 2,

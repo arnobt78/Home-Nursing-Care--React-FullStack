@@ -82,7 +82,7 @@ const HomeConsultationSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-24 px-6 md:px-12 xl:px-44">
+    <section className="bg-gray-100 py-24 px-6 lg:px-12 xl:px-44">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Left Section */}
         <div className="md:col-span-2 px-6">
@@ -133,7 +133,7 @@ const HomeConsultationSection = () => {
           <h3 className="text-primary/90 text-xl font-bold mb-8">
             Kostenfreie Beratung
           </h3>
-          <div className="flex items-center gap-4 text-center mb-6">
+          <div className="flex justify-center items-center gap-4 text-center mb-6">
             <CachedImage
               src={HRImage}
               alt="Consultant"

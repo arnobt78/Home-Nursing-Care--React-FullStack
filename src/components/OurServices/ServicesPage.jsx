@@ -57,13 +57,13 @@ const ServicesPage = () => {
 
       {/* Tabs */}
       <div className="container mx-auto py-6 bg-gray-200">
-        <div className="flex justify-center gap-12 items-center">
+        <div className="flex justify-center gap-12 items-center ">
           {tabs.map((tab, index) => (
             <NavLink
               key={index}
               to={tab.path} // Use absolute paths here
               className={({ isActive }) =>
-                `text-sm font-medium pb-2 ${
+                `text-sm xl:text-lg font-medium pb-2 ${
                   isActive
                     ? "text-green-700 border-b-2 border-green-700"
                     : "text-gray-600 hover:text-green-700"

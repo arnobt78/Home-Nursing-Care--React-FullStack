@@ -5,14 +5,14 @@ import CachedImage from "../CachedImage";
 
 const MapSection = () => {
   return (
-    <section className="bg-white py-24 px-6 md:px-16 xl:px-60">
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="bg-white py-24 px-6 lg:px-12 xl:px-44">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-full">
         {/* Text Content */}
-        <div>
+        <div className="w-full max-w-full">
           <h2 className="text-primary/90 text-2xl md:text-3xl font-bold mb-6">
             Für Sie durch das Revier
           </h2>
-          <p className="text-base md:text-lg leading-relaxed text-primary/90 mb-4 text-justify">
+          <p className="text-sm md:text-lg leading-relaxed text-primary/90 mb-4 text-justify">
             Sernitas Care ist täglich mit seinen grün-weißen Flitzern in Bochum
             und den angrenzenden Städten und Gemeinden unterwegs – zuverlässig,
             flexibel und immer nah am Menschen. Unser engagiertes Team aus
@@ -44,11 +44,11 @@ const MapSection = () => {
         </div>
 
         {/* Image Content */}
-        <div className="flex justify-center">
+        <div className="flex justify-center w-full max-w-full">
           <CachedImage
             src={mapImage}
             alt="Map showing Sernitas Care coverage"
-            className=" object-cover max-w-max h-[400px]"
+            className="object-contain max-w-full h-[400px]"
           />
         </div>
       </div>

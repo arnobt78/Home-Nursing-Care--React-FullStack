@@ -9,22 +9,7 @@ const WirSindSernitas = () => {
           <h2 className="text-xl font-bold text-green-700">
             Wir sind Sernitas
           </h2>
-          <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
-            Gemeinsam für eine bessere Pflege
-          </h3>
-          <p className="text-primary/90 text-justify leading-relaxed">
-            Sernitas Care steht für Vertrauen, Qualität und Menschlichkeit. Wir
-            sind ein engagiertes Team, das sich darauf spezialisiert hat,
-            pflegebedürftigen Menschen und ihren Familien die bestmögliche
-            Unterstützung zu bieten. Unser Ziel ist es, ein Umfeld zu schaffen,
-            in dem sich jeder sicher und geborgen fühlt.
-          </p>
-          <p className="text-primary/90 text-justify leading-relaxed">
-            Mit unserer langjährigen Erfahrung und unserem umfassenden
-            Fachwissen setzen wir uns dafür ein, die Lebensqualität unserer
-            Klienten zu verbessern. Wir glauben daran, dass Pflege mehr ist als
-            nur eine Dienstleistung – es ist eine Herzensangelegenheit.
-          </p>
+
           <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
             Unsere Philosophie – Pflege, die den Menschen in den Mittelpunkt
             stellt
@@ -66,6 +51,23 @@ const WirSindSernitas = () => {
           />
         </div>
       </div>
+
+      <h3 className="text-2xl xl:text-3xl font-bold text-green-700 pt-12">
+        Gemeinsam für eine bessere Pflege
+      </h3>
+      <p className="text-primary/90 text-justify leading-relaxed">
+        Sernitas Care steht für Vertrauen, Qualität und Menschlichkeit. Wir sind
+        ein engagiertes Team, das sich darauf spezialisiert hat,
+        pflegebedürftigen Menschen und ihren Familien die bestmögliche
+        Unterstützung zu bieten. Unser Ziel ist es, ein Umfeld zu schaffen, in
+        dem sich jeder sicher und geborgen fühlt.
+      </p>
+      <p className="text-primary/90 text-justify leading-relaxed">
+        Mit unserer langjährigen Erfahrung und unserem umfassenden Fachwissen
+        setzen wir uns dafür ein, die Lebensqualität unserer Klienten zu
+        verbessern. Wir glauben daran, dass Pflege mehr ist als nur eine
+        Dienstleistung – es ist eine Herzensangelegenheit.
+      </p>
     </div>
   );
 };

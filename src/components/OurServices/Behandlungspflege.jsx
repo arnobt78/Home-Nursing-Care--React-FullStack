@@ -10,9 +10,9 @@ const Behandlungspflege = () => {
   const navigate = useNavigate(); // Initialize navigate function
 
   return (
-    <div className="space-y-6 px-12">
+    <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* First Section: Heading and Right Image */}
-      <div className="flex flex-col lg:flex-row items-center gap-8">
+      <div className="flex flex-col lg:flex-row items-center gap-8 pb-16 ">
         <div className="lg:w-1/2 space-y-4">
           <h2 className="text-xl font-bold text-green-700">
             Behandlungspflege
@@ -49,7 +49,7 @@ const Behandlungspflege = () => {
       </div>
 
       {/* Second Section: Comment Section */}
-      <div className="bg-gray-200 p-4 rounded-2xl shadow-2xl">
+      <div className="bg-gray-200 py-12 rounded-2xl shadow-2xl">
         <div className="flex flex-col lg:flex-row items-center ">
           <div className="lg:w-1/3 flex justify-center">
             <img
@@ -73,8 +73,8 @@ const Behandlungspflege = () => {
       </div>
 
       {/* Third Section: Three Cards */}
-      <div className="space-y-6">
-        <h3 className="text-2xl font-bold text-green-700 text-center">
+      <div className="space-y-6 py-24">
+        <h3 className="text-2xl xl:text-3xl font-bold text-green-700 text-center mb-12">
           Die drei Arten der Behandlungspflege
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -92,7 +92,7 @@ const Behandlungspflege = () => {
           <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             <h4 className="font-bold text-lg pt-2">
-              Krankenhausvermeidungspflege
+              Krankenhaus vermeidungspflege
             </h4>
             <p className="text-gray-100 mt-2">
               In manchen Fällen wird die Behandlungspflege verordnet, um einen
@@ -113,8 +113,8 @@ const Behandlungspflege = () => {
       {/* Fourth Section: FAQ Box */}
       <div className="bg-transparent p-4 flex flex-col lg:flex-row items-center gap-8">
         {/* Left Side: Text */}
-        <div className="lg:w-2/3 space-y-4">
-          <h4 className="text-2xl font-bold text-green-700">
+        <div className="lg:w-2/3 space-y-6">
+          <h4 className="text-2xl xl:text-3xl font-bold text-green-700">
             Unser medizinisches Pflegeangebot im Überblick
           </h4>
           <p className="text-primary/90">
@@ -213,7 +213,7 @@ const Behandlungspflege = () => {
             Sie uns einfach an unter: <strong>0234 / 966 46 480</strong>.
           </p>
           <button
-            className="bg-green-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-700 mt-8"
+            className="bg-primary/90 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-700 mt-8"
             onClick={() => navigate("/contact")} // Navigate to /contact on click
           >
             Zum Kontaktformular →

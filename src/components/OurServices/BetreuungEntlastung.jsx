@@ -8,9 +8,9 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const BetreuungEntlastung = () => {
   return (
-    <div className="space-y-6 px-12">
+    <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* First Section: Text and Image */}
-      <div className="flex flex-col lg:flex-row items-center gap-8">
+      <div className="flex flex-col lg:flex-row items-center gap-8 pb-24">
         <div className="lg:w-1/2 space-y-4">
           <h2 className="text-xl font-bold text-green-700">
             Betreuungs- und Entlastungsleistungen
@@ -57,11 +57,11 @@ const BetreuungEntlastung = () => {
       <ReviewSectionService />
 
       {/* Third Section: Additional Services */}
-      <div className="space-y-6">
-        <h3 className="text-2xl font-bold text-green-700 text-center">
+      <div className="space-y-6 py-24">
+        <h3 className="text-2xl xl:text-3xl font-bold text-green-700 text-center">
           Diese Zusatzleistungen bieten wir an
         </h3>
-        <p className="text-primary/90 text-center">
+        <p className="text-primary/90 text-center pb-12">
           Sernitas Care bietet verschiedene Zusatzleistungen an, die nicht Teil
           der Grundpflege und Behandlungspflege sind. Bei Bedarf können unsere
           Patienten Leistungen zur hauswirtschaftlichen Versorgung buchen, die
@@ -69,7 +69,7 @@ const BetreuungEntlastung = () => {
           Pflegesachleistung über die Pflegekasse oder als Privatleistung
           abgerechnet.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Spaziergänge & Bewegungsangebote

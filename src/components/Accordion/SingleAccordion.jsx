@@ -56,14 +56,18 @@
 import { motion } from "framer-motion";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 const SingleAccordion = ({ title, info, isActive, onToggle }) => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
   return (
     <motion.article
-      className="question shadow-lg mb-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      className="question mb-6"
+      initial={!hasAnimated ? { opacity: 0, y: 20 } : false}
+      animate={!hasAnimated ? { opacity: 1, y: 0 } : false}
       transition={{ duration: 0.5, ease: "easeOut" }}
+      onAnimationComplete={() => setHasAnimated(true)} // Mark animation as completed
     >
       {/* Question Header */}
       <div className="bg-primary p-4 rounded-lg">
@@ -85,10 +89,10 @@ const SingleAccordion = ({ title, info, isActive, onToggle }) => {
       {/* Answer Content */}
       {isActive && (
         <motion.div
-          className="border-2 border-primary/90 bg-slate-200 rounded-lg p-4" // Fixed typo in border-primary
+          className="border-2 border-primary/90 bg-slate-200 rounded-lg p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           <p className="text-primary/90 text-justify">{info}</p>
         </motion.div>

@@ -6,7 +6,7 @@ const Verhinderungspflege = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="space-y-12 px-12">
+    <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* First Section: Heading and Right Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-4">
@@ -53,7 +53,7 @@ const Verhinderungspflege = () => {
       </div>
 
       {/* Second Section: Leistungen */}
-      <div className="space-y-6">
+      <div className="space-y-6 py-24">
         <h3 className="text-2xl font-bold text-green-700">
           Welche Leistungen beinhaltet die Verhinderungspflege?
         </h3>
@@ -62,7 +62,7 @@ const Verhinderungspflege = () => {
           ist in § 39 SGB XI festgelegt. Im Wesentlichen handelt es sich um
           Leistungen der Haushaltshilfe:
         </p>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-primary/90 pl-5">
+        <ul className="grid grid-cols-1 gap-4 text-primary/90 pl-5">
           <li className="flex items-start gap-2">
             <span className="text-green-700 font-bold">✔</span> Essen zubereiten
           </li>
@@ -77,11 +77,11 @@ const Verhinderungspflege = () => {
             <span className="text-green-700 font-bold">✔</span> Einkaufen
           </li>
         </ul>
-        <p className="text-primary/90 mt-4">
+        <p className="text-primary/90 pt-8">
           Auch Leistungen der Grundpflege sind im Rahmen einer
           Verhinderungspflege möglich, in Form von Hilfe bei:
         </p>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-primary/90 pl-5">
+        <ul className="grid grid-cols-1 gap-4 text-primary/90 pl-5">
           <li className="flex items-start gap-2">
             <span className="text-green-700 font-bold">✔</span> An- und
             Auskleiden
@@ -103,7 +103,7 @@ const Verhinderungspflege = () => {
             sowie Inkontinenzversorgung
           </li>
         </ul>
-        <p className="text-primary/90 mt-4">
+        <p className="text-primary/90 pt-8">
           Lediglich ärztlich verordnete medizinische Behandlungspflege, wie
           Spritzen geben oder Wundversorgung, fällt nicht in den
           Leistungsbereich unseres Pflegedienstes bei einer Verhinderungspflege.
@@ -142,11 +142,11 @@ const Verhinderungspflege = () => {
       </div>
 
       {/* Fourth Section: Beratung */}
-      <div className="text-center space-y-4">
-        <h3 className="text-xl font-bold text-green-700">
+      <div className="text-center space-y-6 py-24">
+        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
           Nutzen Sie unsere persönliche Beratung
         </h3>
-        <p className="text-primary/90">
+        <p className="text-primary/90 pb-8">
           Sie haben Fragen zur Verhinderungspflege? Oder möchten mehr über
           unsere Leistungen und die Kostenübernahme erfahren? Dann rufen Sie uns
           an! Wir beraten Sie kostenfrei und beantworten Ihre Fragen. Gemeinsam
@@ -155,7 +155,7 @@ const Verhinderungspflege = () => {
           Sie und Ihre Angehörigen die Unterstützung, die Sie benötigen.
         </p>
         <button
-          className="bg-green-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-700"
+          className="bg-primary/90 text-white px-6 py-2 rounded-lg shadow-2xl hover:bg-green-700"
           onClick={() => navigate("/contact")} // Navigate to /contact on click
         >
           Jetzt Beratung anfragen →

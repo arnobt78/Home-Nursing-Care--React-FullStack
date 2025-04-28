@@ -2,14 +2,14 @@ import serviceImage from "../../assets/service-15.png";
 
 const Rufbereitschaft = () => {
   return (
-    <div className="space-y-6 px-12">
+    <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* First Section: Text and Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8 ">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-xl font-bold text-green-700">
+          <h2 className="text-lg xl:text-xl font-bold text-green-700">
             24-STUNDEN-PFLEGE im Revier
           </h2>
-          <h3 className="text-3xl font-bold text-green-700">
+          <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
             PFLEGEBEDÜRFTIGKEIT STETS IN GUTEN HÄNDEN
           </h3>
           <p className="text-primary/90 text-justify">
@@ -31,8 +31,8 @@ const Rufbereitschaft = () => {
       </div>
 
       {/* Second Section: Vorteile */}
-      <div className="space-y-4">
-        <h3 className="text-2xl font-bold text-green-700">
+      <div className="space-y-6 py-24">
+        <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
           VORTEILE DER 24-STUNDEN-PFLEGE FÜR DIE PFLEGE IM EIGENEN ZUHAUSE
         </h3>
         <p className="text-primary/90 text-justify">

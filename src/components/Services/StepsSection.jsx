@@ -2,7 +2,7 @@ import { FaPhoneAlt, FaCar, FaFileAlt, FaHome } from "react-icons/fa";
 
 const StepsSection = () => {
   return (
-    <section className="bg-gray-50 py-24 px-6 md:px-16 xl:px-44">
+    <section className="bg-gray-50 py-24 px-6 md:px-12 xl:px-44">
       <div className="max-w-6xl mx-auto text-center">
         {/* Section Title */}
         <h2 className="text-primary/90 text-2xl md:text-3xl font-bold mb-2">

@@ -7,7 +7,7 @@ const Grundpflege = () => {
   const navigate = useNavigate(); // Initialize the navigate function
 
   return (
-    <div className="space-y-6 px-12">
+    <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* Text and Image Section */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-4">
@@ -45,32 +45,40 @@ const Grundpflege = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="mt-8">
-        <h3 className="text-xl font-bold text-green-700">
+      <div className="mt-8 py-12">
+        <h3 className="text-xl xl:text-2xl font-bold text-green-700 pb-8 text-center">
           Leistungsspektrum der Grundpflege
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 ">
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Körperpflege
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Betten und Lagern
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             An- und Auskleiden
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Hilfe bei der Nahrungs- & Flüssigkeitsaufnahme
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
-            Verwendung von Inkontinenzprodukten
+            Aktivierende Pflege zur Förderung der Selbständigkeit
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Unterstützung beim Toilettengang
+          </div>
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+            <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
+            Verwendung von Inkontinenz-produkten
+          </div>
+          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Prävention von Dekubitus, Thrombose, usw.
           </div>
@@ -78,18 +86,18 @@ const Grundpflege = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="mt-8 text-center">
-        <h3 className="text-lg font-bold text-green-700">
+      <div className="mt-12 text-center">
+        <h3 className="text-lg xl:text-xl font-bold text-green-700">
           Wir sind für Sie da!
         </h3>
-        <p className=" text-primary/90 mt-2">
+        <p className=" text-primary/90 mt-4">
           Gerne beraten wir Sie, welche Leistungen für Sie passen. Auf diese
           Weise erhalten Sie eine individuell auf Sie oder Ihre Angehörigen
           abgestimmte Grundpflege. Sie haben Fragen? Auch die beantworten Ihnen
           unsere Mitarbeiter gerne. Rufen Sie uns an!
         </p>
         <button
-          className="bg-green-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-700 mt-4"
+          className="bg-primary/90 text-white px-6 py-3 rounded-lg shadow-2xl hover:bg-green-700 mt-8"
           onClick={() => navigate("/contact")} // Navigate to /contact on click
         >
           Jetzt Kontakt aufnehmen →
