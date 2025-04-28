@@ -205,11 +205,14 @@ const Navbar = () => {
     {
       title: "Über uns",
       subItems: [
-        { title: "Wir sind Sernitas", link: "/about-us" },
-        { title: "Team", link: "/team" },
-        { title: "Leitbild", link: "/leitbild" },
-        { title: "Kooperationsnetzwerk", link: "/netzwerk" },
-        { title: "Mitgliedschaft BAP", link: "/bap" },
+        { title: "Wir sind Sernitas", link: "/about-us/wir-sind-sernitas" },
+        { title: "Team", link: "/about-us/team" },
+        { title: "Leitbild", link: "/about-us/leitbild" },
+        {
+          title: "Kooperationsnetzwerk",
+          link: "/about-us/kooperationsnetzwerk",
+        },
+        { title: "Mitgliedschaft BAP", link: "/about-us/mitgliedschaft-bap" },
       ],
     },
     {
@@ -279,7 +282,7 @@ const Navbar = () => {
                       if (item.title === "Unsere Leistungen") {
                         navigate("/services/grundpflege"); // Navigate to default page
                       } else if (item.title === "Über uns") {
-                        navigate("/about-us"); // Navigate to /about-us when "Über uns" is clicked
+                        navigate("/about-us/wir-sind-sernitas"); // Navigate to /about-us when "Über uns" is clicked
                       }
                     }}
                   >

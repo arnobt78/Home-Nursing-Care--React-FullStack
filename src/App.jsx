@@ -31,7 +31,9 @@ const GeneralTerms = React.lazy(() =>
   import("./components/GeneralTerms/GeneralTerms")
 );
 const Contact = React.lazy(() => import("./components/Contact/Contact"));
-const AboutUs = React.lazy(() => import("./components/AboutUs/AboutUs"));
+const AboutUsPage = React.lazy(() =>
+  import("./components/AboutUs/AboutUsPage")
+);
 // const Magazine = React.lazy(() => import("./components/Magazine/Magazine"));
 // const TeamValuesSection = React.lazy(() =>
 //   import("./components/TeamValuesSection/TeamValuesSection")
@@ -137,7 +139,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services/*" element={<ServicesPage />} />
-            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/about-us/*" element={<AboutUsPage />} />
             {/* <Route path="/magazine" element={<Magazine />} /> */}
             <Route path="/imprint" element={<Imprint />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

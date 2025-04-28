@@ -153,13 +153,35 @@ input[type="date"].search-input::-webkit-calendar-picker-indicator {
 
 /* Add a specific class for HomeConsultationSection input fields */
 .home-consultation-input {
-  all: unset; /* Reset all default browser styles */
-  width: 100%; /* Ensure the input spans the full width */
+  all: unset;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #737e90;
+  outline: none;
+  box-sizing: border-box;
+  color: #514f4f;
+}
+/* Style for <select> with home-consultation-input */
+select.home-consultation-input {
+  appearance: none; /* Remove default browser styles */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23737e90'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center; /* Position the arrow */
+  background-size: 1rem; /* Size of the arrow */
+  padding-right: 2rem; /* Add space for the arrow */
+  width: 100%; /* Ensure full width */
   padding-bottom: 0.5rem; /* Add padding for better spacing */
   border-bottom: 1px solid #737e90; /* Bottom border */
   outline: none; /* Remove default focus outline */
   box-sizing: border-box; /* Include padding and border in width calculation */
-  color: #514f4f; /* Text color for input value */
+  color: #adb1b7; /* Text color for input value */
+}
+
+select.home-consultation-input:focus {
+  border-bottom-color: #24836d; /* Tailwind's ring-blue-500 */
+  box-shadow: 0 2px 0 #24836d; /* Add a subtle focus effect */
 }
 
 .home-consultation-input::placeholder {
