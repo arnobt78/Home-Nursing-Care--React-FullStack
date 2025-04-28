@@ -57,44 +57,6 @@ const WirSindSernitas = () => {
             wir großen Wert auf individuelle Betreuung und eine vertrauensvolle
             Zusammenarbeit.
           </p>
-
-          {/* Values Section */}
-          <div className="mt-12 space-y-6">
-            <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
-              Unsere Werte
-            </h3>
-            <ul className="space-y-4 text-primary/90">
-              <li className="flex items-start gap-2">
-                <span className="text-green-700 font-bold">✔</span>{" "}
-                Wertschätzung gegenüber jedem Menschen
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-700 font-bold">✔</span>{" "}
-                Verantwortung im täglichen Handeln
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-700 font-bold">✔</span>{" "}
-                Verlässlichkeit in jeder Situation
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-700 font-bold">✔</span> Herzlichkeit
-                als Grundlage unserer Arbeit
-              </li>
-            </ul>
-          </div>
-
-          {/* Quality of Life Section */}
-          <div className="mt-12">
-            <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
-              Gemeinsam für Ihre Lebensqualität
-            </h3>
-            <p className="text-primary/90 mt-4 text-justify leading-relaxed">
-              Unser Ziel ist es, die Pflege so zu gestalten, dass sie
-              Lebensfreude erhält und neue Perspektiven eröffnet. Denn echte
-              Fürsorge bedeutet, das Leben unserer Klienten nachhaltig zu
-              bereichern – Tag für Tag.
-            </p>
-          </div>
         </div>
         <div className="lg:w-1/2">
           <img
