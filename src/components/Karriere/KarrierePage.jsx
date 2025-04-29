@@ -57,15 +57,15 @@ const KarrierePage = () => {
       ></section>
 
       {/* Introduction Section */}
-      <section className="py-24 px-6 lg:px-12 xl:32 bg-slate-100">
+      <section className="py-12 xl:py-24 px-6 lg:px-12 xl:32 space-y-6 bg-slate-100">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-secondary text-lg font-medium mb-4">
+          <h2 className="text-secondary text-lg font-medium ">
             EIN TEAM VON EXPERTEN
           </h2>
-          <h1 className="text-primary/90 text-3xl md:text-4xl font-bold mb-6">
+          <h1 className="text-primary/90 text-3xl md:text-4xl font-bold mb-16">
             Starte Deine Karriere bei Sernitas
           </h1>
-          <p className="text-base md:text-lg leading-relaxed text-primary/90 mb-4">
+          {/* <p className="text-base md:text-lg leading-relaxed text-primary/90 mb-4">
             Du willst dich in einem erfolgreichen Unternehmen weiterentwickeln?
             Dann nutze die Möglichkeiten, die Dir Sernitas als Arbeitgeber
             bietet, ganz gleich, in welcher Phase Deiner Karriere Du dich
@@ -78,7 +78,39 @@ const KarrierePage = () => {
             Nutze unser breites Angebot an Karrieremöglichkeiten, von Praktika
             und Studium über Berufseinstiegs- und Traineeprogramme bis hin zu
             Fach- und Führungsaufgaben.
-          </p>
+          </p> */}
+          {/* Arbeitsweise Section */}
+
+          <div className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-10 text-primary/90 text-justify space-y-6">
+            {/* Left Text */}
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl font-bold mb-6">Unsere Arbeitsweise</h2>
+              <p className="text-base md:text-lg leading-relaxed mb-4">
+                In unserem Unternehmen stehen unsere Kund:innen und
+                Mitarbeiter:innen im Mittelpunkt. Ganz gleich, welchen Beruf Sie
+                ausüben, ohne unsere Mitarbeiter:innen können wir den hohen
+                Qualitätsstandard unserer Unternehmen nicht gewährleisten.
+              </p>
+              <p className="text-base md:text-lg leading-relaxed">
+                Das Unternehmen Sernitas GmbH benötigt stets engagierte und gut
+                ausgebildete Teamkolleg:innen. Wir wissen, dass hohe
+                Qualitätsleistungen und kompetentes Personal die Grundlage für
+                Erfolg sind. Dieser Grundsatz ist uns wichtig und ein Anliegen.
+                Wenn Du genauso denkst und dich angesprochen fühlst und in einer
+                freundlichen, internationalen Atmosphäre arbeiten möchtest,
+                freuen wir uns auf Deine Bewerbung.
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div className="w-full md:w-1/2">
+              <img
+                src={karriereImage2}
+                alt="Arbeitsweise"
+                className="rounded-xl shadow-lg object-cover w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -107,40 +139,6 @@ const KarrierePage = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Arbeitsweise Section */}
-      <section className="py-24 px-6 lg:px-12 xl:px-32 bg-slate-100 text-primary/90 text-justify">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          {/* Left Text */}
-          <div className="w-full md:w-1/2">
-            <h2 className="text-3xl font-bold mb-6">Unsere Arbeitsweise</h2>
-            <p className="text-base md:text-lg leading-relaxed mb-4">
-              In unserem Unternehmen stehen unsere Kund:innen und
-              Mitarbeiter:innen im Mittelpunkt. Ganz gleich, welchen Beruf Sie
-              ausüben, ohne unsere Mitarbeiter:innen können wir den hohen
-              Qualitätsstandard unserer Unternehmen nicht gewährleisten.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed">
-              Das Unternehmen Sernitas GmbH benötigt stets engagierte und gut
-              ausgebildete Teamkolleg:innen. Wir wissen, dass hohe
-              Qualitätsleistungen und kompetentes Personal die Grundlage für
-              Erfolg sind. Dieser Grundsatz ist uns wichtig und ein Anliegen.
-              Wenn Du genauso denkst und dich angesprochen fühlst und in einer
-              freundlichen, internationalen Atmosphäre arbeiten möchtest, freuen
-              wir uns auf Deine Bewerbung.
-            </p>
-          </div>
-
-          {/* Right Image */}
-          <div className="w-full md:w-1/2">
-            <img
-              src={karriereImage2}
-              alt="Arbeitsweise"
-              className="rounded-xl shadow-lg object-cover w-full h-auto"
-            />
           </div>
         </div>
       </section>
