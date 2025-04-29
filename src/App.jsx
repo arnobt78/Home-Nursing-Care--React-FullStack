@@ -62,9 +62,10 @@ const HomeConsultationSection = React.lazy(() =>
 const ServicesPage = React.lazy(() =>
   import("./components/OurServices/ServicesPage")
 );
-// const ReviewSectionService = React.lazy(() =>
-//   import("./components/ReviewSection/ReviewSectionService")
-// );
+
+const WissenswertesPage = React.lazy(() =>
+  import("./components/Wissenswertes/WissenswertesPage")
+);
 
 const KarrierePage = React.lazy(() =>
   import("./components/Karriere/KarrierePage")
@@ -140,7 +141,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/services/*" element={<ServicesPage />} />
             <Route path="/about-us/*" element={<AboutUsPage />} />
-            {/* <Route path="/magazine" element={<Magazine />} /> */}
+            <Route path="/wissenswertes/*" element={<WissenswertesPage />} />
+
             <Route path="/imprint" element={<Imprint />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/general-terms" element={<GeneralTerms />} />

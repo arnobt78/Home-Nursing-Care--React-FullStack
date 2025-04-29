@@ -40,7 +40,7 @@ const tabs = [
   },
 ];
 
-const ServicesPage = () => {
+const AboutUsPage = () => {
   const location = useLocation(); // Get the current location
 
   // Find the active tab based on the current path
@@ -93,4 +93,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default AboutUsPage;

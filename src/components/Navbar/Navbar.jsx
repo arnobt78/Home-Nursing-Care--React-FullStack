@@ -218,11 +218,11 @@ const Navbar = () => {
     {
       title: "Wissenswertes",
       subItems: [
-        { title: "FAQ", link: "/faq" },
-        { title: "Aktuelles", link: "/aktuelles" },
-        { title: "Pflege-Blog", link: "/blog" },
-        { title: "Pflege-Ratgeber", link: "/ratgeber" },
-        { title: "Downloads", link: "/downloads" },
+        { title: "FAQ", link: "/wissenswertes/faq" },
+        { title: "Aktuelles", link: "/wissenswertes/aktuelles" },
+        { title: "Pflege-Blog", link: "/wissenswertes/pflege-blog" },
+        { title: "Pflege-Ratgeber", link: "/wissenswertes/pflege-ratgeber" },
+        { title: "Downloads", link: "/wissenswertes/downloads" },
       ],
     },
   ];
@@ -283,6 +283,8 @@ const Navbar = () => {
                         navigate("/services/grundpflege"); // Navigate to default page
                       } else if (item.title === "Über uns") {
                         navigate("/about-us/wir-sind-sernitas"); // Navigate to /about-us when "Über uns" is clicked
+                      } else if (item.title === "Wissenswertes") {
+                        navigate("/wissenswertes/faq"); // Navigate to /wissenswertes when "Wissenswertes" is clicked
                       }
                     }}
                   >
