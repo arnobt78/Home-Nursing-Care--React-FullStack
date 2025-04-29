@@ -9,7 +9,7 @@ const Aktuelles = () => {
     {
       id: 1,
       platform: "linkedin",
-      image: newsImg1, // Fixed: Directly reference the imported image
+      image: newsImg1,
       text: "We are hiring employees for various positions in Germany. Join our team and grow with us!",
       hashtags: "#hiring #jobs #sernitasgroup #sernitascare",
       link: "https://www.linkedin.com/company/sernitas/posts/",
@@ -17,7 +17,7 @@ const Aktuelles = () => {
     {
       id: 2,
       platform: "linkedin",
-      image: newsImg2, // Fixed: Directly reference the imported image
+      image: newsImg2,
       text: "Discover the latest updates and innovations in healthcare and nursing with Sernitas Group.",
       hashtags: "#healthcare #innovation #sernitasgroup #sernitascare",
       link: "https://www.linkedin.com/company/sernitas/posts/",
@@ -25,7 +25,7 @@ const Aktuelles = () => {
     {
       id: 3,
       platform: "instagram",
-      image: newsImg3, // Fixed: Directly reference the imported image
+      image: newsImg3,
       text: "Almanya, 1 Mart 2023 tarihinde yürürlüğe giren yasa ile yurt dışından sağlık çalışanı istihdam etmektedir.",
       hashtags:
         "#almanya #almanca #sernitasgroup #almanyaiş #hemşire #sernitascare",
@@ -34,7 +34,7 @@ const Aktuelles = () => {
     {
       id: 4,
       platform: "instagram",
-      image: newsImg4, // Fixed: Directly reference the imported image
+      image: newsImg4,
       text: "Kuzey Ren-Vestfalya’daki büyük bir klinik için bu ve gelecek yıl için hemşireler arıyoruz.",
       hashtags: "#denklik #hemşire #hemşirelik #sernitasgroup #sernitascare",
       link: "https://www.instagram.com/p/CtjAjcygsoa/",
@@ -42,7 +42,7 @@ const Aktuelles = () => {
     {
       id: 5,
       platform: "linkedin",
-      image: newsImg5, // Fixed: Directly reference the imported image
+      image: newsImg5,
       text: '"MÜŞTERİ İLİŞKİLERİ ASİSTANI" Arıyoruz. -Tercihen Lisans Mezunu -En az 2 yıl deneyimli',
       hashtags: "#hiring #işealım #istanbul #asistan #sernitascare",
       link: "https://www.linkedin.com/posts/sernitas_hiring-iagnealaftm-istanbuliagn-activity-6976144925885104128-NP7q/?utm_source=share&utm_medium=member_desktop",
@@ -71,6 +71,69 @@ const Aktuelles = () => {
           Pflegestandards, sondern werfen auch einen Blick über den Tellerrand –
           etwa auf internationale Fachkräftegewinnung, Digitalisierung im
           Gesundheitswesen oder Innovationen in der Pflege.
+        </p>
+      </div>
+
+      {/* Social Media Section */}
+      <div className="text-center space-y-6 py-12">
+        <h2 className="text-2xl xl:text-3xl font-bold text-green-700 pb-4">
+          Wir in den Sozialen Medien
+        </h2>
+        <div className="flex justify-center gap-12 pb-4">
+          <a
+            href="https://www.facebook.com/sernitasglobal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 text-3xl transition transform hover:scale-105 duration-300"
+          >
+            <i className="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/sernitashrturkey?igsh=MWphd210cjVod3hjbg=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-500 text-3xl transition transform hover:scale-110 duration-300"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 text-3xl transition transform hover:scale-110 duration-300"
+          >
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-red-600 text-3xl transition transform hover:scale-110 duration-300"
+          >
+            <i className="fab fa-youtube"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/sernitas/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-700 text-3xl transition transform hover:scale-110 duration-300"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.xing.com/pages/sernitas-gmbh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-700 text-3xl transition transform hover:scale-110 duration-300"
+          >
+            <i className="fab fa-xing"></i>
+          </a>
+        </div>
+        <p className="text-primary/90">
+          Mit unseren sozialen Kanälen möchten wir Ihnen einen Ort bieten, an
+          dem Sie mit uns interagieren, Informationen austauschen und Einblicke
+          in unsere Dienstleistungen und unser tägliches Schaffen erhalten und
+          Ihnen so einen noch besseren Service bieten zu können.
         </p>
       </div>
 
