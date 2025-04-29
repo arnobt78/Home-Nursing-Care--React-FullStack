@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import karriereImage1 from "../../assets/karriere-1.png";
-import karriereImage2 from "../../assets/karriere-2.png";
+import karriereImage2 from "../../assets/hero-3.png";
 
 const jobPosts = [
   {
@@ -57,9 +57,9 @@ const KarrierePage = () => {
       ></section>
 
       {/* Introduction Section */}
-      <section className="py-12 xl:py-24 px-6 lg:px-12 xl:32 space-y-6 bg-slate-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-secondary text-lg font-medium ">
+      <section className="py-12 xl:py-24 px-6 lg:px-12 xl:32  bg-slate-100">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h2 className="text-secondary text-lg font-medium mb-4 ">
             EIN TEAM VON EXPERTEN
           </h2>
           <h1 className="text-primary/90 text-3xl md:text-4xl font-bold mb-16">
@@ -81,10 +81,12 @@ const KarrierePage = () => {
           </p> */}
           {/* Arbeitsweise Section */}
 
-          <div className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-10 text-primary/90 text-justify space-y-6">
+          <div className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-10 text-primary/90 text-justify space-y-16">
             {/* Left Text */}
             <div className="w-full md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6">Unsere Arbeitsweise</h2>
+              <h2 className="text-3xl font-bold mt-12 mb-6">
+                Unsere Arbeitsweise
+              </h2>
               <p className="text-base md:text-lg leading-relaxed mb-4">
                 In unserem Unternehmen stehen unsere Kund:innen und
                 Mitarbeiter:innen im Mittelpunkt. Ganz gleich, welchen Beruf Sie
@@ -103,11 +105,11 @@ const KarrierePage = () => {
             </div>
 
             {/* Right Image */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 flex justify-center items-center">
               <img
                 src={karriereImage2}
                 alt="Arbeitsweise"
-                className="rounded-xl shadow-lg object-cover w-full h-auto"
+                className="rounded-xl shadow-lg object-cover w-full h-96"
               />
             </div>
           </div>
