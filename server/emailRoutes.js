@@ -197,4 +197,41 @@ ${message}
   }
 });
 
+// New API Route for Blog Comment Section
+router.post("/api/send-comment", async (req, res) => {
+  try {
+    const { fullname, email, comment } = req.body;
+
+    let transporter = nodemailer.createTransport({
+      host: process.env.VITE_SMTP_HOST,
+      port: process.env.VITE_SMTP_PORT,
+      secure: process.env.VITE_SMTP_SECURE === "true",
+      auth: {
+        user: process.env.VITE_EMAIL_USER,
+        pass: process.env.VITE_EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: `"Sernitas Care" <${process.env.VITE_EMAIL_USER}>`,
+      to: process.env.VITE_EMAIL_USER,
+      subject: `New Comment from ${fullname}`,
+      text: `
+        Name: ${fullname}
+        Email: ${email}
+        Comment: ${comment}
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    res.status(200).json({ message: "Comment sent successfully" });
+  } catch (error) {
+    console.error("Error sending comment:", error);
+    res
+      .status(500)
+      .json({ error: "Error sending comment", details: error.message });
+  }
+});
+
 export default router;

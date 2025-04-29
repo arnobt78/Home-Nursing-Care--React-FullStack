@@ -77,7 +77,7 @@ const Aktuelles = () => {
       {/* Social Media Section */}
       <div className="text-center space-y-6 py-12">
         <h2 className="text-2xl xl:text-3xl font-bold text-green-700 pb-4">
-          Wir in den Sozialen Medien
+          Sernitas in den sozialen Medien
         </h2>
         <div className="flex justify-center gap-12 pb-4">
           <a
@@ -130,10 +130,14 @@ const Aktuelles = () => {
           </a>
         </div>
         <p className="text-primary/90">
-          Mit unseren sozialen Kanälen möchten wir Ihnen einen Ort bieten, an
-          dem Sie mit uns interagieren, Informationen austauschen und Einblicke
-          in unsere Dienstleistungen und unser tägliches Schaffen erhalten und
-          Ihnen so einen noch besseren Service bieten zu können.
+          Ob auf LinkedIn, Instagram oder Facebook – unsere Kanäle geben Ihnen
+          einen persönlichen Einblick in unseren Alltag, aktuelle
+          Stellenausschreibungen, Erfolgsgeschichten aus dem Pflegebereich und
+          Neuigkeiten aus unseren internationalen Kooperationen.
+          <br />
+          <br />
+          Treten Sie in den Dialog mit uns, teilen Sie Ihre Meinung oder
+          erfahren Sie als Erste*r von offenen Stellen und Projekten.
         </p>
       </div>
 
@@ -145,7 +149,7 @@ const Aktuelles = () => {
             href={news.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-50 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition transform hover:scale-105 duration-300"
+            className="bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition transform hover:scale-105 duration-300"
           >
             <div className="relative">
               <img
