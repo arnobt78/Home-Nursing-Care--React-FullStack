@@ -53,22 +53,22 @@ const PflegeRatgeber = () => {
           Themen, die Sie erwarten:
         </h4>
         <ul className="space-y-2">
-          <li className="flex items-start gap-2">
+          <li className="flex items-start gap-2 text-primary/90">
             <span className="text-green-700 font-bold">✔</span> Grundpflege und
             Behandlungspflege: Alles, was Sie über grundlegende Pflegeleistungen
             und spezialisierte medizinische Pflege wissen müssen.
           </li>
-          <li className="flex items-start gap-2">
+          <li className="flex items-start gap-2 text-primary/90">
             <span className="text-green-700 font-bold">✔</span>{" "}
             Pflegeversicherung und Zuschüsse: Ihre Rechte und wie Sie die
             finanziellen Hilfen optimal nutzen.
           </li>
-          <li className="flex items-start gap-2">
+          <li className="flex items-start gap-2 text-primary/90">
             <span className="text-green-700 font-bold">✔</span>{" "}
             Verhinderungspflege: Wie Sie durch unsere Unterstützung Entlastung
             in Ihrem Alltag finden können.
           </li>
-          <li className="flex items-start gap-2">
+          <li className="flex items-start gap-2 text-primary/90">
             <span className="text-green-700 font-bold">✔</span> Tipps zur
             häuslichen Pflege: Praktische Anleitungen, um die Pflege zu Hause
             sicher und effektiv zu gestalten.

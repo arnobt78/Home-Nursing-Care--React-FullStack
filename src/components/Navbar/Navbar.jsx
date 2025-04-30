@@ -229,6 +229,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Desktop Navbar */}
       <motion.div
         variants={slideBottom(0.2)}
         initial="initial"
@@ -251,7 +252,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
             <ul className="flex gap-7 xl:gap-10 text-white text-sm xl:text-base font-medium tracking-wide items-center">
-              {/* Home Icon as Separate Nav Title */}
+              {/* Home Icon */}
               <li className="flex items-center">
                 <button
                   className="text-white hover:text-secondary flex items-center justify-center"
@@ -266,40 +267,38 @@ const Navbar = () => {
                   key={idx}
                   className="relative group flex items-center gap-2"
                   onMouseEnter={() => {
-                    clearTimeout(hideDropdownTimeout); // Clear any existing timeout
-                    setActiveDropdown(idx); // Show the dropdown immediately
+                    clearTimeout(hideDropdownTimeout);
+                    setActiveDropdown(idx);
                   }}
                   onMouseLeave={() => {
                     hideDropdownTimeout = setTimeout(() => {
-                      setActiveDropdown(null); // Hide the dropdown after a delay
-                    }, 300); // Delay of 300ms
+                      setActiveDropdown(null);
+                    }, 300);
                   }}
                 >
-                  {/* Main Navigation Button */}
                   <button
                     className="uppercase hover:text-secondary flex items-center justify-center"
                     onClick={() => {
                       if (item.title === "Unsere Leistungen") {
-                        navigate("/services/grundpflege"); // Navigate to default page
+                        navigate("/services/grundpflege");
                       } else if (item.title === "Über uns") {
-                        navigate("/about-us/wir-sind-sernitas"); // Navigate to /about-us when "Über uns" is clicked
+                        navigate("/about-us/wir-sind-sernitas");
                       } else if (item.title === "Wissenswertes") {
-                        navigate("/wissenswertes/faq"); // Navigate to /wissenswertes when "Wissenswertes" is clicked
+                        navigate("/wissenswertes/faq");
                       }
                     }}
                   >
                     {item.title}
                   </button>
 
-                  {/* Dropdown for Sub-items */}
                   {activeDropdown === idx && item.subItems && (
                     <ul
                       className="absolute left-0 top-full mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg py-2 px-4 w-64"
-                      onMouseEnter={() => clearTimeout(hideDropdownTimeout)} // Prevent hiding when hovering over the dropdown
+                      onMouseEnter={() => clearTimeout(hideDropdownTimeout)}
                       onMouseLeave={() => {
                         hideDropdownTimeout = setTimeout(() => {
-                          setActiveDropdown(null); // Hide the dropdown after a delay
-                        }, 300); // Delay of 300ms
+                          setActiveDropdown(null);
+                        }, 300);
                       }}
                     >
                       {item.subItems.map((sub, i) => (
@@ -337,10 +336,10 @@ const Navbar = () => {
                 </button>
               </li>
 
-              {/* Updated Language Selector with Global Icon */}
+              {/* Language Selector */}
               <li className="relative group flex items-center">
                 <button className="uppercase hover:text-secondary flex items-center gap-2 justify-center">
-                  <i className="fas fa-globe"></i> {/* Global Icon */}
+                  <i className="fas fa-globe"></i>
                 </button>
                 <ul className="absolute left-0 top-full mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg py-2 px-4 w-32 hidden group-hover:block">
                   <li>
@@ -385,6 +384,114 @@ const Navbar = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50">
+          <div className="backdrop-blur-md flex flex-col items-start p-6 text-white w-full h-full overflow-y-auto">
+            <button
+              onClick={toggleMenu}
+              className="absolute top-5 right-5 text-white text-2xl hover:shadow-md transition-shadow duration-300"
+            >
+              &times;
+            </button>
+            <ul className="w-full space-y-6">
+              {/* Home Icon */}
+              <li className="flex items-center gap-4 text-lg font-bold uppercase">
+                <button
+                  onClick={() => {
+                    toggleMenu();
+                    navigate("/");
+                  }}
+                  className="flex items-center gap-2 hover:text-secondary transition duration-300"
+                >
+                  <i className="fas fa-home"></i> Home
+                </button>
+              </li>
+
+              {/* Main Menu Items */}
+              {navItems.map((item, idx) => (
+                <li key={idx} className="w-full">
+                  <div className="text-lg font-bold uppercase flex items-center justify-between">
+                    <span>{item.title}</span>
+                  </div>
+                  <ul className="mt-4 space-y-4 pl-4">
+                    {item.subItems.map((sub, i) => (
+                      <li key={i}>
+                        <a
+                          href={sub.link}
+                          onClick={toggleMenu}
+                          className="block text-sm hover:text-secondary transition duration-300"
+                        >
+                          {sub.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+
+              {/* Global Icon */}
+              <li className="flex items-center gap-4 text-lg font-bold uppercase">
+                <button className="flex items-center gap-2 hover:text-secondary transition duration-300">
+                  <i className="fas fa-globe"></i> Language
+                </button>
+                <ul className="mt-2 space-y-2 pl-4">
+                  <li>
+                    <button className="block text-sm hover:text-secondary transition duration-300">
+                      Deutsch
+                    </button>
+                  </li>
+                  <li>
+                    <button className="block text-sm hover:text-secondary transition duration-300">
+                      Türkisch
+                    </button>
+                  </li>
+                  <li>
+                    <button className="block text-sm hover:text-secondary transition duration-300">
+                      Englisch
+                    </button>
+                  </li>
+                </ul>
+              </li>
+
+              {/* Search Icon */}
+              <li className="flex items-center gap-4 text-lg font-bold uppercase">
+                <button
+                  onClick={toggleMenu}
+                  className="flex items-center gap-2 hover:text-secondary transition duration-300"
+                >
+                  <i className="fas fa-search"></i> Search
+                </button>
+              </li>
+
+              {/* Additional Buttons */}
+              <li>
+                <button
+                  onClick={() => {
+                    toggleMenu();
+                    navigate("/contact");
+                  }}
+                  className="w-full text-center py-2 bg-secondary text-white rounded hover:bg-primary transition duration-300"
+                >
+                  Kontakt
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    toggleMenu();
+                    navigate("/karriere");
+                  }}
+                  className="w-full text-center py-2 bg-secondary text-white rounded hover:bg-primary transition duration-300"
+                >
+                  Karriere
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </>
   );
 };
