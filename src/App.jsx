@@ -9,7 +9,6 @@ import {
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
-import ScrollToTop from "./components/ScrollToTop";
 
 // Lazy load components
 const Hero = React.lazy(() => import("./components/Hero/Hero"));
@@ -17,9 +16,7 @@ const Cards = React.lazy(() => import("./components/Cards/Cards"));
 const TestimonialSection1 = React.lazy(() =>
   import("./components/TestimonialSection/TestimonialSection1")
 );
-// const TestimonialSection2 = React.lazy(() =>
-//   import("./components/TestimonialSection/TestimonialSection2")
-// );
+
 const ReviewSectionHome = React.lazy(() =>
   import("./components/ReviewSection/ReviewSectionHome")
 );
@@ -34,10 +31,7 @@ const Contact = React.lazy(() => import("./components/Contact/Contact"));
 const AboutUsPage = React.lazy(() =>
   import("./components/AboutUs/AboutUsPage")
 );
-// const Magazine = React.lazy(() => import("./components/Magazine/Magazine"));
-// const TeamValuesSection = React.lazy(() =>
-//   import("./components/TeamValuesSection/TeamValuesSection")
-// );
+
 const AccordionSection = React.lazy(() =>
   import("./components/Accordion/AccordionSection")
 );
@@ -133,7 +127,6 @@ const App = () => {
 
   return (
     <ErrorBoundary>
-      <ScrollToTop />
       <Navbar />
       <main>
         <Suspense fallback={<Loading />}>

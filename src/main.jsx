@@ -5,10 +5,8 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import queryClient from "./reactQueryClient";
 
 import App from "./App.jsx";
+import ScrollToTop from "./components/ScrollToTop";
 import "./index.css";
-
-// import ReactDOM from "react-dom";
-// import axios from "axios";
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -30,6 +28,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <Router>
+        <ScrollToTop />
         <App />
       </Router>
     </QueryClientProvider>
