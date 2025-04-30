@@ -243,8 +243,7 @@ const Contact = () => {
                   {/* Centered Button */}
                   <div className="flex justify-center mt-6">
                     <Button
-                      size="md"
-                      className="lg:max-w-[200px] px-4 py-2 bg-secondary text-white rounded-2xl border-2 hover:bg-white hover:text-secondary hover:border-secondary transition duration-300 flex items-center justify-center"
+                      className="px-8 py-6 bg-secondary text-white rounded-2xl border-2 hover:bg-white hover:text-secondary hover:border-secondary transition duration-300 flex items-center justify-center"
                       type="submit"
                       disabled={isLoading}
                     >

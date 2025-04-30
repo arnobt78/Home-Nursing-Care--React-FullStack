@@ -215,7 +215,7 @@ const Hero = () => {
             initial="initial"
             animate="animate"
             transition={{ duration: 1.2 }}
-            className="mt-6 bg-primary/60 text-white/90 p-4 rounded-md shadow-md flex items-center gap-4"
+            className="mt-6 bg-primary/60 text-white/90 p-4 rounded-xl shadow-md flex items-center gap-4"
           >
             <FaPhone className="text-xl text--white/90" />
             <div>
@@ -235,12 +235,12 @@ const Hero = () => {
             initial="initial"
             animate="animate"
             transition={{ duration: 1.4 }}
-            className="flex gap-4 mt-6"
+            className="flex gap-6 mt-6"
           >
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/services")}
+              onClick={() => navigate("/services/grundpflege")}
               className="primary-btn border-2 border-white hover:border-primary hover:bg-secondary hover:text-white transition-transform duration-300 shadow-md hover:shadow-lg"
             >
               Mehr erfahren

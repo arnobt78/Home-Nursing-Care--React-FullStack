@@ -65,22 +65,8 @@ const KarrierePage = () => {
           <h1 className="text-primary/90 text-3xl md:text-4xl font-bold mb-16">
             Starte Deine Karriere bei Sernitas
           </h1>
-          {/* <p className="text-base md:text-lg leading-relaxed text-primary/90 mb-4">
-            Du willst dich in einem erfolgreichen Unternehmen weiterentwickeln?
-            Dann nutze die Möglichkeiten, die Dir Sernitas als Arbeitgeber
-            bietet, ganz gleich, in welcher Phase Deiner Karriere Du dich
-            befindest. Sernitas bietet Dir die Möglichkeit, Deine Fähigkeiten zu
-            erweitern und ein breites Spektrum an Erfahrungen zu sammeln. Auch
-            innerhalb der Sernitas-Gruppe und auf internationaler Ebene gibt es
-            zahlreiche Möglichkeiten.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed text-primary/90">
-            Nutze unser breites Angebot an Karrieremöglichkeiten, von Praktika
-            und Studium über Berufseinstiegs- und Traineeprogramme bis hin zu
-            Fach- und Führungsaufgaben.
-          </p> */}
-          {/* Arbeitsweise Section */}
 
+          {/* Arbeitsweise Section */}
           <div className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-10 text-primary/90 text-justify space-y-16">
             {/* Left Text */}
             <div className="w-full md:w-1/2">
