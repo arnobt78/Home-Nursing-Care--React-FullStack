@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+
 import ScrollToTop from "../ScrollToTop"; // Import ScrollToTop
 import { slideUp } from "../../utility/animation";
 import {
@@ -17,18 +17,6 @@ import AffiliatesSection from "./AffiliatesSection"; // Import the AffiliatesSec
 import CachedImage from "../CachedImage";
 
 const Footer = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
-
-  // Scroll to top and navigate function
-  const handleNavigation = (path) => {
-    navigate(path); // Navigate to the desired route
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth", // Smooth scrolling
-    });
-  };
-
   // Framer Motion Variants for row animations
   const rowVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -122,37 +110,150 @@ const Footer = () => {
           >
             <h4 className="text-xl font-bold">Menü</h4>
             <ul className="space-y-2">
+              {/* Unsere Leistungen */}
               <li>
-                <button
-                  onClick={() => handleNavigation("/")} // Use handleNavigation
+                <a
+                  href="/services/grundpflege"
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  Willkommen
-                </button>
+                  Grundpflege
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleNavigation("/services")} // Use handleNavigation
+                <a
+                  href="/services/behandlungspflege"
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  Was wir tun
-                </button>
+                  Behandlungspflege
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleNavigation("/about-us")} // Use handleNavigation
+                <a
+                  href="/services/verhinderungspflege"
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
-                  Über uns
-                </button>
+                  Verhinderungspflege
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleNavigation("/contact")} // Use handleNavigation
+                <a
+                  href="/services/betreuung-entlastung"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Betreuungs- und Entlastungsleistungen
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services/rufbereitschaft"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  24h - Rufbereitschaft
+                </a>
+              </li>
+
+              {/* Über uns */}
+              <li>
+                <a
+                  href="/about-us/wir-sind-sernitas"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Wir sind Sernitas
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about-us/team"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Team
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about-us/leitbild"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Leitbild
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about-us/kooperationsnetzwerk"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Kooperationsnetzwerk
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about-us/mitgliedschaft-bap"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Mitgliedschaft BAP
+                </a>
+              </li>
+
+              {/* Wissenswertes */}
+              <li>
+                <a
+                  href="/wissenswertes/faq"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/wissenswertes/aktuelles"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Aktuelles
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/wissenswertes/pflege-blog"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Pflege-Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/wissenswertes/pflege-ratgeber"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Pflege-Ratgeber
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/wissenswertes/downloads"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Downloads
+                </a>
+              </li>
+
+              {/* Karriere */}
+              <li>
+                <a
+                  href="/karriere"
+                  className="hover:scale-110 hover:text-secondary transition-transform duration-300"
+                >
+                  Karriere
+                </a>
+              </li>
+
+              {/* Kontakt */}
+              <li>
+                <a
+                  href="/contact"
                   className="hover:scale-110 hover:text-secondary transition-transform duration-300"
                 >
                   Kontakt
-                </button>
+                </a>
               </li>
             </ul>
           </motion.div>

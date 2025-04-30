@@ -82,7 +82,7 @@ const HomeConsultationSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-24 px-6 lg:px-12 xl:px-44">
+    <section className="bg-gray-100 py-24 px-6 lg:px-12 xl:px-32">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Left Section */}
         <div className="md:col-span-2 px-6">

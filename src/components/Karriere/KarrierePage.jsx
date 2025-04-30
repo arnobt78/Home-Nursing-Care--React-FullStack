@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import karriereImage1 from "../../assets/karriere-1.png";
 import karriereImage2 from "../../assets/hero-3.png";
 
@@ -42,12 +41,6 @@ const jobPosts = [
 ];
 
 const KarrierePage = () => {
-  const navigate = useNavigate();
-
-  const handleApplyClick = () => {
-    navigate("/karriere/bewerben");
-  };
-
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
@@ -110,10 +103,10 @@ const KarrierePage = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center text-center">
             {jobPosts.map((job, index) => (
-              <div
+              <a
                 key={index}
+                href="/karriere/bewerben"
                 className="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition cursor-pointer"
-                onClick={handleApplyClick}
               >
                 <h3 className="text-secondary text-xl font-bold mb-2">
                   {job.title}
@@ -125,24 +118,24 @@ const KarrierePage = () => {
                 <p className="text-primary/90 text-md flex items-center justify-center gap-2">
                   <i className="fas fa-envelope"></i> {job.email}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
       {/* Apply Button Section */}
-      <section className="py-24 px-6 lg:px-12 xl:px-32  text-center">
+      <section className="py-24 px-6 lg:px-12 xl:px-32 text-center">
         <h2 className="text-primary/90 text-xl lg:text-2xl font-medium mb-8">
           Haben wir Dein Interesse geweckt? Dann bewirb dich gleich! Wir freuen
           uns dich kennenzulernen.
         </h2>
-        <button
-          onClick={handleApplyClick}
+        <a
+          href="/karriere/bewerben"
           className="bg-primary/90 text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-secondary/90 transition cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105"
         >
           HIER BEWERBEN
-        </button>
+        </a>
       </section>
     </div>
   );

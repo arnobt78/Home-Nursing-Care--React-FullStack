@@ -16,13 +16,15 @@ const StepsSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Step 1 */}
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-primary/90 text-white rounded-full flex items-center justify-center mb-4">
+            <div className="w-16 h-16 bg-primary/90 text-white rounded-full shadow-2xl flex items-center justify-center mb-4">
               <FaPhoneAlt className="text-2xl" />
             </div>
-            <p className="text-primary/90 text-base md:text-lg">
-              Rufen Sie uns an: <br />
-              <span className="font-bold">0234 / 966 46 480</span>
-            </p>
+            <div className="text-center min-h-[60px]">
+              <p className="text-primary/90 text-base md:text-lg">
+                Rufen Sie uns an: <br />
+                <span className="font-bold">0234 / 966 46 480</span>
+              </p>
+            </div>
           </div>
 
           {/* Curvy Arrow */}
@@ -51,13 +53,15 @@ const StepsSection = () => {
 
           {/* Step 2 */}
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-primary/90 text-white rounded-full flex items-center justify-center mb-4">
+            <div className="w-16 h-16 bg-primary/90 text-white rounded-full shadow-2xl flex items-center justify-center mb-4">
               <FaCar className="text-2xl" />
             </div>
-            <p className="text-primary/90 text-base md:text-lg">
-              Wir kommen sofort <br />
-              bei Ihnen vorbei
-            </p>
+            <div className="text-center min-h-[60px]">
+              <p className="text-primary/90 text-base md:text-lg">
+                Wir kommen sofort <br />
+                bei Ihnen vorbei
+              </p>
+            </div>
           </div>
 
           {/* Curvy Arrow */}
@@ -86,13 +90,15 @@ const StepsSection = () => {
 
           {/* Step 3 */}
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-primary/90 text-white rounded-full flex items-center justify-center mb-4">
+            <div className="w-16 h-16 bg-primary/90 text-white rounded-full shadow-2xl flex items-center justify-center mb-4">
               <FaFileAlt className="text-2xl" />
             </div>
-            <p className="text-primary/90 text-base md:text-lg">
-              Sie bekommen <br />
-              ein Angebot
-            </p>
+            <div className="text-center min-h-[60px]">
+              <p className="text-primary/90 text-base md:text-lg">
+                Sie bekommen <br />
+                ein Angebot
+              </p>
+            </div>
           </div>
 
           {/* Curvy Arrow */}
@@ -121,13 +127,15 @@ const StepsSection = () => {
 
           {/* Step 4 */}
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-primary/90 text-white rounded-full flex items-center justify-center mb-4">
+            <div className="w-16 h-16 bg-primary/90 text-white rounded-full shadow-2xl flex items-center justify-center mb-4">
               <FaHome className="text-2xl" />
             </div>
-            <p className="text-primary/90 text-base md:text-lg">
-              Ihr Pflegedienst kommt <br />
-              schon am nächsten Tag!
-            </p>
+            <div className="text-center min-h-[60px]">
+              <p className="text-primary/90 text-base md:text-lg">
+                Ihr Pflegedienst kommt <br />
+                schon am nächsten Tag!
+              </p>
+            </div>
           </div>
         </div>
       </div>

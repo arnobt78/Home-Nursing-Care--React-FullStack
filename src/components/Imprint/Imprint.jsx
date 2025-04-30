@@ -7,13 +7,13 @@ const Imprint = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto py-24 px-5 md:px-10 lg:px-20 text-justify overflow-visible">
+      <div className="container mx-auto py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12 text-justify overflow-visible">
         <motion.h1
           variants={slideUp(0.2)}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="text-3xl font-bold mb-6 text-primary"
+          className="text-3xl font-bold mt-6 mb-6 text-primary"
         >
           Impressum
         </motion.h1>
@@ -23,7 +23,7 @@ const Imprint = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="space-y-6 text-primary/90 leading-relaxed"
+            className="space-y-12 text-primary/90 leading-relaxed"
           >
             {/* <p>
               <strong>Information according to § 5 TMG</strong>
