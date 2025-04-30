@@ -1,11 +1,11 @@
 // import Img11 from "../../assets/icon/ambulance-1.svg";
-// import Img4 from "../../assets/icon/care-1.svg";
+import Img4 from "../../assets/icon/care-1.svg";
 // import Img3 from "../../assets/icon/handshake-1.svg";
 // import Img5 from "../../assets/icon/health-1.svg";
-// import Img6 from "../../assets/icon/health-2.svg";
+import Img6 from "../../assets/icon/health-2.svg";
 // import Img9 from "../../assets/icon/home-1.svg";
 // import Img10 from "../../assets/icon/home-2.svg";
-// import Img8 from "../../assets/icon/nurse-2.svg";
+import Img8 from "../../assets/icon/nurse-2.svg";
 
 import Img1 from "../../assets/icon/time-1.svg";
 import Img2 from "../../assets/icon/care-2.svg";
@@ -217,7 +217,7 @@ export const cardsData = [
     title: "Verhinderungspflege",
     description:
       "Verhinderungspflege bedeutet, dass wir einspringen, wenn Ihre pflegenden Angehörigen mal eine Pause brauchen – zuverlässig, liebevoll und direkt bei Ihnen zu Hause.",
-    image: Img7,
+    image: Img8,
     details: `<h3>Verhinderungspflege – ob jahres-, stunden- oder wochenweise</h3>
 <p>
 Sernitas Care springt für Pflegepersonen & Angehörige mit flexibler Ersatzpflege ein. Sernitas Care ist mit einem flexibel buchbaren Dienstleistungsangebot in der Verhinderungspflege für Pflegebedürftige da, wenn Pflegepersonen oder Angehörige verhindert bzw. abwesend sind. Unsere ambitionierten Mitarbeiter kümmern sich stellvertretend in allen Belangen um pflegebedürftige Personen, die sonst von einer eingetragenen Pflegeperson oder Angehörigen gepflegt werden.
@@ -306,7 +306,7 @@ Unser Ziel: Sie entlasten – emotional, organisatorisch und finanziell. Vertrau
     title: "Betreuungs- und Entlastungsleistungen",
     description:
       "Wir schenken Zeit, Unterstützung und ein offenes Ohr – mit Betreuungs- und Entlastungsleistungen, die den Alltag leichter machen und Ihre Liebsten entlasten",
-    image: Img2,
+    image: Img6,
     details: `<h3>Sernitas Care – qualifizierte Pflegeberatung nach §37.3 SGB XI</h3>
 
 <p>Die regelmäßige Pflegeberatung durch unser geschultes Team deckt alle Phasen und Grade der Pflege ab. Pflegebedürftige und ihre Angehörigen erhalten auf diesem Weg alle relevanten Informationen über die Möglichkeiten einer professionellen Pflege. Wir beraten Sie zu Ihrem Pflegegrad und welche Pflegedienstleistungen noch interessant für Sie geworden sein könnten. Auch der Bedarf nach Hilfsmitteln wird durch unsere Beratung aufgedeckt. Die Pflegekasse übernimmt die Kosten für Hilfsmittel und für die Leistungen durch unseren Pflegedienst. Wir prüfen in unserem Beratungseinsatz, ob Ihr Pflegegrad eventuell neu eingestuft werden muss und ob sich der Zustand Ihrer Pflegebedürftigkeit verbessert oder verschlechtert hat oder ob die Leistungen durch unseren Pflegedienst und der Bedarf an Hilfsmitteln gleichbleiben.</p>
@@ -398,55 +398,54 @@ Wenn Sie mehr über die 24-Stunden-Betreuung von Sernitas Care erfahren möchten
     id: 6,
     title: "Das Sernitas-Prinzip",
     description:
-      "Als interkultureller und kultursensibler Pflegedienst begegnen wir jedem Menschen mit Respekt, Offenheit und Verständnis – unabhängig von Herkunft, Sprache oder Glauben.",
-    image: Img2,
-    details: `<h3>Nahtloser Übergang von Klinikaufenthalten in die häusliche Pflege – Pflegeüberleitung mit Sernitas Care</h3>
+      "Individuelle Pflege mit Herz und Verstand – dafür steht das Sernitas-Prinzip.",
+    image: Img4,
+    details: `<h3>Das Sernitas-Prinzip – Pflege mit Herz und Verstand</h3>
 
-<h4>Was ist Pflegeüberleitung?</h4>
 <p>
-Pflegeüberleitung bezeichnet die strukturierte und koordinierte Organisation des Übergangs von einem Krankenhausaufenthalt in die ambulante oder häusliche Pflege. Ziel ist es, Versorgungsabbrüche zu vermeiden, die Pflegekontinuität sicherzustellen und einen reibungslosen Ablauf für Betroffene und Angehörige zu gewährleisten. Bei Sernitas Care stehen wir Ihnen dabei als zuverlässiger Partner zur Seite – kompetent, empathisch und mit dem Blick für das Wesentliche.
-</p>
-
-<h4>Warum ist eine gute Pflegeüberleitung so wichtig?</h4>
-<p>
-Nach einem Aufenthalt im Krankenhaus oder in einer Rehabilitationsklinik stehen viele Betroffene und ihre Angehörigen vor organisatorischen, medizinischen und pflegerischen Herausforderungen. Eine unzureichend geplante Entlassung kann zu Komplikationen, Rückfällen oder unnötigen Wiederaufnahmen führen. Umso wichtiger ist eine gut koordinierte Pflegeüberleitung, die rechtzeitig alle notwendigen Maßnahmen einleitet – von der Medikamentenversorgung über Hilfsmittel bis hin zur häuslichen Pflege. Sernitas Care übernimmt diesen Prozess vorausschauend und individuell abgestimmt.
+  <strong>Individuelle Pflege mit Herz und Verstand – dafür steht das Sernitas-Prinzip.</strong>
+  <br>
+  Unsere Philosophie basiert auf einem ganzheitlichen Ansatz, der den Menschen in den Mittelpunkt stellt. Wir glauben, dass professionelle Pflege mehr ist als nur medizinische Versorgung – sie ist ein Zusammenspiel aus Respekt, Vertrauen, Fürsorge und fachlicher Kompetenz.
 </p>
 
-<h4>Unsere Leistungen im Bereich Pflegeüberleitung</h4>
+<h3>1. Menschlichkeit an erster Stelle</h3>
 <p>
-Sernitas Care begleitet Sie oder Ihre Angehörigen aktiv beim Übergang von der Klinik in die eigene Häuslichkeit. Unsere Leistungen umfassen:
-</p>
-<ul>
-  <li>Individuelle Beratung und Pflegeplanung vor der Entlassung</li>
-  <li>Abstimmung mit Ärzten, Sozialdiensten und Klinikpersonal</li>
-  <li>Organisation und Bereitstellung von Hilfsmitteln und Pflegeprodukten</li>
-  <li>Koordination ambulanter Pflegedienste und medizinischer Betreuung</li>
-  <li>Unterstützung bei der Beantragung von Leistungen und Verordnungen</li>
-  <li>Begleitung bei der Eingewöhnung zu Hause durch unser Pflegeteam</li>
-</ul>
-<p>
-Wir sorgen dafür, dass alle erforderlichen Maßnahmen zum richtigen Zeitpunkt bereitstehen – damit Sie sich ganz auf die Genesung konzentrieren können.
+  Bei Sernitas Care behandeln wir jede Person als einzigartiges Individuum mit eigener Geschichte, Bedürfnissen und Wünschen. Unsere Pflegekräfte nehmen sich die Zeit zuzuhören, zu verstehen und echte Verbindungen aufzubauen.
+  <br>
+  <strong>Empathie, Würde und Nähe</strong> sind die Grundlagen unseres täglichen Handelns.
 </p>
 
-<h4>Pflegeüberleitung mit Struktur und Herz</h4>
+<h3>2. Fachkompetenz und kontinuierliche Weiterbildung</h3>
 <p>
-Unser Team bei Sernitas Care arbeitet Hand in Hand mit allen Beteiligten, um den Übergang so angenehm wie möglich zu gestalten. Wir berücksichtigen nicht nur medizinische und pflegerische Aspekte, sondern auch emotionale und soziale Bedürfnisse. Dabei achten wir auf klare Kommunikation, transparente Abläufe und eine lückenlose Dokumentation. Denn Vertrauen entsteht durch Sicherheit – und die schaffen wir mit einer professionellen Pflegeüberleitung.
+  Um eine bestmögliche Betreuung zu gewährleisten, setzen wir auf qualifiziertes Personal und fördern kontinuierlich die fachliche Entwicklung unseres Teams.
+  <br>
+  <strong>Aktuelle Pflegestandards, Fortbildungen und praxisorientiertes Wissen</strong> sichern die hohe Qualität unserer Leistungen.
 </p>
 
-<h4>Vermeidung von Versorgungslücken – für eine sichere Rückkehr nach Hause</h4>
+<h3>3. Individuelle Pflegekonzepte</h3>
 <p>
-Gerade ältere oder chronisch kranke Menschen benötigen nach einem Klinikaufenthalt besondere Unterstützung. Ohne eine gezielte Pflegeüberleitung drohen Unterversorgung, Überforderung oder gesundheitliche Rückschritte. Sernitas Care setzt auf eine vorausschauende Planung, um genau das zu verhindern. Wir schaffen eine stabile Versorgungsstruktur – von Anfang an, ganz individuell und in enger Abstimmung mit allen Beteiligten.
+  Jeder Mensch hat unterschiedliche Bedürfnisse – daher passen wir unsere Leistungen flexibel an. Ob Grundpflege, Behandlungspflege oder Betreuung und Entlastung: Wir entwickeln gemeinsam mit unseren Klient*innen und deren Angehörigen maßgeschneiderte Pflegepläne.
+  <br>
+  <strong>Transparenz und Mitbestimmung</strong> stehen dabei im Zentrum unserer Arbeit.
 </p>
 
-<h4>Gemeinsam in die nächste Phase – mit Sernitas Care an Ihrer Seite</h4>
+<h3>4. Zusammenarbeit auf Augenhöhe</h3>
 <p>
-Der Übergang von der stationären in die häusliche Versorgung ist mehr als ein logistischer Prozess – er ist ein sensibler Schritt im Leben eines Menschen. Wir begleiten Sie dabei mit Fachkompetenz, Geduld und Menschlichkeit. Unsere Pflegekräfte sind nicht nur medizinisch geschult, sondern auch einfühlsame Begleiter*innen, die den Übergang aktiv gestalten und unterstützen.
+  Pflege ist Teamarbeit. Deshalb arbeiten wir eng mit Ärzt*innen, Therapeut*innen, Angehörigen und anderen Partner*innen im Gesundheitswesen zusammen, um eine ganzheitliche Versorgung zu ermöglichen.
+  <br>
+  <strong>Kooperation statt Hierarchie – für ein starkes Netzwerk im Sinne der Patient*innen.</strong>
 </p>
 
-<h3>Pflegeüberleitung bei Sernitas Care – Für Sicherheit, Vertrauen und ein gutes Ankommen zu Hause</h3>
+<h3>5. Nachhaltigkeit und Verantwortung</h3>
 <p>
-Mit Sernitas Care gelingt der Übergang von der Klinik in die häusliche Pflege reibungslos und sicher. Wir übernehmen die Verantwortung für eine lückenlose Versorgung, stimmen uns eng mit den behandelnden Fachkräften ab und sorgen dafür, dass alle notwendigen Ressourcen zur richtigen Zeit verfügbar sind. Sprechen Sie uns an – wir begleiten Sie auf dem Weg zurück in den vertrauten Alltag.
+  Wir bei Sernitas Care denken über den Tellerrand hinaus. Ressourcenbewusstes Handeln, ethische Verantwortung und ein achtsamer Umgang mit unserer Umwelt und unseren Mitmenschen sind fester Bestandteil unseres Leitbilds.
 </p>
+
+<p>
+  <strong>Das Sernitas-Prinzip ist unser Versprechen an Sie:</strong> Wir pflegen mit Herz, handeln mit Verantwortung und begleiten Sie mit Kompetenz durch alle Lebenslagen.
+</p>
+<p>
+  <strong>Gemeinsam für Ihre Gesundheit und Ihr Wohlbefinden – das ist unser Ziel.</strong>
 `,
   },
 ];

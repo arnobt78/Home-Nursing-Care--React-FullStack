@@ -49,7 +49,7 @@ const Behandlungspflege = () => {
       </div>
 
       {/* Second Section: Comment Section */}
-      <div className="bg-gray-200 py-12 rounded-2xl shadow-2xl">
+      <div className="bg-gray-200 py-16 px-6 lg:px-12 rounded-2xl shadow-2xl">
         <div className="flex flex-col lg:flex-row items-center ">
           <div className="lg:w-1/3 flex justify-center">
             <img

@@ -19,7 +19,7 @@ const TestimonialSection1 = () => {
   const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // (example) format of your YouTube video ID
 
   return (
-    <div className="bg-primary/30 py-16 px-6 md:px-12 xl:px-44">
+    <div className="bg-primary/30 py-16 px-6 lg:px-12">
       <motion.div
         className="container flex flex-col md:flex-row items-center justify-center gap-8"
         initial={{ opacity: 0 }}

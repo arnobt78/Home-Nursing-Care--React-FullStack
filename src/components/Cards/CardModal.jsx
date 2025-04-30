@@ -19,19 +19,19 @@ const CardModal = ({ isOpen, onClose, cardData }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-8 relative overflow-y-auto max-h-[90vh]">
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center overflow-y-auto">
+      <div className="bg-white rounded-lg shadow-lg max-w-7xl w-full max-h-[90vh] p-24 relative overflow-y-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <button
             onClick={handleNavigateToServices}
-            className="text-primary font-semibold"
+            className="text-primary/90 font-semibold hover:text-secondary hover:border-b-2 hover:border-secondary transition duration-300"
           >
             ← Zurück zu Services
           </button>
           <button
             onClick={onClose}
-            className="text-red-500 font-semibold text-lg"
+            className="text-red-500 font-semibold text-2xl p-2 transition duration-300 bg-red-300/10 hover:bg-red-300/20"
           >
             ✕
           </button>
@@ -47,13 +47,13 @@ const CardModal = ({ isOpen, onClose, cardData }) => {
         <div className="flex justify-between mt-6">
           <button
             onClick={() => navigate("/contact")}
-            className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary"
+            className="bg-primary/90 text-white px-4 py-2 rounded-lg hover:bg-secondary"
           >
             Unverbindlich Kontakt aufnehmen
           </button>
           <button
             onClick={handleNavigateToServices}
-            className="bg-gray-200 text-primary px-4 py-2 rounded-lg hover:bg-gray-300"
+            className="bg-gray-200 text-primary/90 px-4 py-2 rounded-lg hover:bg-gray-300 "
           >
             Zurück zu Services
           </button>
