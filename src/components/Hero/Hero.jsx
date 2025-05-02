@@ -174,9 +174,18 @@ const Hero = () => {
           src={backgroundVideoUrl}
           title="Sernitas Video Background"
           allow="autoplay; muted; loop"
-          frameBorder="0"
+          style={{ border: "none" }} // Replaces the deprecated frameBorder attribute
         />
       </div>
+      {/* <div className="absolute inset-0 z-0">
+        <iframe
+          className="w-full h-full object-cover"
+          src={backgroundVideoUrl}
+          title="Sernitas Video Background"
+          allow="autoplay; muted; loop"
+          frameBorder="0"
+        />
+      </div> */}
 
       {/* Overlay Content */}
       {!isVideoOpen && (
