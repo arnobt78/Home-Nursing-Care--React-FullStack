@@ -1,6 +1,8 @@
-import HRImg1 from "../../assets/hr-1.jpg";
-import HRImg2 from "../../assets/hr-2.png";
-import HRImg3 from "../../assets/hr-3.jpg";
+import HRImg1 from "../../assets/aboutPage/hr-1.jpg";
+import HRImg2 from "../../assets/aboutPage/hr-2.png";
+import HRImg3 from "../../assets/aboutPage/hr-3.jpg";
+
+import CachedImage from "../CachedImage";
 
 const team = [
   {
@@ -58,14 +60,15 @@ const Team = () => {
             className="relative rounded-2xl overflow-hidden shadow-2xl group block"
           >
             {/* Background Image */}
-            <div
-              className="w-full h-72 bg-cover bg-center"
-              style={{ backgroundImage: `url(${member.img})` }}
-            ></div>
+            <CachedImage
+              src={member.img}
+              alt={member.name}
+              className="w-full h-72 object-cover rounded-t-2xl"
+            />
 
             {/* Overlay with Name and Title */}
             <div className="absolute inset-0 flex flex-col justify-end text-center">
-              <div className="bg-black/30 p-2  group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl">
+              <div className="bg-black/30 p-2 group-hover:opacity-100 hover:scale-105 transition-opacity duration-300 rounded-b-2xl">
                 <h3 className="text-lg font-bold text-white">{member.name}</h3>
                 <p className="text-sm text-white">{member.title}</p>
               </div>
@@ -73,6 +76,11 @@ const Team = () => {
           </a>
         ))}
       </div>
+
+      {/* Conclusion Section */}
+      <h2 className="text-2xl xl:text-3xl font-bold text-green-700 mt-16 text-center">
+        Gemeinsam für Ihre Pflege
+      </h2>
       <p className="pt-12 text-primary/90 text-center">
         Wir glauben daran, dass wahre Qualität in der Pflege nur mit Herzblut
         und echter Hingabe erreicht werden kann. Lernen Sie unser Team kennen

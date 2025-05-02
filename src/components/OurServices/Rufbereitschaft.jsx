@@ -1,4 +1,6 @@
-import serviceImage from "../../assets/service-15.png";
+import serviceImage from "../../assets/servicePage/service-15.png";
+
+import CachedImage from "../CachedImage";
 
 const Rufbereitschaft = () => {
   return (
@@ -22,7 +24,7 @@ const Rufbereitschaft = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <CachedImage
             src={serviceImage}
             alt="24-Stunden-Pflege"
             className="w-full max-h-[400px] object-cover rounded-xl"

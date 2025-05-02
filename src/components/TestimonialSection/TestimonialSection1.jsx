@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 
-import TestimonialImg from "../../assets/hr-1.jpg";
+import TestimonialImg from "../../assets/aboutPage/hr-1.jpg";
 
 import CachedImage from "../CachedImage";
 

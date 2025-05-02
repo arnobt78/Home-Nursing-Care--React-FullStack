@@ -1,10 +1,12 @@
-import infoIcon from "../../assets/service-11.png";
-import serviceImage from "../../assets/service-13.png";
-
 import ReviewSectionService from "../ReviewSection/ReviewSectionService";
 import HomeConsultationSection from "../Services/HomeConsultationSection";
 
 import { FaCheckCircle } from "react-icons/fa";
+
+import infoIcon from "../../assets/servicePage/service-11.png";
+import serviceImage from "../../assets/servicePage/service-13.png";
+
+import CachedImage from "../CachedImage";
 
 const BetreuungEntlastung = () => {
   return (
@@ -45,7 +47,7 @@ const BetreuungEntlastung = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <CachedImage
             src={serviceImage}
             alt="Betreuung und Entlastung"
             className="w-full max-h-[400px] object-cover rounded-xl"
@@ -128,7 +130,7 @@ const BetreuungEntlastung = () => {
       >
         {/* Left Side: Image */}
         <div className="lg:w-1/4 flex">
-          <img src={infoIcon} alt="Info Icon" className="w-72 h-40" />
+          <CachedImage src={infoIcon} alt="Info Icon" className="w-72 h-40" />
         </div>
 
         {/* Right Side: Text */}

@@ -2,7 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { slideBottom } from "../../utility/animation";
 
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/footerSection/logo.png";
+
 import CachedImage from "../CachedImage";
 
 const Navbar = () => {

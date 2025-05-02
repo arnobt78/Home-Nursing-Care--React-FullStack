@@ -4,13 +4,15 @@ import { useMutation } from "@tanstack/react-query"; // Import useMutation
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-import bewerben1 from "../../assets/bewerben-1.png";
-
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { Button } from "../../components/ui/button";
 
 import { z } from "zod";
+
+import bewerben1 from "../../assets/karrierePage/bewerben-1.png";
+
+import CachedImage from "../CachedImage";
 
 // Define validation schema using zod
 const schema = z.object({
@@ -133,7 +135,7 @@ const Contact = () => {
     >
       {/* Header Section */}
       <div className="w-full">
-        <img
+        <CachedImage
           src={bewerben1}
           alt="Header"
           className="w-full object-contain lg:object-cover"

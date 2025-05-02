@@ -199,7 +199,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { FaPlay } from "react-icons/fa";
 
-import reviewImage from "../../assets/review-1.png";
+import reviewImage from "../../assets/homePage/review-1.png";
 
 import CachedImage from "../CachedImage";
 

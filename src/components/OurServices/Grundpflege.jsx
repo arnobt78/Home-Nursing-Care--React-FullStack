@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import Image from "../../assets/service-5.png";
 
 import { FaCheckCircle } from "react-icons/fa";
+
+import Image from "../../assets/servicePage/service-5.png";
+
+import CachedImage from "../CachedImage";
 
 const Grundpflege = () => {
   const navigate = useNavigate(); // Initialize the navigate function
@@ -36,7 +39,7 @@ const Grundpflege = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <CachedImage
             src={Image}
             alt="Grundpflege"
             className="w-full max-h-[300px] object-cover rounded-xl"

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-import SernitasGroup from "../../assets/sernitas-group.png";
-import SernitasHR from "../../assets/sernitas-hr.png";
-import SernitasKliniken from "../../assets/sernitas-kliniken.png";
-import SernitasInstitute from "../../assets/sernitas-institute.png";
+import SernitasGroup from "../../assets/footerSection/sernitas-group.png";
+import SernitasHR from "../../assets/footerSection/sernitas-hr.png";
+import SernitasKliniken from "../../assets/footerSection/sernitas-kliniken.png";
+import SernitasInstitute from "../../assets/footerSection/sernitas-institute.png";
 
 import CachedImage from "../CachedImage";
 

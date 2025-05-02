@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
-import rightImage from "../../assets/service-7.png";
-import commentImage from "../../assets/service-8.png";
-import logoRound from "../../assets/logo-round.png";
-
 import { FaCheckCircle } from "react-icons/fa";
+
+import rightImage from "../../assets/servicePage/service-7.png";
+import commentImage from "../../assets/servicePage/service-8.png";
+import logoRound from "../../assets/footerSection/logo-round.png";
+
+import CachedImage from "../CachedImage";
 
 const Behandlungspflege = () => {
   const navigate = useNavigate(); // Initialize navigate function
@@ -40,7 +42,7 @@ const Behandlungspflege = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <iCachedImagemg
             src={rightImage}
             alt="Behandlungspflege"
             className="w-full max-h-[400px] object-cover rounded-xl"
@@ -52,7 +54,7 @@ const Behandlungspflege = () => {
       <div className="bg-gray-200 py-16 px-6 lg:px-12 rounded-2xl shadow-2xl">
         <div className="flex flex-col lg:flex-row items-center ">
           <div className="lg:w-1/3 flex justify-center">
-            <img
+            <CachedImage
               src={commentImage}
               alt="Comment"
               className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover"
@@ -196,7 +198,7 @@ const Behandlungspflege = () => {
             <h4 className="text-xl font-bold text-green-700">
               Sie haben Fragen?
             </h4>
-            <img
+            <CachedImage
               src={logoRound}
               alt="Logo"
               className="absolute -top-12 -right-12 w-32 h-32 object-contain"

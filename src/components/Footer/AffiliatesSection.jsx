@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 
-import BPA from "../../assets/bpa.png";
-import KABS from "../../assets/kabs.png";
-import Dr from "../../assets/hirler.png";
-import Klinikum from "../../assets/klinikum.png";
-import Burger from "../../assets/burger.png";
-import LMU from "../../assets/lmu.png";
+import BPA from "../../assets/footerSection/bpa.png";
+import KABS from "../../assets/footerSection/kabs.png";
+import Dr from "../../assets/footerSection/hirler.png";
+import Klinikum from "../../assets/footerSection/klinikum.png";
+import Burger from "../../assets/footerSection/burger.png";
+import LMU from "../../assets/footerSection/lmu.png";
 
-import Goethe from "../../assets/goethe.png";
-import Nicc from "../../assets/nicc.png";
-import IEC from "../../assets/iec.png";
-import Markische from "../../assets/markische.png";
-import American from "../../assets/american.png";
-import Ankara from "../../assets/ankara.png";
-import Timer from "../../assets/timer.png";
-import LWL from "../../assets/lwl.png";
+import Goethe from "../../assets/footerSection/goethe.png";
+import Nicc from "../../assets/footerSection/nicc.png";
+import IEC from "../../assets/footerSection/iec.png";
+import Markische from "../../assets/footerSection/markische.png";
+import American from "../../assets/footerSection/american.png";
+import Ankara from "../../assets/footerSection/ankara.png";
+import Timer from "../../assets/footerSection/timer.png";
+import LWL from "../../assets/footerSection/lwl.png";
 
 import CachedImage from "../CachedImage";
 

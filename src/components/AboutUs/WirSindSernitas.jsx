@@ -1,4 +1,6 @@
-import AboutImg4 from "../../assets/hero-4.jpg";
+import AboutImg4 from "../../assets/aboutPage/hero-4.jpg";
+
+import CachedImage from "../CachedImage";
 
 const WirSindSernitas = () => {
   return (
@@ -44,7 +46,7 @@ const WirSindSernitas = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <CachedImage
             src={AboutImg4}
             alt="Wir sind Sernitas"
             className="w-full h-fit object-cover rounded-xl shadow-lg"

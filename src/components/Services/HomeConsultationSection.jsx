@@ -4,7 +4,7 @@ import { Input } from "../../components/ui/input";
 import { Button } from "../../components/ui/button";
 import { z } from "zod";
 
-import HRImage from "../../assets/hr-1.jpg";
+import HRImage from "../../assets/aboutPage/hr-1.jpg";
 
 import CachedImage from "../CachedImage";
 

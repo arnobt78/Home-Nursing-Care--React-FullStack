@@ -10,7 +10,9 @@ import { Button } from "../ui/button";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-import application1 from "../../assets/hero-2.jpg";
+import application1 from "../../assets/aboutPage/hero-2.jpg";
+
+import CachedImage from "../CachedImage";
 
 // Zod validation schema (messages in German)
 const ApplicationFormSchema = z.object({
@@ -151,7 +153,7 @@ const ApplicationForm = () => {
     <>
       {/* Header Section */}
       <div className="w-full">
-        <img
+        <CachedImage
           src={application1}
           alt="Header"
           className="w-full h-[800px] object-contain lg:object-cover"

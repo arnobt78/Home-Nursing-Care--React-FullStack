@@ -1,5 +1,7 @@
-import karriereImage1 from "../../assets/karriere-1.png";
-import karriereImage2 from "../../assets/hero-3.png";
+import karriereImage1 from "../../assets/karrierePage/karriere-1.png";
+import karriereImage2 from "../../assets/aboutPage/hero-3.png";
+
+import CachedImage from "../CachedImage";
 
 const jobPosts = [
   {
@@ -85,7 +87,7 @@ const KarrierePage = () => {
 
             {/* Right Image */}
             <div className="w-full md:w-1/2 flex justify-center items-center">
-              <img
+              <CachedImage
                 src={karriereImage2}
                 alt="Arbeitsweise"
                 className="rounded-xl shadow-lg object-cover w-full h-96"

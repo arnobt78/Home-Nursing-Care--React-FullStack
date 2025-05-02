@@ -1,8 +1,10 @@
-import newsImg1 from "../../assets/wissenswertesPageImg/aktuelles/news-1.png";
-import newsImg2 from "../../assets/wissenswertesPageImg/aktuelles/news-2.png";
-import newsImg3 from "../../assets/wissenswertesPageImg/aktuelles/news-3.png";
-import newsImg4 from "../../assets/wissenswertesPageImg/aktuelles/news-4.png";
-import newsImg5 from "../../assets/wissenswertesPageImg/aktuelles/news-5.png";
+import newsImg1 from "../../assets/wissenswertesPage/aktuelles/news-1.png";
+import newsImg2 from "../../assets/wissenswertesPage/aktuelles/news-2.png";
+import newsImg3 from "../../assets/wissenswertesPage/aktuelles/news-3.png";
+import newsImg4 from "../../assets/wissenswertesPage/aktuelles/news-4.png";
+import newsImg5 from "../../assets/wissenswertesPage/aktuelles/news-5.png";
+
+import CachedImage from "../CachedImage";
 
 const Aktuelles = () => {
   const newsData = [
@@ -152,7 +154,7 @@ const Aktuelles = () => {
             className="bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition transform hover:scale-105 duration-300"
           >
             <div className="relative">
-              <img
+              <CachedImage
                 src={news.image}
                 alt="News"
                 className="w-full h-72 object-cover"

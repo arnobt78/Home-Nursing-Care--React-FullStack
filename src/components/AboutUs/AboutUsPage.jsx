@@ -6,11 +6,13 @@ import Leitbild from "./Leitbild";
 import Kooperationsnetzwerk from "./Kooperationsnetzwerk";
 import MitgliedschaftBAP from "./MitgliedschaftBAP";
 
-import wirSindSernitasImg from "../../assets/hero-1.png";
-import teamImg from "../../assets/hero-4.jpg";
-import leitbildImg from "../../assets/hero-3.png";
-import kooperationsnetzwerkImg from "../../assets/hero-6.png";
-import bapImg from "../../assets/hero-5.png";
+import wirSindSernitasImg from "../../assets/aboutPage/hero-1.png";
+import teamImg from "../../assets/aboutPage/hero-4.jpg";
+import leitbildImg from "../../assets/aboutPage/hero-3.png";
+import kooperationsnetzwerkImg from "../../assets/aboutPage/hero-6.png";
+import bapImg from "../../assets/aboutPage/hero-5.png";
+
+import CachedImage from "../CachedImage";
 
 const tabs = [
   {
@@ -49,7 +51,7 @@ const AboutUsPage = () => {
   return (
     <div className="min-h-screen pt-[70px] pb-16 bg-slate-100 text-black">
       {/* Top Image */}
-      <img
+      <CachedImage
         src={activeTab?.image || wirSindSernitasImg} // Default to Grundpflege image
         alt="Leistungen"
         className="w-full max-h-[600px] object-cover"

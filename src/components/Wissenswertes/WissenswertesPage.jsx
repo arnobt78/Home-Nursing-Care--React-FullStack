@@ -6,11 +6,13 @@ import PflegeBlog from "./PflegeBlog";
 import PflegeRatgeber from "./PflegeRatgeber";
 import Downloads from "./Downloads";
 
-import faqImg from "../../assets/wissenswertesPageImg/faq-1.png";
-import aktuellesImg from "../../assets/wissenswertesPageImg/aktuelles-1.png";
-import pflegeBlogImg from "../../assets/wissenswertesPageImg/blog-1.png";
-import pflegeRatgeberImg from "../../assets/wissenswertesPageImg/ratgeber-1.png";
-import downloadsImg from "../../assets/wissenswertesPageImg/downloads-1.png";
+import faqImg from "../../assets/wissenswertesPage/faq-1.png";
+import aktuellesImg from "../../assets/wissenswertesPage/aktuelles-1.png";
+import pflegeBlogImg from "../../assets/wissenswertesPage/blog-1.png";
+import pflegeRatgeberImg from "../../assets/wissenswertesPage/ratgeber-1.png";
+import downloadsImg from "../../assets/wissenswertesPage/downloads-1.png";
+
+import CachedImage from "../CachedImage";
 
 const tabs = [
   {
@@ -49,7 +51,7 @@ const WissenswertesPage = () => {
   return (
     <div className="min-h-screen pt-[70px] pb-16 bg-slate-100 text-black">
       {/* Top Image */}
-      <img
+      <CachedImage
         src={activeTab?.image || faqImg} // Default to Grundpflege image
         alt="Leistungen"
         className="w-full max-h-[600px] object-cover"

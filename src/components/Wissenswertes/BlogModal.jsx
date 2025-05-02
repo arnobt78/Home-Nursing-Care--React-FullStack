@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { z } from "zod";
 
+import CachedImage from "../CachedImage";
+
 const BlogModal = ({ isOpen, onClose, blogData }) => {
   // State for form data, errors, and success message
   const [formData, setFormData] = useState({
@@ -106,7 +108,7 @@ const BlogModal = ({ isOpen, onClose, blogData }) => {
 
         {/* Blog Image */}
         <div className="w-full flex justify-center items-center">
-          <img
+          <CachedImage
             src={blogData.image}
             alt={blogData.title}
             className="w-full  bg-cover bg-center"

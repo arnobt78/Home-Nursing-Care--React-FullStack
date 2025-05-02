@@ -6,11 +6,13 @@ import Verhinderungspflege from "./Verhinderungspflege";
 import BetreuungEntlastung from "./BetreuungEntlastung";
 import Rufbereitschaft from "./Rufbereitschaft";
 
-import grundpflegeImg from "../../assets/service-4.png";
-import behandlungspflegeImg from "../../assets/service-6.png";
-import verhinderungspflegeImg from "../../assets/service-9.png";
-import betreuungEntlastungImg from "../../assets/service-12.png";
-import rufbereitschaftImg from "../../assets/service-14.png";
+import grundpflegeImg from "../../assets/servicePage/service-4.png";
+import behandlungspflegeImg from "../../assets/servicePage/service-6.png";
+import verhinderungspflegeImg from "../../assets/servicePage/service-9.png";
+import betreuungEntlastungImg from "../../assets/servicePage/service-12.png";
+import rufbereitschaftImg from "../../assets/servicePage/service-14.png";
+
+import CachedImage from "../CachedImage";
 
 const tabs = [
   {
@@ -49,7 +51,7 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen pt-[70px] pb-16 bg-slate-100 text-black">
       {/* Top Image */}
-      <img
+      <CachedImage
         src={activeTab?.image || grundpflegeImg} // Default to Grundpflege image
         alt="Leistungen"
         className="w-full max-h-[600px] object-cover"

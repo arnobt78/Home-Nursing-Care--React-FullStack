@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import bewerben1 from "../../assets/bewerben-1.png";
-import bewerben2 from "../../assets/bewerben-2.png";
-
 import axios from "axios";
+
+import bewerben1 from "../../assets/karrierePage/bewerben-1.png";
+import bewerben2 from "../../assets/karrierePage/bewerben-2.png";
+
+import CachedImage from "../CachedImage";
 
 const BewerbenSchema = z.object({
   firstname: z.string().min(1, "Vorname ist erforderlich"),
@@ -57,7 +59,7 @@ const BewerbenPage = () => {
     <div className="containero">
       {/* Header Section */}
       <div className="w-full">
-        <img
+        <CachedImage
           src={bewerben1}
           alt="Header"
           className="w-full object-contain lg:object-cover"
@@ -68,7 +70,7 @@ const BewerbenPage = () => {
       <div className="py-24 px-6 lg:px-12 xl:px-44  grid md:grid-cols-2 gap-12">
         {/* Left Section */}
         <div>
-          <img
+          <CachedImage
             src={bewerben2}
             alt="Contact"
             className="w-full h-auto rounded-lg shadow-lg"

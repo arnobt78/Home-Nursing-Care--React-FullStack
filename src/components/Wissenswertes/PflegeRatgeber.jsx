@@ -2,6 +2,8 @@ import { useState } from "react";
 import ratgeberData from "./ratgeberData";
 import RatgeberModal from "./RatgeberModal";
 
+import CachedImage from "../CachedImage";
+
 const PflegeRatgeber = () => {
   const [selectedRatgeber, setSelectedRatgeber] = useState(null);
 
@@ -94,7 +96,7 @@ const PflegeRatgeber = () => {
             className="bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition transform hover:scale-105 duration-300 cursor-pointer"
             onClick={() => handleOpenModal(ratgeber)}
           >
-            <img
+            <CachedImage
               src={ratgeber.image}
               alt={ratgeber.title}
               className="w-full h-48 object-cover"

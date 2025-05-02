@@ -11,6 +11,8 @@ import Img1 from "../../assets/icon/time-1.svg";
 import Img2 from "../../assets/icon/care-2.svg";
 import Img7 from "../../assets/icon/nurse-1.svg";
 
+import CachedImage from "../CachedImage";
+
 export const cardsData = [
   {
     id: 1,

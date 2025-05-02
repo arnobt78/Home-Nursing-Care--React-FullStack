@@ -1,6 +1,9 @@
-import familyImage from "../../assets/service-10.png";
-import infoIcon from "../../assets/service-11.png";
 import { useNavigate } from "react-router-dom";
+
+import familyImage from "../../assets/servicePage/service-10.png";
+import infoIcon from "../../assets/servicePage/service-11.png";
+
+import CachedImage from "../CachedImage";
 
 const Verhinderungspflege = () => {
   const navigate = useNavigate();
@@ -44,7 +47,7 @@ const Verhinderungspflege = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <CachedImage
             src={familyImage}
             alt="Family"
             className="w-full max-h-[400px] object-cover rounded-xl"
@@ -119,7 +122,7 @@ const Verhinderungspflege = () => {
       >
         {/* Left Side: Image */}
         <div className="lg:w-1/4 flex">
-          <img src={infoIcon} alt="Info Icon" className="w-72 h-40" />
+          <CachedImage src={infoIcon} alt="Info Icon" className="w-72 h-40" />
         </div>
 
         {/* Right Side: Text */}

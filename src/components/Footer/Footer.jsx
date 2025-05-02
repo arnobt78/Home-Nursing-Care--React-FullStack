@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import ScrollToTop from "../ScrollToTop"; // Import ScrollToTop
+import ScrollToTop from "../ScrollToTop";
 import { slideUp } from "../../utility/animation";
 import {
   FaFacebook,
@@ -10,9 +10,11 @@ import {
   FaLinkedin,
   FaXing,
 } from "react-icons/fa";
-import Logo from "../../assets/logo-bg.png";
-import PartnersSection from "./PartnersSection"; // Import the PartnersSection component
-import AffiliatesSection from "./AffiliatesSection"; // Import the AffiliatesSection component
+
+import Logo from "../../assets/footerSection/logo-bg.png";
+
+import PartnersSection from "./PartnersSection";
+import AffiliatesSection from "./AffiliatesSection";
 
 import CachedImage from "../CachedImage";
 

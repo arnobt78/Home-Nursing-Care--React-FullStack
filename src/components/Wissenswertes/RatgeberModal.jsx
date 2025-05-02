@@ -25,7 +25,7 @@
 
 //         {/* Ratgeber Image */}
 //         <div className="w-full flex justify-center items-center">
-//           <img
+//           <CachedImage
 //             src={RatgeberData.image}
 //             alt={RatgeberData.title}
 //             className="w-full bg-cover bg-center"
@@ -81,6 +81,8 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
+import CachedImage from "../CachedImage";
+
 const RatgeberModal = ({ isOpen, onClose, RatgeberData }) => {
   const navigate = useNavigate();
 
@@ -102,7 +104,7 @@ const RatgeberModal = ({ isOpen, onClose, RatgeberData }) => {
 
         {/* Ratgeber Image */}
         <div className="w-full h-96 flex justify-center items-center bg-gray-100">
-          <img
+          <CachedImage
             src={RatgeberData.image}
             alt={RatgeberData.title}
             className="w-full h-full object-cover"

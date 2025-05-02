@@ -2,7 +2,14 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open("static-assets").then((cache) => {
       return cache.addAll([
+        // browser tab icon
+
+        // /public
+        "/public/vite.svg",
+
         // icons
+
+        // ../../assets/icon
         "/assets/icon/ambulance-1.svg",
         "/assets/icon/care-1.svg",
         "/assets/icon/care-2.svg",
@@ -16,39 +23,97 @@ self.addEventListener("install", (event) => {
         "/assets/icon/time-1.svg",
 
         // images
-        "/assets/bpa.png",
-        "/assets/burger.png",
-        "/assets/hirler.png",
-        "/assets/kabs.png",
-        "/assets/klinikum.png",
-        "/assets/lmu.png",
-        "/assets/map-1.jpg",
-        "/assets/review-1.jpg",
 
-        "/assets/american.png",
-        "/assets/ankara.png",
-        "/assets/goethe.png",
-        "/assets/hero-1.jpg",
-        "/assets/hero-2.jpg",
-        "/assets/hero-3.jpg",
-        "/assets/hero-4.jpg",
-        "/assets/hr-1.jpg",
-        "/assets/hr-2.jpg",
-        "/assets/hr-3.jpg",
-        "/assets/hr-4.jpg",
-        "/assets/iec.png",
-        "/assets/logo-bg.png",
-        "/assets/logo.png",
-        "/assets/lwl.png",
-        "/assets/markische.png",
-        "/assets/nicc.png",
-        "/assets/sernitas-group.png",
-        "/assets/sernitas-hr.png",
-        "/assets/sernitas-institute.png",
-        "/assets/sernitas-kliniken.png",
-        "/assets/service-2.jpg",
-        "/assets/service-3.jpg",
-        "/assets/timer.png",
+        // ../../assets/aboutPage
+        "/assets/aboutPage/hero-1.png",
+        "/assets/aboutPage/hero-2.png",
+        "/assets/aboutPage/hero-3.png",
+        "/assets/aboutPage/hero-4.png",
+        "/assets/aboutPage/hero-5.png",
+        "/assets/aboutPage/hero-6.png",
+        "/assets/aboutPage/hr-1.jpg",
+        "/assets/aboutPage/hr-2.png",
+        "/assets/aboutPage/hr-3.jpg",
+        "/assets/aboutPage/hr-4.jpg",
+
+        // ../../assets/footerSection
+        "/assets/footerSection/american.png",
+        "/assets/footerSection/ankara.png",
+        "/assets/footerSection/bpa.png",
+        "/assets/footerSection/burger.png",
+        "/assets/footerSection/goethe.png",
+        "/assets/footerSection/hirler.png",
+        "/assets/footerSection/iec.png",
+        "/assets/footerSection/kabs.png",
+        "/assets/footerSection/klinikum.png",
+        "/assets/footerSection/lmu.png",
+        "/assets/footerSection/logo-bg.png",
+        "/assets/footerSection/logo-round.png",
+        "/assets/footerSection/logo.png",
+        "/assets/footerSection/lwl.png",
+        "/assets/footerSection/markische.png",
+        "/assets/footerSection/nicc.png",
+        "/assets/footerSection/sernitas-group.png",
+        "/assets/footerSection/sernitas-hr.png",
+        "/assets/footerSection/sernitas-institute.png",
+        "/assets/footerSection/sernitas-kliniken.png",
+        "/assets/footerSection/timer.png",
+
+        // ../../assets/homePage
+        "/assets/homePage/map-1.jpg",
+        "/assets/homePage/review-1.jpg",
+        "/assets/homePage/service-3.jpg",
+
+        // ../../assets/karrierePage
+        "/assets/karrierePage/bewerben-1.png",
+        "/assets/karrierePage/bewerben-2.png",
+        "/assets/karrierePage/karriere-1.png",
+
+        // ../../assets/servicePage
+        "/assets/servicePage/review-2.png",
+        "/assets/servicePage/service-4.png",
+        "/assets/servicePage/service-5.png",
+        "/assets/servicePage/service-6.png",
+        "/assets/servicePage/service-7.png",
+        "/assets/servicePage/service-8.png",
+        "/assets/servicePage/service-9.png",
+        "/assets/servicePage/service-10.png",
+        "/assets/servicePage/service-11.png",
+        "/assets/servicePage/service-12.png",
+        "/assets/servicePage/service-13.png",
+        "/assets/servicePage/service-14.png",
+        "/assets/servicePage/service-15.png",
+
+        // ../../assets/wissenswertesPage
+        "/assets/wissenswertesPage/aktuelles-1.png",
+        "/assets/wissenswertesPage/blog-1.png",
+        "/assets/wissenswertesPage/downloads-1.png",
+        "/assets/wissenswertesPage/faq-1.png",
+        "/assets/wissenswertesPage/ratgeber-1.png",
+
+        "/assets/wissenswertesPage/aktuelles/news-1.png",
+        "/assets/wissenswertesPage/aktuelles/news-2.png",
+        "/assets/wissenswertesPage/aktuelles/news-3.png",
+        "/assets/wissenswertesPage/aktuelles/news-4.png",
+        "/assets/wissenswertesPage/aktuelles/news-5.png",
+
+        "/assets/wissenswertesPage/blog/blog-1.png",
+        "/assets/wissenswertesPage/blog/blog-2.png",
+        "/assets/wissenswertesPage/blog/blog-3.png",
+        "/assets/wissenswertesPage/blog/blog-4.png",
+        "/assets/wissenswertesPage/blog/blog-5.png",
+        "/assets/wissenswertesPage/blog/blog-6.png",
+        "/assets/wissenswertesPage/blog/blog-7.png",
+        "/assets/wissenswertesPage/blog/blog-8.png",
+        "/assets/wissenswertesPage/blog/blog-9.png",
+        "/assets/wissenswertesPage/blog/blog-10.png",
+
+        "/assets/wissenswertesPage/ratgeber/ratgeber-1.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-2.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-3.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-4.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-5.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-6.png",
       ]);
     })
   );

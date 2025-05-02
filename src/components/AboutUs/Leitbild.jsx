@@ -1,4 +1,6 @@
-import HeroImage from "../../assets/hero-2.jpg";
+import HeroImage from "../../assets/aboutPage/hero-2.jpg";
+
+import CachedImage from "../CachedImage";
 
 const Leitbild = () => {
   return (
@@ -24,7 +26,7 @@ const Leitbild = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <CachedImage
             src={HeroImage}
             alt="Unser Leitbild"
             className="w-full max-h-[300px] object-cover rounded-xl shadow-lg"

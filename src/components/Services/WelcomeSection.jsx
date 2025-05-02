@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import teamImage from "../../assets/service-3.jpg";
+
+import teamImage from "../../assets/homePage/service-3.jpg";
+
 import CachedImage from "../CachedImage";
 
 const WelcomeSection = () => {

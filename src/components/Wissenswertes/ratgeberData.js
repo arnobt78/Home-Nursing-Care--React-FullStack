@@ -1,9 +1,11 @@
-import ratgeberImg1 from "../../assets/wissenswertesPageImg/ratgeber/ratgeber-1.png";
-import ratgeberImg2 from "../../assets/wissenswertesPageImg/ratgeber/ratgeber-2.png";
-import ratgeberImg3 from "../../assets/wissenswertesPageImg/ratgeber/ratgeber-3.png";
-import ratgeberImg4 from "../../assets/wissenswertesPageImg/ratgeber/ratgeber-4.png";
-import ratgeberImg5 from "../../assets/wissenswertesPageImg/ratgeber/ratgeber-5.png";
-import ratgeberImg6 from "../../assets/wissenswertesPageImg/ratgeber/ratgeber-6.png";
+import ratgeberImg1 from "../../assets/wissenswertesPage/ratgeber/ratgeber-1.png";
+import ratgeberImg2 from "../../assets/wissenswertesPage/ratgeber/ratgeber-2.png";
+import ratgeberImg3 from "../../assets/wissenswertesPage/ratgeber/ratgeber-3.png";
+import ratgeberImg4 from "../../assets/wissenswertesPage/ratgeber/ratgeber-4.png";
+import ratgeberImg5 from "../../assets/wissenswertesPage/ratgeber/ratgeber-5.png";
+import ratgeberImg6 from "../../assets/wissenswertesPage/ratgeber/ratgeber-6.png";
+
+import CachedImage from "../CachedImage";
 
 const blogData = [
   {

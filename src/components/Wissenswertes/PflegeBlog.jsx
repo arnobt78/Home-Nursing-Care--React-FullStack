@@ -2,6 +2,8 @@ import { useState } from "react";
 import blogData from "./blogData";
 import BlogModal from "./BlogModal";
 
+import CachedImage from "../CachedImage";
+
 const PflegeBlog = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
 
@@ -44,7 +46,7 @@ const PflegeBlog = () => {
             className="bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition transform hover:scale-105 duration-300 cursor-pointer"
             onClick={() => handleOpenModal(blog)}
           >
-            <img
+            <CachedImage
               src={blog.image}
               alt={blog.title}
               className="w-full h-48 object-cover"

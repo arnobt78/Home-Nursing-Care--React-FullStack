@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { FaPlay } from "react-icons/fa";
 
-import reviewImage from "../../assets/review-2.png";
+import reviewImage from "../../assets/servicePage/review-2.png";
 
 import CachedImage from "../CachedImage";
 
