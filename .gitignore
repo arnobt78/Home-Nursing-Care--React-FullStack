@@ -24,7 +24,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.vite/deps
+.vite
 
 # Local Netlify folder
 .netlify
