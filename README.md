@@ -2,6 +2,8 @@
 
 Sernitas-Care is a comprehensive home nursing service platform in Germany, developed as part of the Sernitas-Groupe. The platform is built with modern web technologies, offering a responsive, user-friendly interface and robust backend functionality. It provides services such as nursing care, client testimonials, job applications, and contact options, all integrated seamlessly.
 
+**Online-Live:** https://develop-testing-1.netlify.app/
+
 ---
 
 ## Table of Contents
