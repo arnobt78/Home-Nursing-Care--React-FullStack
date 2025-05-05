@@ -36,7 +36,7 @@ const Footer = () => {
     <>
       <ScrollToTop /> {/* Ensure ScrollToTop is included */}
       <AffiliatesSection /> {/* Add AffiliatesSection above the footer */}
-      <footer className="bg-primary text-white py-12">
+      <footer className="bg-primary/90 text-white py-12">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -331,7 +331,7 @@ const Footer = () => {
           whileInView="animate"
           className="text-center mt-10"
         >
-          <p className="text-lg">
+          <p className="font-sour text-md">
             Made with <span className="text-red-500">❤️</span>
           </p>
           <p className="text-sm font-medium">

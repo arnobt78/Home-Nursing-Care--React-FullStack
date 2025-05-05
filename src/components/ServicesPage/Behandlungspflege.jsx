@@ -190,8 +190,8 @@ const Behandlungspflege = () => {
         {/* Right Side: Logo and Contact */}
         <div className="lg:w-1/3 bg-secondary/20 p-8 rounded-[5rem] shadow-md flex flex-col">
           {/* Right Side: Logo and Heading */}
-          <div className="relative py-10 flex justify-between">
-            <h4 className="font-sour text-2xl font-bold text-green-700">
+          <div className="relative py-12 flex justify-between">
+            <h4 className="font-sour text-xl font-bold text-green-700 mt-2">
               Sie haben Fragen?
             </h4>
             <CachedImage
@@ -206,7 +206,7 @@ const Behandlungspflege = () => {
             <strong>Haushaltshilfe nach der Geburt</strong>, oder weitere
             Wünsche haben, können Sie gerne unser Kontaktformular nutzen.
           </p>
-          <p className="text-primary/90 mt-2">
+          <p className="text-primary/90 mt-1">
             Wir werden uns umgehend mit Ihnen in Verbindung setzen. Oder rufen
             Sie uns einfach an unter: <strong>0234 / 966 46 480</strong>.
           </p>
