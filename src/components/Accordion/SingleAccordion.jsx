@@ -34,7 +34,7 @@ const SingleAccordion = ({ title, info, isActive, onToggle }) => {
       {/* Answer Content */}
       {isActive && (
         <motion.div
-          className="border-2 border-primary/90 bg-gray-100 rounded-lg m-12"
+          className="border-2 border-primary/90 bg-gray-100 rounded-lg p-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
