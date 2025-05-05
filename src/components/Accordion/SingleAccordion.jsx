@@ -8,18 +8,18 @@ const SingleAccordion = ({ title, info, isActive, onToggle }) => {
 
   return (
     <motion.article
-      className="question mb-6"
+      className="question mb-8"
       initial={!hasAnimated ? { opacity: 0, y: 20 } : false}
       animate={!hasAnimated ? { opacity: 1, y: 0 } : false}
       transition={{ duration: 0.5, ease: "easeOut" }}
       onAnimationComplete={() => setHasAnimated(true)} // Mark animation as completed
     >
       {/* Question Header */}
-      <div className="bg-primary p-4 rounded-lg">
+      <div className="bg-primary/90 py-6 px-12 rounded-2xl shadow-2xl">
         <header className="flex justify-between items-center">
           <h5 className="text-lg font-semibold text-white">{title}</h5>
           <button
-            className="bg-white text-primary rounded-full w-8 h-8 flex items-center justify-center"
+            className="bg-white text-primary/90 rounded-full w-8 h-8 flex items-center justify-center"
             onClick={onToggle} // Call the toggle function
           >
             {isActive ? (
@@ -34,7 +34,7 @@ const SingleAccordion = ({ title, info, isActive, onToggle }) => {
       {/* Answer Content */}
       {isActive && (
         <motion.div
-          className="border-2 border-primary/90 bg-slate-200 rounded-lg p-4"
+          className="border-2 border-primary/90 bg-gray-100 rounded-lg m-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}

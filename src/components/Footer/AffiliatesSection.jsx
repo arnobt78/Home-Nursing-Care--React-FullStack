@@ -109,14 +109,14 @@ const affiliates = [
 const AffiliatesSection = () => {
   return (
     <motion.div
-      className="w-full bg-white py-4 shadow-md z-50"
+      className="w-full bg-white mt-12"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {/* Header */}
-      <h2 className="text-3xl font-bold text-center text-primary/90 mb-2s">
+      <h2 className="font-sour text-3xl font-bold text-center text-primary/90">
         Unsere Partner
       </h2>
       <div className="container mx-auto flex justify-between items-center gap-4 flex-wrap">
@@ -126,7 +126,7 @@ const AffiliatesSection = () => {
             href={affiliate.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex justify-center items-center"
+            className="flex-1 flex justify-center items-center my-12"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}

@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 import { FaCheckCircle } from "react-icons/fa";
 
 import rightImage from "../../assets/servicePage/service-7.png";
@@ -9,17 +7,15 @@ import logoRound from "../../assets/footerSection/logo-round.png";
 import CachedImage from "../CachedImage";
 
 const Behandlungspflege = () => {
-  const navigate = useNavigate(); // Initialize navigate function
-
   return (
     <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* First Section: Heading and Right Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8 pb-16 ">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-xl font-bold text-green-700">
+          <h2 className="font-sour text-xl font-bold text-green-700">
             Behandlungspflege
           </h2>
-          <h3 className="text-3xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl font-bold text-green-700">
             Mehr als nur Pflege – medizinische Unterstützung für zuhause
           </h3>
           <p className="text-primary/90 text-justify">
@@ -42,7 +38,7 @@ const Behandlungspflege = () => {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <iCachedImagemg
+          <CachedImage
             src={rightImage}
             alt="Behandlungspflege"
             className="w-full max-h-[400px] object-cover rounded-xl"
@@ -61,7 +57,7 @@ const Behandlungspflege = () => {
             />
           </div>
           <div className="lg:w-2/3 justify-center">
-            <blockquote className="text-xl italic text-primary/90 pb-4">
+            <blockquote className=" font-sour text-xl italic text-primary/90 pb-4">
               „Als behandelnder Arzt, kann ich dank Sernitas Care sicher sein,
               dass meine Patienten auch zuhause medizinisch bestens versorgt
               sind.“
@@ -76,35 +72,35 @@ const Behandlungspflege = () => {
 
       {/* Third Section: Three Cards */}
       <div className="space-y-6 py-24">
-        <h3 className="text-2xl xl:text-3xl font-bold text-green-700 text-center mb-12">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700 text-center mb-12">
           Die drei Arten der Behandlungspflege
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+        <div className="font-sour grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="text-white  bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
-            <h4 className="font-bold text-lg pt-2">
+            <h4 className="font-bold text-2xl pt-2">
               Medizinische Behandlungspflege auf ärztliche Verordnung
             </h4>
-            <p className="text-gray-100 mt-2">
+            <p className="text-xl text-gray-100 mt-2">
               Dazu gehören unter anderem die Medikamentengabe, das An- und
               Ausziehen von ärztlich verordneten Kompressionsstrümpfen,
               Zuckerkontrolle und Injektionen usw.
             </p>
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
-            <h4 className="font-bold text-lg pt-2">
+            <h4 className="font-bold text-2xl pt-2">
               Krankenhaus vermeidungspflege
             </h4>
-            <p className="text-gray-100 mt-2">
+            <p className="text-xl text-gray-100 mt-2">
               In manchen Fällen wird die Behandlungspflege verordnet, um einen
               Krankenhausaufenthalt zu vermeiden oder zu verkürzen.
             </p>
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
-            <h4 className="font-bold text-lg pt-2">Sicherungspflege</h4>
-            <p className="text-gray-100 mt-2">
+            <h4 className="font-bold text-2xl pt-2">Sicherungspflege</h4>
+            <p className="text-xl text-gray-100 mt-2">
               Diese verordnet der Arzt, um sicherzustellen, dass der Patient zu
               Hause dieselbe umfassende Versorgung wie im Krankenhaus erhält.
             </p>
@@ -116,7 +112,7 @@ const Behandlungspflege = () => {
       <div className="bg-transparent p-4 flex flex-col lg:flex-row items-center gap-8">
         {/* Left Side: Text */}
         <div className="lg:w-2/3 space-y-6">
-          <h4 className="text-2xl xl:text-3xl font-bold text-green-700">
+          <h4 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
             Unser medizinisches Pflegeangebot im Überblick
           </h4>
           <p className="text-primary/90">
@@ -195,7 +191,7 @@ const Behandlungspflege = () => {
         <div className="lg:w-1/3 bg-secondary/20 p-8 rounded-[5rem] shadow-md flex flex-col">
           {/* Right Side: Logo and Heading */}
           <div className="relative py-10 flex justify-between">
-            <h4 className="text-xl font-bold text-green-700">
+            <h4 className="font-sour text-2xl font-bold text-green-700">
               Sie haben Fragen?
             </h4>
             <CachedImage
@@ -214,12 +210,12 @@ const Behandlungspflege = () => {
             Wir werden uns umgehend mit Ihnen in Verbindung setzen. Oder rufen
             Sie uns einfach an unter: <strong>0234 / 966 46 480</strong>.
           </p>
-          <button
-            className="bg-primary/90 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-700 mt-8"
-            onClick={() => navigate("/contact")} // Navigate to /contact on click
+          <a
+            href="/contact"
+            className="items-center text-center bg-primary/90 text-white px-4 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 hover:scale-105 transition-transform duration-300"
           >
-            Zum Kontaktformular →
-          </button>
+            Jetzt Kontakt aufnehmen →
+          </a>
         </div>
       </div>
     </div>

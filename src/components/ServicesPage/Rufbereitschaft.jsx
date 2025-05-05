@@ -8,10 +8,10 @@ const Rufbereitschaft = () => {
       {/* First Section: Text and Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8 ">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-lg xl:text-xl font-bold text-green-700">
+          <h2 className="font-sour text-xl font-bold text-green-700">
             24-STUNDEN-PFLEGE im Revier
           </h2>
-          <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
+          <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
             PFLEGEBEDÜRFTIGKEIT STETS IN GUTEN HÄNDEN
           </h3>
           <p className="text-primary/90 text-justify">
@@ -34,7 +34,7 @@ const Rufbereitschaft = () => {
 
       {/* Second Section: Vorteile */}
       <div className="space-y-6 py-24">
-        <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           VORTEILE DER 24-STUNDEN-PFLEGE FÜR DIE PFLEGE IM EIGENEN ZUHAUSE
         </h3>
         <p className="text-primary/90 text-justify">
@@ -53,6 +53,25 @@ const Rufbereitschaft = () => {
           kostenintensiver als vergleichbare Pflegeangebote in Pflegeheimen.
           Dennoch können Pflegebedürftige im eigenen Zuhause verweilen.
         </p>
+      </div>
+
+      {/* Contact Section */}
+      <div className="mt-12 text-center">
+        <h3 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
+          Wir sind für Sie da!
+        </h3>
+        <p className="text-primary/90 mt-4">
+          Gerne beraten wir Sie, welche Leistungen für Sie passen. Auf diese
+          Weise erhalten Sie eine individuell auf Sie oder Ihre Angehörigen
+          abgestimmte Grundpflege. Sie haben Fragen? Auch die beantworten Ihnen
+          unsere Mitarbeiter gerne. Rufen Sie uns an!
+        </p>
+        <a
+          href="/contact"
+          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
+        >
+          Jetzt Kontakt aufnehmen →
+        </a>
       </div>
     </div>
   );

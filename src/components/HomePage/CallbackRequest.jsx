@@ -81,7 +81,7 @@ const CallbackRequest = () => {
   };
 
   return (
-    <section className="bg-primary/90 py-4 px-24 xl:px-44 border-t-2 border-secondary/90 text-white">
+    <section className="bg-primary/90 py-4 px-16 xl:px-32 border-t-2 border-secondary/90 text-white">
       <form
         className="flex flex-col md:flex-row items-center gap-4"
         onSubmit={handleSubmit}

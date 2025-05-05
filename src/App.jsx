@@ -11,25 +11,14 @@ import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
 
 // Lazy load components
-const Hero = React.lazy(() => import("./components/Hero/Hero"));
+
+// HomePage components
+const Hero = React.lazy(() => import("./components/HomePage/Hero"));
+
 const Cards = React.lazy(() => import("./components/Cards/Cards"));
+
 const TestimonialSection1 = React.lazy(() =>
   import("./components/TestimonialSection/TestimonialSection1")
-);
-
-const ReviewSectionHome = React.lazy(() =>
-  import("./components/ReviewSection/ReviewSectionHome")
-);
-const Imprint = React.lazy(() => import("./components/Imprint/Imprint"));
-const PrivacyPolicy = React.lazy(() =>
-  import("./components/PrivacyPolicy/PrivacyPolicy")
-);
-const GeneralTerms = React.lazy(() =>
-  import("./components/GeneralTerms/GeneralTerms")
-);
-const Contact = React.lazy(() => import("./components/Contact/Contact"));
-const AboutUsPage = React.lazy(() =>
-  import("./components/AboutUs/AboutUsPage")
 );
 
 const AccordionSection = React.lazy(() =>
@@ -39,28 +28,56 @@ const ApplicationForm = React.lazy(() =>
   import("./components/ApplicationForm/ApplicationForm")
 );
 const CallbackRequest = React.lazy(() =>
-  import("./components/Services/CallbackRequest")
+  import("./components/HomePage/CallbackRequest")
 );
 
 const WelcomeSection = React.lazy(() =>
-  import("./components/Services/WelcomeSection")
+  import("./components/HomePage/WelcomeSection")
 );
-const MapSection = React.lazy(() => import("./components/Services/MapSection"));
+const MapSection = React.lazy(() => import("./components/HomePage/MapSection"));
+
 const StepsSection = React.lazy(() =>
-  import("./components/Services/StepsSection")
+  import("./components/HomePage/StepsSection")
 );
+
 const HomeConsultationSection = React.lazy(() =>
-  import("./components/Services/HomeConsultationSection")
+  import("./components/HomePage/HomeConsultationSection")
 );
 
+const ReviewSectionHome = React.lazy(() =>
+  import("./components/ReviewSection/ReviewSectionHome")
+);
+
+// Footer components
+const Imprint = React.lazy(() => import("./components/Imprint/Imprint"));
+
+const PrivacyPolicy = React.lazy(() =>
+  import("./components/PrivacyPolicy/PrivacyPolicy")
+);
+
+const GeneralTerms = React.lazy(() =>
+  import("./components/GeneralTerms/GeneralTerms")
+);
+
+// Contact components
+const Contact = React.lazy(() => import("./components/Contact/Contact"));
+
+// AboutUs components
+const AboutUsPage = React.lazy(() =>
+  import("./components/AboutUs/AboutUsPage")
+);
+
+// ServicePage components
 const ServicesPage = React.lazy(() =>
-  import("./components/OurServices/ServicesPage")
+  import("./components/ServicesPage/ServicesPage")
 );
 
+// WissenswertesPage components
 const WissenswertesPage = React.lazy(() =>
-  import("./components/Wissenswertes/WissenswertesPage")
+  import("./components/WissenswertesPage/WissenswertesPage")
 );
 
+// KarrierePage components
 const KarrierePage = React.lazy(() =>
   import("./components/Karriere/KarrierePage")
 );
@@ -68,7 +85,7 @@ const BewerbenPage = React.lazy(() =>
   import("./components/Karriere/BewerbenPage")
 );
 
-// const Admin = React.lazy(() => import("./components/Admin/Admin"));
+// AdminPage components
 
 import Admin from "./components/Admin/Admin";
 

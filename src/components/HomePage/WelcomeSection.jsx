@@ -10,10 +10,10 @@ const WelcomeSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Top Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-primary text-lg md:text-xl font-medium mb-4">
+          <h2 className="font-sour text-primary/90 text-lg md:text-xl font-medium mb-4">
             Herzlich Willkommen bei Sernitas Care
           </h2>
-          <h1 className="text-primary text-2xl md:text-3xl font-bold mb-6 leading-snug">
+          <h1 className="font-sour text-primary/90 text-2xl md:text-3xl font-bold mb-6 leading-snug">
             Professionelle Pflege & Betreuung mit interkulturellem Verständnis
           </h1>
         </div>
@@ -43,7 +43,7 @@ const WelcomeSection = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h3 className="text-primary text-xl md:text-2xl font-semibold mb-4">
+            <h3 className="text-primary/90 text-xl md:text-2xl font-semibold mb-4">
               Sernitas Care – Ihre vertrauensvolle Unterstützung im Alltag
             </h3>
             <p className="text-base md:text-lg leading-relaxed text-primary/90 mb-4 text-justify">

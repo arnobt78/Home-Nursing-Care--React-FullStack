@@ -319,12 +319,12 @@ const Hero = () => {
             </div>
 
             {/* Facebook */}
-            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md cursor-pointer">
+            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md">
               <a
                 href="https://www.facebook.com/sernitasglobal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 pointer-events-auto" // Ensure pointer-events are enabled
               >
                 <FaFacebookF className="text-lg" />
                 {hover && <span>Facebook</span>}
@@ -332,12 +332,12 @@ const Hero = () => {
             </div>
 
             {/* Instagram */}
-            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md cursor-pointer">
+            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md">
               <a
                 href="https://www.instagram.com/sernitashrturkey?igsh=MWphd210cjVod3hjbg=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 pointer-events-auto" // Ensure pointer-events are enabled
               >
                 <FaInstagram className="text-lg" />
                 {hover && <span>Instagram</span>}

@@ -1,5 +1,5 @@
 import ReviewSectionService from "../ReviewSection/ReviewSectionService";
-import HomeConsultationSection from "../Services/HomeConsultationSection";
+import HomeConsultationSection from "../HomePage/HomeConsultationSection";
 
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -14,10 +14,10 @@ const BetreuungEntlastung = () => {
       {/* First Section: Text and Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8 pb-24">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-xl font-bold text-green-700">
+          <h2 className="font-sour text-xl font-bold text-green-700">
             Betreuungs- und Entlastungsleistungen
           </h2>
-          <h3 className="text-3xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl font-bold text-green-700">
             Den Alltag gemeinsam leichter machen
           </h3>
           <p className="text-primary/90 text-justify">
@@ -60,7 +60,7 @@ const BetreuungEntlastung = () => {
 
       {/* Third Section: Additional Services */}
       <div className="space-y-6 py-24">
-        <h3 className="text-2xl xl:text-3xl font-bold text-green-700 text-center">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700 text-center">
           Diese Zusatzleistungen bieten wir an
         </h3>
         <p className="text-primary/90 text-center pb-12">
@@ -71,52 +71,52 @@ const BetreuungEntlastung = () => {
           Pflegesachleistung über die Pflegekasse oder als Privatleistung
           abgerechnet.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+        <div className="font-sour text-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Spaziergänge & Bewegungsangebote
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Alltagsbegleitung & Gesellschaft
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Begleitung zu Terminen oder Einkäufen
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Unterstützung im Haushalt
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Entlastung pflegender Angehöriger
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Gemeinsame soziale Aktivitäten
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Aufstehen, Aufsetzen und Liegen
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Unterstützung beim Toilettengang
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             An- und Auskleiden
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Hilfe bei der Nahrungs- & Flüssigkeitsaufnahme
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Gemeinsames Spielen, Basteln oder Musikhören
           </div>
-          <div className="text-white bg-secondary/80 p-6 rounded-2xl text-center shadow-2xl flex flex-col items-center">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Versorgung von Haustieren
           </div>
@@ -125,28 +125,33 @@ const BetreuungEntlastung = () => {
 
       {/* Fourth Section: Info Box */}
       <div
-        className="flex flex-col lg:flex-row items-center rounded-lg shadow-xl border-2"
-        style={{ borderColor: "#a0b106" }}
+        className="flex flex-col lg:flex-row items-center rounded-lg shadow-xl border-2 border-primary/80"
+        // style={{ borderColor: "#a0b106" }}
       >
         {/* Left Side: Image */}
         <div className="lg:w-1/4 flex">
-          <CachedImage src={infoIcon} alt="Info Icon" className="w-72 h-40" />
+          <CachedImage
+            src={infoIcon}
+            alt="Info Icon"
+            className="w-full h-60 rounded-tl-lg rounded-bl-lg object-cover"
+          />
         </div>
 
         {/* Right Side: Text */}
-        <div className="lg:w-3/4 px-4 text-justify">
-          <h4 className="text-lg font-bold text-green-700">Gut zu wissen!</h4>
-          <p className="text-sm text-primary/90">
+        <div className="lg:w-3/4 mt-2 mb-2 ml-12 mr-12 text-justify">
+          <h4 className="font-sour text-xl font-bold text-green-700">
+            Gut zu wissen!
+          </h4>
+          <p className="font-sour text-md text-primary/90">
             Die Kosten für die Seniorenbetreuung können – sofern ein Pflegegrad
             vorliegt – im Rahmen der <strong>Verhinderungspflege</strong> oder
             zusätzlicher Betreuungs- und Entlastungsleistungen von der
             Pflegekasse übernommen werden.
           </p>
-          <p className="text-sm text-primary/90">
+          <p className="font-sour text-md text-primary/90">
             Wenn Sie wissen möchten, wie man Leistungen der Pflegeversicherung
             beantragt, schauen Sie doch einmal auf der Seite{" "}
-            <strong>Pflegebegutachtung</strong>
-            vorbei.
+            <strong>Pflegebegutachtung</strong> vorbei.
           </p>
         </div>
       </div>

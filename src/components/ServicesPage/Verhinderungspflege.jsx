@@ -1,22 +1,18 @@
-import { useNavigate } from "react-router-dom";
-
 import familyImage from "../../assets/servicePage/service-10.png";
 import infoIcon from "../../assets/servicePage/service-11.png";
 
 import CachedImage from "../CachedImage";
 
 const Verhinderungspflege = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* First Section: Heading and Right Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-xl font-bold text-green-700">
+          <h2 className="font-sour text-xl font-bold text-green-700">
             Verhinderungspflege
           </h2>
-          <h3 className="text-3xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl font-bold text-green-700">
             Weil auch Angehörige mal eine Pause brauchen
           </h3>
           <p className="text-primary/90 text-justify">
@@ -57,7 +53,7 @@ const Verhinderungspflege = () => {
 
       {/* Second Section: Leistungen */}
       <div className="space-y-6 py-24">
-        <h3 className="text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Welche Leistungen beinhaltet die Verhinderungspflege?
         </h3>
         <p className="text-primary/90">
@@ -117,23 +113,29 @@ const Verhinderungspflege = () => {
 
       {/* Third Section: Info Box */}
       <div
-        className="flex flex-col lg:flex-row items-center rounded-lg shadow-xl border-2"
-        style={{ borderColor: "#a0b106" }}
+        className="flex flex-col lg:flex-row items-center rounded-lg shadow-xl border-2 border-primary/80"
+        // style={{ borderColor: "#a0b106" }}
       >
         {/* Left Side: Image */}
         <div className="lg:w-1/4 flex">
-          <CachedImage src={infoIcon} alt="Info Icon" className="w-72 h-40" />
+          <CachedImage
+            src={infoIcon}
+            alt="Info Icon"
+            className="w-full h-60 rounded-tl-lg rounded-bl-lg object-cover"
+          />
         </div>
 
         {/* Right Side: Text */}
-        <div className="lg:w-3/4 px-4 text-justify">
-          <h4 className="text-lg font-bold text-green-700">Gut zu wissen!</h4>
-          <p className="text-sm text-primary/90">
+        <div className="lg:w-3/4 mt-2 mb-2 ml-12 mr-12 text-justify">
+          <h4 className="font-sour text-xl font-bold text-green-700">
+            Gut zu wissen!
+          </h4>
+          <p className="font-sour text-md text-primary/90">
             Die Kosten für die Verhinderungspflege werden bis zu 1.612 Euro
             jährlich und für maximal 6 Wochen durch die Pflegeversicherung (ab
             Pflegegrad 2) übernommen.
           </p>
-          <p className="text-sm text-primary/90">
+          <p className="font-sour text-md text-primary/90">
             Die Leistungen für Verhinderungspflege und Kurzzeitpflege können
             miteinander kombiniert werden: Wenn die Leistungen für
             Kurzzeitpflege im Jahr nicht oder nicht vollständig abgerufen
@@ -146,7 +148,7 @@ const Verhinderungspflege = () => {
 
       {/* Fourth Section: Beratung */}
       <div className="text-center space-y-6 py-24">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
           Nutzen Sie unsere persönliche Beratung
         </h3>
         <p className="text-primary/90 pb-8">
@@ -157,12 +159,12 @@ const Verhinderungspflege = () => {
           Sie und Ihre pflegebedürftigen Angehörigen geeignet sind. So erhalten
           Sie und Ihre Angehörigen die Unterstützung, die Sie benötigen.
         </p>
-        <button
-          className="bg-primary/90 text-white px-6 py-2 rounded-lg shadow-2xl hover:bg-green-700"
-          onClick={() => navigate("/contact")} // Navigate to /contact on click
+        <a
+          href="/contact"
+          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
         >
-          Jetzt Beratung anfragen →
-        </button>
+          Jetzt Kontakt aufnehmen →
+        </a>
       </div>
     </div>
   );

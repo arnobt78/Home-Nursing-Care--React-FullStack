@@ -35,7 +35,7 @@ const ReviewSectionNew = () => {
 
         {/* Review Text */}
         <div className="flex-1 text-center md:text-left">
-          <p className="text-primary/90 text-md xl:text-lg text-justify leading-relaxed italic pb-4">
+          <p className="font-sour text-primary/90 text-md xl:text-lg text-justify leading-relaxed italic pb-4">
             „Pflege zu Hause schenkt uns jeden Tag ein bisschen Lebensfreude.
             Die Betreuer respektieren unsere individuellen Bedürfnisse und
             helfen uns unseren Alltag weiterhin flexibel zu gestalten.“

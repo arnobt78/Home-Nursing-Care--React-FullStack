@@ -65,7 +65,7 @@ const TestimonialSection2 = () => {
           <div className="relative">
             {/* FaQuoteLeft dynamically aligned to the start of the paragraph */}
             <FaQuoteLeft className="absolute -top-2 -left-10 text-primary/90 text-3xl md:text-4xl" />
-            <p className="text-primary/90 text-md text-justify leading-relaxed">
+            <p className="font-sour text-primary/90 text-md text-justify leading-relaxed">
               Bei Sernitas Care stehen die Menschen im Mittelpunkt. Mit Herz,
               Respekt und echter Hingabe kümmern wir uns um das Wohl unserer
               Klientinnen und Klienten. Für uns ist Pflege mehr als nur ein

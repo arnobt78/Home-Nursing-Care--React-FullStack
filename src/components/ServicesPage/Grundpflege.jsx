@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 import { FaCheckCircle } from "react-icons/fa";
 
 import Image from "../../assets/servicePage/service-5.png";
@@ -7,15 +5,15 @@ import Image from "../../assets/servicePage/service-5.png";
 import CachedImage from "../CachedImage";
 
 const Grundpflege = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
-
   return (
     <div className="space-y-6 py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* Text and Image Section */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-xl font-bold text-green-700">Grundpflege</h2>
-          <h3 className="text-3xl font-bold text-green-700">
+          <h2 className="font-sour text-xl font-bold text-green-700">
+            Grundpflege
+          </h2>
+          <h3 className="font-sour text-3xl font-bold text-green-700">
             Wenn der Alltag schwer fällt, sind wir für Sie da
           </h3>
           <p className="text-primary/90 text-justify">
@@ -49,39 +47,39 @@ const Grundpflege = () => {
 
       {/* Cards Section */}
       <div className="mt-8 py-12">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700 pb-8 text-center">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700 pb-8 text-center">
           Leistungsspektrum der Grundpflege
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+        <div className="font-sour text-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Körperpflege
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Betten und Lagern
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             An- und Auskleiden
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Hilfe bei der Nahrungs- & Flüssigkeitsaufnahme
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Aktivierende Pflege zur Förderung der Selbständigkeit
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Unterstützung beim Toilettengang
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Verwendung von Inkontinenz-produkten
           </div>
-          <div className="text-white bg-secondary/80 p-4 rounded-2xl text-center shadow-2xl flex flex-col items-center pt-4">
+          <div className="text-white bg-primary/80 p-12 rounded-2xl text-center shadow-2xl flex flex-col items-center">
             <FaCheckCircle className="text-gray-100 text-3xl flex-shrink-0" />
             Prävention von Dekubitus, Thrombose, usw.
           </div>
@@ -90,21 +88,21 @@ const Grundpflege = () => {
 
       {/* Contact Section */}
       <div className="mt-12 text-center">
-        <h3 className="text-lg xl:text-xl font-bold text-green-700">
+        <h3 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
           Wir sind für Sie da!
         </h3>
-        <p className=" text-primary/90 mt-4">
+        <p className="text-primary/90 mt-4">
           Gerne beraten wir Sie, welche Leistungen für Sie passen. Auf diese
           Weise erhalten Sie eine individuell auf Sie oder Ihre Angehörigen
           abgestimmte Grundpflege. Sie haben Fragen? Auch die beantworten Ihnen
           unsere Mitarbeiter gerne. Rufen Sie uns an!
         </p>
-        <button
-          className="bg-primary/90 text-white px-6 py-3 rounded-lg shadow-2xl hover:bg-green-700 mt-8"
-          onClick={() => navigate("/contact")} // Navigate to /contact on click
+        <a
+          href="/contact"
+          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
         >
           Jetzt Kontakt aufnehmen →
-        </button>
+        </a>
       </div>
     </div>
   );

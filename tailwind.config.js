@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
         ephesis: ["Ephesis", "cursive"],
+        sour: ["Sour Gummy", "cursive"],
       },
       container: {
         center: true,

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { Input } from "../../components/ui/input";
-import { Button } from "../../components/ui/button";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 import { z } from "zod";
 
 import HRImage from "../../assets/aboutPage/hr-1.jpg";
@@ -82,14 +82,14 @@ const HomeConsultationSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-24 px-6 lg:px-12 xl:px-32">
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section className="bg-gray-100 py-24 px-4 lg:px-16">
+      <div className="flex flex-col lg:flex-row gap-12">
         {/* Left Section */}
-        <div className="md:col-span-2 px-6">
-          <h2 className="text-primary/90 text-2xl md:text-3xl font-bold mb-4">
+        <div className="lg:w-[60%] space-y-6">
+          <h2 className="font-sour text-primary/90 text-2xl md:text-3xl font-bold mb-4">
             Mehr Lebensqualität in den eigenen vier Wänden
           </h2>
-          <p className="text-gray-500 leading-relaxed mb-4 text-justify">
+          <p className="text-gray-500 leading-relaxed text-justify">
             Immer mehr Menschen entscheiden sich bewusst für eine Betreuung
             zuhause. Auch im Ruhrgebiet vertrauen viele Pflegebedürftige auf die
             Vorteile der ambulanten Pflege – und damit auf mehr Selbstbestimmung
@@ -124,13 +124,13 @@ const HomeConsultationSection = () => {
             <br />
             Mit Sernitas Care entscheiden Sie sich für einen kultursensiblen
             Pflegedienst, der nicht nur professionell, sondern auch menschlich
-            und mit Respekt für Vielfalt handelt
+            und mit Respekt für Vielfalt handelt.
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="bg-white shadow-2xl rounded-xl items-center text-center px-6 py-8">
-          <h3 className="text-primary/90 text-xl font-bold mb-8">
+        <div className="lg:w-[40%] bg-white shadow-2xl rounded-xl items-center text-center px-6 py-8">
+          <h3 className="font-sour text-primary/90 text-2xl font-bold mb-8">
             Kostenfreie Beratung
           </h3>
           <div className="flex justify-center items-center gap-4 text-center mb-6">
@@ -140,7 +140,7 @@ const HomeConsultationSection = () => {
               className="w-24 h-24 rounded-full object-cover border-2 border-primary/90"
             />
             <div>
-              <p className="font-ephesis text-primary/90 text-2xl font-bold tracking-wide">
+              <p className="font-sour text-primary/90 text-2xl font-bold tracking-wide">
                 Dr. Ali Yildiz
               </p>
               <p className="text-gray-400 text-sm">Mo - Fr 08:00 - 17:00</p>
@@ -148,7 +148,7 @@ const HomeConsultationSection = () => {
             </div>
           </div>
           <form onSubmit={handleSubmit}>
-            <p className="text-primary/90 font-medium mb-8">
+            <p className="font-sour text-primary/90 font-medium text-xl mb-8">
               Wir rufen Sie zurück!
             </p>
             <div className="ml-4 mr-4 mb-4 text-gray-700">
@@ -177,7 +177,7 @@ const HomeConsultationSection = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
               )}
             </div>
-            <div className=" mb-8">
+            <div className="mb-8">
               <label className="flex items-start text-sm text-gray-500">
                 <input
                   type="checkbox"

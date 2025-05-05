@@ -10,7 +10,7 @@ const MapSection = () => {
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-full">
         {/* Text Content */}
         <div className="w-full max-w-full">
-          <h2 className="text-primary/90 text-2xl md:text-3xl font-bold mb-6">
+          <h2 className="font-sour text-primary/90 text-2xl md:text-3xl font-bold mb-6">
             Für Sie durch das Revier
           </h2>
           <p className="text-sm md:text-lg leading-relaxed text-primary/90 mb-4 text-justify">

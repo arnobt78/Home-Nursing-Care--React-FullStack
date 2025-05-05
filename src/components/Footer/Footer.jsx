@@ -36,7 +36,7 @@ const Footer = () => {
     <>
       <ScrollToTop /> {/* Ensure ScrollToTop is included */}
       <AffiliatesSection /> {/* Add AffiliatesSection above the footer */}
-      <footer className="bg-primary text-white py-10">
+      <footer className="bg-primary text-white py-12">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -54,8 +54,10 @@ const Footer = () => {
               alt="Sernitas Logo"
               className="w-[200px] mx-auto md:mx-0"
             />
-            <p className="text-lg">Wir globalisieren die Gesundheit!</p>
-            <p className="text-lg font-medium">Folgen Sie uns</p>
+            <p className="font-sour text-lg">
+              Wir globalisieren die Gesundheit!
+            </p>
+            <p className="font-sour text-lg font-medium">Folgen Sie uns</p>
             <div className="flex justify-center md:justify-start gap-4">
               <a
                 href="https://www.facebook.com/sernitasglobal"

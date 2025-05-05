@@ -36,7 +36,7 @@ const AccordionSection = () => {
         variants={slideUp(0.2)}
         initial="initial"
         animate="animate" // Trigger animation only once
-        className="text-3xl font-bold text-center text-primary/90 mb-10"
+        className="font-sour text-3xl font-bold text-center text-primary/90 mb-10"
       >
         Fragen, die oft gestellt werden – Antworten, die helfen!
       </motion.h2>
