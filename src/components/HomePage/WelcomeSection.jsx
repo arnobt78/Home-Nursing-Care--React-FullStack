@@ -10,10 +10,10 @@ const WelcomeSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Top Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-sour text-primary/90 text-lg md:text-xl font-medium mb-4">
+          <h2 className="font-sour text-primary/90 text-xl lg:text-2xl font-medium mb-4">
             Herzlich Willkommen bei Sernitas Care
           </h2>
-          <h1 className="font-sour text-primary/90 text-2xl md:text-3xl font-bold mb-6 leading-snug">
+          <h1 className="font-sour text-primary/90 text-3xl md:text-4xl font-bold mb-6 leading-snug">
             Professionelle Pflege & Betreuung mit interkulturellem Verständnis
           </h1>
         </div>

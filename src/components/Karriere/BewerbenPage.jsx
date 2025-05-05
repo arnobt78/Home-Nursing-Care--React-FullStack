@@ -79,10 +79,10 @@ const BewerbenPage = () => {
 
         {/* Right Section - Form */}
         <div>
-          <h2 className="text-primary/90 text-2xl xl:text-3xl font-bold mb-6">
+          <h2 className="font-sour text-primary/90 text-2xl xl:text-3xl font-bold mb-12">
             Nehmen Sie Kontakt zu unserem Team auf!
           </h2>
-          <p className="mb-6 text-gray-600">
+          <p className="mb-12 text-primary/90">
             Ob Fachkraft, Gesundheitseinrichtung oder Organisation – wir von
             Sernitas freuen uns, von Ihnen zu hören. Unsere Experten melden sich
             innerhalb kürzester Zeit bei Ihnen.
@@ -115,7 +115,7 @@ const BewerbenPage = () => {
                   </p>
                 )}
               </div>
-              <div>
+              <div className="text-primary/90 ">
                 <label className="text-primary/90 block mb-1">
                   Geschlecht *
                 </label>
@@ -261,7 +261,7 @@ const BewerbenPage = () => {
             )}
             <button
               type="submit"
-              className="bg-primary/90 text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-secondary/90 transition cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-primary/90 text-white px-6 py-3 rounded-2xl text-lg font-medium hover:bg-secondary/90 transition cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Unverbindlich Anfragen
             </button>

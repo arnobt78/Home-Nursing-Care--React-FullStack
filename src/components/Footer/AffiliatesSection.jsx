@@ -116,7 +116,7 @@ const AffiliatesSection = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {/* Header */}
-      <h2 className="font-sour text-3xl font-bold text-center text-primary/90">
+      <h2 className="font-sour text-3xl xl:text-4xl font-bold text-center text-primary/90">
         Unsere Partner
       </h2>
       <div className="container mx-auto flex justify-between items-center gap-4 flex-wrap">

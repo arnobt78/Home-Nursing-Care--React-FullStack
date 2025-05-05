@@ -86,7 +86,7 @@ const HomeConsultationSection = () => {
       <div className="flex flex-col lg:flex-row gap-12">
         {/* Left Section */}
         <div className="lg:w-[60%] space-y-6">
-          <h2 className="font-sour text-primary/90 text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="font-sour text-primary/90 text-3xl lg:text-4xl font-bold mb-4">
             Mehr Lebensqualität in den eigenen vier Wänden
           </h2>
           <p className="text-gray-500 leading-relaxed text-justify">

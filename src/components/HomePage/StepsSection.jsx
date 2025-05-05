@@ -5,10 +5,10 @@ const StepsSection = () => {
     <section className="bg-gray-50 py-24 px-6 md:px-12 xl:px-44">
       <div className="max-w-6xl mx-auto text-center">
         {/* Section Title */}
-        <h2 className="font-sour text-primary/90 text-2xl md:text-3xl font-bold mb-2">
+        <h2 className="font-sour text-primary/90 text-3xl md:text-4xl font-bold mb-2">
           Sie brauchen einen Pflegedienst?
         </h2>
-        <p className="text-secondary font-ephesis text-3xl tracking-wide font-bold mb-8">
+        <p className="text-secondary font-ephesis text-4xl tracking-wide font-bold mb-8">
           So einfach geht’s
         </p>
 

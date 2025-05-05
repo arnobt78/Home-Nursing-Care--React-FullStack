@@ -8,10 +8,10 @@ const Rufbereitschaft = () => {
       {/* First Section: Text and Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8 ">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="font-sour text-xl font-bold text-green-700">
+          <h2 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
             24-STUNDEN-PFLEGE im Revier
           </h2>
-          <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
             PFLEGEBEDÜRFTIGKEIT STETS IN GUTEN HÄNDEN
           </h3>
           <p className="text-primary/90 text-justify">
@@ -34,7 +34,7 @@ const Rufbereitschaft = () => {
 
       {/* Second Section: Vorteile */}
       <div className="space-y-6 py-24">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
           VORTEILE DER 24-STUNDEN-PFLEGE FÜR DIE PFLEGE IM EIGENEN ZUHAUSE
         </h3>
         <p className="text-primary/90 text-justify">

@@ -179,10 +179,10 @@ const Contact = () => {
                 className="bg-primary/90 text-white p-4 md:p-8 xl:p-12 rounded-2xl shadow-2xl w-full"
               >
                 <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-                  <h2 className="text-2xl lg:text-3xl text-white/90">
+                  <h2 className="font-sour text-2xl lg:text-3xl text-white/90">
                     Wir sind für Sie da
                   </h2>
-                  <p className="text-white/70 text-justify">
+                  <p className="text-white/80 text-justify">
                     Treten Sie mit Sernitas Care in Kontakt – wir stehen Ihnen
                     mit vertrauensvoller, einfühlsamer und professioneller
                     Pflege zur Seite. Gemeinsam sorgen wir für mehr

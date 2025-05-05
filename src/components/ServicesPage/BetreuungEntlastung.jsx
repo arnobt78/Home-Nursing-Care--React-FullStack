@@ -14,10 +14,10 @@ const BetreuungEntlastung = () => {
       {/* First Section: Text and Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8 pb-24">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="font-sour text-xl font-bold text-green-700">
+          <h2 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
             Betreuungs- und Entlastungsleistungen
           </h2>
-          <h3 className="font-sour text-3xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
             Den Alltag gemeinsam leichter machen
           </h3>
           <p className="text-primary/90 text-justify">
@@ -60,7 +60,7 @@ const BetreuungEntlastung = () => {
 
       {/* Third Section: Additional Services */}
       <div className="space-y-6 py-24">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700 text-center">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 text-center">
           Diese Zusatzleistungen bieten wir an
         </h3>
         <p className="text-primary/90 text-center pb-12">

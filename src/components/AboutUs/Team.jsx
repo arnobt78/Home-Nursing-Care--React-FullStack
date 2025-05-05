@@ -87,6 +87,25 @@ const Team = () => {
         und entdecken Sie die Gesichter, die unsere Vision von liebevoller,
         hochwertiger Pflege Wirklichkeit werden lassen.
       </p>
+
+      {/* Contact Section */}
+      <div className="mt-12 text-center">
+        <h3 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
+          Wir sind für Sie da!
+        </h3>
+        <p className="text-primary/90 mt-4">
+          Gerne beraten wir Sie, welche Leistungen für Sie passen. Auf diese
+          Weise erhalten Sie eine individuell auf Sie oder Ihre Angehörigen
+          abgestimmte Grundpflege. Sie haben Fragen? Auch die beantworten Ihnen
+          unsere Mitarbeiter gerne. Rufen Sie uns an!
+        </p>
+        <a
+          href="/contact"
+          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
+        >
+          Jetzt Kontakt aufnehmen →
+        </a>
+      </div>
     </div>
   );
 };

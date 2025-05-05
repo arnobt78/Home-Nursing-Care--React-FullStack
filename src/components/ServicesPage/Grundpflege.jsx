@@ -10,10 +10,10 @@ const Grundpflege = () => {
       {/* Text and Image Section */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="font-sour text-xl font-bold text-green-700">
+          <h2 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
             Grundpflege
           </h2>
-          <h3 className="font-sour text-3xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
             Wenn der Alltag schwer fällt, sind wir für Sie da
           </h3>
           <p className="text-primary/90 text-justify">
@@ -47,7 +47,7 @@ const Grundpflege = () => {
 
       {/* Cards Section */}
       <div className="mt-8 py-12">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700 pb-8 text-center">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 pb-8 text-center">
           Leistungsspektrum der Grundpflege
         </h3>
         <div className="font-sour text-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">

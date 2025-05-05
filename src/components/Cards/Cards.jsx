@@ -22,7 +22,7 @@ const Cards = () => {
     <div className="bg-slate-100">
       <div className="container py-24 px-6 lg:px-12 xl:px-44">
         {/* Section Title */}
-        <h2 className="font-sour text-center text-primary/90 text-lg md:text-xl font-medium mb-4">
+        <h2 className="font-sour text-center text-primary/90 text-xl md:text-2xl font-medium mb-4">
           Zuhause in besten Händen
         </h2>
         <motion.h1
@@ -30,7 +30,7 @@ const Cards = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="font-sour text-3xl font-bold text-center text-primary/90 mb-12"
+          className="font-sour text-3xl xl:text-4xl font-bold text-center text-primary/90 mb-12"
         >
           Unsere Leistungen auf einen Blick
         </motion.h1>
