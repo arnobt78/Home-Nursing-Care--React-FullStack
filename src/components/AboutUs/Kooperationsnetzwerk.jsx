@@ -1,16 +1,12 @@
-import { useNavigate } from "react-router-dom";
-
 const Kooperationsnetzwerk = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12">
       {/* Introduction Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
           EIN TEIL VON SERNITAS!
         </h2>
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Kooperationen, die den Unterschied machen
         </h3>
         <p className="text-primary/90 text-justify">
@@ -31,7 +27,7 @@ const Kooperationsnetzwerk = () => {
 
       {/* What Connects Us Section */}
       <div className="space-y-6">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Was uns verbindet:
         </h3>
         <ul className="space-y-4 text-primary/90">
@@ -56,7 +52,7 @@ const Kooperationsnetzwerk = () => {
 
       {/* Vision Section */}
       <div className="space-y-6">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Unsere Vision:
         </h3>
         <p className="text-primary/90 text-justify">
@@ -66,26 +62,9 @@ const Kooperationsnetzwerk = () => {
         </p>
       </div>
 
-      {/* Call to Action Section */}
-      <div className="space-y-6">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
-          Werden Sie Teil unseres Netzwerks
-        </h3>
-        <p className="text-primary/90 text-justify">
-          Möchten Sie gemeinsam mit uns neue Wege in der Pflege gehen? Ob als
-          Pflegeeinrichtung, medizinischer Dienstleister, Bildungsträger oder
-          Technologiepartner – wir freuen uns über jede Kooperation, die unsere
-          Vision teilt.
-        </p>
-        <p className="text-primary/90 text-justify">
-          Kontaktieren Sie uns noch heute und lassen Sie uns gemeinsam die
-          Zukunft der Pflege gestalten!
-        </p>
-      </div>
-
       {/* Card Section */}
       <div className="space-y-6">
-        <h3 className="text-center text-2xl xl:text-3xl font-bold text-green-700 py-12">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-center text-green-700 py-12">
           Für Sie im Überblick
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch text-center">
@@ -134,24 +113,28 @@ const Kooperationsnetzwerk = () => {
         </div>
       </div>
 
-      {/* Contact Section */}
-      <div className="text-center space-y-4 py-12">
-        <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
-          Nehmen Sie Kontakt zu unserem Team auf!
+      {/* Call to Action Section */}
+      <div className="pt-12 space-y-6">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+          Werden Sie Teil unseres Netzwerks
         </h3>
-        <p className="text-primary/90">
-          Ob Fachkraft, Gesundheitseinrichtung oder Organisation – wir von
-          Sernitas freuen uns, von Ihnen zu hören.
+        <p className="text-primary/90 text-justify">
+          Möchten Sie gemeinsam mit uns neue Wege in der Pflege gehen? Ob als
+          Pflegeeinrichtung, medizinischer Dienstleister, Bildungsträger oder
+          Technologiepartner – wir freuen uns über jede Kooperation, die unsere
+          Vision teilt.
         </p>
-        <p className="text-primary/90 pb-6">
-          Unsere Experten melden sich innerhalb kürzester Zeit bei Ihnen.
+        <p className="text-primary/90 text-justify pb-8">
+          Kontaktieren Sie uns noch heute und lassen Sie uns gemeinsam die
+          Zukunft der Pflege gestalten!
         </p>
-        <button
-          onClick={() => navigate("/contact")}
-          className="bg-green-700 text-white px-6 py-3 rounded-xl shadow-2xl hover:bg-green-800 transition"
+
+        <a
+          href="/contact"
+          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
         >
           Jetzt Kontakt aufnehmen →
-        </button>
+        </a>
       </div>
     </div>
   );

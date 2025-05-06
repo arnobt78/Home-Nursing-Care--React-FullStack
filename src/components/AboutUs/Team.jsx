@@ -29,18 +29,18 @@ const Team = () => {
   return (
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* Introduction Section */}
-      <div className="space-y-6 items-center text-center">
-        <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+      <div className="space-y-6 items-center">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
           Lernen Sie die Menschen hinter Sernitas Care kennen
         </h2>
-        <p className="text-primary/90 text-center">
+        <p className="text-primary/90 text-justify">
           Jeder Mensch verdient eine Pflege, die von Respekt, Vertrauen und
           echter Menschlichkeit geprägt ist. Genau dafür stehen die Menschen
           hinter Sernitas Care. Unser Team besteht aus engagierten Fachkräften,
           die ihre Leidenschaft für Pflege und Betreuung tagtäglich in ihre
           Arbeit einbringen.
         </p>
-        <p className="text-primary/90 text-center">
+        <p className="text-primary/90 text-justify">
           Ob in der Geschäftsführung, der Organisation oder im persönlichen
           Austausch – unsere Mitarbeiter sind das Herzstück von Sernitas Care.
           Mit ihrer Fachkompetenz, Empathie und jahrelangen Erfahrung setzen sie
@@ -50,7 +50,7 @@ const Team = () => {
       </div>
 
       {/* Team Members Section */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="my-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {team.map((member, index) => (
           <a
             key={index}
@@ -69,8 +69,8 @@ const Team = () => {
             {/* Overlay with Name and Title */}
             <div className="absolute inset-0 flex flex-col justify-end text-center">
               <div className="bg-black/30 p-2 group-hover:opacity-100 hover:scale-105 transition-opacity duration-300 rounded-b-2xl">
-                <h3 className="text-lg font-bold text-white">{member.name}</h3>
-                <p className="text-sm text-white">{member.title}</p>
+                <h3 className=" text-lg font-bold text-white">{member.name}</h3>
+                <p className="text-md text-white">{member.title}</p>
               </div>
             </div>
           </a>
@@ -78,10 +78,10 @@ const Team = () => {
       </div>
 
       {/* Conclusion Section */}
-      <h2 className="text-2xl xl:text-3xl font-bold text-green-700 mt-16 text-center">
+      <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 text-center">
         Gemeinsam für Ihre Pflege
       </h2>
-      <p className="pt-12 text-primary/90 text-center">
+      <p className="pt-12 text-primary/90 text-justify">
         Wir glauben daran, dass wahre Qualität in der Pflege nur mit Herzblut
         und echter Hingabe erreicht werden kann. Lernen Sie unser Team kennen
         und entdecken Sie die Gesichter, die unsere Vision von liebevoller,
@@ -93,7 +93,7 @@ const Team = () => {
         <h3 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
           Wir sind für Sie da!
         </h3>
-        <p className="text-primary/90 mt-4">
+        <p className="text-primary/90 mt-4 pb-8 text-justify">
           Gerne beraten wir Sie, welche Leistungen für Sie passen. Auf diese
           Weise erhalten Sie eine individuell auf Sie oder Ihre Angehörigen
           abgestimmte Grundpflege. Sie haben Fragen? Auch die beantworten Ihnen

@@ -7,8 +7,8 @@ const Leitbild = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* Text and Image Section */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
-        <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <div className="lg:w-1/2 space-y-6">
+          <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
             Unser Leitbild
           </h2>
           <p className="text-primary/90 text-justify">
@@ -36,10 +36,10 @@ const Leitbild = () => {
 
       {/* What Sets Us Apart Section */}
       <div className="mt-12 space-y-6">
-        <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
           Was uns auszeichnet
         </h3>
-        <ul className="space-y-4 text-primary/90">
+        <ul className="space-y-6 text-primary/90">
           <li className="flex items-start gap-2">
             <span className="text-green-700 font-bold">✔</span> Individuelle
             Pflegepläne: Keine Pflege von der Stange – wir gestalten unsere
@@ -65,10 +65,10 @@ const Leitbild = () => {
 
       {/* Values Section */}
       <div className="mt-12 space-y-6">
-        <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
           Unsere Werte
         </h3>
-        <ul className="space-y-4 text-primary/90">
+        <ul className="space-y-6 text-primary/90">
           <li className="flex items-start gap-2">
             <span className="text-green-700 font-bold">✔</span> Wertschätzung
             gegenüber jedem Menschen
@@ -89,11 +89,11 @@ const Leitbild = () => {
       </div>
 
       {/* Quality of Life Section */}
-      <div className="mt-12">
-        <h3 className="text-2xl xl:text-3xl font-bold text-green-700">
+      <div className="mt-12 space-y-6">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
           Gemeinsam für Ihre Lebensqualität
         </h3>
-        <p className="text-primary/90 mt-4 text-justify">
+        <p className="text-primary/90 text-justify">
           Unser Ziel ist es, die Pflege so zu gestalten, dass sie Lebensfreude
           erhält und neue Perspektiven eröffnet. Denn echte Fürsorge bedeutet,
           das Leben unserer Klienten nachhaltig zu bereichern – Tag für Tag.

@@ -3,10 +3,10 @@ const MitgliedschaftBAP = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12">
       {/* Header Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
           Mitgliedschaft im bpa
         </h2>
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Gemeinsam stark für eine bessere Pflege
         </h3>
         <p className="text-primary/90 text-justify">
@@ -26,10 +26,10 @@ const MitgliedschaftBAP = () => {
 
       {/* Why We Are Members Section */}
       <div className="space-y-6">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Warum wir Mitglied sind
         </h3>
-        <ul className="space-y-4 text-primary/90">
+        <ul className="space-y-6 text-primary/90">
           <li className="flex items-start gap-2">
             <span className="text-green-700 font-bold">✔</span> von aktuellen
             Fachinformationen und rechtlichen Entwicklungen zu profitieren,
@@ -60,7 +60,7 @@ const MitgliedschaftBAP = () => {
 
       {/* Joint Efforts Section */}
       <div className="space-y-6">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Gemeinsam mehr erreichen
         </h3>
         <p className="text-primary/90 text-justify">
@@ -84,7 +84,7 @@ const MitgliedschaftBAP = () => {
 
       {/* About BPA Section */}
       <div className="space-y-6">
-        <h3 className="text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
           Über den bpa
         </h3>
         <p className="text-primary/90 text-justify">
@@ -127,7 +127,7 @@ const MitgliedschaftBAP = () => {
       <div className="text-center">
         <button
           onClick={() => window.open("https://www.bpa.de/", "_blank")}
-          className="bg-green-700 text-white px-6 py-3 rounded-xl shadow-2xl hover:bg-green-800 transition"
+          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
         >
           Mehr erfahren →
         </button>

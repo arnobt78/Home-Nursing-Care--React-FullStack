@@ -7,15 +7,16 @@ const WirSindSernitas = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* Text and Image Section */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
-        <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-xl font-bold text-green-700">
+        <div className="lg:w-1/2 space-y-6">
+          <h2 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
             Wir sind Sernitas
           </h2>
 
-          <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+          <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 pb-6">
             Unsere Philosophie – Pflege, die den Menschen in den Mittelpunkt
             stellt
           </h2>
+
           <p className="text-primary/90 text-justify leading-relaxed">
             Bei Sernitas Care verstehen wir Pflege als Berufung – getragen von
             Menschlichkeit, Respekt und einem ganzheitlichen Blick auf den
@@ -54,7 +55,7 @@ const WirSindSernitas = () => {
         </div>
       </div>
 
-      <h3 className="text-2xl xl:text-3xl font-bold text-green-700 pt-12">
+      <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 pt-12 pb-6">
         Gemeinsam für eine bessere Pflege
       </h3>
       <p className="text-primary/90 text-justify leading-relaxed">
@@ -64,6 +65,8 @@ const WirSindSernitas = () => {
         Unterstützung zu bieten. Unser Ziel ist es, ein Umfeld zu schaffen, in
         dem sich jeder sicher und geborgen fühlt.
       </p>
+      <br />
+
       <p className="text-primary/90 text-justify leading-relaxed">
         Mit unserer langjährigen Erfahrung und unserem umfassenden Fachwissen
         setzen wir uns dafür ein, die Lebensqualität unserer Klienten zu
