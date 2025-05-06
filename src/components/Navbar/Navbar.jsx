@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { slideBottom } from "../../utility/animation";
 
@@ -9,6 +9,13 @@ import CachedImage from "../CachedImage";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // State for search bar
+  const [searchQuery, setSearchQuery] = useState(""); // State for search input
+  const [searchResults, setSearchResults] = useState([]); // State for search results
+  const [isSearchListVisible, setIsSearchListVisible] = useState(false); // State for search list visibility
+
+  const searchRef = useRef(null); // Ref for the search bar container
+  const inputRef = useRef(null); // Ref for the search input
 
   // Define hideDropdownTimeout
   let hideDropdownTimeout;
@@ -16,6 +23,66 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+    setSearchQuery(""); // Clear search query when toggling
+    setSearchResults([]); // Clear search results when toggling
+    setIsSearchListVisible(false); // Hide search list when toggling
+  };
+
+  const handleSearch = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+
+    // Example searchable items (replace with actual data from your project)
+    const searchableItems = [
+      { title: "Unsere Leistungen", link: "/services/grundpflege" },
+      { title: "Über uns", link: "/about-us/wir-sind-sernitas" },
+      { title: "Wissenswertes", link: "/wissenswertes/faq" },
+      { title: "Karriere", link: "/karriere" },
+      { title: "Kontakt", link: "/contact" },
+      { title: "Impressum", link: "/imprint" },
+      { title: "Datenschutz", link: "/privacy-policy" },
+      { title: "AGB", link: "/general-terms" },
+    ];
+
+    // Filter results based on the query
+    const results = searchableItems.filter((item) =>
+      item.title.toLowerCase().includes(query)
+    );
+    setSearchResults(results);
+    setIsSearchListVisible(true); // Show search list when typing
+  };
+
+  // Close search bar or list when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target) &&
+        inputRef.current &&
+        !inputRef.current.contains(event.target)
+      ) {
+        // Hide both search bar and search list when clicking outside the entire search bar area
+        setIsSearchListVisible(false);
+        setIsSearchOpen(false);
+      } else if (
+        searchRef.current &&
+        searchRef.current.contains(event.target) &&
+        inputRef.current &&
+        !inputRef.current.contains(event.target)
+      ) {
+        // Hide only the search list when clicking inside the search bar area but outside the search list
+        setIsSearchListVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const navItems = [
     {
@@ -70,7 +137,7 @@ const Navbar = () => {
           <a href="/" className="flex items-center cursor-pointer">
             <CachedImage
               src={Logo}
-              alt="Logo"
+              alt="sernitas care logo"
               className="w-[180px] md:w-[200px] hover:scale-105 transition-transform duration-300"
             />
           </a>
@@ -163,7 +230,7 @@ const Navbar = () => {
               </li>
 
               {/* Language Selector */}
-              <li className="relative group flex items-center">
+              {/* <li className="relative group flex items-center">
                 <button className="uppercase text-lg font-bold hover:text-secondary flex items-center gap-2 justify-center">
                   <i className="fas fa-globe"></i>
                 </button>
@@ -173,22 +240,25 @@ const Navbar = () => {
                       Deutsch
                     </button>
                   </li>
-                  {/* <li>
+                  <li>
                     <button className="block px-2 py-1 text-white hover:text-secondary hover:bg-white/10 rounded">
                       Türkisch
                     </button>
-                  </li> */}
+                  </li>
                   <li>
                     <button className="block px-2 py-1 text-white hover:text-secondary hover:bg-white/10 rounded">
                       Englisch
                     </button>
                   </li>
                 </ul>
-              </li>
+              </li> */}
 
               {/* Search Icon */}
               <li className="flex items-center">
-                <button className="text-white text-lg font-bold hover:text-secondary flex items-center justify-center">
+                <button
+                  onClick={toggleSearch}
+                  className="text-white text-lg font-bold hover:text-secondary flex items-center justify-center"
+                >
                   <i className="fas fa-search"></i>
                 </button>
               </li>
@@ -210,6 +280,49 @@ const Navbar = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Search Bar */}
+      {isSearchOpen && (
+        <div
+          ref={searchRef} // Attach ref to the search bar container
+          className="fixed w-full bg-primary/90 py-4 px-16 xl:px-32 border-t-2 border-secondary/90 text-white/90 z-50"
+          style={{ marginTop: "4rem" }}
+        >
+          <div className="container mx-auto">
+            <input
+              ref={inputRef} // Attach ref to the search input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearch}
+              placeholder="Suche..."
+              className="search-input"
+              onFocus={() => setIsSearchListVisible(true)} // Show list on focus
+            />
+            {isSearchListVisible && searchResults.length > 0 && (
+              <ul className="mt-4 bg-gray-100 shadow-lg rounded-lg">
+                {searchResults.map((result, index) => (
+                  <li
+                    key={index}
+                    className="border-b last:border-none text-primary/90"
+                  >
+                    <a
+                      href={result.link}
+                      className="block px-4 py-2 hover:bg-gray-200"
+                    >
+                      {result.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {searchQuery &&
+              isSearchListVisible &&
+              searchResults.length === 0 && (
+                <p className="mt-4 text-gray-300">Keine Ergebnisse gefunden.</p>
+              )}
+          </div>
+        </div>
+      )}
 
       {/* Mobile Menu */}
       {isMenuOpen && (

@@ -35,7 +35,6 @@ const BewerbenPage = () => {
     handleSubmit,
     formState: { errors },
     reset,
-    watch,
   } = useForm({
     resolver: zodResolver(BewerbenSchema),
   });
