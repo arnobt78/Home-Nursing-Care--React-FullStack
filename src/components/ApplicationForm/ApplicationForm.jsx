@@ -152,17 +152,25 @@ const ApplicationForm = () => {
   return (
     <>
       {/* Header Section */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <CachedImage
           src={application1}
           alt="Header"
-          className="w-full h-[800px] object-contain lg:object-cover"
+          className="w-full h-[400px] object-cover"
         />
-      </div>
+      </div> */}
+      {/* Hero Section */}
+      <section className="relative bg-cover bg-center h-[400px] flex items-center justify-center">
+        <CachedImage
+          src={application1}
+          alt="Header"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </section>
 
       {/* New Text Section */}
       <div className="bg-primary/90 text-white py-12 xl:py-24 px-6 lg:px-12 xl:px-32  space-y-12">
-        <h1 className="text-2xl xl:text-3xl font-bold text-center">
+        <h1 className="font-sour text-3xl xl:text-4xl font-bold text-center">
           Jetzt kostenlos beraten lassen – Bewerben Sie sich bei Sernitas Care
         </h1>
         <p className="text-white/90 text-justify">

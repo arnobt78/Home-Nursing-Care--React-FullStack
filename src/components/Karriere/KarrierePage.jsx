@@ -46,10 +46,13 @@ const KarrierePage = () => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center h-[400px] flex items-center justify-center"
-        style={{ backgroundImage: `url(${karriereImage1})` }}
-      ></section>
+      <section className="relative bg-cover bg-center h-[400px] flex items-center justify-center">
+        <CachedImage
+          src={karriereImage1}
+          alt="Karriere"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </section>
 
       {/* Introduction Section */}
       <section className="py-12 xl:py-24 px-6 lg:px-12 xl:32  bg-slate-100">
