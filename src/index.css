@@ -51,7 +51,7 @@ main {
 .styled-content h3 {
   font-size: 1.5rem; /* Tailwind equivalent: text-xl */
   font-weight: 700; /* Tailwind equivalent: font-bold */
-  color: #144647; /* Tailwind equivalent: text-gray-800 */
+  color: #144647/90; /* Tailwind equivalent: text-gray-800 */
   margin-bottom: 0.5rem; /* Tailwind equivalent: mb-2 */
   border-bottom: 2px solid #e5e7eb; /* Tailwind equivalent: border-gray-200 */
   padding-bottom: 0.25rem; /* Tailwind equivalent: pb-1 */
@@ -157,6 +157,7 @@ input[type="date"].search-input::-webkit-calendar-picker-indicator {
 }
 
 /* Add a specific class for HomeConsultationSection input fields */
+/* Add a specific class for HomeConsultationSection input fields */
 .home-consultation-input {
   all: unset;
   width: 100%;
@@ -164,8 +165,9 @@ input[type="date"].search-input::-webkit-calendar-picker-indicator {
   border-bottom: 1px solid #737e90;
   outline: none;
   box-sizing: border-box;
-  color: #514f4f;
+  color: #514f4f; /* Set a default color */
 }
+
 /* Style for <select> with home-consultation-input */
 select.home-consultation-input {
   appearance: none; /* Remove default browser styles */
@@ -181,7 +183,7 @@ select.home-consultation-input {
   border-bottom: 1px solid #737e90; /* Bottom border */
   outline: none; /* Remove default focus outline */
   box-sizing: border-box; /* Include padding and border in width calculation */
-  color: #adb1b7; /* Text color for input value */
+  color: #144647; /* Allow the color to be overridden by conditional classes */
 }
 
 select.home-consultation-input:focus {

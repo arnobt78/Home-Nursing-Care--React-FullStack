@@ -35,6 +35,7 @@ const BewerbenPage = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    watch,
   } = useForm({
     resolver: zodResolver(BewerbenSchema),
   });
@@ -87,13 +88,14 @@ const BewerbenPage = () => {
             Sernitas freuen uns, von Ihnen zu hören. Unsere Experten melden sich
             innerhalb kürzester Zeit bei Ihnen.
           </p>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+
+          <form onSubmit={handleSubmit(onSubmit)} className=" space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="text-primary/90 block mb-1">Vorname *</label>
                 <input
                   {...register("firstname")}
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                   placeholder="Vorname"
                 />
                 {errors.firstname && (
@@ -106,7 +108,7 @@ const BewerbenPage = () => {
                 <label className="text-primary/90 block mb-1">Nachname *</label>
                 <input
                   {...register("lastname")}
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                   placeholder="Nachname"
                 />
                 {errors.lastname && (
@@ -115,13 +117,14 @@ const BewerbenPage = () => {
                   </p>
                 )}
               </div>
+
               <div className="text-primary/90 ">
                 <label className="text-primary/90 block mb-1">
                   Geschlecht *
                 </label>
                 <select
                   {...register("gender")}
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                 >
                   <option value="">Bitte auswählen</option>
                   <option value="Männlich">Männlich</option>
@@ -140,7 +143,7 @@ const BewerbenPage = () => {
                 </label>
                 <select
                   {...register("degree")}
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                 >
                   <option value="">Bitte auswählen</option>
                   <option value="Ausbildung">Ausbildung</option>
@@ -155,13 +158,14 @@ const BewerbenPage = () => {
                   </p>
                 )}
               </div>
+
               <div>
                 <label className="text-primary/90 block mb-1">
                   Unternehmen *
                 </label>
                 <input
                   {...register("company")}
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                   placeholder="Unternehmen"
                 />
                 {errors.company && (
@@ -176,7 +180,7 @@ const BewerbenPage = () => {
                 </label>
                 <input
                   {...register("country")}
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                   placeholder="Aufenthaltsland"
                 />
                 {errors.country && (
@@ -190,7 +194,7 @@ const BewerbenPage = () => {
                 <input
                   {...register("email")}
                   type="email"
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                   placeholder="E-Mail"
                 />
                 {errors.email && (
@@ -216,7 +220,7 @@ const BewerbenPage = () => {
                 </label>
                 <input
                   {...register("linkedin")}
-                  className="input home-consultation-input"
+                  className="home-consultation-input"
                   placeholder="LinkedIn Profil"
                 />
                 {errors.linkedin && (

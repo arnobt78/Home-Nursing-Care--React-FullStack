@@ -220,7 +220,7 @@ const ApplicationForm = () => {
       {/* Application Form */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-12 mx-auto bg-primary/90 text-white  px-6 lg:px-12 xl:px-32 pb-24"
+        className="space-y-12 mx-auto bg-primary/90 text-white px-6 lg:px-12 xl:px-32 pb-24"
       >
         {/* First Name and Last Name */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -119,14 +119,15 @@ const AffiliatesSection = () => {
       <h2 className="font-sour text-3xl xl:text-4xl font-bold text-center text-primary/90">
         Unsere Partner
       </h2>
-      <div className="container mx-auto flex justify-between items-center gap-4 flex-wrap">
+
+      <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 lg:grid-cols-[repeat(auto-fit,minmax(0,1fr))] xl:grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-4">
         {affiliates.map((affiliate) => (
           <motion.a
             key={affiliate.id}
             href={affiliate.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex justify-center items-center my-12"
+            className="flex justify-center items-center my-12"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}

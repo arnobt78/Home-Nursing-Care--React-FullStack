@@ -43,14 +43,14 @@ const PartnersSection = () => {
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div className="container mx-auto flex justify-between items-center gap-4">
+      <div className="container mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-4">
         {partners.map((partner) => (
           <motion.a
             key={partner.id}
             href={partner.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex justify-center items-center"
+            className="flex justify-center items-center"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
