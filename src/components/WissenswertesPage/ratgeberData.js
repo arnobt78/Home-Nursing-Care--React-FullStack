@@ -13,10 +13,10 @@ const blogData = [
     title:
       "Pflegeformen im Überblick – Sernitas Care Pflegedienst Wattenscheid",
     description: `
-<p><strong>Welche gibt es?</strong></p>
+<h3>Welche gibt es?</strong></h3>
 <p>Benötigt ein/e Angehörige/r Pflege, bieten sich verschiedene Pflegeformen an, die sicherzustellen, dass die/der Pflegebedürftige jederzeit optimal versorgt ist. Erfahren Sie, welche Optionen Sie haben und wägen Sie ab, welche für Ihre Situation die richtige ist.</p>
 
-<h2>Häusliche und stationäre Pflege</h2>
+<h3>Häusliche und stationäre Pflege</h3>
 
 <h3>Pflegeformen im Überblick</h3>
 <ul>
@@ -392,7 +392,7 @@ const blogData = [
   {
     id: 5,
     title:
-      "Finanzierungsmöglichkeiten der ambulanten Pflege für Pflegegradinhaber und Selbstzahler",
+      "Finanzierungs möglichkeiten der ambulanten Pflege für Pflegegradinhaber und Selbstzahler",
     description: `
 <p>Die finanzielle Planung der ambulanten Pflege kann für viele Familien eine Herausforderung sein. Unabhängig davon, ob Sie Pflegegradinhaber oder Selbstzahler sind, gibt es verschiedene Wege, die Pflege zu finanzieren. Bei PflegePlus bekommen Sie alles aus einer Hand: Pflege und Betreuung für Pflegegradinhaber und Selbstzahler – und wir unterstützen Sie bei der Antragsstellung und individuellen Beratung. Sie können außerdem Ihre Leistungen privat aufstocken und die vollen Budgettöpfe der Pflegekassen ausschöpfen, um das zu bekommen, was Ihnen zusteht.</p>
 

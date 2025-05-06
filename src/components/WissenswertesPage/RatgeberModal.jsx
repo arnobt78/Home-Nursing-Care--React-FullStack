@@ -79,21 +79,18 @@
 // export default RatgeberModal;
 
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
 
 import CachedImage from "../CachedImage";
 
 const RatgeberModal = ({ isOpen, onClose, RatgeberData }) => {
-  const navigate = useNavigate();
-
   if (!isOpen) return null;
 
   return (
     <div
       className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-start overflow-y-auto"
-      style={{ marginTop: "4rem" }} // Ensure modal starts below the navbar
+      style={{ marginTop: "4rem" }}
     >
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-7xl overflow-hidden">
+      <div className="bg-white w-full max-w-7xl overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -126,16 +123,17 @@ const RatgeberModal = ({ isOpen, onClose, RatgeberData }) => {
 
         {/* Footer Buttons */}
         <div className="flex justify-between p-6 md:p-12">
-          <button
-            onClick={() => navigate("/contact")}
-            className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary"
+          <a
+            href="/contact"
+            className="bg-primary/90 text-white px-6 py-3 rounded-xl hover:bg-secondary transition duration-300"
           >
-            Unverbindlich Kontakt aufnehmen
-          </button>
+            Unverbindlich Kontakt aufnehmen →
+          </a>
+
           <button
             type="button"
             onClick={onClose}
-            className="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-400 transition"
+            className="bg-gray-300 text-gray-700 px-6 py-3 rounded-xl hover:bg-gray-400 transition duration-300"
           >
             Zurück zu Pflege-Ratgeber
           </button>
