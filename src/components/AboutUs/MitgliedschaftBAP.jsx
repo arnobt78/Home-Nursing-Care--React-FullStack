@@ -3,10 +3,10 @@ const MitgliedschaftBAP = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12">
       {/* Header Section */}
       <div className="space-y-6">
-        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Mitgliedschaft im bpa
         </h2>
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Gemeinsam stark für eine bessere Pflege
         </h3>
         <p className="text-primary/90 text-justify">
@@ -26,7 +26,7 @@ const MitgliedschaftBAP = () => {
 
       {/* Why We Are Members Section */}
       <div className="space-y-6">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Warum wir Mitglied sind
         </h3>
         <ul className="space-y-6 text-primary/90">
@@ -60,7 +60,7 @@ const MitgliedschaftBAP = () => {
 
       {/* Joint Efforts Section */}
       <div className="space-y-6">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Gemeinsam mehr erreichen
         </h3>
         <p className="text-primary/90 text-justify">
@@ -84,7 +84,7 @@ const MitgliedschaftBAP = () => {
 
       {/* About BPA Section */}
       <div className="space-y-6">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Über den bpa
         </h3>
         <p className="text-primary/90 text-justify">

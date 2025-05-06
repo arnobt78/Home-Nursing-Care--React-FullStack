@@ -3,10 +3,10 @@ const Kooperationsnetzwerk = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12">
       {/* Introduction Section */}
       <div className="space-y-6">
-        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           EIN TEIL VON SERNITAS!
         </h2>
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Kooperationen, die den Unterschied machen
         </h3>
         <p className="text-primary/90 text-justify">
@@ -27,7 +27,7 @@ const Kooperationsnetzwerk = () => {
 
       {/* What Connects Us Section */}
       <div className="space-y-6">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Was uns verbindet:
         </h3>
         <ul className="space-y-4 text-primary/90">
@@ -52,7 +52,7 @@ const Kooperationsnetzwerk = () => {
 
       {/* Vision Section */}
       <div className="space-y-6">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Unsere Vision:
         </h3>
         <p className="text-primary/90 text-justify">
@@ -64,12 +64,12 @@ const Kooperationsnetzwerk = () => {
 
       {/* Card Section */}
       <div className="space-y-6">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-center text-green-700 py-12">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-center text-primary/90 py-12">
           Für Sie im Überblick
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch text-center">
           <div className="bg-white rounded-2xl shadow-2xl p-8 flex flex-col h-full">
-            <h4 className="text-lg font-bold text-green-700">
+            <h4 className="text-lg font-bold text-primary/90">
               Einzelpartnerschaft
             </h4>
             <p className="text-primary/90 mt-2">
@@ -80,7 +80,7 @@ const Kooperationsnetzwerk = () => {
             </p>
           </div>
           <div className="bg-white rounded-2xl shadow-2xl p-8 flex flex-col h-full">
-            <h4 className="text-lg font-bold text-green-700">
+            <h4 className="text-lg font-bold text-primary/90">
               Beratungsorganisationen und Agenturen
             </h4>
             <p className="text-primary/90 mt-2">
@@ -91,7 +91,7 @@ const Kooperationsnetzwerk = () => {
             </p>
           </div>
           <div className="bg-white rounded-2xl shadow-2xl p-8 flex flex-col h-full">
-            <h4 className="text-lg font-bold text-green-700">Sprachschulen</h4>
+            <h4 className="text-lg font-bold text-primary/90">Sprachschulen</h4>
             <p className="text-primary/90 mt-2">
               Sie sind eine Sprachschule, die Sprachkurse auf den Niveaustufen
               A1 bis B2 anbietet und möchten mit uns kooperieren? Dann
@@ -99,7 +99,7 @@ const Kooperationsnetzwerk = () => {
             </p>
           </div>
           <div className="bg-white rounded-2xl shadow-2xl p-8 flex flex-col h-full">
-            <h4 className="text-lg font-bold text-green-700">
+            <h4 className="text-lg font-bold text-primary/90">
               Bildungseinrichtungen
             </h4>
             <p className="text-primary/90 mt-2">
@@ -115,7 +115,7 @@ const Kooperationsnetzwerk = () => {
 
       {/* Call to Action Section */}
       <div className="pt-12 space-y-6">
-        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Werden Sie Teil unseres Netzwerks
         </h3>
         <p className="text-primary/90 text-justify">

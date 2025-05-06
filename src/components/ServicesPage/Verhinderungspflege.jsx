@@ -9,10 +9,10 @@ const Verhinderungspflege = () => {
       {/* First Section: Heading and Right Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
+          <h2 className="font-sour text-xl xl:text-2xl font-bold text-primary/90">
             Verhinderungspflege
           </h2>
-          <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
             Weil auch Angehörige mal eine Pause brauchen
           </h3>
           <p className="text-primary/90 text-justify">
@@ -53,7 +53,7 @@ const Verhinderungspflege = () => {
 
       {/* Second Section: Leistungen */}
       <div className="space-y-6 py-24">
-        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Welche Leistungen beinhaltet die Verhinderungspflege?
         </h3>
         <p className="text-primary/90">
@@ -113,7 +113,7 @@ const Verhinderungspflege = () => {
 
       {/* Third Section: Info Box */}
       <div
-        className="flex flex-col lg:flex-row items-center rounded-lg shadow-xl border-2 border-primary/80"
+        className="flex flex-col lg:flex-row items-center rounded-3xl shadow-2xl border-2 border-primary/80"
         // style={{ borderColor: "#a0b106" }}
       >
         {/* Left Side: Image */}
@@ -121,7 +121,7 @@ const Verhinderungspflege = () => {
           <CachedImage
             src={infoIcon}
             alt="Info Icon"
-            className="w-full h-60 rounded-tl-lg rounded-bl-lg object-cover"
+            className="w-full h-60 rounded-tl-3xl rounded-bl-3xl object-cover"
           />
         </div>
 
@@ -148,7 +148,7 @@ const Verhinderungspflege = () => {
 
       {/* Fourth Section: Beratung */}
       <div className="text-center space-y-6 py-24">
-        <h3 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-xl xl:text-2xl font-bold text-primary/90">
           Nutzen Sie unsere persönliche Beratung
         </h3>
         <p className="text-primary/90 pb-8">

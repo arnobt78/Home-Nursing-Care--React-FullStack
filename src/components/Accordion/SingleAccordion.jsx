@@ -8,7 +8,7 @@ const SingleAccordion = ({ title, info, isActive, onToggle }) => {
 
   return (
     <motion.article
-      className="question mb-8"
+      className="question mb-12"
       initial={!hasAnimated ? { opacity: 0, y: 20 } : false}
       animate={!hasAnimated ? { opacity: 1, y: 0 } : false}
       transition={{ duration: 0.5, ease: "easeOut" }}

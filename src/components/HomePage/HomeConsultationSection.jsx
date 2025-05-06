@@ -82,7 +82,7 @@ const HomeConsultationSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-24 px-4 lg:px-16">
+    <section className="bg-gray-100 py-24 px-4 lg:px-12 xl:px-44">
       <div className="flex flex-col lg:flex-row gap-12">
         {/* Left Section */}
         <div className="lg:w-[60%] space-y-6">

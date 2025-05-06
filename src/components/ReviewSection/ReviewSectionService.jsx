@@ -15,7 +15,7 @@ const ReviewSectionNew = () => {
   const videoUrl = "https://www.youtube.com/embed/5ORB8IWFxMo"; // Replace with your YouTube video ID
 
   return (
-    <section className="bg-gray-200 py-16 px-6 lg:px-12 rounded-lg shadow-xl">
+    <section className="bg-gray-200 py-16 px-6 lg:px-12 rounded-3xl shadow-xl">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
         {/* Image with Play Button */}
         <div className="relative flex-shrink-0">

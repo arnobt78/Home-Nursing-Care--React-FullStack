@@ -26,7 +26,7 @@ const PflegeRatgeber = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12">
       {/* Header Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           PflegeRatgeber – Ihr Leitfaden für eine individuelle Pflege
         </h2>
         <p className="text-primary/90 text-justify">
@@ -38,7 +38,7 @@ const PflegeRatgeber = () => {
           Sie mit den nötigen Informationen zu versorgen, die Ihnen helfen, die
           besten Entscheidungen für die Pflege Ihrer Liebsten zu treffen.
         </p>
-        <h3 className="text-xl font-bold text-green-700">
+        <h3 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Unsere Expertise für Ihre Sicherheit und Unterstützung
         </h3>
         <p className="text-primary/90 text-justify">
@@ -51,7 +51,7 @@ const PflegeRatgeber = () => {
           Sie stets gut informiert sind und die Pflegebedürfnisse Ihrer
           Angehörigen optimal erfüllt werden.
         </p>
-        <h4 className="text-lg font-bold text-green-700">
+        <h4 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Themen, die Sie erwarten:
         </h4>
         <ul className="space-y-2">
@@ -76,7 +76,7 @@ const PflegeRatgeber = () => {
             sicher und effektiv zu gestalten.
           </li>
         </ul>
-        <h4 className="text-lg font-bold text-green-700">
+        <h4 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
           Warum Sernitas Care?
         </h4>
         <p className="text-primary/90 text-justify">

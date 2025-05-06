@@ -98,7 +98,7 @@ const Downloads = () => {
       <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12 items-center text-center justify-center">
         {sections.map((section, index) => (
           <div key={index} className="mb-16">
-            <h2 className=" items-start text-2xl xl:text-3xl text-primary/90 font-bold mb-12">
+            <h2 className=" items-start font-sour text-3xl xl:text-4xl text-primary/90 font-bold mb-12">
               {section.title}
             </h2>
             <ul>

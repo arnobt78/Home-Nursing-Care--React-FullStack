@@ -8,11 +8,11 @@ const WirSindSernitas = () => {
       {/* Text and Image Section */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-6">
-          <h2 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
+          <h2 className="font-sour text-xl xl:text-2xl font-bold text-primary/90">
             Wir sind Sernitas
           </h2>
 
-          <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 pb-6">
+          <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90 pb-6">
             Unsere Philosophie – Pflege, die den Menschen in den Mittelpunkt
             stellt
           </h2>
@@ -55,7 +55,7 @@ const WirSindSernitas = () => {
         </div>
       </div>
 
-      <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 pt-12 pb-6">
+      <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90 pt-12 pb-6">
         Gemeinsam für eine bessere Pflege
       </h3>
       <p className="text-primary/90 text-justify leading-relaxed">

@@ -65,10 +65,10 @@ const WissenswertesPage = () => {
               key={index}
               to={tab.path} // Use absolute paths here
               className={({ isActive }) =>
-                `text-sm xl:text-lg font-medium pb-2 ${
+                `text-md xl:text-xl font-bold pb-2 ${
                   isActive
                     ? "text-green-700 border-b-2 border-green-700"
-                    : "text-gray-600 hover:text-green-700"
+                    : "text-primary/90 hover:text-green-700"
                 }`
               }
             >

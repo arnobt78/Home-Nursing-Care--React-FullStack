@@ -30,7 +30,7 @@ const Team = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44">
       {/* Introduction Section */}
       <div className="space-y-6 items-center">
-        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Lernen Sie die Menschen hinter Sernitas Care kennen
         </h2>
         <p className="text-primary/90 text-justify">
@@ -78,7 +78,7 @@ const Team = () => {
       </div>
 
       {/* Conclusion Section */}
-      <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 text-center">
+      <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90 text-center">
         Gemeinsam für Ihre Pflege
       </h2>
       <p className="pt-12 text-primary/90 text-justify">
@@ -90,7 +90,7 @@ const Team = () => {
 
       {/* Contact Section */}
       <div className="mt-12 text-center">
-        <h3 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
+        <h3 className="font-sour text-xl xl:text-2xl font-bold text-primary/90">
           Wir sind für Sie da!
         </h3>
         <p className="text-primary/90 mt-4 pb-8 text-justify">

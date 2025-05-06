@@ -55,7 +55,7 @@ const Aktuelles = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12">
       {/* Header Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Aktuelles bei Sernitas Care
         </h2>
         <p className="text-primary/90 text-justify">
@@ -78,10 +78,10 @@ const Aktuelles = () => {
 
       {/* Social Media Section */}
       <div className="text-center space-y-6 py-12">
-        <h2 className="text-2xl xl:text-3xl font-bold text-green-700 pb-4">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Sernitas in den sozialen Medien
         </h2>
-        <div className="flex justify-center gap-12 pb-4">
+        <div className="flex justify-center gap-16 py-12">
           <a
             href="https://www.facebook.com/sernitasglobal"
             target="_blank"

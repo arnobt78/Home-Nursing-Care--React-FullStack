@@ -26,7 +26,7 @@ const PflegeBlog = () => {
     <div className="py-12 xl:py-24 px-6 lg:px-12 xl:px-44 space-y-12">
       {/* Header Section */}
       <div className="space-y-6">
-        <h2 className="text-2xl xl:text-3xl font-bold text-green-700">
+        <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Sernitas Blog & Gesundheitsbulletins
         </h2>
         <p className="text-primary/90 text-justify">

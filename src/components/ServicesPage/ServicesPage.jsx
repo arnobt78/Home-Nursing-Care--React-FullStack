@@ -49,7 +49,7 @@ const ServicesPage = () => {
   const activeTab = tabs.find((tab) => location.pathname.startsWith(tab.path));
 
   return (
-    <div className="min-h-screen pt-[70px] pb-16 bg-slate-100 text-black">
+    <div className="min-h-screen pt-[70px] pb-16 bg-slate-100 ">
       {/* Top Image */}
       <CachedImage
         src={activeTab?.image || grundpflegeImg} // Default to Grundpflege image
@@ -65,10 +65,10 @@ const ServicesPage = () => {
               key={index}
               to={tab.path} // Use absolute paths here
               className={({ isActive }) =>
-                `text-sm xl:text-lg font-medium pb-2 ${
+                `text-md xl:text-xl font-bold pb-2 ${
                   isActive
                     ? "text-green-700 border-b-2 border-green-700"
-                    : "text-gray-600 hover:text-green-700"
+                    : "text-primary/90 hover:text-green-700"
                 }`
               }
             >

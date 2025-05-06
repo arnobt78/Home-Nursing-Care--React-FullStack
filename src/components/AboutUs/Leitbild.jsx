@@ -8,7 +8,7 @@ const Leitbild = () => {
       {/* Text and Image Section */}
       <div className="flex flex-col lg:flex-row items-center gap-8">
         <div className="lg:w-1/2 space-y-6">
-          <h2 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+          <h2 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
             Unser Leitbild
           </h2>
           <p className="text-primary/90 text-justify">
@@ -36,7 +36,7 @@ const Leitbild = () => {
 
       {/* What Sets Us Apart Section */}
       <div className="mt-12 space-y-6">
-        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Was uns auszeichnet
         </h3>
         <ul className="space-y-6 text-primary/90">
@@ -65,7 +65,7 @@ const Leitbild = () => {
 
       {/* Values Section */}
       <div className="mt-12 space-y-6">
-        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Unsere Werte
         </h3>
         <ul className="space-y-6 text-primary/90">
@@ -90,7 +90,7 @@ const Leitbild = () => {
 
       {/* Quality of Life Section */}
       <div className="mt-12 space-y-6">
-        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
           Gemeinsam für Ihre Lebensqualität
         </h3>
         <p className="text-primary/90 text-justify">

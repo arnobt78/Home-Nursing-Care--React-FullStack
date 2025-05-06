@@ -12,10 +12,10 @@ const Behandlungspflege = () => {
       {/* First Section: Heading and Right Image */}
       <div className="flex flex-col lg:flex-row items-center gap-8 pb-16 ">
         <div className="lg:w-1/2 space-y-4">
-          <h2 className="font-sour text-xl xl:text-2xl font-bold text-green-700">
+          <h2 className="font-sour text-xl xl:text-2xl font-bold text-primary/90">
             Behandlungspflege
           </h2>
-          <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+          <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
             Mehr als nur Pflege – medizinische Unterstützung für zuhause
           </h3>
           <p className="text-primary/90 text-justify">
@@ -72,7 +72,7 @@ const Behandlungspflege = () => {
 
       {/* Third Section: Three Cards */}
       <div className="space-y-6 py-24">
-        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-green-700 text-center mb-12">
+        <h3 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90 text-center mb-12">
           Die drei Arten der Behandlungspflege
         </h3>
         <div className="font-sour grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -112,7 +112,7 @@ const Behandlungspflege = () => {
       <div className="bg-transparent p-4 flex flex-col lg:flex-row items-center gap-8">
         {/* Left Side: Text */}
         <div className="lg:w-2/3 space-y-6">
-          <h4 className="font-sour text-3xl xl:text-4xl font-bold text-green-700">
+          <h4 className="font-sour text-3xl xl:text-4xl font-bold text-primary/90">
             Unser medizinisches Pflegeangebot im Überblick
           </h4>
           <p className="text-primary/90">

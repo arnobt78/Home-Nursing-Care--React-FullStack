@@ -27,7 +27,7 @@ const AccordionSection = () => {
 
   return (
     <motion.section
-      className="container mx-auto py-24 px-4 md:px-12 xl:px-44"
+      className="container mx-auto py-24 px-4 md:px-12 xl:px-44 space-y-12"
       initial="initial"
       animate="animate" // Trigger animation only once
     >
@@ -36,7 +36,7 @@ const AccordionSection = () => {
         variants={slideUp(0.2)}
         initial="initial"
         animate="animate" // Trigger animation only once
-        className="font-sour text-3xl xl:text-4xl font-bold text-center text-primary/90 mb-10"
+        className="font-sour text-3xl xl:text-4xl font-bold text-center text-primary/90 mb-12"
       >
         Fragen, die oft gestellt werden – Antworten, die helfen!
       </motion.h2>
