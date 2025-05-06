@@ -76,16 +76,6 @@ const PflegeRatgeber = () => {
             sicher und effektiv zu gestalten.
           </li>
         </ul>
-        <h4 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
-          Warum Sernitas Care?
-        </h4>
-        <p className="text-primary/90 text-justify">
-          Als Experten in der häuslichen Pflege stehen wir Ihnen mit Rat und Tat
-          zur Seite. Unsere jahrelange Erfahrung ermöglicht es uns, Ihnen
-          maßgeschneiderte Lösungen anzubieten, die perfekt zu den Bedürfnissen
-          Ihrer Familie passen. Lassen Sie uns gemeinsam den Weg zu einer
-          würdevollen und kompetenten Pflege gehen.
-        </p>
       </div>
 
       {/* Ratgeber Cards Section */}
@@ -111,6 +101,36 @@ const PflegeRatgeber = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Contact Section */}
+      <div className="pt-12 text-center space-y-12">
+        <h4 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
+          Warum Sernitas Care?
+        </h4>
+        <p className="text-primary/90 text-justify">
+          Als Experten in der häuslichen Pflege stehen wir Ihnen mit Rat und Tat
+          zur Seite. Unsere jahrelange Erfahrung ermöglicht es uns, Ihnen
+          maßgeschneiderte Lösungen anzubieten, die perfekt zu den Bedürfnissen
+          Ihrer Familie passen. Lassen Sie uns gemeinsam den Weg zu einer
+          würdevollen und kompetenten Pflege gehen.
+        </p>
+
+        <h3 className="font-sour text-xl xl:text-2xl font-bold text-primary/90">
+          Wir sind für Sie da!
+        </h3>
+        <p className="text-primary/90 mt-4">
+          Gerne beraten wir Sie, welche Leistungen für Sie passen. Auf diese
+          Weise erhalten Sie eine individuell auf Sie oder Ihre Angehörigen
+          abgestimmte Grundpflege. Sie haben Fragen? Auch die beantworten Ihnen
+          unsere Mitarbeiter gerne. Rufen Sie uns an!
+        </p>
+        <a
+          href="/contact"
+          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
+        >
+          Jetzt Kontakt aufnehmen →
+        </a>
       </div>
 
       {/* Ratgeber Modal */}

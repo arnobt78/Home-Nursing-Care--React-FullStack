@@ -114,6 +114,16 @@ self.addEventListener("install", (event) => {
         "/assets/wissenswertesPage/ratgeber/ratgeber-4.png",
         "/assets/wissenswertesPage/ratgeber/ratgeber-5.png",
         "/assets/wissenswertesPage/ratgeber/ratgeber-6.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-7.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-8.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-9.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-10.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-11.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-12.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-13.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-14.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-15.png",
+        "/assets/wissenswertesPage/ratgeber/ratgeber-16.png",
       ]);
     })
   );

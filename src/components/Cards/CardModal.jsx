@@ -19,13 +19,13 @@ const CardModal = ({ isOpen, onClose, cardData }) => {
 
         {/* Service Content */}
         <div className="p-6 md:p-12 space-y-6">
-          <h2 className="text-2xl font-bold text-primary/90 text-center">
+          <h2 className="text-3xl font-bold text-primary/90 text-center py-12">
             {cardData.title}
           </h2>
 
           {/* Content */}
           <div
-            className="text-primary/90 text-justify leading-relaxed space-y-4 styled-content"
+            className="text-primary/90 text-justify leading-relaxed space-y-6 styled-content"
             dangerouslySetInnerHTML={{ __html: cardData.details }}
           ></div>
         </div>
