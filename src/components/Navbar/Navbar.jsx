@@ -63,7 +63,7 @@ const Navbar = () => {
         variants={slideBottom(0.2)}
         initial="initial"
         animate="animate"
-        className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black bg-opacity-30 py-4 shadow-lg"
+        className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black bg-opacity-30 py-4"
       >
         <div className="container flex justify-between items-center">
           {/* Clickable Logo */}
@@ -77,12 +77,12 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
-            <ul className="flex gap-7 xl:gap-10 text-white text-sm xl:text-base font-medium tracking-wide items-center">
+            <ul className="flex gap-7 xl:gap-10 text-white font-medium tracking-wide items-center">
               {/* Home Icon */}
               <li className="flex items-center">
                 <a
                   href="/"
-                  className="text-white hover:text-secondary flex items-center justify-center"
+                  className="text-white text-lg font-bold hover:text-secondary flex items-center justify-center"
                 >
                   <i className="fas fa-home"></i>
                 </a>
@@ -112,14 +112,14 @@ const Navbar = () => {
                         ? "/wissenswertes/faq"
                         : "/"
                     }
-                    className="uppercase hover:text-secondary flex items-center justify-center"
+                    className="uppercase text-md font-bold hover:text-secondary flex items-center justify-center"
                   >
                     {item.title}
                   </a>
 
                   {activeDropdown === idx && item.subItems && (
                     <ul
-                      className="absolute left-0 top-full mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg py-2 px-4 w-64"
+                      className="absolute left-0 top-full mt-2 bg-black bg-opacity-80 rounded-lg shadow-lg m-4 w-64"
                       onMouseEnter={() => clearTimeout(hideDropdownTimeout)}
                       onMouseLeave={() => {
                         hideDropdownTimeout = setTimeout(() => {
@@ -131,7 +131,7 @@ const Navbar = () => {
                         <li key={i}>
                           <a
                             href={sub.link}
-                            className="block px-2 py-1 text-white hover:text-secondary hover:bg-white/10 rounded"
+                            className="block p-4 text-white hover:text-secondary hover:bg-white/10"
                           >
                             {sub.title}
                           </a>
@@ -146,7 +146,7 @@ const Navbar = () => {
               <li className="flex items-center">
                 <a
                   href="/karriere"
-                  className="uppercase hover:text-secondary flex items-center justify-center"
+                  className="uppercase text-md font-bold hover:text-secondary flex items-center justify-center"
                 >
                   Karriere
                 </a>
@@ -156,7 +156,7 @@ const Navbar = () => {
               <li className="flex items-center">
                 <a
                   href="/contact"
-                  className="uppercase hover:text-secondary flex items-center justify-center"
+                  className="uppercase text-md font-bold hover:text-secondary flex items-center justify-center"
                 >
                   Kontakt
                 </a>
@@ -164,7 +164,7 @@ const Navbar = () => {
 
               {/* Language Selector */}
               <li className="relative group flex items-center">
-                <button className="uppercase hover:text-secondary flex items-center gap-2 justify-center">
+                <button className="uppercase text-lg font-bold hover:text-secondary flex items-center gap-2 justify-center">
                   <i className="fas fa-globe"></i>
                 </button>
                 <ul className="absolute left-0 top-full mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg py-2 px-4 w-32 hidden group-hover:block">
@@ -173,11 +173,11 @@ const Navbar = () => {
                       Deutsch
                     </button>
                   </li>
-                  <li>
+                  {/* <li>
                     <button className="block px-2 py-1 text-white hover:text-secondary hover:bg-white/10 rounded">
                       Türkisch
                     </button>
-                  </li>
+                  </li> */}
                   <li>
                     <button className="block px-2 py-1 text-white hover:text-secondary hover:bg-white/10 rounded">
                       Englisch
@@ -188,7 +188,7 @@ const Navbar = () => {
 
               {/* Search Icon */}
               <li className="flex items-center">
-                <button className="text-white hover:text-secondary flex items-center justify-center">
+                <button className="text-white text-lg font-bold hover:text-secondary flex items-center justify-center">
                   <i className="fas fa-search"></i>
                 </button>
               </li>
@@ -244,7 +244,7 @@ const Navbar = () => {
                         <a
                           href={sub.link}
                           onClick={toggleMenu}
-                          className="block text-sm hover:text-secondary transition duration-300"
+                          className="block text-md hover:text-secondary transition duration-300"
                         >
                           {sub.title}
                         </a>
@@ -265,11 +265,11 @@ const Navbar = () => {
                       Deutsch
                     </button>
                   </li>
-                  <li>
+                  {/* <li>
                     <button className="block text-sm hover:text-secondary transition duration-300">
                       Türkisch
                     </button>
-                  </li>
+                  </li> */}
                   <li>
                     <button className="block text-sm hover:text-secondary transition duration-300">
                       Englisch
@@ -292,7 +292,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="/contact"
-                  className="w-full text-center py-2 bg-secondary text-white rounded hover:bg-primary transition duration-300"
+                  className="w-full text-center px-8 py-2 bg-secondary text-white rounded-lg hover:bg-primary transition duration-300"
                 >
                   Kontakt
                 </a>
@@ -300,7 +300,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="/karriere"
-                  className="w-full text-center py-2 bg-secondary text-white rounded hover:bg-primary transition duration-300"
+                  className="w-full text-center px-8 py-2 bg-secondary text-white rounded-lg hover:bg-primary transition duration-300"
                 >
                   Karriere
                 </a>
