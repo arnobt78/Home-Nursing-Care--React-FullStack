@@ -15,12 +15,16 @@ const schema = z.object({
     .string()
     .regex(/^\d+$/, "Telefonnummer darf nur Ziffern enthalten")
     .min(10, "Telefonnummer muss mindestens 10 Ziffern enthalten"),
+  consent: z.boolean().refine((val) => val === true, {
+    message: "Sie müssen der Datenschutzerklärung zustimmen.",
+  }),
 });
 
 const HomeConsultationSection = () => {
   const [formData, setFormData] = useState({
     fullname: "",
     phone: "",
+    consent: false,
   });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
@@ -35,11 +39,14 @@ const HomeConsultationSection = () => {
   // Define the mutation function
   const mutation = useMutation({
     mutationFn: async (data) => {
-      const response = await fetch(`${apiBaseUrl}/api/send-email`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `${apiBaseUrl}/api/send-home-consultation-email`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
       if (!response.ok)
         throw new Error("Rückrufanfrage konnte nicht gesendet werden.");
       return response.json();
@@ -47,8 +54,11 @@ const HomeConsultationSection = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -65,6 +75,7 @@ const HomeConsultationSection = () => {
       setFormData({
         fullname: "",
         phone: "",
+        consent: false,
       });
     } catch (error) {
       if (error.errors) {
@@ -182,10 +193,11 @@ const HomeConsultationSection = () => {
                 <input
                   type="checkbox"
                   name="consent"
-                  checked={formData.consent || false}
-                  onChange={(e) =>
-                    setFormData({ ...formData, consent: e.target.checked })
-                  }
+                  checked={formData.consent}
+                  // onChange={(e) =>
+                  //   setFormData({ ...formData, consent: e.target.checked })
+                  // }
+                  onChange={handleChange}
                   className="mr-2 mt-1"
                   required
                 />
@@ -193,6 +205,9 @@ const HomeConsultationSection = () => {
                 bin damit einverstanden, dass die von mir angegebenen Daten
                 elektronisch erhoben und gespeichert werden.
               </label>
+              {errors.consent && (
+                <p className="text-red-500 text-sm mt-1">{errors.consent}</p>
+              )}
             </div>
             <Button
               type="submit"

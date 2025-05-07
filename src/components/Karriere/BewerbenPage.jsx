@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -39,19 +40,31 @@ const BewerbenPage = () => {
     resolver: zodResolver(BewerbenSchema),
   });
 
+  const [successMessage, setSuccessMessage] = useState("");
+  const [formError, setFormError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   const apiBaseUrl =
     import.meta.env.MODE === "development"
       ? import.meta.env.VITE_API_BASE_URL_LOCAL
       : import.meta.env.VITE_API_BASE_URL_RENDER;
 
   const onSubmit = async (data) => {
+    setIsLoading(true);
+    setSuccessMessage("");
+    setFormError("");
+
     try {
       await axios.post(`${apiBaseUrl}/api/send-job-application`, data);
-      alert("Anfrage erfolgreich gesendet!");
+      setSuccessMessage("Anfrage erfolgreich gesendet!");
       reset();
     } catch (error) {
       console.error("Fehler beim Senden:", error);
-      alert("Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut.");
+      setFormError(
+        "Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut."
+      );
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -262,12 +275,22 @@ const BewerbenPage = () => {
             {errors.consent && (
               <p className="text-red-500 text-sm">{errors.consent.message}</p>
             )}
+            {/* Submit Button */}
             <button
               type="submit"
+              disabled={isLoading}
               className="bg-primary/90 text-white px-6 py-3 rounded-2xl text-lg font-medium hover:bg-secondary/90 transition cursor-pointer shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Unverbindlich Anfragen
+              {isLoading ? "Senden..." : "Unverbindlich Anfragen"}
             </button>
+
+            {/* Success or Error Messages */}
+            {successMessage && (
+              <p className="text-green-500 text-sm mt-4">{successMessage}</p>
+            )}
+            {formError && (
+              <p className="text-red-500 text-sm mt-4">{formError}</p>
+            )}
           </form>
         </div>
       </div>

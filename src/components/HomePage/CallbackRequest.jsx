@@ -31,11 +31,14 @@ const CallbackRequest = () => {
   // Define the mutation function
   const mutation = useMutation({
     mutationFn: async (data) => {
-      const response = await fetch(`${apiBaseUrl}/api/send-email`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `${apiBaseUrl}/api/send-home-consultation-email`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
       if (!response.ok)
         throw new Error("Rückrufanfrage konnte nicht gesendet werden.");
       return response.json();
