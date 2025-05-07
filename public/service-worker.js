@@ -129,15 +129,15 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// self.addEventListener("fetch", (event) => {
-//   event.respondWith(
-//     caches.match(event.request).then((cachedResponse) => {
-//       return cachedResponse || fetch(event.request);
-//     })
-//   );
-// });
-
 self.addEventListener("fetch", (event) => {
+  const url = new URL(event.request.url);
+
+  // Bypass service worker for CSS files
+  if (url.pathname.endsWith(".css")) {
+    console.log("Bypassing service worker for:", event.request.url);
+    return; // Skip handling this request
+  }
+
   console.log("Fetching:", event.request.url);
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
