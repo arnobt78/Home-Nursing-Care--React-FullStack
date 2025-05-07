@@ -138,14 +138,15 @@ self.addEventListener("fetch", (event) => {
     return; // Skip handling this request
   }
 
+  // Always fetch fresh HTML files for navigation
+  if (event.request.mode === "navigate") {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+
   console.log("Fetching:", event.request.url);
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        console.log("Serving from cache:", event.request.url);
-      } else {
-        console.log("Fetching from network:", event.request.url);
-      }
       return cachedResponse || fetch(event.request);
     })
   );
