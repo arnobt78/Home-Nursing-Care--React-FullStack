@@ -9,6 +9,7 @@ import {
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
+import PageNotFound from "./components/PageNotFound";
 
 // Lazy load components
 
@@ -162,6 +163,9 @@ const App = () => {
             <Route path="/karriere/bewerben" element={<BewerbenPage />} />
 
             <Route path="/admin" element={<Admin />} />
+
+            {/* Wildcard route for 404 Page */}
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
       </main>
