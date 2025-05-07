@@ -193,7 +193,7 @@ const Contact = () => {
                     <Input
                       type="text"
                       name="fullname"
-                      placeholder="Vor- und Nachname"
+                      placeholder="Vor- und Nachname*"
                       value={formData.fullname}
                       onChange={handleChange}
                       className="search-input text-white"
@@ -204,7 +204,7 @@ const Contact = () => {
                     <Input
                       type="email"
                       name="email"
-                      placeholder="E-Mail-Adresse"
+                      placeholder="E-Mail-Adresse*"
                       value={formData.email}
                       onChange={handleChange}
                       className="search-input text-white"
@@ -215,7 +215,7 @@ const Contact = () => {
                     <Input
                       type="tel"
                       name="phone"
-                      placeholder="Telefonnummer"
+                      placeholder="Telefonnummer*"
                       value={formData.phone}
                       onChange={handleChange}
                       className="search-input text-white"
@@ -226,7 +226,7 @@ const Contact = () => {
                     <Textarea
                       className="search-input text-white"
                       name="message"
-                      placeholder="Ihre Nachricht"
+                      placeholder="Ihre Nachricht*"
                       value={formData.message}
                       onChange={handleChange}
                     />
