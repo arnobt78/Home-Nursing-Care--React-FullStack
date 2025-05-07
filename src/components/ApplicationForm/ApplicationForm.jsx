@@ -151,14 +151,6 @@ const ApplicationForm = () => {
 
   return (
     <>
-      {/* Header Section */}
-      {/* <div className="w-full">
-        <CachedImage
-          src={application1}
-          alt="Header"
-          className="w-full h-[400px] object-cover"
-        />
-      </div> */}
       {/* Hero Section */}
       <section className="relative bg-cover bg-center h-[400px] flex items-center justify-center">
         <CachedImage
@@ -233,7 +225,7 @@ const ApplicationForm = () => {
         {/* First Name and Last Name */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <label className="block text-lg font-medium mb-1">Vorname</label>
+            <label className="block text-lg font-medium mb-1">Vorname*</label>
             <div className="relative">
               <Input
                 type="text"
@@ -249,7 +241,7 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">Nachname</label>
+            <label className="block text-lg font-medium mb-1">Nachname*</label>
             <Input
               type="text"
               placeholder="Doe"
@@ -267,7 +259,7 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Geburtsdatum
+              Geburtsdatum*
             </label>
             <Input
               type="date"
@@ -281,7 +273,9 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">Geschlecht</label>
+            <label className="block text-lg font-medium mb-1">
+              Geschlecht*
+            </label>
             <div className="relative">
               <select
                 {...register("gender")}
@@ -303,7 +297,7 @@ const ApplicationForm = () => {
         {/* Email and Telephone fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <label className="block text-lg font-medium mb-1">E-Mail</label>
+            <label className="block text-lg font-medium mb-1">E-Mail*</label>
             <Input
               type="email"
               placeholder="example@example.com"
@@ -318,7 +312,7 @@ const ApplicationForm = () => {
           </div>
           <div>
             <label className="block text-lg font-medium mb-1">
-              Telefonnummer
+              Telefonnummer*
             </label>
             <Input
               type="text"
@@ -338,7 +332,7 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Straßenname
+              Straßenname*
             </label>
             <Input
               type="text"
@@ -353,7 +347,9 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">Hausnummer</label>
+            <label className="block text-lg font-medium mb-1">
+              Hausnummer*
+            </label>
             <Input
               type="text"
               placeholder="12A"
@@ -370,7 +366,7 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Postleitzahl
+              Postleitzahl*
             </label>
             <Input
               type="text"
@@ -385,7 +381,7 @@ const ApplicationForm = () => {
             )}
           </div>
           <div>
-            <label className="block text-lg font-medium mb-1">Stadt</label>
+            <label className="block text-lg font-medium mb-1">Stadt*</label>
             <Input
               type="text"
               placeholder="Berlin"
@@ -399,7 +395,7 @@ const ApplicationForm = () => {
         </div>
         {/* Occupation */}
         <div>
-          <label className="block text-lg font-medium mb-1">Beruf</label>
+          <label className="block text-lg font-medium mb-1">Beruf*</label>
           <Input
             type="text"
             placeholder="Pflegekraft"
@@ -416,7 +412,7 @@ const ApplicationForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <label className="block text-lg font-medium mb-1">
-              Name der Kontaktperson für Notfälle
+              Name der Kontaktperson für Notfälle*
             </label>
             <Input
               type="text"
@@ -432,7 +428,7 @@ const ApplicationForm = () => {
           </div>
           <div>
             <label className="block text-lg font-medium mb-1">
-              Telefonnummer der Kontaktperson
+              Telefonnummer der Kontaktperson*
             </label>
             <Input
               type="text"
@@ -528,7 +524,9 @@ const ApplicationForm = () => {
         {/* Identification */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <label className="block text-lg font-medium mb-1">Ausweisart</label>
+            <label className="block text-lg font-medium mb-1">
+              Ausweisart*
+            </label>
             <select
               {...register("identificationType")}
               className="w-full h-[48px] text-white bg-[#436b6c] rounded-md p-2 search-input"
@@ -586,7 +584,7 @@ const ApplicationForm = () => {
             className="mr-2"
           />
           <label className="text-md">
-            Ich stimme der Datenschutzerklärung zu
+            Ich stimme der Datenschutzerklärung zu*
           </label>
         </div>
         {errors.privacyConsent && (
