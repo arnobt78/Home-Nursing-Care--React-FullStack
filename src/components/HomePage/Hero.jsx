@@ -146,18 +146,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
-import {
-  FaPhone,
-  FaEnvelope,
-  FaAngleDoubleRight,
-  FaFacebookF,
-  FaInstagram,
-  FaPlay,
-} from "react-icons/fa";
+import { FaPhone, FaPlay } from "react-icons/fa";
 
 const Hero = () => {
   const navigate = useNavigate();
-  const [hover, setHover] = useState(false);
+  // const [hover, setHover] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const backgroundVideoUrl =
@@ -177,19 +170,10 @@ const Hero = () => {
           style={{ border: "none" }} // Replaces the deprecated frameBorder attribute
         />
       </div>
-      {/* <div className="absolute inset-0 z-0">
-        <iframe
-          className="w-full h-full object-cover"
-          src={backgroundVideoUrl}
-          title="Sernitas Video Background"
-          allow="autoplay; muted; loop"
-          frameBorder="0"
-        />
-      </div> */}
 
       {/* Overlay Content */}
       {!isVideoOpen && (
-        <div className="absolute inset-0 z-10 bg-black bg-opacity-40 text-white flex flex-col justify-center items-start px-6 md:px-12">
+        <div className="absolute inset-0 z-10 bg-black bg-opacity-40 text-white flex flex-col justify-center items-start px-6 sm:px-6 md:px-12">
           <motion.h1
             variants={{
               initial: { opacity: 0, y: 20 },
@@ -198,7 +182,7 @@ const Hero = () => {
             initial="initial"
             animate="animate"
             transition={{ duration: 0.8 }}
-            className="text-4xl xl:text-5xl font-semibold leading-snug"
+            className="text-3xl xl:text-5xl font-semibold leading-snug"
           >
             Ihr Pflegedienst im Revier
           </motion.h1>
@@ -274,75 +258,6 @@ const Hero = () => {
             onClick={() => setIsVideoOpen(true)}
           >
             <FaPlay className="text-white text-3xl md:text-4xl" />
-          </div>
-        </div>
-      )}
-
-      {/* Side Hover Icons */}
-      {!isVideoOpen && (
-        <div
-          className={`fixed top-1/2 -translate-y-1/2 right-0 z-20 transition-all duration-500 bg-transparent ${
-            hover ? "w-64" : "w-14"
-          }`}
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          <div className="flex flex-col gap-2 py-4 px-2 ">
-            {/* Phone */}
-            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md cursor-pointer">
-              <a href="tel:+4923496646480" className="flex items-center gap-2">
-                <FaPhone className="text-lg" />
-                {hover && <span>+49 234 966 46 480</span>}
-              </a>
-            </div>
-
-            {/* Email */}
-            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md cursor-pointer">
-              <a
-                href="mailto:info@sernitas-care.com"
-                className="flex items-center gap-2"
-              >
-                <FaEnvelope className="text-lg" />
-                {hover && <span>info@sernitas-care.com</span>}
-              </a>
-            </div>
-
-            {/* Contact Form */}
-            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md cursor-pointer">
-              <button
-                onClick={() => navigate("/contact")}
-                className="flex items-center gap-2"
-              >
-                <FaAngleDoubleRight className="text-lg" />
-                {hover && <span>Zum Kontaktformular</span>}
-              </button>
-            </div>
-
-            {/* Facebook */}
-            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md">
-              <a
-                href="https://www.facebook.com/sernitasglobal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 pointer-events-auto" // Ensure pointer-events are enabled
-              >
-                <FaFacebookF className="text-lg" />
-                {hover && <span>Facebook</span>}
-              </a>
-            </div>
-
-            {/* Instagram */}
-            <div className="flex items-center gap-2 text-white hover:text-gray-200 bg-primary/90 hover:bg-secondary/90 p-2 rounded-md">
-              <a
-                href="https://www.instagram.com/sernitashrturkey?igsh=MWphd210cjVod3hjbg=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 pointer-events-auto" // Ensure pointer-events are enabled
-              >
-                <FaInstagram className="text-lg" />
-                {hover && <span>Instagram</span>}
-              </a>
-            </div>
           </div>
         </div>
       )}

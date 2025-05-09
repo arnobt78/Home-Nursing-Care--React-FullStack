@@ -49,7 +49,7 @@ const WissenswertesPage = () => {
   const activeTab = tabs.find((tab) => location.pathname.startsWith(tab.path));
 
   return (
-    <div className="min-h-screen pt-[70px] pb-16 bg-slate-100 text-black">
+    <div className="min-h-screen pt-[68px] pb-16 backdrop-blur-md">
       {/* Top Image */}
       <CachedImage
         src={activeTab?.image || faqImg} // Default to Grundpflege image
@@ -58,7 +58,7 @@ const WissenswertesPage = () => {
       />
 
       {/* Tabs */}
-      <div className="container mx-auto py-6 bg-gray-200">
+      <div className="container mx-auto py-6 bg-gray-200 hidden md:block">
         <div className="flex justify-center gap-12 items-center">
           {tabs.map((tab, index) => (
             <NavLink

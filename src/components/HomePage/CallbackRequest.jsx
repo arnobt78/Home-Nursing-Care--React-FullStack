@@ -84,7 +84,7 @@ const CallbackRequest = () => {
   };
 
   return (
-    <section className="bg-primary/90 py-4 px-16 xl:px-32 border-t-2 border-secondary/90 text-white">
+    <section className="bg-primary/90 py-4 sm:px-4 md:px-12 xl:px-32 border-t-2 border-secondary/90 text-white">
       <form
         className="flex flex-col md:flex-row items-center gap-4"
         onSubmit={handleSubmit}
@@ -92,11 +92,11 @@ const CallbackRequest = () => {
         <p className="text-white/90 font-medium whitespace-nowrap px-4">
           Wir rufen Sie gerne zurück:
         </p>
-        <div className="flex-1 px-8">
+        <div className="flex-1 px-4">
           <Input
             type="text"
             name="fullname"
-            placeholder="Ihr Name *"
+            placeholder="Ihr Name*"
             value={formData.fullname}
             onChange={handleChange}
             className="search-input text-white"
@@ -107,11 +107,11 @@ const CallbackRequest = () => {
             </p>
           )}
         </div>
-        <div className="flex-1 px-8">
+        <div className="flex-1 px-4">
           <Input
             type="tel"
             name="phone"
-            placeholder="Telefonnummer *"
+            placeholder="Telefonnummer*"
             value={formData.phone}
             onChange={handleChange}
             className="search-input text-white"

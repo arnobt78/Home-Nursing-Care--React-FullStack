@@ -10,9 +10,15 @@ const CardModal = ({ isOpen, onClose, cardData }) => {
     >
       <div className="bg-white w-full max-w-7xl overflow-hidden">
         {/* Close Button */}
-        <button
+        {/* <button
           onClick={onClose}
           className="absolute top-4 right-4 text-red-500 hover:text-red-800 text-3xl p-1 transition duration-300 bg-red-300/10 hover:bg-red-300/20"
+        >
+          ✕
+        </button> */}
+        <button
+          onClick={onClose}
+          className="fixed top-20 right-5 text-red-500 hover:text-red-800 text-3xl p-1 transition duration-300 bg-red-300/10 hover:bg-red-300/20 z-50"
         >
           ✕
         </button>

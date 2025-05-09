@@ -199,3 +199,14 @@ select.home-consultation-input:focus {
   border-bottom-color: #24836d; /* Tailwind's ring-blue-500 */
   box-shadow: 0 2px 0 #24836d; /* Add a subtle focus effect */
 }
+
+/* Disable scrolling when the modal is open */
+/* .no-scroll {
+  overflow: hidden;
+} */
+
+/* Disable scrolling when the modal is open */
+.wrapper.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

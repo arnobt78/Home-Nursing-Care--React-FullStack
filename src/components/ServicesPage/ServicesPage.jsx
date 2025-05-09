@@ -49,7 +49,7 @@ const ServicesPage = () => {
   const activeTab = tabs.find((tab) => location.pathname.startsWith(tab.path));
 
   return (
-    <div className="min-h-screen pt-[70px] pb-16 bg-slate-100 ">
+    <div className="min-h-screen pt-[68px] pb-16 backdrop-blur-md">
       {/* Top Image */}
       <CachedImage
         src={activeTab?.image || grundpflegeImg} // Default to Grundpflege image
@@ -58,8 +58,9 @@ const ServicesPage = () => {
       />
 
       {/* Tabs */}
-      <div className="container mx-auto py-6 bg-gray-200">
-        <div className="flex justify-center gap-12 items-center ">
+      {/* Tabs */}
+      <div className="container mx-auto py-6 bg-gray-200 hidden md:block">
+        <div className="flex justify-center gap-12 items-center">
           {tabs.map((tab, index) => (
             <NavLink
               key={index}
@@ -77,6 +78,26 @@ const ServicesPage = () => {
           ))}
         </div>
       </div>
+      {/* Tabs */}
+      {/* <div className="container mx-auto py-6 bg-gray-200">
+        <div className="flex justify-start md:justify-center gap-4 md:gap-12 items-center overflow-x-auto scrollbar-hide">
+          {tabs.map((tab, index) => (
+            <NavLink
+              key={index}
+              to={tab.path} // Use absolute paths here
+              className={({ isActive }) =>
+                `text-sm md:text-md xl:text-xl font-bold pb-2 whitespace-nowrap ${
+                  isActive
+                    ? "text-green-700 border-b-2 border-green-700"
+                    : "text-primary/90 hover:text-green-700"
+                }`
+              }
+            >
+              {tab.label}
+            </NavLink>
+          ))}
+        </div>
+      </div> */}
 
       {/* Content */}
       <div className="container mx-auto mt-8 px-4">

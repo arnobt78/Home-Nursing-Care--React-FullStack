@@ -1,20 +1,8 @@
-import { useState } from "react";
 import ratgeberData from "./ratgeberData";
-import RatgeberModal from "./RatgeberModal";
 
 import CachedImage from "../CachedImage";
 
 const PflegeRatgeber = () => {
-  const [selectedRatgeber, setSelectedRatgeber] = useState(null);
-
-  const handleOpenModal = (ratgeber) => {
-    setSelectedRatgeber(ratgeber);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedRatgeber(null);
-  };
-
   // Utility function to strip HTML tags from a string
   const stripHtmlTags = (html) => {
     const div = document.createElement("div");
@@ -81,10 +69,10 @@ const PflegeRatgeber = () => {
       {/* Ratgeber Cards Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-12">
         {ratgeberData.map((ratgeber) => (
-          <div
+          <a
             key={ratgeber.id}
+            href={`/pflege-ratgeber/${ratgeber.id}`}
             className="bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition transform hover:scale-105 duration-300 cursor-pointer"
-            onClick={() => handleOpenModal(ratgeber)}
           >
             <CachedImage
               src={ratgeber.image}
@@ -99,48 +87,9 @@ const PflegeRatgeber = () => {
                 {stripHtmlTags(ratgeber.description).slice(0, 100)}...
               </p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
-
-      {/* Contact Section */}
-      <div className="pt-12 text-center space-y-12">
-        <h4 className="font-sour text-2xl xl:text-3xl font-bold text-primary/90">
-          Warum Sernitas Care?
-        </h4>
-        <p className="text-primary/90 text-justify">
-          Als Experten in der häuslichen Pflege stehen wir Ihnen mit Rat und Tat
-          zur Seite. Unsere jahrelange Erfahrung ermöglicht es uns, Ihnen
-          maßgeschneiderte Lösungen anzubieten, die perfekt zu den Bedürfnissen
-          Ihrer Familie passen. Lassen Sie uns gemeinsam den Weg zu einer
-          würdevollen und kompetenten Pflege gehen.
-        </p>
-
-        <h3 className="font-sour text-xl xl:text-2xl font-bold text-primary/90">
-          Wir sind für Sie da!
-        </h3>
-        <p className="text-primary/90 mt-4">
-          Gerne beraten wir Sie, welche Leistungen für Sie passen. Auf diese
-          Weise erhalten Sie eine individuell auf Sie oder Ihre Angehörigen
-          abgestimmte Grundpflege. Sie haben Fragen? Auch die beantworten Ihnen
-          unsere Mitarbeiter gerne. Rufen Sie uns an!
-        </p>
-        <a
-          href="/contact"
-          className="bg-primary/90 text-white px-6 py-3 rounded-2xl shadow-2xl hover:bg-green-700 mt-8 inline-block hover:scale-105 transition-transform duration-300"
-        >
-          Jetzt Kontakt aufnehmen →
-        </a>
-      </div>
-
-      {/* Ratgeber Modal */}
-      {selectedRatgeber && (
-        <RatgeberModal
-          isOpen={!!selectedRatgeber}
-          onClose={handleCloseModal}
-          RatgeberData={selectedRatgeber}
-        />
-      )}
     </div>
   );
 };
