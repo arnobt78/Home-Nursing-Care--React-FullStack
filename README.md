@@ -1,6 +1,6 @@
 # Sernitas Care – Home Care Nursing Service Platform
 
-<img width="1447" alt="Screenshot 2025-06-07 at 02 30 46" src="https://github.com/user-attachments/assets/240819f6-ae5a-4fe1-bd7c-9b20088cdfab" />
+<img width="1435" alt="Screenshot 2025-06-07 at 02 30 46" src="https://github.com/user-attachments/assets/e0869bae-9f85-4088-8188-ec7ad956d66b" />
 
 Sernitas Care is a comprehensive home nursing service solution developed for the German market as part of the Sernitas-Groupe. This platform enables families and individuals to access professional home care services, browse career opportunities, and get in touch with the Sernitas team—all within a modern, responsive web application.
 
