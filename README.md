@@ -1,51 +1,74 @@
-# Sernitas Care - Home Care Nursing Service Provider
+# Sernitas Care – Home Care Nursing Service Platform
 
-Sernitas-Care is a comprehensive home nursing service platform in Germany, developed as part of the Sernitas-Groupe. The platform is built with modern web technologies, offering a responsive, user-friendly interface and robust backend functionality. It provides services such as nursing care, client testimonials, job applications, and contact options, all integrated seamlessly.
+<img width="1447" alt="Screenshot 2025-06-07 at 02 26 42" src="https://github.com/user-attachments/assets/240819f6-ae5a-4fe1-bd7c-9b20088cdfab" />
 
-**Production-Live:** https://sernitas-care.com/
+Sernitas Care is a comprehensive home nursing service solution developed for the German market as part of the Sernitas-Groupe. This platform enables families and individuals to access professional home care services, browse career opportunities, and get in touch with the Sernitas team—all within a modern, responsive web application.
 
-**Test-Live:** https://develop-testing-1.netlify.app/
+
+**Production:** https://sernitas-care.com/
+
+**Test Environment:** https://develop-testing-1.netlify.app/
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Environment Variables](#environment-variables)
+- [Installation & Usage](#installation--usage)
+- [Scripts](#scripts)
+- [Routing](#routing)
+- [Backend Server](#backend-server)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
 ## Features
 
-- **Responsive Design**: Fully optimized for all devices, including desktops, tablets, and mobile phones.
-- **Modern UI/UX**: Built with TailwindCSS for a clean, professional, and accessible design.
-- **Dynamic Components**: Includes interactive elements like accordions, modals, and testimonials.
-- **Lazy Loading**: Efficient loading of components using React's `React.lazy`.
-- **Email Integration**: Backend powered by **Express** and **Nodemailer** for sending emails.
-- **Smooth Animations**: Integrated with **Framer Motion** for fluid animations.
-- **Routing**: Client-side routing with **React Router**.
-- **Job Applications**: Users can browse and apply for open positions.
-- **Environment Configuration**: Secure environment variables using .env.
+- **Responsive Design:** Optimized for desktops, tablets, and mobile devices.
+- **Modern UI/UX:** Built with TailwindCSS for an accessible, clean, and professional interface.
+- **Dynamic Components:** Interactive UI elements such as accordions, modals, and testimonials.
+- **Lazy Loading:** Efficient loading of React components using `React.lazy`.
+- **Email Integration:** Backend powered by Express and Nodemailer to process contact forms and job applications.
+- **Smooth Animations:** Enhanced user experience with Framer Motion.
+- **Client-side Routing:** Seamless navigation using React Router.
+- **Job Applications:** Users can view job postings and apply directly via the platform.
+- **Secure Configurations:** Environment variables managed through `.env` files.
+- **Admin Dashboard:** Secure, authenticated admin section for managing content.
 
 ---
 
 ## Tech Stack
 
-## Frontend
+### Frontend
 
-- **React**: Component-based UI library.
-- **Vite**: Fast build tool for modern web projects.
-- **TailwindCSS**: Utility-first CSS framework.
-- **Framer Motion**: Animation library for React.
-- **React Icons**: Icon library for React.
+- **React**: Component-based UI library
+- **Vite**: Lightning-fast build tool
+- **TailwindCSS**: Utility-first CSS framework
+- **Framer Motion**: Animation for React
+- **React Icons**: Collection of popular icons
 
-## Backend
+### Backend
 
-- **Node.js**: JavaScript runtime for server-side development.
-- **Express**: Lightweight Node.js framework.
-- **Nodemailer**: Email sending service.
-- **MongoDB**: NoSQL database for storing application data.
-- **Prisma**: ORM for database management.
-- **Zod**: Schema validation for form inputs.
+- **Node.js**: JavaScript runtime for server-side logic
+- **Express**: Minimal and flexible Node.js web application framework
+- **Nodemailer**: For sending emails
+- **MongoDB**: NoSQL database
+- **Prisma**: Type-safe database ORM
+- **Zod**: Schema validation for forms and APIs
 
-## Other Tools
+### Tooling & Deployment
 
-- **ESLint**: Linting for consistent code quality.
-- **Prettier**: Code formatting tool.
-- **Netlify**: Deployment platform for frontend hosting.
+- **ESLint**: Code linting
+- **Prettier**: Code formatting
+- **Netlify**: Frontend hosting
+- **Render**: Backend hosting (or any Node.js-compatible host)
 
 ---
 
@@ -84,30 +107,30 @@ sernitas-care/
 
 ## API Endpoints
 
-## Authentication
+### Authentication
 
-- `POST /api/auth/login`: User login.
-- `POST /api/auth/register`: User registration.
+- `POST /api/auth/login` — User login
+- `POST /api/auth/register` — User registration
 
-## Services
+### Services
 
-- `GET /api/services`: Fetch all services.
-- `GET /api/services/:id`: Fetch a specific service.
+- `GET /api/services` — Fetch all services
+- `GET /api/services/:id` — Fetch a specific service
 
-## Job Applications
+### Job Applications
 
-- `GET /api/jobs`: Fetch all job postings.
-- `POST /api/jobs/apply`: Submit a job application.
+- `GET /api/jobs` — Fetch job postings
+- `POST /api/jobs/apply` — Submit a job application
 
-## Contact
+### Contact
 
-- `POST /api/contact`: Send a contact form message.
+- `POST /api/contact` — Contact form submission
 
 ---
 
 ## Environment Variables
 
-Create a .env file in the root directory and configure the following variables:
+Create a `.env` file in the root directory and configure the following:
 
 ```env
 VITE_EMAIL_USER=your-email@example.com
@@ -121,31 +144,24 @@ JWT_SECRET=your-jwt-secret
 
 ---
 
-## Installation
+## Installation & Usage
 
-1. Clone the repository:
-
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/arnobt78/sernitas-care.git
    cd sernitas-care
    ```
-
-2. Install dependencies:
-
+2. **Install dependencies:**
    ```bash
    npm install
    ```
-
-3. Configure environment variables in .env.
-
-4. Start the development server:
-
+3. **Configure environment variables:**  
+   Edit `.env` with your credentials.
+4. **Start the frontend development server:**
    ```bash
    npm run dev
    ```
-
-5. Start the backend server:
-
+5. **Start the backend server:**
    ```bash
    node server/index.js
    ```
@@ -154,66 +170,65 @@ JWT_SECRET=your-jwt-secret
 
 ## Scripts
 
-- `npm run dev`: Start the development server.
-- `npm run build`: Build the project for production.
-- `npm run preview`: Preview the production build.
-- `npm run lint`: Run ESLint to check for code quality.
+- `npm run dev` — Start the development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview the production build
+- `npm run lint` — Run ESLint
 
 ---
 
 ## Routing
 
-## Public Routes
+### Public Routes
 
-- `/`: Home page with hero section and services.
-- `/about-us`: About Us page.
-- `/services`: List of services.
-- `/karriere`: Career page with job postings.
-- `/contact`: Contact form.
+- `/` — Home (hero section, services, testimonials)
+- `/about-us` — About Sernitas Care
+- `/services` — List of services
+- `/karriere` — Career page with job postings
+- `/contact` — Contact form
 
-## Private Routes
+### Private Routes
 
-- `/dashboard`: Admin dashboard (requires authentication).
+- `/dashboard` — Admin dashboard (requires authentication)
 
 ---
 
 ## Backend Server
 
-The backend server is built with **Express** and connects to a **MongoDB** database. It handles:
+The backend, built with Express and MongoDB, handles:
 
-- User authentication (JWT-based).
-- CRUD operations for services and job postings.
-- Sending emails via **Nodemailer**.
+- JWT-based user authentication
+- CRUD operations for services and job postings
+- Email processing via Nodemailer
 
 ---
 
 ## Deployment
 
-## Frontend Deployment
+### Frontend
 
-The frontend is deployed on **Netlify**. To deploy:
+Deployed on **Netlify**.  
+Just push to the `main` branch—Netlify will automatically deploy.
 
-1. Push changes to the `main` branch.
-2. Netlify automatically builds and deploys the project.
+### Backend
 
-## Backend Server Deployment
-
-The backend is hosted on **Render** or any Node.js-compatible hosting platform. Ensure the .env variables are configured on the hosting platform.
+Host on **Render** or any Node.js-compatible platform.  
+Ensure all necessary environment variables are set in your production environment.
 
 ---
 
 ## Contributing
 
 1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature`.
-3. Commit your changes: `git commit -m 'Add your feature'`.
-4. Push to the branch: `git push origin feature/your-feature`.
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push to GitHub: `git push origin feature/your-feature`
 5. Open a pull request.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ---
