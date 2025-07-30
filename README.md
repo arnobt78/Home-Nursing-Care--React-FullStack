@@ -5,11 +5,11 @@
 ---
 
 Sernitas Care is a comprehensive home nursing service solution developed for the German market as part of the Sernitas-Groupe. This platform enables families and individuals to access professional home care services, browse career opportunities, and get in touch with the Sernitas team—all within a modern, responsive web application.
+This project is built using React, Vite, and TailwindCSS, ensuring a fast, responsive, and user-friendly experience. The backend is powered by Node.js with Express and MongoDB, providing a robust API for data management and email processing.
 
+- **Production-Live:** [https://sernitas-care.com/](https://sernitas-care.com/)
 
-- **Production:** https://sernitas-care.com/
-
-- **Test Environment:** https://develop-testing-1.netlify.app/
+- **Live-Demo:** [https://develop-testing-1.netlify.app/](https://develop-testing-1.netlify.app/)
 
 ---
 
@@ -149,21 +149,28 @@ JWT_SECRET=your-jwt-secret
 ## Installation & Usage
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/arnobt78/sernitas-care.git
    cd sernitas-care
    ```
+
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
+
 3. **Configure environment variables:**  
    Edit `.env` with your credentials.
 4. **Start the frontend development server:**
+
    ```bash
    npm run dev
    ```
+
 5. **Start the backend server:**
+
    ```bash
    node server/index.js
    ```
@@ -207,12 +214,12 @@ The backend, built with Express and MongoDB, handles:
 
 ## Deployment
 
-### Frontend
+### Frontend Deployment
 
-Deployed on **Netlify**.  
+Deployed on **Netlify** and cPanel.  
 Just push to the `main` branch—Netlify will automatically deploy.
 
-### Backend
+### Backend Deployment
 
 Host on **Render** or any Node.js-compatible platform.  
 Ensure all necessary environment variables are set in your production environment.
